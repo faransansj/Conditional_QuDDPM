@@ -1,5 +1,7 @@
 import numpy as np
 
+from conditional_quddpm.datasets.loader import load_tfim_dataset, nested_train_subsets
+from conditional_quddpm.experiments.quddpm_tfim import run_tfim_learning_gate
 from conditional_quddpm.models.quddpm import (
     _reverse_unitary,
     bloch_z,
@@ -49,6 +51,14 @@ def test_fidelity_mmd_and_condition_encoding():
     assert condition_angles([0, 1]) == {0: 0.0, 1: np.pi}
 
 
+def test_four_qubit_reverse_step_preserves_shape_and_norm():
+    states = haar_states(6, seed=8, n_qubits=4)
+    parameters = np.zeros((2, 22))
+    output = reverse_step(states, parameters, np.pi, np.linspace(0.1, 0.9, len(states)))
+    assert output.shape == (6, 16)
+    assert np.allclose(np.linalg.norm(output, axis=1), 1.0, atol=1e-12)
+
+
 def test_conditional_smoke_training_separates_classes_and_reproduces_generation(tmp_path):
     labels = [0, 1]
     targets = pole_clusters(24, labels, seed=11)
@@ -74,3 +84,23 @@ def test_conditional_smoke_training_separates_classes_and_reproduces_generation(
     assert all(history[-1]["loss"] < history[0]["loss"] for history in result.histories)
     assert np.mean(bloch_z(first[0])) > 0 > np.mean(bloch_z(first[1]))
     assert all(fidelity_mmd(first[label], targets[label]) < fidelity_mmd(haar_states(48, 101 + label), targets[label]) for label in labels)
+
+
+def test_tfim_gate_records_train_only_ids_and_never_evaluates_test(tmp_path):
+    config = {
+        "dataset": "data/tfim_4q_random",
+        "real_states_per_class": 2,
+        "subset_seed": 31415,
+        "model": {"diffusion_steps": 1, "layers": 1},
+        "training": {"steps": 0, "learning_rate": 0.1, "perturbation": 0.1},
+        "seeds": {"forward": 1, "source": 2, "init": 3, "spsa": 4, "measurement": 5},
+        "generation": {"samples_per_class": 4, "source_seed": 6, "measurement_seed": 7},
+        "validation": {"physical_tolerance": 1e-10},
+    }
+    summary = run_tfim_learning_gate(config, tmp_path)
+    dataset = load_tfim_dataset(config["dataset"])
+    expected = nested_train_subsets(dataset.train, [2], config["subset_seed"])[2]
+    assert summary["data_access"]["test_evaluated"] is False
+    assert summary["data_access"]["training_splits"] == ["train"]
+    assert set(summary["data_access"]["training_parameter_ids"]) == set(expected.parameter_ids)
+    assert summary["checks"]["physical"]

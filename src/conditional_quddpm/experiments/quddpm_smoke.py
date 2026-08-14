@@ -75,6 +75,7 @@ def _run_task(name: str, labels: list[int], config: dict, output: Path) -> dict:
         training_steps=training_steps,
         learning_rate=training_config["learning_rate"],
         perturbation=training_config["perturbation"],
+        n_ancilla=model_config.get("ancillas", 1),
     )
     generated = generate_quddpm(
         result,

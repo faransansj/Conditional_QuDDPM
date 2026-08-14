@@ -1,0 +1,24 @@
+# First train-only 4-qubit TFIM learning gate. Phase 4 remains blocked unless valid.
+dataset: data/tfim_4q_random
+real_states_per_class: 10
+subset_seed: 31415
+model:
+  diffusion_steps: 2
+  layers: 6
+  ancillas: 2
+training:
+  steps: 1000
+  learning_rate: 0.5
+  perturbation: 0.15
+seeds:
+  forward: 120
+  source: 130
+  init: 140
+  spsa: 150
+  measurement: 160
+generation:
+  samples_per_class: 32
+  source_seed: 1010
+  measurement_seed: 1020
+validation:
+  physical_tolerance: 1.0e-10

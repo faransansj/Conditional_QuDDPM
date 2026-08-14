@@ -1,8 +1,8 @@
 """Minimal pure-state QuDDPM/C-QuDDPM reference implementation.
 
-This is an independent NumPy implementation of the paper-defined method: a
-random-unitary forward process and an ancilla-assisted, measured, non-unitary
-reverse process trained one diffusion step at a time with fidelity-kernel MMD.
+Independent NumPy implementation of a random-unitary forward process and an
+ancilla-assisted, measured reverse process trained one diffusion step at a
+time with fidelity-kernel MMD. Supports one or more data qubits.
 """
 
 from __future__ import annotations
@@ -23,9 +23,31 @@ def rotation(pauli: np.ndarray, angle: float) -> np.ndarray:
     return np.cos(angle / 2) * I - 1j * np.sin(angle / 2) * pauli
 
 
-def haar_states(count: int, seed: int) -> np.ndarray:
+def _two_qubit_rotation(pauli: np.ndarray, angle: float) -> np.ndarray:
+    product = np.kron(pauli, pauli)
+    return np.cos(angle / 2) * np.eye(4) - 1j * np.sin(angle / 2) * product
+
+
+def _qubit_count(state_dimension: int) -> int:
+    n_qubits = int(np.log2(state_dimension))
+    if 2**n_qubits != state_dimension:
+        raise ValueError("state dimension must be a power of two")
+    return n_qubits
+
+
+def _apply_gate(state: np.ndarray, gate: np.ndarray, wires: tuple[int, ...], n_qubits: int) -> np.ndarray:
+    tensor = state.reshape((2,) * n_qubits)
+    remaining = tuple(qubit for qubit in range(n_qubits) if qubit not in wires)
+    permutation = wires + remaining
+    inverse = np.argsort(permutation)
+    transformed = np.transpose(tensor, permutation).reshape(2 ** len(wires), -1)
+    transformed = gate @ transformed
+    return np.transpose(transformed.reshape((2,) * n_qubits), inverse).reshape(-1)
+
+
+def haar_states(count: int, seed: int, n_qubits: int = 1) -> np.ndarray:
     rng = np.random.default_rng(seed)
-    states = rng.normal(size=(count, 2)) + 1j * rng.normal(size=(count, 2))
+    states = rng.normal(size=(count, 2**n_qubits)) + 1j * rng.normal(size=(count, 2**n_qubits))
     return states / np.linalg.norm(states, axis=1, keepdims=True)
 
 
@@ -47,8 +69,18 @@ def pole_clusters(count: int, labels: list[int], seed: int, spread: float = 0.22
 def _random_su2(rng: np.random.Generator, strength: float) -> np.ndarray:
     axis = rng.normal(size=3)
     axis /= np.linalg.norm(axis)
-    pauli = axis[0] * X + axis[1] * Y + axis[2] * Z
-    return rotation(pauli, rng.uniform(-np.pi, np.pi) * strength)
+    return rotation(axis[0] * X + axis[1] * Y + axis[2] * Z, rng.uniform(-np.pi, np.pi) * strength)
+
+
+def _scramble_state(state: np.ndarray, rng: np.random.Generator, strength: float) -> np.ndarray:
+    n_qubits = _qubit_count(len(state))
+    output = state
+    for qubit in range(n_qubits):
+        output = _apply_gate(output, _random_su2(rng, strength), (qubit,), n_qubits)
+    for qubit in range(n_qubits - 1):
+        angle = rng.uniform(-np.pi / 2, np.pi / 2) * strength
+        output = _apply_gate(output, _two_qubit_rotation(Z, angle), (qubit, qubit + 1), n_qubits)
+    return output
 
 
 def forward_diffusion(
@@ -59,9 +91,10 @@ def forward_diffusion(
     trajectories = {label: [states.copy()] for label, states in targets.items()}
     for step in range(steps):
         strength = (step + 1) / steps
-        for label, states in targets.items():
-            previous = trajectories[label][-1]
-            trajectories[label].append(np.asarray([_random_su2(rng, strength) @ state for state in previous]))
+        for label in targets:
+            trajectories[label].append(
+                np.asarray([_scramble_state(state, rng, strength) for state in trajectories[label][-1]])
+            )
     return trajectories
 
 
@@ -76,19 +109,43 @@ def fidelity_mmd(left: np.ndarray, right: np.ndarray) -> float:
     return float(max(value, 0.0))
 
 
-def _two_qubit_rotation(pauli: np.ndarray, angle: float) -> np.ndarray:
-    product = np.kron(pauli, pauli)
-    return np.cos(angle / 2) * np.eye(4) - 1j * np.sin(angle / 2) * product
+def reverse_parameter_count(n_data: int, n_ancilla: int = 1) -> int:
+    n_total = n_data + n_ancilla
+    return 2 * n_total + 3 * (n_total - 1)
+
+
+def _apply_reverse_circuit(
+    joint: np.ndarray, parameters: np.ndarray, n_data: int, n_ancilla: int = 1
+) -> np.ndarray:
+    n_total = n_data + n_ancilla
+    expected = reverse_parameter_count(n_data, n_ancilla)
+    if parameters.shape[1] != expected:
+        raise ValueError(f"expected {expected} parameters per layer, got {parameters.shape[1]}")
+    output = joint
+    for layer in parameters:
+        offset = 0
+        for qubit in range(n_total):
+            output = _apply_gate(output, rotation(X, layer[offset]), (qubit,), n_total)
+            output = _apply_gate(output, rotation(Y, layer[offset + 1]), (qubit,), n_total)
+            offset += 2
+        for left in range(n_total - 1):
+            wires = (left, left + 1)
+            for pauli in (X, Y, Z):
+                output = _apply_gate(output, _two_qubit_rotation(pauli, layer[offset]), wires, n_total)
+                offset += 1
+            output = _apply_gate(output, CZ, wires, n_total)
+    return output
 
 
 def _reverse_unitary(parameters: np.ndarray) -> np.ndarray:
-    """Expressive RX/RY plus XX/YY/ZZ ancilla-data denoising ansatz."""
-    unitary = np.eye(4, dtype=np.complex128)
-    for layer in parameters:
-        local = np.kron(rotation(Y, layer[1]) @ rotation(X, layer[0]), rotation(Y, layer[3]) @ rotation(X, layer[2]))
-        entangler = _two_qubit_rotation(Z, layer[6]) @ _two_qubit_rotation(Y, layer[5]) @ _two_qubit_rotation(X, layer[4])
-        unitary = CZ @ entangler @ local @ unitary
-    return unitary
+    """Materialize the reverse unitary for validation tests."""
+    width = parameters.shape[1]
+    n_total = (width + 3) // 5
+    if 5 * n_total - 3 != width or n_total < 2:
+        raise ValueError("invalid reverse parameter width")
+    n_data = n_total - 1
+    basis = np.eye(2**n_total, dtype=np.complex128)
+    return np.column_stack([_apply_reverse_circuit(column, parameters, n_data) for column in basis])
 
 
 def reverse_step(
@@ -100,13 +157,24 @@ def reverse_step(
     """Apply one conditioned reverse step and sample the ancilla measurement."""
     if len(states) != len(measurement_uniforms):
         raise ValueError("one measurement uniform is required per state")
-    ancilla = rotation(X, condition_angle) @ np.array([1.0, 0.0], dtype=np.complex128)
-    unitary = _reverse_unitary(parameters)
+    n_data = _qubit_count(states.shape[1])
+    width = parameters.shape[1]
+    n_total = (width + 3) // 5
+    n_ancilla = n_total - n_data
+    if n_ancilla < 1 or reverse_parameter_count(n_data, n_ancilla) != width:
+        raise ValueError("reverse parameter width is incompatible with the data dimension")
+    ancilla_qubit = rotation(X, condition_angle) @ np.array([1.0, 0.0], dtype=np.complex128)
+    ancilla = ancilla_qubit
+    for _ in range(n_ancilla - 1):
+        ancilla = np.kron(ancilla, ancilla_qubit)
     outputs = []
     for state, uniform in zip(states, measurement_uniforms, strict=True):
-        joint = (unitary @ np.kron(ancilla, state)).reshape(2, 2)
+        joint = _apply_reverse_circuit(
+            np.kron(ancilla, state), parameters, n_data, n_ancilla
+        ).reshape(2**n_ancilla, -1)
         probabilities = np.sum(np.abs(joint) ** 2, axis=1)
-        outcome = int(uniform >= probabilities[0])
+        outcome = int(np.searchsorted(np.cumsum(probabilities), uniform, side="right"))
+        outcome = min(outcome, len(probabilities) - 1)
         output = joint[outcome]
         outputs.append(output / np.linalg.norm(output))
     return np.asarray(outputs)
@@ -123,6 +191,8 @@ class QuDDPMTrainingResult:
     parameters: np.ndarray
     histories: list[list[dict[str, float]]]
     conditioning: dict[int, float]
+    n_data: int
+    n_ancilla: int = 1
 
 
 def save_quddpm_checkpoint(path: str | Path, result: QuDDPMTrainingResult) -> None:
@@ -132,6 +202,8 @@ def save_quddpm_checkpoint(path: str | Path, result: QuDDPMTrainingResult) -> No
         parameters=result.parameters,
         labels=labels,
         condition_angles=np.asarray([result.conditioning[int(label)] for label in labels]),
+        n_data=np.asarray(result.n_data),
+        n_ancilla=np.asarray(result.n_ancilla),
     )
 
 
@@ -141,7 +213,9 @@ def load_quddpm_checkpoint(path: str | Path) -> QuDDPMTrainingResult:
         int(label): float(angle)
         for label, angle in zip(checkpoint["labels"], checkpoint["condition_angles"], strict=True)
     }
-    return QuDDPMTrainingResult(checkpoint["parameters"], [], conditioning)
+    n_data = int(checkpoint["n_data"]) if "n_data" in checkpoint else (checkpoint["parameters"].shape[-1] + 3) // 5 - 1
+    n_ancilla = int(checkpoint["n_ancilla"]) if "n_ancilla" in checkpoint else 1
+    return QuDDPMTrainingResult(checkpoint["parameters"], [], conditioning, n_data, n_ancilla)
 
 
 def train_stepwise_quddpm(
@@ -158,19 +232,25 @@ def train_stepwise_quddpm(
     training_steps: int,
     learning_rate: float,
     perturbation: float,
+    n_ancilla: int = 1,
 ) -> tuple[QuDDPMTrainingResult, dict[int, list[np.ndarray]]]:
     """Train reverse maps from T→0, sharing each step's parameters across labels."""
     labels = sorted(targets)
     if any(len(targets[label]) != samples for label in labels):
         raise ValueError("every class must contain exactly samples states")
+    dimensions = {targets[label].shape[1] for label in labels}
+    if len(dimensions) != 1:
+        raise ValueError("all target classes must have the same state dimension")
+    n_data = _qubit_count(dimensions.pop())
     forward = forward_diffusion(targets, diffusion_steps, forward_seed)
     angles = condition_angles(labels)
     init_rng = np.random.default_rng(init_seed)
     spsa_rng = np.random.default_rng(spsa_seed)
     measurement_rng = np.random.default_rng(measurement_seed)
-    parameters = init_rng.normal(0.0, 0.15, size=(diffusion_steps, layers, 7))
-    source = {label: haar_states(samples, source_seed + label) for label in labels}
-    current = {label: source[label].copy() for label in labels}
+    parameters = init_rng.normal(
+        0.0, 0.15, size=(diffusion_steps, layers, reverse_parameter_count(n_data, n_ancilla))
+    )
+    current = {label: haar_states(samples, source_seed + label, n_data) for label in labels}
     uniforms = {
         (step, label): measurement_rng.random(samples)
         for step in range(diffusion_steps)
@@ -182,14 +262,13 @@ def train_stepwise_quddpm(
         target_at_step = {label: forward[label][step] for label in labels}
 
         def loss(candidate: np.ndarray) -> float:
-            losses = [
+            return float(np.mean([
                 fidelity_mmd(
                     reverse_step(current[label], candidate, angles[label], uniforms[(step, label)]),
                     target_at_step[label],
                 )
                 for label in labels
-            ]
-            return float(np.mean(losses))
+            ]))
 
         step_parameters = parameters[step].copy()
         for iteration in range(training_steps + 1):
@@ -208,7 +287,7 @@ def train_stepwise_quddpm(
             for label in labels
         }
 
-    return QuDDPMTrainingResult(parameters, histories, angles), forward
+    return QuDDPMTrainingResult(parameters, histories, angles, n_data, n_ancilla), forward
 
 
 def generate_quddpm(
@@ -221,7 +300,7 @@ def generate_quddpm(
     rng = np.random.default_rng(measurement_seed)
     generated = {}
     for label in labels:
-        states = haar_states(count, source_seed + label)
+        states = haar_states(count, source_seed + label, result.n_data)
         for step in range(len(result.parameters) - 1, -1, -1):
             states = reverse_step(states, result.parameters[step], result.conditioning[label], rng.random(count))
         generated[label] = states
@@ -229,4 +308,6 @@ def generate_quddpm(
 
 
 def bloch_z(states: np.ndarray) -> np.ndarray:
+    if states.shape[1] != 2:
+        raise ValueError("bloch_z is defined only for one-qubit states")
     return np.real(np.einsum("bi,ij,bj->b", states.conj(), Z, states))

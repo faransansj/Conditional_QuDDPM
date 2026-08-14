@@ -9,7 +9,7 @@
 | Repository and research design | ✅ Documented |
 | TFIM dataset generator | ✅ Implemented and tested (4-qubit dense exact diagonalization) |
 | QCNN baseline | ✅ Development protocol frozen (4 qubits) |
-| Conditional QuDDPM | 🚧 One-qubit functional validation passed; TFIM training pending |
+| Conditional QuDDPM | 🚧 One-qubit validation passed; first 4-qubit TFIM learning gate failed (underfitting) |
 | Conditional MSQuDDPM | 📋 Planned |
 | Augmentation benchmarks | 📋 Planned |
 
@@ -126,6 +126,7 @@ Implemented paths are shown without a planning annotation.
 │   ├── tfim_simulation_guide.md
 │   ├── qcnn_baseline.md
 │   ├── quddpm_validation.md
+│   ├── quddpm_tfim_4q_gate.md
 │   └── upstream_audit.md
 ├── configs/
 │   ├── dataset/             # random and blocked TFIM configs
@@ -171,6 +172,9 @@ Validate unconditional and conditional QuDDPM mechanics before TFIM training:
 
 ```bash
 uv run run-quddpm-smoke --config configs/quddpm/phase3_smoke.yaml --output results/quddpm_phase3_smoke
+
+# Expected to exit nonzero until the 4-qubit TFIM learning gate passes.
+uv run run-quddpm-tfim --config configs/quddpm/tfim_4q_smoke.yaml --output results/quddpm_tfim_4q_smoke
 ```
 
 The QCNN loader treats `split_manifest.json` as the source of truth and stores exact training IDs with each run. The default convention is open-boundary `H = -J Σ ZZ - g Σ X`, `J=1`, with samples in `g/J ∈ [0.2,0.8]` and `[1.2,1.8]`; the finite-size critical neighborhood is excluded from this initial classification dataset. Random and blocked-g results are reported as separate benchmarks. See the [TFIM simulation guide](docs/tfim_simulation_guide.md) for artifact schemas, examples, and interpretation.
@@ -184,7 +188,7 @@ The QCNN loader treats `split_manifest.json` as the source of truth and stores e
 5. Run matched multi-seed comparisons, scaling and near-critical analyses.
 6. Produce paper-ready tables, figures, and reproduction commands.
 
-See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), [QCNN baseline guide](docs/qcnn_baseline.md), [QuDDPM validation](docs/quddpm_validation.md), and [upstream diffusion audit](docs/upstream_audit.md).
+See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), [QCNN baseline guide](docs/qcnn_baseline.md), [QuDDPM validation](docs/quddpm_validation.md), [4-qubit TFIM learning gate](docs/quddpm_tfim_4q_gate.md), and [upstream diffusion audit](docs/upstream_audit.md).
 
 ## Limitations
 
