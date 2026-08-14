@@ -1,0 +1,1428 @@
+{
+  "config": {
+    "J": 1.0,
+    "boundary": "open",
+    "dataset_seed": 1729,
+    "n_qubits": 4,
+    "numerical_tolerance": 1e-10,
+    "phase_regions": {
+      "ferromagnetic": [
+        0.2,
+        0.8
+      ],
+      "paramagnetic": [
+        1.2,
+        1.8
+      ]
+    },
+    "samples_per_class": 100,
+    "split_ratios": {
+      "test": 0.15,
+      "train": 0.7,
+      "val": 0.15
+    },
+    "split_seed": 2718
+  },
+  "records": [
+    {
+      "energy": -3.0740273527827164,
+      "g": 0.21844521776310083,
+      "label": 0,
+      "parameter_id": "class-0-00000",
+      "split": "train"
+    },
+    {
+      "energy": -3.144409289092483,
+      "g": 0.30107448785896784,
+      "label": 0,
+      "parameter_id": "class-0-00001",
+      "split": "test"
+    },
+    {
+      "energy": -3.2318640539554515,
+      "g": 0.3763702682271599,
+      "label": 0,
+      "parameter_id": "class-0-00002",
+      "split": "train"
+    },
+    {
+      "energy": -3.515563995701938,
+      "g": 0.5457511459110853,
+      "label": 0,
+      "parameter_id": "class-0-00003",
+      "split": "train"
+    },
+    {
+      "energy": -3.840757281504614,
+      "g": 0.6874231258668102,
+      "label": 0,
+      "parameter_id": "class-0-00004",
+      "split": "val"
+    },
+    {
+      "energy": -4.105256546633769,
+      "g": 0.7858137887640018,
+      "label": 0,
+      "parameter_id": "class-0-00005",
+      "split": "train"
+    },
+    {
+      "energy": -3.3893103263956665,
+      "g": 0.4790008847651382,
+      "label": 0,
+      "parameter_id": "class-0-00006",
+      "split": "val"
+    },
+    {
+      "energy": -3.1300559376702584,
+      "g": 0.28644152659576294,
+      "label": 0,
+      "parameter_id": "class-0-00007",
+      "split": "train"
+    },
+    {
+      "energy": -4.004547187556109,
+      "g": 0.7495350290765965,
+      "label": 0,
+      "parameter_id": "class-0-00008",
+      "split": "test"
+    },
+    {
+      "energy": -3.287391142705318,
+      "g": 0.4160259390419352,
+      "label": 0,
+      "parameter_id": "class-0-00009",
+      "split": "train"
+    },
+    {
+      "energy": -3.0837877340100284,
+      "g": 0.23193876470166094,
+      "label": 0,
+      "parameter_id": "class-0-00010",
+      "split": "train"
+    },
+    {
+      "energy": -3.140229911647613,
+      "g": 0.2969007713157933,
+      "label": 0,
+      "parameter_id": "class-0-00011",
+      "split": "train"
+    },
+    {
+      "energy": -3.208537331804828,
+      "g": 0.358124664150845,
+      "label": 0,
+      "parameter_id": "class-0-00012",
+      "split": "train"
+    },
+    {
+      "energy": -3.6579653882553345,
+      "g": 0.6117554672807776,
+      "label": 0,
+      "parameter_id": "class-0-00013",
+      "split": "train"
+    },
+    {
+      "energy": -3.4381615736222773,
+      "g": 0.5060049962306592,
+      "label": 0,
+      "parameter_id": "class-0-00014",
+      "split": "train"
+    },
+    {
+      "energy": -4.055865329694431,
+      "g": 0.768178287377971,
+      "label": 0,
+      "parameter_id": "class-0-00015",
+      "split": "test"
+    },
+    {
+      "energy": -3.125372873181383,
+      "g": 0.2814741172455181,
+      "label": 0,
+      "parameter_id": "class-0-00016",
+      "split": "test"
+    },
+    {
+      "energy": -3.2929397120163704,
+      "g": 0.41974431886066993,
+      "label": 0,
+      "parameter_id": "class-0-00017",
+      "split": "train"
+    },
+    {
+      "energy": -3.256644710585162,
+      "g": 0.39465794630307816,
+      "label": 0,
+      "parameter_id": "class-0-00018",
+      "split": "test"
+    },
+    {
+      "energy": -3.1809499533545442,
+      "g": 0.3349976601629431,
+      "label": 0,
+      "parameter_id": "class-0-00019",
+      "split": "train"
+    },
+    {
+      "energy": -3.671002922844408,
+      "g": 0.6174408430931173,
+      "label": 0,
+      "parameter_id": "class-0-00020",
+      "split": "test"
+    },
+    {
+      "energy": -3.6124880128152146,
+      "g": 0.5914997667621501,
+      "label": 0,
+      "parameter_id": "class-0-00021",
+      "split": "train"
+    },
+    {
+      "energy": -4.050837811062158,
+      "g": 0.7663667480628311,
+      "label": 0,
+      "parameter_id": "class-0-00022",
+      "split": "val"
+    },
+    {
+      "energy": -3.1793220885049096,
+      "g": 0.3335729529184907,
+      "label": 0,
+      "parameter_id": "class-0-00023",
+      "split": "train"
+    },
+    {
+      "energy": -4.000329822185947,
+      "g": 0.747987417977477,
+      "label": 0,
+      "parameter_id": "class-0-00024",
+      "split": "train"
+    },
+    {
+      "energy": -3.0871399456877584,
+      "g": 0.23637426827500305,
+      "label": 0,
+      "parameter_id": "class-0-00025",
+      "split": "train"
+    },
+    {
+      "energy": -3.4609893365990065,
+      "g": 0.5180792738290952,
+      "label": 0,
+      "parameter_id": "class-0-00026",
+      "split": "val"
+    },
+    {
+      "energy": -3.289881131295662,
+      "g": 0.4176994889197786,
+      "label": 0,
+      "parameter_id": "class-0-00027",
+      "split": "train"
+    },
+    {
+      "energy": -3.3096471031069536,
+      "g": 0.43071093392349635,
+      "label": 0,
+      "parameter_id": "class-0-00028",
+      "split": "train"
+    },
+    {
+      "energy": -3.6178438740093055,
+      "g": 0.5939213134652501,
+      "label": 0,
+      "parameter_id": "class-0-00029",
+      "split": "train"
+    },
+    {
+      "energy": -3.264911878839055,
+      "g": 0.400537649682437,
+      "label": 0,
+      "parameter_id": "class-0-00030",
+      "split": "train"
+    },
+    {
+      "energy": -3.1641919531170664,
+      "g": 0.3199686206278371,
+      "label": 0,
+      "parameter_id": "class-0-00031",
+      "split": "train"
+    },
+    {
+      "energy": -3.408791732469983,
+      "g": 0.48997403901682435,
+      "label": 0,
+      "parameter_id": "class-0-00032",
+      "split": "train"
+    },
+    {
+      "energy": -3.5472939535703985,
+      "g": 0.5611606520176665,
+      "label": 0,
+      "parameter_id": "class-0-00033",
+      "split": "train"
+    },
+    {
+      "energy": -3.1270064327698037,
+      "g": 0.2832183881271203,
+      "label": 0,
+      "parameter_id": "class-0-00034",
+      "split": "val"
+    },
+    {
+      "energy": -3.4246477578277994,
+      "g": 0.49870152239887583,
+      "label": 0,
+      "parameter_id": "class-0-00035",
+      "split": "test"
+    },
+    {
+      "energy": -3.3172494614763433,
+      "g": 0.4355928287021071,
+      "label": 0,
+      "parameter_id": "class-0-00036",
+      "split": "val"
+    },
+    {
+      "energy": -4.135240746022371,
+      "g": 0.796384231308324,
+      "label": 0,
+      "parameter_id": "class-0-00037",
+      "split": "train"
+    },
+    {
+      "energy": -3.658876091106406,
+      "g": 0.6121542869992269,
+      "label": 0,
+      "parameter_id": "class-0-00038",
+      "split": "train"
+    },
+    {
+      "energy": -3.3321303849018267,
+      "g": 0.4449657736358459,
+      "label": 0,
+      "parameter_id": "class-0-00039",
+      "split": "train"
+    },
+    {
+      "energy": -3.1010401515689074,
+      "g": 0.2538375454230154,
+      "label": 0,
+      "parameter_id": "class-0-00040",
+      "split": "val"
+    },
+    {
+      "energy": -3.63220394558942,
+      "g": 0.6003652617456775,
+      "label": 0,
+      "parameter_id": "class-0-00041",
+      "split": "train"
+    },
+    {
+      "energy": -3.816836009289993,
+      "g": 0.6779580603883781,
+      "label": 0,
+      "parameter_id": "class-0-00042",
+      "split": "train"
+    },
+    {
+      "energy": -3.5668034735987066,
+      "g": 0.5704159809277166,
+      "label": 0,
+      "parameter_id": "class-0-00043",
+      "split": "train"
+    },
+    {
+      "energy": -3.5170484517168252,
+      "g": 0.5464824775605529,
+      "label": 0,
+      "parameter_id": "class-0-00044",
+      "split": "train"
+    },
+    {
+      "energy": -3.2047860803913975,
+      "g": 0.35508530888870715,
+      "label": 0,
+      "parameter_id": "class-0-00045",
+      "split": "test"
+    },
+    {
+      "energy": -3.6921976373813252,
+      "g": 0.6265761910988408,
+      "label": 0,
+      "parameter_id": "class-0-00046",
+      "split": "train"
+    },
+    {
+      "energy": -3.5177122343226404,
+      "g": 0.5468091545829168,
+      "label": 0,
+      "parameter_id": "class-0-00047",
+      "split": "val"
+    },
+    {
+      "energy": -3.0954939882321195,
+      "g": 0.24703799160041254,
+      "label": 0,
+      "parameter_id": "class-0-00048",
+      "split": "test"
+    },
+    {
+      "energy": -3.087141267759447,
+      "g": 0.23637599906483742,
+      "label": 0,
+      "parameter_id": "class-0-00049",
+      "split": "train"
+    },
+    {
+      "energy": -3.0753177422985485,
+      "g": 0.220282349090266,
+      "label": 0,
+      "parameter_id": "class-0-00050",
+      "split": "val"
+    },
+    {
+      "energy": -3.0989750083650853,
+      "g": 0.2513302180305127,
+      "label": 0,
+      "parameter_id": "class-0-00051",
+      "split": "val"
+    },
+    {
+      "energy": -3.8017544573360627,
+      "g": 0.6719308204961062,
+      "label": 0,
+      "parameter_id": "class-0-00052",
+      "split": "val"
+    },
+    {
+      "energy": -3.990047432051675,
+      "g": 0.7442038794726993,
+      "label": 0,
+      "parameter_id": "class-0-00053",
+      "split": "train"
+    },
+    {
+      "energy": -3.5138654616619864,
+      "g": 0.544913044544729,
+      "label": 0,
+      "parameter_id": "class-0-00054",
+      "split": "train"
+    },
+    {
+      "energy": -3.4475058812694797,
+      "g": 0.5109862126732145,
+      "label": 0,
+      "parameter_id": "class-0-00055",
+      "split": "train"
+    },
+    {
+      "energy": -3.2432170865763155,
+      "g": 0.3848778959398045,
+      "label": 0,
+      "parameter_id": "class-0-00056",
+      "split": "train"
+    },
+    {
+      "energy": -3.9481355332392827,
+      "g": 0.7286248934573123,
+      "label": 0,
+      "parameter_id": "class-0-00057",
+      "split": "train"
+    },
+    {
+      "energy": -3.3263538617973203,
+      "g": 0.4413552914050601,
+      "label": 0,
+      "parameter_id": "class-0-00058",
+      "split": "train"
+    },
+    {
+      "energy": -3.5087192112558228,
+      "g": 0.5423651833057976,
+      "label": 0,
+      "parameter_id": "class-0-00059",
+      "split": "val"
+    },
+    {
+      "energy": -3.1604002825393036,
+      "g": 0.31645022621524177,
+      "label": 0,
+      "parameter_id": "class-0-00060",
+      "split": "val"
+    },
+    {
+      "energy": -3.3768332807046195,
+      "g": 0.471817904475553,
+      "label": 0,
+      "parameter_id": "class-0-00061",
+      "split": "train"
+    },
+    {
+      "energy": -3.1622769830735624,
+      "g": 0.3181974232107459,
+      "label": 0,
+      "parameter_id": "class-0-00062",
+      "split": "train"
+    },
+    {
+      "energy": -4.009584393287592,
+      "g": 0.7513803122886991,
+      "label": 0,
+      "parameter_id": "class-0-00063",
+      "split": "train"
+    },
+    {
+      "energy": -3.792875346696171,
+      "g": 0.6683598687236156,
+      "label": 0,
+      "parameter_id": "class-0-00064",
+      "split": "train"
+    },
+    {
+      "energy": -3.604092639994435,
+      "g": 0.5876835552206536,
+      "label": 0,
+      "parameter_id": "class-0-00065",
+      "split": "test"
+    },
+    {
+      "energy": -3.0658131165473796,
+      "g": 0.20632229748232556,
+      "label": 0,
+      "parameter_id": "class-0-00066",
+      "split": "train"
+    },
+    {
+      "energy": -3.0794351780801805,
+      "g": 0.22603301322050498,
+      "label": 0,
+      "parameter_id": "class-0-00067",
+      "split": "train"
+    },
+    {
+      "energy": -3.1318438475979518,
+      "g": 0.2883117288059418,
+      "label": 0,
+      "parameter_id": "class-0-00068",
+      "split": "train"
+    },
+    {
+      "energy": -4.141086839024765,
+      "g": 0.7984338464625791,
+      "label": 0,
+      "parameter_id": "class-0-00069",
+      "split": "train"
+    },
+    {
+      "energy": -3.094928545865733,
+      "g": 0.24633272789051047,
+      "label": 0,
+      "parameter_id": "class-0-00070",
+      "split": "test"
+    },
+    {
+      "energy": -3.5270251375532595,
+      "g": 0.5513704615612919,
+      "label": 0,
+      "parameter_id": "class-0-00071",
+      "split": "train"
+    },
+    {
+      "energy": -3.5041574208289306,
+      "g": 0.5400957695092138,
+      "label": 0,
+      "parameter_id": "class-0-00072",
+      "split": "train"
+    },
+    {
+      "energy": -3.9298365121794667,
+      "g": 0.7217400323086898,
+      "label": 0,
+      "parameter_id": "class-0-00073",
+      "split": "train"
+    },
+    {
+      "energy": -3.8345879023596865,
+      "g": 0.6849929092661181,
+      "label": 0,
+      "parameter_id": "class-0-00074",
+      "split": "train"
+    },
+    {
+      "energy": -3.5690072181921946,
+      "g": 0.5714515392553448,
+      "label": 0,
+      "parameter_id": "class-0-00075",
+      "split": "test"
+    },
+    {
+      "energy": -3.2993982448532053,
+      "g": 0.4240236762457142,
+      "label": 0,
+      "parameter_id": "class-0-00076",
+      "split": "train"
+    },
+    {
+      "energy": -3.3978353491707547,
+      "g": 0.48383795501094223,
+      "label": 0,
+      "parameter_id": "class-0-00077",
+      "split": "train"
+    },
+    {
+      "energy": -3.2308083434848136,
+      "g": 0.37556739199641476,
+      "label": 0,
+      "parameter_id": "class-0-00078",
+      "split": "train"
+    },
+    {
+      "energy": -3.9640068187038975,
+      "g": 0.7345547686551295,
+      "label": 0,
+      "parameter_id": "class-0-00079",
+      "split": "train"
+    },
+    {
+      "energy": -4.004062042557386,
+      "g": 0.7493571233785881,
+      "label": 0,
+      "parameter_id": "class-0-00080",
+      "split": "train"
+    },
+    {
+      "energy": -3.088635094103361,
+      "g": 0.23832256910773994,
+      "label": 0,
+      "parameter_id": "class-0-00081",
+      "split": "train"
+    },
+    {
+      "energy": -3.3581023667110546,
+      "g": 0.4607895118831634,
+      "label": 0,
+      "parameter_id": "class-0-00082",
+      "split": "train"
+    },
+    {
+      "energy": -3.2369874807908494,
+      "g": 0.38023786375038593,
+      "label": 0,
+      "parameter_id": "class-0-00083",
+      "split": "train"
+    },
+    {
+      "energy": -3.2117467433776374,
+      "g": 0.3607007211973122,
+      "label": 0,
+      "parameter_id": "class-0-00084",
+      "split": "train"
+    },
+    {
+      "energy": -4.032820354243616,
+      "g": 0.7598485204837038,
+      "label": 0,
+      "parameter_id": "class-0-00085",
+      "split": "val"
+    },
+    {
+      "energy": -3.5895340124594686,
+      "g": 0.5810049701379388,
+      "label": 0,
+      "parameter_id": "class-0-00086",
+      "split": "train"
+    },
+    {
+      "energy": -3.791491306350605,
+      "g": 0.6678017116702339,
+      "label": 0,
+      "parameter_id": "class-0-00087",
+      "split": "train"
+    },
+    {
+      "energy": -3.1141981113061177,
+      "g": 0.26918864443824575,
+      "label": 0,
+      "parameter_id": "class-0-00088",
+      "split": "train"
+    },
+    {
+      "energy": -3.251676042014345,
+      "g": 0.3910731392440311,
+      "label": 0,
+      "parameter_id": "class-0-00089",
+      "split": "train"
+    },
+    {
+      "energy": -3.2121883960555957,
+      "g": 0.3610534960254982,
+      "label": 0,
+      "parameter_id": "class-0-00090",
+      "split": "train"
+    },
+    {
+      "energy": -4.054081723562172,
+      "g": 0.7675359686386367,
+      "label": 0,
+      "parameter_id": "class-0-00091",
+      "split": "train"
+    },
+    {
+      "energy": -3.3107588509823214,
+      "g": 0.431428941641965,
+      "label": 0,
+      "parameter_id": "class-0-00092",
+      "split": "train"
+    },
+    {
+      "energy": -3.392043826340855,
+      "g": 0.48055798120791443,
+      "label": 0,
+      "parameter_id": "class-0-00093",
+      "split": "train"
+    },
+    {
+      "energy": -3.6458408058515257,
+      "g": 0.6064211487280865,
+      "label": 0,
+      "parameter_id": "class-0-00094",
+      "split": "train"
+    },
+    {
+      "energy": -3.132964177986989,
+      "g": 0.2894764434747263,
+      "label": 0,
+      "parameter_id": "class-0-00095",
+      "split": "test"
+    },
+    {
+      "energy": -3.6481453091644043,
+      "g": 0.6074386025135714,
+      "label": 0,
+      "parameter_id": "class-0-00096",
+      "split": "test"
+    },
+    {
+      "energy": -3.220363385042913,
+      "g": 0.3675103293979574,
+      "label": 0,
+      "parameter_id": "class-0-00097",
+      "split": "test"
+    },
+    {
+      "energy": -3.1781686398076197,
+      "g": 0.33255905535688246,
+      "label": 0,
+      "parameter_id": "class-0-00098",
+      "split": "train"
+    },
+    {
+      "energy": -3.5042879249426995,
+      "g": 0.5401608372151063,
+      "label": 0,
+      "parameter_id": "class-0-00099",
+      "split": "val"
+    },
+    {
+      "energy": -6.481527389978949,
+      "g": 1.493887408293015,
+      "label": 1,
+      "parameter_id": "class-1-00000",
+      "split": "train"
+    },
+    {
+      "energy": -7.146257694365676,
+      "g": 1.673813037592079,
+      "label": 1,
+      "parameter_id": "class-1-00001",
+      "split": "train"
+    },
+    {
+      "energy": -6.331285668270016,
+      "g": 1.4526969782594867,
+      "label": 1,
+      "parameter_id": "class-1-00002",
+      "split": "val"
+    },
+    {
+      "energy": -6.172710046541222,
+      "g": 1.4089648460096162,
+      "label": 1,
+      "parameter_id": "class-1-00003",
+      "split": "train"
+    },
+    {
+      "energy": -7.511386954910962,
+      "g": 1.7713679597760992,
+      "label": 1,
+      "parameter_id": "class-1-00004",
+      "split": "train"
+    },
+    {
+      "energy": -5.47046518004021,
+      "g": 1.2112136845317563,
+      "label": 1,
+      "parameter_id": "class-1-00005",
+      "split": "train"
+    },
+    {
+      "energy": -6.101029491394427,
+      "g": 1.3891022599877827,
+      "label": 1,
+      "parameter_id": "class-1-00006",
+      "split": "train"
+    },
+    {
+      "energy": -7.534329095887059,
+      "g": 1.7774728898413397,
+      "label": 1,
+      "parameter_id": "class-1-00007",
+      "split": "train"
+    },
+    {
+      "energy": -7.533901336213734,
+      "g": 1.777359087481827,
+      "label": 1,
+      "parameter_id": "class-1-00008",
+      "split": "train"
+    },
+    {
+      "energy": -5.492487007205674,
+      "g": 1.2175407174183248,
+      "label": 1,
+      "parameter_id": "class-1-00009",
+      "split": "train"
+    },
+    {
+      "energy": -6.308208273070101,
+      "g": 1.4463497210495941,
+      "label": 1,
+      "parameter_id": "class-1-00010",
+      "split": "train"
+    },
+    {
+      "energy": -6.825147842870179,
+      "g": 1.5873221029861966,
+      "label": 1,
+      "parameter_id": "class-1-00011",
+      "split": "train"
+    },
+    {
+      "energy": -5.719639890849474,
+      "g": 1.2822696324911598,
+      "label": 1,
+      "parameter_id": "class-1-00012",
+      "split": "test"
+    },
+    {
+      "energy": -7.143818360553757,
+      "g": 1.6731586291929523,
+      "label": 1,
+      "parameter_id": "class-1-00013",
+      "split": "train"
+    },
+    {
+      "energy": -5.8031179930753,
+      "g": 1.305834626903721,
+      "label": 1,
+      "parameter_id": "class-1-00014",
+      "split": "train"
+    },
+    {
+      "energy": -7.01207752105092,
+      "g": 1.6377584705768964,
+      "label": 1,
+      "parameter_id": "class-1-00015",
+      "split": "test"
+    },
+    {
+      "energy": -6.105751217058087,
+      "g": 1.390412551233009,
+      "label": 1,
+      "parameter_id": "class-1-00016",
+      "split": "train"
+    },
+    {
+      "energy": -7.273341491843374,
+      "g": 1.7078551410607692,
+      "label": 1,
+      "parameter_id": "class-1-00017",
+      "split": "train"
+    },
+    {
+      "energy": -5.828194704074231,
+      "g": 1.3128922191433723,
+      "label": 1,
+      "parameter_id": "class-1-00018",
+      "split": "train"
+    },
+    {
+      "energy": -7.006933867061185,
+      "g": 1.6363739614835264,
+      "label": 1,
+      "parameter_id": "class-1-00019",
+      "split": "val"
+    },
+    {
+      "energy": -5.699552345400785,
+      "g": 1.2765822777162408,
+      "label": 1,
+      "parameter_id": "class-1-00020",
+      "split": "train"
+    },
+    {
+      "energy": -6.273208796291558,
+      "g": 1.4367125621787484,
+      "label": 1,
+      "parameter_id": "class-1-00021",
+      "split": "val"
+    },
+    {
+      "energy": -7.370720977136759,
+      "g": 1.7338751775436605,
+      "label": 1,
+      "parameter_id": "class-1-00022",
+      "split": "train"
+    },
+    {
+      "energy": -5.924931057587599,
+      "g": 1.3400303590736045,
+      "label": 1,
+      "parameter_id": "class-1-00023",
+      "split": "val"
+    },
+    {
+      "energy": -6.110214190168882,
+      "g": 1.3916507869517907,
+      "label": 1,
+      "parameter_id": "class-1-00024",
+      "split": "train"
+    },
+    {
+      "energy": -5.5240177164861555,
+      "g": 1.2265828901251097,
+      "label": 1,
+      "parameter_id": "class-1-00025",
+      "split": "train"
+    },
+    {
+      "energy": -5.839455275524018,
+      "g": 1.3160582945798625,
+      "label": 1,
+      "parameter_id": "class-1-00026",
+      "split": "train"
+    },
+    {
+      "energy": -6.414488404412869,
+      "g": 1.4755356185864694,
+      "label": 1,
+      "parameter_id": "class-1-00027",
+      "split": "train"
+    },
+    {
+      "energy": -7.294209521244265,
+      "g": 1.71343576122342,
+      "label": 1,
+      "parameter_id": "class-1-00028",
+      "split": "train"
+    },
+    {
+      "energy": -6.799132045293541,
+      "g": 1.5802821486799066,
+      "label": 1,
+      "parameter_id": "class-1-00029",
+      "split": "train"
+    },
+    {
+      "energy": -7.191078445595969,
+      "g": 1.685830578411982,
+      "label": 1,
+      "parameter_id": "class-1-00030",
+      "split": "train"
+    },
+    {
+      "energy": -6.317176476531615,
+      "g": 1.4488170225439592,
+      "label": 1,
+      "parameter_id": "class-1-00031",
+      "split": "val"
+    },
+    {
+      "energy": -6.0296497551853365,
+      "g": 1.3692602728226004,
+      "label": 1,
+      "parameter_id": "class-1-00032",
+      "split": "train"
+    },
+    {
+      "energy": -5.59712733389834,
+      "g": 1.2474752956155983,
+      "label": 1,
+      "parameter_id": "class-1-00033",
+      "split": "train"
+    },
+    {
+      "energy": -7.385047708929025,
+      "g": 1.7376987469002727,
+      "label": 1,
+      "parameter_id": "class-1-00034",
+      "split": "val"
+    },
+    {
+      "energy": -7.583161739183201,
+      "g": 1.7904582965212479,
+      "label": 1,
+      "parameter_id": "class-1-00035",
+      "split": "train"
+    },
+    {
+      "energy": -6.5250454274658365,
+      "g": 1.505777497770287,
+      "label": 1,
+      "parameter_id": "class-1-00036",
+      "split": "train"
+    },
+    {
+      "energy": -6.110147709535286,
+      "g": 1.3916323439267804,
+      "label": 1,
+      "parameter_id": "class-1-00037",
+      "split": "train"
+    },
+    {
+      "energy": -6.262290940425664,
+      "g": 1.4337036015634546,
+      "label": 1,
+      "parameter_id": "class-1-00038",
+      "split": "val"
+    },
+    {
+      "energy": -5.788902031378265,
+      "g": 1.3018293949352748,
+      "label": 1,
+      "parameter_id": "class-1-00039",
+      "split": "test"
+    },
+    {
+      "energy": -6.33772306924432,
+      "g": 1.4544665378762094,
+      "label": 1,
+      "parameter_id": "class-1-00040",
+      "split": "test"
+    },
+    {
+      "energy": -5.882366845021083,
+      "g": 1.328106258427922,
+      "label": 1,
+      "parameter_id": "class-1-00041",
+      "split": "val"
+    },
+    {
+      "energy": -5.894980525551289,
+      "g": 1.3316425987822686,
+      "label": 1,
+      "parameter_id": "class-1-00042",
+      "split": "train"
+    },
+    {
+      "energy": -5.476954498860217,
+      "g": 1.213079132340383,
+      "label": 1,
+      "parameter_id": "class-1-00043",
+      "split": "test"
+    },
+    {
+      "energy": -6.326740965882252,
+      "g": 1.4514474365428682,
+      "label": 1,
+      "parameter_id": "class-1-00044",
+      "split": "train"
+    },
+    {
+      "energy": -5.869609085160612,
+      "g": 1.324527181485944,
+      "label": 1,
+      "parameter_id": "class-1-00045",
+      "split": "train"
+    },
+    {
+      "energy": -6.060566692196622,
+      "g": 1.377862395756887,
+      "label": 1,
+      "parameter_id": "class-1-00046",
+      "split": "val"
+    },
+    {
+      "energy": -5.513101184900946,
+      "g": 1.2234545330108715,
+      "label": 1,
+      "parameter_id": "class-1-00047",
+      "split": "test"
+    },
+    {
+      "energy": -6.115080900806727,
+      "g": 1.3930007610808517,
+      "label": 1,
+      "parameter_id": "class-1-00048",
+      "split": "test"
+    },
+    {
+      "energy": -6.215691777301278,
+      "g": 1.4208460596862764,
+      "label": 1,
+      "parameter_id": "class-1-00049",
+      "split": "test"
+    },
+    {
+      "energy": -6.752389441093524,
+      "g": 1.5676202062245963,
+      "label": 1,
+      "parameter_id": "class-1-00050",
+      "split": "val"
+    },
+    {
+      "energy": -7.057767022886211,
+      "g": 1.6500487468224074,
+      "label": 1,
+      "parameter_id": "class-1-00051",
+      "split": "train"
+    },
+    {
+      "energy": -7.021995737400441,
+      "g": 1.6404276297866316,
+      "label": 1,
+      "parameter_id": "class-1-00052",
+      "split": "test"
+    },
+    {
+      "energy": -5.929255103882308,
+      "g": 1.3412402797312233,
+      "label": 1,
+      "parameter_id": "class-1-00053",
+      "split": "train"
+    },
+    {
+      "energy": -5.951586706853434,
+      "g": 1.3474847965665777,
+      "label": 1,
+      "parameter_id": "class-1-00054",
+      "split": "train"
+    },
+    {
+      "energy": -5.509151982304452,
+      "g": 1.222322232547379,
+      "label": 1,
+      "parameter_id": "class-1-00055",
+      "split": "train"
+    },
+    {
+      "energy": -7.450196236466053,
+      "g": 1.7550714924725779,
+      "label": 1,
+      "parameter_id": "class-1-00056",
+      "split": "train"
+    },
+    {
+      "energy": -6.270083008487595,
+      "g": 1.4358512281317877,
+      "label": 1,
+      "parameter_id": "class-1-00057",
+      "split": "train"
+    },
+    {
+      "energy": -7.189515506764127,
+      "g": 1.68541172750937,
+      "label": 1,
+      "parameter_id": "class-1-00058",
+      "split": "train"
+    },
+    {
+      "energy": -6.765468408955356,
+      "g": 1.571164858743208,
+      "label": 1,
+      "parameter_id": "class-1-00059",
+      "split": "test"
+    },
+    {
+      "energy": -6.025111366070739,
+      "g": 1.3679965066274322,
+      "label": 1,
+      "parameter_id": "class-1-00060",
+      "split": "test"
+    },
+    {
+      "energy": -5.54606533118939,
+      "g": 1.232894045649241,
+      "label": 1,
+      "parameter_id": "class-1-00061",
+      "split": "train"
+    },
+    {
+      "energy": -6.642616286019398,
+      "g": 1.5378146618844108,
+      "label": 1,
+      "parameter_id": "class-1-00062",
+      "split": "train"
+    },
+    {
+      "energy": -6.585708942983483,
+      "g": 1.5223231374809147,
+      "label": 1,
+      "parameter_id": "class-1-00063",
+      "split": "train"
+    },
+    {
+      "energy": -6.017420251635818,
+      "g": 1.365854216666651,
+      "label": 1,
+      "parameter_id": "class-1-00064",
+      "split": "train"
+    },
+    {
+      "energy": -7.4761863393531085,
+      "g": 1.7619956740598113,
+      "label": 1,
+      "parameter_id": "class-1-00065",
+      "split": "train"
+    },
+    {
+      "energy": -7.088474340019921,
+      "g": 1.658301029585718,
+      "label": 1,
+      "parameter_id": "class-1-00066",
+      "split": "train"
+    },
+    {
+      "energy": -5.94058594673356,
+      "g": 1.3444095509652478,
+      "label": 1,
+      "parameter_id": "class-1-00067",
+      "split": "train"
+    },
+    {
+      "energy": -6.603633930870902,
+      "g": 1.5272057874031923,
+      "label": 1,
+      "parameter_id": "class-1-00068",
+      "split": "train"
+    },
+    {
+      "energy": -6.918840113548712,
+      "g": 1.6126332389752611,
+      "label": 1,
+      "parameter_id": "class-1-00069",
+      "split": "val"
+    },
+    {
+      "energy": -7.386404511986384,
+      "g": 1.738060795809778,
+      "label": 1,
+      "parameter_id": "class-1-00070",
+      "split": "train"
+    },
+    {
+      "energy": -7.46853227344618,
+      "g": 1.759956883507384,
+      "label": 1,
+      "parameter_id": "class-1-00071",
+      "split": "train"
+    },
+    {
+      "energy": -6.475224540438549,
+      "g": 1.4921638564675352,
+      "label": 1,
+      "parameter_id": "class-1-00072",
+      "split": "val"
+    },
+    {
+      "energy": -6.862148648713249,
+      "g": 1.5973257463418535,
+      "label": 1,
+      "parameter_id": "class-1-00073",
+      "split": "train"
+    },
+    {
+      "energy": -6.021125602594892,
+      "g": 1.366886404679291,
+      "label": 1,
+      "parameter_id": "class-1-00074",
+      "split": "train"
+    },
+    {
+      "energy": -7.184463378540126,
+      "g": 1.6840577074409673,
+      "label": 1,
+      "parameter_id": "class-1-00075",
+      "split": "test"
+    },
+    {
+      "energy": -6.098072242033726,
+      "g": 1.3882814760728057,
+      "label": 1,
+      "parameter_id": "class-1-00076",
+      "split": "train"
+    },
+    {
+      "energy": -7.240538649083185,
+      "g": 1.699077633325056,
+      "label": 1,
+      "parameter_id": "class-1-00077",
+      "split": "train"
+    },
+    {
+      "energy": -7.420561180467493,
+      "g": 1.7471717863301324,
+      "label": 1,
+      "parameter_id": "class-1-00078",
+      "split": "val"
+    },
+    {
+      "energy": -5.580685612687245,
+      "g": 1.2427854989987226,
+      "label": 1,
+      "parameter_id": "class-1-00079",
+      "split": "train"
+    },
+    {
+      "energy": -6.383339795633877,
+      "g": 1.466993741731638,
+      "label": 1,
+      "parameter_id": "class-1-00080",
+      "split": "train"
+    },
+    {
+      "energy": -7.276033301204015,
+      "g": 1.7085751408975824,
+      "label": 1,
+      "parameter_id": "class-1-00081",
+      "split": "val"
+    },
+    {
+      "energy": -6.348593232080073,
+      "g": 1.457453628862817,
+      "label": 1,
+      "parameter_id": "class-1-00082",
+      "split": "train"
+    },
+    {
+      "energy": -6.674102964040835,
+      "g": 1.5463741309488495,
+      "label": 1,
+      "parameter_id": "class-1-00083",
+      "split": "train"
+    },
+    {
+      "energy": -7.304450920969386,
+      "g": 1.7161736261896778,
+      "label": 1,
+      "parameter_id": "class-1-00084",
+      "split": "train"
+    },
+    {
+      "energy": -7.582596117279446,
+      "g": 1.790307957693861,
+      "label": 1,
+      "parameter_id": "class-1-00085",
+      "split": "train"
+    },
+    {
+      "energy": -6.890891592513529,
+      "g": 1.6050896973237634,
+      "label": 1,
+      "parameter_id": "class-1-00086",
+      "split": "val"
+    },
+    {
+      "energy": -7.034301581093373,
+      "g": 1.6437384087988325,
+      "label": 1,
+      "parameter_id": "class-1-00087",
+      "split": "train"
+    },
+    {
+      "energy": -6.02415452019511,
+      "g": 1.367730027858725,
+      "label": 1,
+      "parameter_id": "class-1-00088",
+      "split": "test"
+    },
+    {
+      "energy": -6.141649070578491,
+      "g": 1.4003654374899155,
+      "label": 1,
+      "parameter_id": "class-1-00089",
+      "split": "train"
+    },
+    {
+      "energy": -5.505632853955787,
+      "g": 1.2213129825153848,
+      "label": 1,
+      "parameter_id": "class-1-00090",
+      "split": "train"
+    },
+    {
+      "energy": -5.470197983326698,
+      "g": 1.2111368566341512,
+      "label": 1,
+      "parameter_id": "class-1-00091",
+      "split": "train"
+    },
+    {
+      "energy": -6.971269534584878,
+      "g": 1.626769221736233,
+      "label": 1,
+      "parameter_id": "class-1-00092",
+      "split": "test"
+    },
+    {
+      "energy": -5.8039747923528955,
+      "g": 1.3060759233300259,
+      "label": 1,
+      "parameter_id": "class-1-00093",
+      "split": "train"
+    },
+    {
+      "energy": -5.678134992253445,
+      "g": 1.2705109683413935,
+      "label": 1,
+      "parameter_id": "class-1-00094",
+      "split": "test"
+    },
+    {
+      "energy": -6.345244723948253,
+      "g": 1.45653359857367,
+      "label": 1,
+      "parameter_id": "class-1-00095",
+      "split": "train"
+    },
+    {
+      "energy": -7.519675974961541,
+      "g": 1.7735739933488004,
+      "label": 1,
+      "parameter_id": "class-1-00096",
+      "split": "train"
+    },
+    {
+      "energy": -5.815616579424117,
+      "g": 1.309353429307726,
+      "label": 1,
+      "parameter_id": "class-1-00097",
+      "split": "train"
+    },
+    {
+      "energy": -7.052770110416264,
+      "g": 1.6487052843191015,
+      "label": 1,
+      "parameter_id": "class-1-00098",
+      "split": "train"
+    },
+    {
+      "energy": -7.59085814619667,
+      "g": 1.7925037941629152,
+      "label": 1,
+      "parameter_id": "class-1-00099",
+      "split": "train"
+    }
+  ]
+}

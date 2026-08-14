@@ -1,0 +1,12 @@
+{
+  "errors": [],
+  "max_eigenpair_residual": 3.657001166779273e-15,
+  "max_norm_error": 4.440892098500626e-16,
+  "samples": 200,
+  "split_counts": {
+    "test": 30,
+    "train": 140,
+    "val": 30
+  },
+  "valid": true
+}
