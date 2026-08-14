@@ -20,11 +20,23 @@ uv sync --extra dev
 
 저장소 루트에서 다음을 실행한다.
 
+Random-split benchmark:
+
 ```bash
 uv run generate-tfim \
   --config configs/dataset/tfim_4q.yaml \
-  --output data/tfim_4q
+  --output data/tfim_4q_random
 ```
+
+Blocked-g benchmark:
+
+```bash
+uv run generate-tfim \
+  --config configs/dataset/tfim_4q_blocked.yaml \
+  --output data/tfim_4q_blocked
+```
+
+Blocked 방식은 class별 `g` 영역을 train/val/test 연속 구간으로 나누고 인접 구간 사이에 `blocked_g_gap`을 비워 near-duplicate state를 방지한다. Random 방식은 기존 class-stratified random assignment를 유지하며 두 결과를 별도 benchmark로 보고한다.
 
 동일한 명령을 source-tree script로 실행할 수도 있다.
 
@@ -40,14 +52,21 @@ uv run python scripts/generate_tfim.py \
 {
   "valid": true,
   "errors": [],
-  "samples": 200,
+  "samples": 400,
+  "split_strategy": "random",
   "split_counts": {
-    "train": 140,
-    "val": 30,
-    "test": 30
+    "train": 280,
+    "val": 60,
+    "test": 60
   },
   "max_norm_error": 8.881784197001252e-16,
-  "max_eigenpair_residual": 3.940900794429958e-15
+  "max_eigenpair_residual": 4.839349969133126e-15,
+  "minimum_cross_split_g_gap": 1.8443025010306258e-05,
+  "checksums_valid": {
+    "states.npz": true,
+    "split_manifest.json": true,
+    "validation.json": true
+  }
 }
 ```
 
@@ -70,8 +89,8 @@ H = -J Σ_i Z_i Z_(i+1) - g Σ_i X_i
 | `boundary` | open | 마지막 qubit과 첫 qubit을 연결하지 않음 |
 | ferromagnetic `g/J` | 0.2–0.8 | class 0 sampling 영역 |
 | paramagnetic `g/J` | 1.2–1.8 | class 1 sampling 영역 |
-| samples/class | 100 | 총 200 parameter points |
-| split | 70/15/15% | class-stratified train/val/test |
+| samples/class | 200 | 총 400 parameter points, train 140/class |
+| split | 70/15/15% | class-stratified random 또는 blocked-g |
 
 각 `g`에서 dense Hermitian exact diagonalization을 수행하여 최소 eigenvalue `E0`와 정규화된 ground-state vector `|ψ0⟩`를 계산한다.
 
@@ -95,12 +114,14 @@ NumPy compressed archive이며 기본 실행 결과는 다음 배열을 포함�
 
 | Key | Shape | dtype | 설명 |
 |---|---:|---|---|
-| `states` | `(200, 16)` | `complex128` | computational basis의 ground-state amplitudes |
-| `energies` | `(200,)` | `float64` | 각 Hamiltonian의 minimum eigenvalue |
-| `labels` | `(200,)` | `int8` | `0`: ferromagnetic, `1`: paramagnetic |
-| `parameter_ids` | `(200,)` | string | leakage 검사용 고유 parameter ID |
-| `splits` | `(200,)` | string | `train`, `val`, `test` |
-| `g` | `(200,)` | `float64` | transverse-field strength |
+| `states` | `(400, 16)` | `complex128` | computational basis의 ground-state amplitudes |
+| `energies` | `(400,)` | `float64` | 각 Hamiltonian의 minimum eigenvalue |
+| `labels` | `(400,)` | `int8` | `0`: ferromagnetic, `1`: paramagnetic |
+| `parameter_ids` | `(400,)` | string | leakage 검사용 고유 parameter ID |
+| `splits` | `(400,)` | string | `train`, `val`, `test` |
+| `g` | `(400,)` | `float64` | transverse-field strength |
+| `magnetization_x` | `(400,)` | `float64` | transverse magnetization `⟨Mx⟩` |
+| `magnetization_z2` | `(400,)` | `float64` | longitudinal order diagnostic `⟨Mz²⟩` |
 
 `states[i]`, `energies[i]`, `labels[i]`, `parameter_ids[i]`, `splits[i]`, `g[i]`는 모두 같은 sample을 나타낸다.
 
@@ -110,7 +131,7 @@ NumPy compressed archive이며 기본 실행 결과는 다음 배열을 포함�
 
 ### `checksums.json`
 
-현재 `split_manifest.json`의 SHA-256 checksum을 기록한다. dataset provenance 확인에 사용한다.
+`states.npz`, `split_manifest.json`, `validation.json` 각각의 SHA-256 checksum을 기록한다. CLI가 생성 직후 세 checksum을 모두 검증한다.
 
 ### `validation.json`
 
@@ -118,7 +139,9 @@ NumPy compressed archive이며 기본 실행 결과는 다음 배열을 포함�
 
 - train/val/test parameter ID가 서로 겹치지 않는가;
 - 모든 state가 정규화되어 있는가;
-- `||H|ψ⟩ - E|ψ⟩||` residual이 tolerance 이내인가.
+- `||H|ψ⟩ - E|ψ⟩||` residual이 tolerance 이내인가;
+- ferromagnetic class에서 평균 `⟨Mz²⟩`가 더 크고 paramagnetic class에서 평균 `⟨Mx⟩`가 더 큰가;
+- blocked split의 실제 minimum cross-split `g` gap이 config 기준 이상인가.
 
 ## 5. 데이터 읽기
 
@@ -132,8 +155,8 @@ train = data["splits"] == "train"
 train_states = data["states"][train]
 train_labels = data["labels"][train]
 
-print(train_states.shape)  # (140, 16)
-print(train_labels.shape)  # (140,)
+print(train_states.shape)  # (280, 16)
+print(train_labels.shape)  # (280,)
 print(np.unique(train_labels, return_counts=True))
 PY
 ```
@@ -166,7 +189,9 @@ cp configs/dataset/tfim_4q.yaml configs/dataset/tfim_6q.yaml
 중요 설정:
 
 - `dataset_seed`: class별 `g` sampling을 결정한다.
-- `split_seed`: 동일한 sampled parameters의 split 배치를 결정한다.
+- `split_seed`: random 방식에서 동일한 sampled parameters의 split 배치를 결정한다.
+- `split_strategy`: `random` 또는 `blocked`.
+- `blocked_g_gap`: blocked 방식에서 인접 split 구간 사이에 제외할 최소 `g` 폭.
 - `phase_regions`: 두 구간은 순서대로 배치되고 겹치지 않아야 한다.
 - `split_ratios`: 음수가 아니며 합이 1이어야 한다.
 - `numerical_tolerance`: validation 기준이며 결과를 보고 사후 조정하지 않는다.
@@ -185,7 +210,10 @@ uv run pytest
 2. Hamiltonian이 Hermitian임;
 3. ground state가 정규화된 최소 eigenpair임;
 4. 잘못된 phase-region overlap이 거부됨;
-5. dataset이 seed에 대해 재현되고 split leakage가 없음.
+5. dataset이 seed에 대해 재현되고 split leakage가 없음;
+6. blocked split이 configured `g` gap을 지킴;
+7. `⟨Mx⟩`, `⟨Mz²⟩`가 class를 기대 방향으로 분리함;
+8. 세 artifact checksum이 모두 검증되고 변조가 탐지됨.
 
 ## 8. 결과 해석 시 주의사항
 

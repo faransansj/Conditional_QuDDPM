@@ -140,10 +140,14 @@ Python 3.11+ and [uv](https://docs.astral.sh/uv/) are required.
 ```bash
 uv sync --extra dev
 uv run pytest
-uv run generate-tfim --config configs/dataset/tfim_4q.yaml --output data/tfim_4q
+# Class-stratified random split
+uv run generate-tfim --config configs/dataset/tfim_4q.yaml --output data/tfim_4q_random
+
+# Contiguous g blocks with guard gaps between splits
+uv run generate-tfim --config configs/dataset/tfim_4q_blocked.yaml --output data/tfim_4q_blocked
 ```
 
-The command creates compressed statevectors, a split manifest, checksums, and `validation.json`. The default convention is open-boundary `H = -J Σ ZZ - g Σ X`, `J=1`, with samples in `g/J ∈ [0.2,0.8]` and `[1.2,1.8]`; the finite-size critical neighborhood is excluded from this initial classification dataset. See the [TFIM simulation guide](docs/tfim_simulation_guide.md) for artifact schemas, examples, and interpretation.
+Each command creates 200 states per class (140 train states per class), compressed statevectors and observables, a split manifest, SHA-256 checksums, and `validation.json`. The default convention is open-boundary `H = -J Σ ZZ - g Σ X`, `J=1`, with samples in `g/J ∈ [0.2,0.8]` and `[1.2,1.8]`; the finite-size critical neighborhood is excluded from this initial classification dataset. Random and blocked-g results are reported as separate benchmarks. See the [TFIM simulation guide](docs/tfim_simulation_guide.md) for artifact schemas, examples, and interpretation.
 
 ## Roadmap
 

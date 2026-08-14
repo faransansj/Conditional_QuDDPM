@@ -18,11 +18,11 @@ These ranges are fixed before downstream test evaluation and can be changed only
 
 ## Leakage prevention
 
-Parameter values and IDs are sampled and assigned to class-stratified train/validation/test splits before diagonalization. State generation does not alter split membership. The manifest is the source of truth for every later generator and QCNN data loader.
+Parameter values and IDs are sampled and assigned to train/validation/test splits before diagonalization. The random benchmark uses class-stratified random assignment. The blocked-g benchmark samples each split from a contiguous class-local `g` interval and leaves a configured guard gap between adjacent intervals, preventing near-duplicate cross-split states. State generation does not alter split membership. The manifest is the source of truth for every later generator and QCNN data loader.
 
 ## Numerical checks
 
-Each generated state must satisfy normalization and eigenpair residual checks at the configured tolerance. Split identifiers must be pairwise disjoint. The CLI writes all checks to `validation.json` and exits nonzero on failure.
+Each generated state must satisfy normalization and eigenpair residual checks at the configured tolerance. Split identifiers must be pairwise disjoint, blocked splits must satisfy their minimum `g` gap, and class means must show the expected TFIM ordering: ferromagnetic `⟨Mz²⟩` above paramagnetic, and paramagnetic `⟨Mx⟩` above ferromagnetic. The CLI writes all checks to `validation.json`, verifies SHA-256 for all three artifacts, and exits nonzero on failure.
 
 ## Scaling boundary
 

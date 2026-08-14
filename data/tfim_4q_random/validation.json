@@ -1,0 +1,26 @@
+{
+  "errors": [],
+  "max_eigenpair_residual": 4.839349969133126e-15,
+  "max_norm_error": 8.881784197001252e-16,
+  "max_observable_error": 0.0,
+  "minimum_cross_split_g_gap": 1.8443025010306258e-05,
+  "observable_means": {
+    "ferromagnetic": {
+      "magnetization_x": 0.43977596345569936,
+      "magnetization_z2": 0.8406126318109258
+    },
+    "paramagnetic": {
+      "magnetization_x": 0.9112617981423315,
+      "magnetization_z2": 0.43178295182725834
+    }
+  },
+  "observables_stored": true,
+  "samples": 400,
+  "split_counts": {
+    "test": 60,
+    "train": 280,
+    "val": 60
+  },
+  "split_strategy": "random",
+  "valid": true
+}

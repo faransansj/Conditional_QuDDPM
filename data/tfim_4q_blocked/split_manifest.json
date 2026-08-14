@@ -1,0 +1,3630 @@
+{
+  "config": {
+    "J": 1.0,
+    "blocked_g_gap": 0.02,
+    "boundary": "open",
+    "dataset_seed": 1729,
+    "n_qubits": 4,
+    "numerical_tolerance": 1e-10,
+    "phase_regions": {
+      "ferromagnetic": [
+        0.2,
+        0.8
+      ],
+      "paramagnetic": [
+        1.2,
+        1.8
+      ]
+    },
+    "samples_per_class": 200,
+    "split_ratios": {
+      "test": 0.15,
+      "train": 0.7,
+      "val": 0.15
+    },
+    "split_seed": 2718,
+    "split_strategy": "blocked"
+  },
+  "records": [
+    {
+      "energy": -3.069629792162829,
+      "g": 0.21205087560522587,
+      "label": 0,
+      "magnetization_x": 0.16909313078996663,
+      "magnetization_z2": 0.9768090256124188,
+      "parameter_id": "class-0-00000",
+      "split": "train"
+    },
+    {
+      "energy": -3.111422736140781,
+      "g": 0.266035332067859,
+      "label": 0,
+      "magnetization_x": 0.21854205273281463,
+      "magnetization_z2": 0.9618530270046834,
+      "parameter_id": "class-0-00001",
+      "split": "train"
+    },
+    {
+      "energy": -3.1590953400421413,
+      "g": 0.31522857524174447,
+      "label": 0,
+      "magnetization_x": 0.2664342667105846,
+      "magnetization_z2": 0.9442235851033043,
+      "parameter_id": "class-0-00002",
+      "split": "train"
+    },
+    {
+      "energy": -3.3022405318881334,
+      "g": 0.425890748661909,
+      "label": 0,
+      "magnetization_x": 0.3815752858520181,
+      "magnetization_z2": 0.8902168506635448,
+      "parameter_id": "class-0-00003",
+      "split": "train"
+    },
+    {
+      "energy": -3.461699350260368,
+      "g": 0.5184497755663161,
+      "label": 0,
+      "magnetization_x": 0.47928029605476336,
+      "magnetization_z2": 0.832440320460703,
+      "parameter_id": "class-0-00004",
+      "split": "train"
+    },
+    {
+      "energy": -3.593281667648154,
+      "g": 0.5827316753258146,
+      "label": 0,
+      "magnetization_x": 0.5434311616186931,
+      "magnetization_z2": 0.7887511868729161,
+      "parameter_id": "class-0-00005",
+      "split": "train"
+    },
+    {
+      "energy": -3.239718827540794,
+      "g": 0.38228057804655696,
+      "label": 0,
+      "magnetization_x": 0.33535250891975965,
+      "magnetization_z2": 0.9137902275560088,
+      "parameter_id": "class-0-00006",
+      "split": "train"
+    },
+    {
+      "energy": -3.103237899357169,
+      "g": 0.25647513070923184,
+      "label": 0,
+      "magnetization_x": 0.20954343776768797,
+      "magnetization_z2": 0.9648264780447304,
+      "parameter_id": "class-0-00007",
+      "split": "train"
+    },
+    {
+      "energy": -3.5428495224044694,
+      "g": 0.5590295523300431,
+      "label": 0,
+      "magnetization_x": 0.5203241043331717,
+      "magnetization_z2": 0.8050141155085073,
+      "parameter_id": "class-0-00008",
+      "split": "train"
+    },
+    {
+      "energy": -3.188059318326048,
+      "g": 0.34113694684073104,
+      "label": 0,
+      "magnetization_x": 0.2926375360493133,
+      "magnetization_z2": 0.9333367135859264,
+      "parameter_id": "class-0-00009",
+      "split": "train"
+    },
+    {
+      "energy": -3.0757306886865927,
+      "g": 0.22086665960508514,
+      "label": 0,
+      "magnetization_x": 0.17694256198793723,
+      "magnetization_z2": 0.9746642114320758,
+      "parameter_id": "class-0-00010",
+      "split": "train"
+    },
+    {
+      "energy": -3.1090530924849715,
+      "g": 0.2633085039263183,
+      "label": 0,
+      "magnetization_x": 0.2159648486182152,
+      "magnetization_z2": 0.9627158280843147,
+      "parameter_id": "class-0-00011",
+      "split": "train"
+    },
+    {
+      "energy": -3.146674116513078,
+      "g": 0.3033081139118854,
+      "label": 0,
+      "magnetization_x": 0.25459391605057796,
+      "magnetization_z2": 0.9488592806674521,
+      "parameter_id": "class-0-00012",
+      "split": "train"
+    },
+    {
+      "energy": -3.372021386972903,
+      "g": 0.46901357195677473,
+      "label": 0,
+      "magnetization_x": 0.42748313402007376,
+      "magnetization_z2": 0.8643945259858177,
+      "parameter_id": "class-0-00013",
+      "split": "train"
+    },
+    {
+      "energy": -3.264041171697422,
+      "g": 0.3999232642040307,
+      "label": 0,
+      "magnetization_x": 0.35397460729485375,
+      "magnetization_z2": 0.9045906037840856,
+      "parameter_id": "class-0-00014",
+      "split": "train"
+    },
+    {
+      "energy": -3.5684924357587464,
+      "g": 0.5712098144202744,
+      "label": 0,
+      "magnetization_x": 0.5322876191132415,
+      "magnetization_z2": 0.7966684345601878,
+      "parameter_id": "class-0-00015",
+      "split": "train"
+    },
+    {
+      "energy": -3.1005373992264142,
+      "g": 0.25322975660040514,
+      "label": 0,
+      "magnetization_x": 0.2065123108132978,
+      "magnetization_z2": 0.96580327327458,
+      "parameter_id": "class-0-00016",
+      "split": "train"
+    },
+    {
+      "energy": -3.1909150661616086,
+      "g": 0.34356628832230435,
+      "label": 0,
+      "magnetization_x": 0.2951249971436097,
+      "magnetization_z2": 0.9322589805804318,
+      "parameter_id": "class-0-00017",
+      "split": "train"
+    },
+    {
+      "energy": -3.1721151014594287,
+      "g": 0.3271765249180111,
+      "label": 0,
+      "magnetization_x": 0.2784417675847737,
+      "magnetization_z2": 0.9393410912481903,
+      "parameter_id": "class-0-00018",
+      "split": "train"
+    },
+    {
+      "energy": -3.131735187346292,
+      "g": 0.28819847130645615,
+      "label": 0,
+      "magnetization_x": 0.23979722035101617,
+      "magnetization_z2": 0.9543988273781087,
+      "parameter_id": "class-0-00019",
+      "split": "train"
+    },
+    {
+      "energy": -3.3784020886665553,
+      "g": 0.47272801748750337,
+      "label": 0,
+      "magnetization_x": 0.4314196880211587,
+      "magnetization_z2": 0.8620704267208203,
+      "parameter_id": "class-0-00020",
+      "split": "train"
+    },
+    {
+      "energy": -3.3497645263443134,
+      "g": 0.45577984761793805,
+      "label": 0,
+      "magnetization_x": 0.4134233609937919,
+      "magnetization_z2": 0.8725542329033826,
+      "parameter_id": "class-0-00021",
+      "split": "train"
+    },
+    {
+      "energy": -3.5659752349649128,
+      "g": 0.5700262754010497,
+      "label": 0,
+      "magnetization_x": 0.5311332114117361,
+      "magnetization_z2": 0.7974806896863453,
+      "parameter_id": "class-0-00022",
+      "split": "train"
+    },
+    {
+      "energy": -3.1308440483283535,
+      "g": 0.2872676625734139,
+      "label": 0,
+      "magnetization_x": 0.2388936629860159,
+      "magnetization_z2": 0.9547278643400454,
+      "parameter_id": "class-0-00023",
+      "split": "train"
+    },
+    {
+      "energy": -3.5407471354959426,
+      "g": 0.5580184464119518,
+      "label": 0,
+      "magnetization_x": 0.519322911950341,
+      "magnetization_z2": 0.8057053249561372,
+      "parameter_id": "class-0-00024",
+      "split": "train"
+    },
+    {
+      "energy": -3.07779676481607,
+      "g": 0.22376452193966867,
+      "label": 0,
+      "magnetization_x": 0.17954181004890538,
+      "magnetization_z2": 0.9739345694128472,
+      "parameter_id": "class-0-00025",
+      "split": "train"
+    },
+    {
+      "energy": -3.2753424688266812,
+      "g": 0.4078117922350089,
+      "label": 0,
+      "magnetization_x": 0.3623409627254426,
+      "magnetization_z2": 0.9003261419209672,
+      "parameter_id": "class-0-00026",
+      "split": "train"
+    },
+    {
+      "energy": -3.1893416278687847,
+      "g": 0.342230332760922,
+      "label": 0,
+      "magnetization_x": 0.2937564731251692,
+      "magnetization_z2": 0.9328528556580794,
+      "parameter_id": "class-0-00027",
+      "split": "train"
+    },
+    {
+      "energy": -3.1994786063993654,
+      "g": 0.3507311434966843,
+      "label": 0,
+      "magnetization_x": 0.3024891913062915,
+      "magnetization_z2": 0.9290239385061448,
+      "parameter_id": "class-0-00028",
+      "split": "train"
+    },
+    {
+      "energy": -3.3523861231423324,
+      "g": 0.4573619247972967,
+      "label": 0,
+      "magnetization_x": 0.4151065466646565,
+      "magnetization_z2": 0.8715890168913126,
+      "parameter_id": "class-0-00029",
+      "split": "train"
+    },
+    {
+      "energy": -3.1764233938199906,
+      "g": 0.33101793112585887,
+      "label": 0,
+      "magnetization_x": 0.2823306856604132,
+      "magnetization_z2": 0.9377210541277848,
+      "parameter_id": "class-0-00030",
+      "split": "train"
+    },
+    {
+      "energy": -3.122503527121214,
+      "g": 0.2783794988101869,
+      "label": 0,
+      "magnetization_x": 0.23031336658065368,
+      "magnetization_z2": 0.9577989143866047,
+      "parameter_id": "class-0-00031",
+      "split": "train"
+    },
+    {
+      "energy": -3.249443761619751,
+      "g": 0.38944970549099195,
+      "label": 0,
+      "magnetization_x": 0.34290261842903247,
+      "magnetization_z2": 0.9101092300772374,
+      "parameter_id": "class-0-00032",
+      "split": "train"
+    },
+    {
+      "energy": -3.317822670842968,
+      "g": 0.4359582926515421,
+      "label": 0,
+      "magnetization_x": 0.39230554301370063,
+      "magnetization_z2": 0.8843938729576928,
+      "parameter_id": "class-0-00033",
+      "split": "train"
+    },
+    {
+      "energy": -3.1014811791279437,
+      "g": 0.2543693469097186,
+      "label": 0,
+      "magnetization_x": 0.20757530296111484,
+      "magnetization_z2": 0.9654621485417672,
+      "parameter_id": "class-0-00034",
+      "split": "train"
+    },
+    {
+      "energy": -3.2573332726474944,
+      "g": 0.39515166130059887,
+      "label": 0,
+      "magnetization_x": 0.3489247394453619,
+      "magnetization_z2": 0.9071253323941298,
+      "parameter_id": "class-0-00035",
+      "split": "train"
+    },
+    {
+      "energy": -3.2033587552895835,
+      "g": 0.35392064808537665,
+      "label": 0,
+      "magnetization_x": 0.30578037538080616,
+      "magnetization_z2": 0.9275567879785378,
+      "parameter_id": "class-0-00036",
+      "split": "train"
+    },
+    {
+      "energy": -3.6083846890883833,
+      "g": 0.589637697788105,
+      "label": 0,
+      "magnetization_x": 0.5500254168362964,
+      "magnetization_z2": 0.784000622443977,
+      "parameter_id": "class-0-00037",
+      "split": "train"
+    },
+    {
+      "energy": -3.372467074774318,
+      "g": 0.4692741341728282,
+      "label": 0,
+      "magnetization_x": 0.42775943747435236,
+      "magnetization_z2": 0.8642319621554599,
+      "parameter_id": "class-0-00038",
+      "split": "train"
+    },
+    {
+      "energy": -3.2109263258645475,
+      "g": 0.360044305442086,
+      "label": 0,
+      "magnetization_x": 0.31212049737568437,
+      "magnetization_z2": 0.9246935100121834,
+      "parameter_id": "class-0-00039",
+      "split": "train"
+    },
+    {
+      "energy": -3.0862256440669884,
+      "g": 0.23517386300970342,
+      "label": 0,
+      "magnetization_x": 0.1898678205113053,
+      "magnetization_z2": 0.970941436525951,
+      "parameter_id": "class-0-00040",
+      "split": "train"
+    },
+    {
+      "energy": -3.3594142910792075,
+      "g": 0.461571971007176,
+      "label": 0,
+      "magnetization_x": 0.4195828557140524,
+      "magnetization_z2": 0.8690066807915652,
+      "parameter_id": "class-0-00041",
+      "split": "train"
+    },
+    {
+      "energy": -3.449923151187883,
+      "g": 0.5122659327870737,
+      "label": 0,
+      "magnetization_x": 0.4728893748140702,
+      "magnetization_z2": 0.836543369824303,
+      "parameter_id": "class-0-00042",
+      "split": "train"
+    },
+    {
+      "energy": -3.3273894218543965,
+      "g": 0.4420051075394415,
+      "label": 0,
+      "magnetization_x": 0.39875134067123874,
+      "magnetization_z2": 0.8808332809630625,
+      "parameter_id": "class-0-00043",
+      "split": "train"
+    },
+    {
+      "energy": -3.302970290162395,
+      "g": 0.4263685520062279,
+      "label": 0,
+      "magnetization_x": 0.3820843733288216,
+      "magnetization_z2": 0.8899435389525809,
+      "parameter_id": "class-0-00044",
+      "split": "train"
+    },
+    {
+      "energy": -3.144659695575604,
+      "g": 0.30132240180728864,
+      "label": 0,
+      "magnetization_x": 0.25263561554215763,
+      "magnetization_z2": 0.9496086942543795,
+      "parameter_id": "class-0-00045",
+      "split": "train"
+    },
+    {
+      "energy": -3.388777076060711,
+      "g": 0.47869644485124263,
+      "label": 0,
+      "magnetization_x": 0.43773373011447403,
+      "magnetization_z2": 0.8583067058772011,
+      "parameter_id": "class-0-00046",
+      "split": "train"
+    },
+    {
+      "energy": -3.303296578758703,
+      "g": 0.4265819809941723,
+      "label": 0,
+      "magnetization_x": 0.3823117843479994,
+      "magnetization_z2": 0.8898213544481609,
+      "parameter_id": "class-0-00047",
+      "split": "train"
+    },
+    {
+      "energy": -3.0828876987283587,
+      "g": 0.23073148784560285,
+      "label": 0,
+      "magnetization_x": 0.18582969029731372,
+      "magnetization_z2": 0.972129845802662,
+      "parameter_id": "class-0-00048",
+      "split": "train"
+    },
+    {
+      "energy": -3.0777975769094525,
+      "g": 0.22376565272236046,
+      "label": 0,
+      "magnetization_x": 0.1795428261563351,
+      "magnetization_z2": 0.9739342822991137,
+      "parameter_id": "class-0-00049",
+      "split": "train"
+    },
+    {
+      "energy": -3.070444166988087,
+      "g": 0.2132511347389738,
+      "label": 0,
+      "magnetization_x": 0.17015672074977245,
+      "magnetization_z2": 0.9765235862704404,
+      "parameter_id": "class-0-00050",
+      "split": "train"
+    },
+    {
+      "energy": -3.084986427278182,
+      "g": 0.2335357424466016,
+      "label": 0,
+      "magnetization_x": 0.1883761515821064,
+      "magnetization_z2": 0.9713830974742242,
+      "parameter_id": "class-0-00051",
+      "split": "train"
+    },
+    {
+      "energy": -3.442506741616681,
+      "g": 0.5083281360574561,
+      "label": 0,
+      "magnetization_x": 0.46880398095344317,
+      "magnetization_z2": 0.8391426169658217,
+      "parameter_id": "class-0-00052",
+      "split": "train"
+    },
+    {
+      "energy": -3.535624373675093,
+      "g": 0.5555465345888303,
+      "label": 0,
+      "magnetization_x": 0.5168701867953094,
+      "magnetization_z2": 0.8073939501120415,
+      "parameter_id": "class-0-00053",
+      "split": "train"
+    },
+    {
+      "energy": -3.3014054299835154,
+      "g": 0.42534318910255625,
+      "label": 0,
+      "magnetization_x": 0.38099190569985847,
+      "magnetization_z2": 0.8905296849186589,
+      "parameter_id": "class-0-00054",
+      "split": "train"
+    },
+    {
+      "energy": -3.2686715090572998,
+      "g": 0.40317765894650015,
+      "label": 0,
+      "magnetization_x": 0.35742363374352526,
+      "magnetization_z2": 0.9028423898324639,
+      "parameter_id": "class-0-00055",
+      "split": "train"
+    },
+    {
+      "energy": -3.1650808984190246,
+      "g": 0.3207868920140056,
+      "label": 0,
+      "magnetization_x": 0.272003362219449,
+      "magnetization_z2": 0.9419816286652446,
+      "parameter_id": "class-0-00056",
+      "split": "train"
+    },
+    {
+      "energy": -3.514787679028281,
+      "g": 0.545368263725444,
+      "label": 0,
+      "magnetization_x": 0.506697662371208,
+      "magnetization_z2": 0.8143262102982348,
+      "parameter_id": "class-0-00057",
+      "split": "train"
+    },
+    {
+      "energy": -3.2079928862272884,
+      "g": 0.35768545705130594,
+      "label": 0,
+      "magnetization_x": 0.3096750325364954,
+      "magnetization_z2": 0.9258036638989573,
+      "parameter_id": "class-0-00058",
+      "split": "train"
+    },
+    {
+      "energy": -3.2988745332025524,
+      "g": 0.4236785864264545,
+      "label": 0,
+      "magnetization_x": 0.37921862604996737,
+      "magnetization_z2": 0.8914782165221784,
+      "parameter_id": "class-0-00059",
+      "split": "train"
+    },
+    {
+      "energy": -3.120395997413487,
+      "g": 0.27608081446062466,
+      "label": 0,
+      "magnetization_x": 0.22810846914309507,
+      "magnetization_z2": 0.9585723662848826,
+      "parameter_id": "class-0-00060",
+      "split": "train"
+    },
+    {
+      "energy": -3.2334700207293365,
+      "g": 0.3775876975906946,
+      "label": 0,
+      "magnetization_x": 0.33042469469178004,
+      "magnetization_z2": 0.9161565496216728,
+      "parameter_id": "class-0-00061",
+      "split": "train"
+    },
+    {
+      "energy": -3.1214400400453766,
+      "g": 0.2772223164976873,
+      "label": 0,
+      "magnetization_x": 0.22920266501449083,
+      "magnetization_z2": 0.9581893422850365,
+      "parameter_id": "class-0-00062",
+      "split": "train"
+    },
+    {
+      "energy": -3.5453615774592055,
+      "g": 0.5602351373619501,
+      "label": 0,
+      "magnetization_x": 0.5215162859885085,
+      "magnetization_z2": 0.8041895975093865,
+      "parameter_id": "class-0-00063",
+      "split": "train"
+    },
+    {
+      "energy": -3.43814313843219,
+      "g": 0.5059951142327622,
+      "label": 0,
+      "magnetization_x": 0.4663780296876129,
+      "magnetization_z2": 0.840677357004795,
+      "parameter_id": "class-0-00064",
+      "split": "train"
+    },
+    {
+      "energy": -3.3456546729083088,
+      "g": 0.45328658941082706,
+      "label": 0,
+      "magnetization_x": 0.41076974549008527,
+      "magnetization_z2": 0.8740694961587954,
+      "parameter_id": "class-0-00065",
+      "split": "train"
+    },
+    {
+      "energy": -3.064383439942073,
+      "g": 0.2041305676884527,
+      "label": 0,
+      "magnetization_x": 0.16211462395167647,
+      "magnetization_z2": 0.9786413127000907,
+      "parameter_id": "class-0-00066",
+      "split": "train"
+    },
+    {
+      "energy": -3.073026425843978,
+      "g": 0.21700823530406327,
+      "label": 0,
+      "magnetization_x": 0.1734963884723416,
+      "magnetization_z2": 0.9756167354568079,
+      "parameter_id": "class-0-00067",
+      "split": "train"
+    },
+    {
+      "energy": -3.104264830592338,
+      "g": 0.25769699615321534,
+      "label": 0,
+      "magnetization_x": 0.21068774722077432,
+      "magnetization_z2": 0.9644544585097352,
+      "parameter_id": "class-0-00068",
+      "split": "train"
+    },
+    {
+      "energy": -3.6113342105588147,
+      "g": 0.5909767796888851,
+      "label": 0,
+      "magnetization_x": 0.5512964498338719,
+      "magnetization_z2": 0.7830793441920954,
+      "parameter_id": "class-0-00069",
+      "split": "train"
+    },
+    {
+      "energy": -3.082545582876382,
+      "g": 0.2302707155551335,
+      "label": 0,
+      "magnetization_x": 0.1854121314083682,
+      "magnetization_z2": 0.9722514238194159,
+      "parameter_id": "class-0-00070",
+      "split": "train"
+    },
+    {
+      "energy": -3.307872744530969,
+      "g": 0.4295620348867107,
+      "label": 0,
+      "magnetization_x": 0.38548750824041633,
+      "magnetization_z2": 0.8881089427131907,
+      "parameter_id": "class-0-00071",
+      "split": "train"
+    },
+    {
+      "energy": -3.296630171121015,
+      "g": 0.42219590274601965,
+      "label": 0,
+      "magnetization_x": 0.37763944925936277,
+      "magnetization_z2": 0.8923199052228031,
+      "parameter_id": "class-0-00072",
+      "split": "train"
+    },
+    {
+      "energy": -3.50571168861732,
+      "g": 0.5408701544416773,
+      "label": 0,
+      "magnetization_x": 0.5021660308185616,
+      "magnetization_z2": 0.8173774807588587,
+      "parameter_id": "class-0-00073",
+      "split": "train"
+    },
+    {
+      "energy": -3.4586606574821515,
+      "g": 0.5168620340538639,
+      "label": 0,
+      "magnetization_x": 0.4776423649739943,
+      "magnetization_z2": 0.8334961892290311,
+      "parameter_id": "class-0-00074",
+      "split": "train"
+    },
+    {
+      "energy": -3.328469522068492,
+      "g": 0.4426816723134919,
+      "label": 0,
+      "magnetization_x": 0.39947245783439644,
+      "magnetization_z2": 0.8804320279367205,
+      "parameter_id": "class-0-00075",
+      "split": "train"
+    },
+    {
+      "energy": -3.194231598494774,
+      "g": 0.34636213514719993,
+      "label": 0,
+      "magnetization_x": 0.297993737451076,
+      "magnetization_z2": 0.9310066365413908,
+      "parameter_id": "class-0-00076",
+      "split": "train"
+    },
+    {
+      "energy": -3.243978987485024,
+      "g": 0.3854407972738156,
+      "label": 0,
+      "magnetization_x": 0.3386775240540007,
+      "magnetization_z2": 0.9121773920453501,
+      "parameter_id": "class-0-00077",
+      "split": "train"
+    },
+    {
+      "energy": -3.158536861916913,
+      "g": 0.3147040294376577,
+      "label": 0,
+      "magnetization_x": 0.2659102570279259,
+      "magnetization_z2": 0.9444325181513269,
+      "parameter_id": "class-0-00078",
+      "split": "train"
+    },
+    {
+      "energy": -3.5226699695823847,
+      "g": 0.5492424488546847,
+      "label": 0,
+      "magnetization_x": 0.51058327593009,
+      "magnetization_z2": 0.8116918195670972,
+      "parameter_id": "class-0-00079",
+      "split": "train"
+    },
+    {
+      "energy": -3.5426076364762413,
+      "g": 0.5589133206073442,
+      "label": 0,
+      "magnetization_x": 0.5202090736637586,
+      "magnetization_z2": 0.805093587702951,
+      "parameter_id": "class-0-00080",
+      "split": "train"
+    },
+    {
+      "energy": -3.078713826047633,
+      "g": 0.22503741181705678,
+      "label": 0,
+      "magnetization_x": 0.18068652716264166,
+      "magnetization_z2": 0.973610185734761,
+      "parameter_id": "class-0-00081",
+      "split": "train"
+    },
+    {
+      "energy": -3.224055643070594,
+      "g": 0.3703824810970001,
+      "label": 0,
+      "magnetization_x": 0.32288337115156596,
+      "magnetization_z2": 0.9197221874117316,
+      "parameter_id": "class-0-00082",
+      "split": "train"
+    },
+    {
+      "energy": -3.1618010459442614,
+      "g": 0.3177554043169188,
+      "label": 0,
+      "magnetization_x": 0.268962285370567,
+      "magnetization_z2": 0.9432107313371967,
+      "parameter_id": "class-0-00083",
+      "split": "train"
+    },
+    {
+      "energy": -3.148393663163684,
+      "g": 0.3049911378489107,
+      "label": 0,
+      "magnetization_x": 0.2562568947791297,
+      "magnetization_z2": 0.9482190121843339,
+      "parameter_id": "class-0-00084",
+      "split": "train"
+    },
+    {
+      "energy": -3.5569632217452463,
+      "g": 0.5657677000493532,
+      "label": 0,
+      "magnetization_x": 0.5269649010294697,
+      "magnetization_z2": 0.8004012016760034,
+      "parameter_id": "class-0-00085",
+      "split": "train"
+    },
+    {
+      "energy": -3.338525901449666,
+      "g": 0.4489232471567867,
+      "label": 0,
+      "magnetization_x": 0.40612322144120616,
+      "magnetization_z2": 0.8767037349113289,
+      "parameter_id": "class-0-00086",
+      "split": "train"
+    },
+    {
+      "energy": -3.437463132718172,
+      "g": 0.5056304516245529,
+      "label": 0,
+      "magnetization_x": 0.46599848366294233,
+      "magnetization_z2": 0.8409168828685674,
+      "parameter_id": "class-0-00087",
+      "split": "train"
+    },
+    {
+      "energy": -3.0940268196768206,
+      "g": 0.2452032476996539,
+      "label": 0,
+      "magnetization_x": 0.19906727343082986,
+      "magnetization_z2": 0.9681489686595615,
+      "parameter_id": "class-0-00088",
+      "split": "train"
+    },
+    {
+      "energy": -3.1695176557529092,
+      "g": 0.324834450972767,
+      "label": 0,
+      "magnetization_x": 0.2760773764086272,
+      "magnetization_z2": 0.9403168174815196,
+      "parameter_id": "class-0-00089",
+      "split": "train"
+    },
+    {
+      "energy": -3.1486300161399354,
+      "g": 0.3052216174033255,
+      "label": 0,
+      "magnetization_x": 0.25648485586170233,
+      "magnetization_z2": 0.9481309676038281,
+      "parameter_id": "class-0-00090",
+      "split": "train"
+    },
+    {
+      "energy": -3.567599284840462,
+      "g": 0.5707901661772427,
+      "label": 0,
+      "magnetization_x": 0.5318785031514923,
+      "magnetization_z2": 0.7969564634484284,
+      "parameter_id": "class-0-00091",
+      "split": "train"
+    },
+    {
+      "energy": -3.2000466488046877,
+      "g": 0.35120024187275045,
+      "label": 0,
+      "magnetization_x": 0.30297275538339236,
+      "magnetization_z2": 0.9288091988288036,
+      "parameter_id": "class-0-00092",
+      "split": "train"
+    },
+    {
+      "energy": -3.241085624427639,
+      "g": 0.38329788105583745,
+      "label": 0,
+      "magnetization_x": 0.3364223003828222,
+      "magnetization_z2": 0.9132727327655311,
+      "parameter_id": "class-0-00093",
+      "split": "train"
+    },
+    {
+      "energy": -3.3660878911190637,
+      "g": 0.46552848383568324,
+      "label": 0,
+      "magnetization_x": 0.4237853367992494,
+      "magnetization_z2": 0.8665619499705994,
+      "parameter_id": "class-0-00094",
+      "split": "train"
+    },
+    {
+      "energy": -3.1049072050708006,
+      "g": 0.2584579430701545,
+      "label": 0,
+      "magnetization_x": 0.21140125210206784,
+      "magnetization_z2": 0.964221592744094,
+      "parameter_id": "class-0-00095",
+      "split": "train"
+    },
+    {
+      "energy": -3.3672156515181046,
+      "g": 0.4661932203088667,
+      "label": 0,
+      "magnetization_x": 0.4244909457526548,
+      "magnetization_z2": 0.866149541178421,
+      "parameter_id": "class-0-00096",
+      "split": "train"
+    },
+    {
+      "energy": -3.1529931624035576,
+      "g": 0.30944008187333216,
+      "label": 0,
+      "magnetization_x": 0.2606667905918374,
+      "magnetization_z2": 0.9465039904559114,
+      "parameter_id": "class-0-00097",
+      "split": "train"
+    },
+    {
+      "energy": -3.130211914422071,
+      "g": 0.2866052494998299,
+      "label": 0,
+      "magnetization_x": 0.2382512158715394,
+      "magnetization_z2": 0.9549611650331808,
+      "parameter_id": "class-0-00098",
+      "split": "train"
+    },
+    {
+      "energy": -3.296694390143459,
+      "g": 0.42223841364720277,
+      "label": 0,
+      "magnetization_x": 0.37768472242223844,
+      "magnetization_z2": 0.8922958145862243,
+      "parameter_id": "class-0-00099",
+      "split": "train"
+    },
+    {
+      "energy": -3.2529644019211728,
+      "g": 0.3920064400847698,
+      "label": 0,
+      "magnetization_x": 0.3456011523023802,
+      "magnetization_z2": 0.9087773715999377,
+      "parameter_id": "class-0-00100",
+      "split": "train"
+    },
+    {
+      "energy": -3.444815864425458,
+      "g": 0.5095578512268251,
+      "label": 0,
+      "magnetization_x": 0.47008105567974773,
+      "magnetization_z2": 0.8383320845894504,
+      "parameter_id": "class-0-00101",
+      "split": "train"
+    },
+    {
+      "energy": -3.217285478247649,
+      "g": 0.3650953591295314,
+      "label": 0,
+      "magnetization_x": 0.3173701331742641,
+      "magnetization_z2": 0.9222860621120855,
+      "parameter_id": "class-0-00102",
+      "split": "train"
+    },
+    {
+      "energy": -3.1827027648081665,
+      "g": 0.33652369939294924,
+      "label": 0,
+      "magnetization_x": 0.2879276188414361,
+      "magnetization_z2": 0.9353565132898196,
+      "parameter_id": "class-0-00103",
+      "split": "train"
+    },
+    {
+      "energy": -3.5729378709767956,
+      "g": 0.573293733720385,
+      "label": 0,
+      "magnetization_x": 0.5343159105285784,
+      "magnetization_z2": 0.7952377044237897,
+      "parameter_id": "class-0-00104",
+      "split": "train"
+    },
+    {
+      "energy": -3.0664736540116277,
+      "g": 0.20732627389408076,
+      "label": 0,
+      "magnetization_x": 0.1649220111664077,
+      "magnetization_z2": 0.9779126838680985,
+      "parameter_id": "class-0-00105",
+      "split": "train"
+    },
+    {
+      "energy": -3.16809904412658,
+      "g": 0.3235468098586848,
+      "label": 0,
+      "magnetization_x": 0.274779643364588,
+      "magnetization_z2": 0.940849385637617,
+      "parameter_id": "class-0-00106",
+      "split": "train"
+    },
+    {
+      "energy": -3.5814933337903545,
+      "g": 0.5772822880296754,
+      "label": 0,
+      "magnetization_x": 0.5381823790973564,
+      "magnetization_z2": 0.792497626332262,
+      "parameter_id": "class-0-00107",
+      "split": "train"
+    },
+    {
+      "energy": -3.58133328715675,
+      "g": 0.5772079371547937,
+      "label": 0,
+      "magnetization_x": 0.5381104935864276,
+      "magnetization_z2": 0.7925487223323033,
+      "parameter_id": "class-0-00108",
+      "split": "train"
+    },
+    {
+      "energy": -3.069230714707278,
+      "g": 0.21145993537997226,
+      "label": 0,
+      "magnetization_x": 0.16857006663405094,
+      "magnetization_z2": 0.9769488041411399,
+      "parameter_id": "class-0-00109",
+      "split": "train"
+    },
+    {
+      "energy": -3.2120568738746824,
+      "g": 0.36094848441906824,
+      "label": 0,
+      "magnetization_x": 0.31305892636368826,
+      "magnetization_z2": 0.9242655837273526,
+      "parameter_id": "class-0-00110",
+      "split": "train"
+    },
+    {
+      "energy": -3.345266780522857,
+      "g": 0.4530504406176485,
+      "label": 0,
+      "magnetization_x": 0.41051834889234895,
+      "magnetization_z2": 0.8742126391741278,
+      "parameter_id": "class-0-00111",
+      "split": "train"
+    },
+    {
+      "energy": -3.100967230968783,
+      "g": 0.2537494932275578,
+      "label": 0,
+      "magnetization_x": 0.20699692949607876,
+      "magnetization_z2": 0.9656479460804142,
+      "parameter_id": "class-0-00112",
+      "split": "train"
+    },
+    {
+      "energy": -3.4440123173247685,
+      "g": 0.5091303044060621,
+      "label": 0,
+      "magnetization_x": 0.469637171680392,
+      "magnetization_z2": 0.8386140125830734,
+      "parameter_id": "class-0-00113",
+      "split": "train"
+    },
+    {
+      "energy": -3.114159696783623,
+      "g": 0.2691452895770978,
+      "label": 0,
+      "magnetization_x": 0.22149160123949224,
+      "magnetization_z2": 0.9608545944319422,
+      "parameter_id": "class-0-00114",
+      "split": "train"
+    },
+    {
+      "energy": -3.401681653264356,
+      "g": 0.4860022007769056,
+      "label": 0,
+      "magnetization_x": 0.44544075581563364,
+      "magnetization_z2": 0.8536526777268947,
+      "parameter_id": "class-0-00115",
+      "split": "train"
+    },
+    {
+      "energy": -3.169041428878522,
+      "g": 0.32440286680556596,
+      "label": 0,
+      "magnetization_x": 0.27564223662570453,
+      "magnetization_z2": 0.9404956268203227,
+      "parameter_id": "class-0-00116",
+      "split": "train"
+    },
+    {
+      "energy": -3.4876568749201744,
+      "g": 0.5317986921597027,
+      "label": 0,
+      "magnetization_x": 0.49296374666271137,
+      "magnetization_z2": 0.8235037500029649,
+      "parameter_id": "class-0-00117",
+      "split": "train"
+    },
+    {
+      "energy": -3.1182853290654813,
+      "g": 0.27375624984033653,
+      "label": 0,
+      "magnetization_x": 0.22588472018035988,
+      "magnetization_z2": 0.9593458824921568,
+      "parameter_id": "class-0-00118",
+      "split": "train"
+    },
+    {
+      "energy": -3.400071690335585,
+      "g": 0.48509765483590395,
+      "label": 0,
+      "magnetization_x": 0.44448795236429794,
+      "magnetization_z2": 0.8542316128067744,
+      "parameter_id": "class-0-00119",
+      "split": "train"
+    },
+    {
+      "energy": -3.0979163619719308,
+      "g": 0.25003375477461076,
+      "label": 0,
+      "magnetization_x": 0.20353902983609326,
+      "magnetization_z2": 0.9667492056123066,
+      "parameter_id": "class-0-00120",
+      "split": "train"
+    },
+    {
+      "energy": -3.2042546470555218,
+      "g": 0.35465220729011576,
+      "label": 0,
+      "magnetization_x": 0.3065363434583327,
+      "magnetization_z2": 0.9272179353692258,
+      "parameter_id": "class-0-00121",
+      "split": "train"
+    },
+    {
+      "energy": -3.5217635693121236,
+      "g": 0.548798449328525,
+      "label": 0,
+      "magnetization_x": 0.5101388020941745,
+      "magnetization_z2": 0.8119940134835482,
+      "parameter_id": "class-0-00122",
+      "split": "train"
+    },
+    {
+      "energy": -3.1349100548639974,
+      "g": 0.29148650126142167,
+      "label": 0,
+      "magnetization_x": 0.24299647852484232,
+      "magnetization_z2": 0.9532252076157791,
+      "parameter_id": "class-0-00123",
+      "split": "train"
+    },
+    {
+      "energy": -3.169934705591832,
+      "g": 0.3252118474751699,
+      "label": 0,
+      "magnetization_x": 0.27645802466317987,
+      "magnetization_z2": 0.9401602055788051,
+      "parameter_id": "class-0-00124",
+      "split": "train"
+    },
+    {
+      "energy": -3.0732759721968663,
+      "g": 0.21736748821507168,
+      "label": 0,
+      "magnetization_x": 0.17381655255041253,
+      "magnetization_z2": 0.9755289577302687,
+      "parameter_id": "class-0-00125",
+      "split": "train"
+    },
+    {
+      "energy": -3.120162483373955,
+      "g": 0.27582475245884347,
+      "label": 0,
+      "magnetization_x": 0.22786321765490714,
+      "magnetization_z2": 0.9586579983793968,
+      "parameter_id": "class-0-00126",
+      "split": "train"
+    },
+    {
+      "energy": -3.2366926834540033,
+      "g": 0.3800166041431601,
+      "label": 0,
+      "magnetization_x": 0.33297369339308236,
+      "magnetization_z2": 0.9149361076000911,
+      "parameter_id": "class-0-00127",
+      "split": "train"
+    },
+    {
+      "energy": -3.4948733263742997,
+      "g": 0.5354446973326344,
+      "label": 0,
+      "magnetization_x": 0.49667221237590786,
+      "magnetization_z2": 0.8210461591818796,
+      "parameter_id": "class-0-00128",
+      "split": "train"
+    },
+    {
+      "energy": -3.3377592206091866,
+      "g": 0.44845100380420566,
+      "label": 0,
+      "magnetization_x": 0.40562016444844223,
+      "magnetization_z2": 0.8769874777099429,
+      "parameter_id": "class-0-00129",
+      "split": "train"
+    },
+    {
+      "energy": -3.4597068868043133,
+      "g": 0.5174093112291617,
+      "label": 0,
+      "magnetization_x": 0.478207179017059,
+      "magnetization_z2": 0.8331324245043312,
+      "parameter_id": "class-0-00130",
+      "split": "train"
+    },
+    {
+      "energy": -3.2140808380045023,
+      "g": 0.36256045472872006,
+      "label": 0,
+      "magnetization_x": 0.3147333745159008,
+      "magnetization_z2": 0.9234993994428394,
+      "parameter_id": "class-0-00131",
+      "split": "train"
+    },
+    {
+      "energy": -3.154187838191124,
+      "g": 0.31058337824409904,
+      "label": 0,
+      "magnetization_x": 0.26180328747657433,
+      "magnetization_z2": 0.9460579777034284,
+      "parameter_id": "class-0-00132",
+      "split": "train"
+    },
+    {
+      "energy": -3.083100216835106,
+      "g": 0.2310171931355242,
+      "label": 0,
+      "magnetization_x": 0.18608872191656867,
+      "magnetization_z2": 0.9720543017295198,
+      "parameter_id": "class-0-00133",
+      "split": "train"
+    },
+    {
+      "energy": -3.526873495019342,
+      "g": 0.5512965146415115,
+      "label": 0,
+      "magnetization_x": 0.5126366807147722,
+      "magnetization_z2": 0.8102928858429685,
+      "parameter_id": "class-0-00134",
+      "split": "train"
+    },
+    {
+      "energy": -3.5998952885015423,
+      "g": 0.5857660870605487,
+      "label": 0,
+      "magnetization_x": 0.5463366106084282,
+      "magnetization_z2": 0.7866640873011228,
+      "parameter_id": "class-0-00135",
+      "split": "train"
+    },
+    {
+      "energy": -3.263830770217618,
+      "g": 0.3997746318765875,
+      "label": 0,
+      "magnetization_x": 0.35381717604439766,
+      "magnetization_z2": 0.9046700721596515,
+      "parameter_id": "class-0-00136",
+      "split": "train"
+    },
+    {
+      "energy": -3.1699213812239146,
+      "g": 0.3251997980321632,
+      "label": 0,
+      "magnetization_x": 0.2764458693463387,
+      "magnetization_z2": 0.9401652095017348,
+      "parameter_id": "class-0-00137",
+      "split": "train"
+    },
+    {
+      "energy": -3.2018522093079005,
+      "g": 0.352686353021457,
+      "label": 0,
+      "magnetization_x": 0.30450581143773914,
+      "magnetization_z2": 0.928126525653697,
+      "parameter_id": "class-0-00138",
+      "split": "train"
+    },
+    {
+      "energy": -3.1118543417579754,
+      "g": 0.26652853802437954,
+      "label": 0,
+      "magnetization_x": 0.2190090925773203,
+      "magnetization_z2": 0.961695712061936,
+      "parameter_id": "class-0-00139",
+      "split": "train"
+    },
+    {
+      "energy": -3.742163081307611,
+      "g": 0.6476253153026694,
+      "label": 0,
+      "magnetization_x": 0.6026282681798885,
+      "magnetization_z2": 0.74433790312548,
+      "parameter_id": "class-0-00140",
+      "split": "val"
+    },
+    {
+      "energy": -3.700065448462731,
+      "g": 0.6299348761799092,
+      "label": 0,
+      "magnetization_x": 0.5871296522376259,
+      "magnetization_z2": 0.7563535155852394,
+      "parameter_id": "class-0-00141",
+      "split": "val"
+    },
+    {
+      "energy": -3.70122860727809,
+      "g": 0.6304299638295177,
+      "label": 0,
+      "magnetization_x": 0.58757017379117,
+      "magnetization_z2": 0.756015831368485,
+      "parameter_id": "class-0-00142",
+      "split": "val"
+    },
+    {
+      "energy": -3.662711418488118,
+      "g": 0.6138310785276537,
+      "label": 0,
+      "magnetization_x": 0.5725931601905199,
+      "magnetization_z2": 0.7673715785922729,
+      "parameter_id": "class-0-00143",
+      "split": "val"
+    },
+    {
+      "energy": -3.741144527690515,
+      "g": 0.6472026411160017,
+      "label": 0,
+      "magnetization_x": 0.6022638311579303,
+      "magnetization_z2": 0.7446236460399774,
+      "parameter_id": "class-0-00144",
+      "split": "val"
+    },
+    {
+      "energy": -3.6988891215579396,
+      "g": 0.6294338054080323,
+      "label": 0,
+      "magnetization_x": 0.5866834146194677,
+      "magnetization_z2": 0.7566953535119207,
+      "parameter_id": "class-0-00145",
+      "split": "val"
+    },
+    {
+      "energy": -3.716510931093131,
+      "g": 0.6369007354059643,
+      "label": 0,
+      "magnetization_x": 0.5932921490147212,
+      "magnetization_z2": 0.751609267904541,
+      "parameter_id": "class-0-00146",
+      "split": "val"
+    },
+    {
+      "energy": -3.666042171318361,
+      "g": 0.6152836346215221,
+      "label": 0,
+      "magnetization_x": 0.5739206643291888,
+      "magnetization_z2": 0.7663754151599964,
+      "parameter_id": "class-0-00147",
+      "split": "val"
+    },
+    {
+      "energy": -3.7215484437541817,
+      "g": 0.6390201065513194,
+      "label": 0,
+      "magnetization_x": 0.5951517913621827,
+      "magnetization_z2": 0.7501689784094029,
+      "parameter_id": "class-0-00148",
+      "split": "val"
+    },
+    {
+      "energy": -3.7308554186725207,
+      "g": 0.6429184483560788,
+      "label": 0,
+      "magnetization_x": 0.5985535908643056,
+      "magnetization_z2": 0.7475239040575787,
+      "parameter_id": "class-0-00149",
+      "split": "val"
+    },
+    {
+      "energy": -3.780777508015636,
+      "g": 0.6634668288714436,
+      "label": 0,
+      "magnetization_x": 0.6160763235357716,
+      "magnetization_z2": 0.733684773181627,
+      "parameter_id": "class-0-00150",
+      "split": "val"
+    },
+    {
+      "energy": -3.8094365046077874,
+      "g": 0.6750068245551372,
+      "label": 0,
+      "magnetization_x": 0.6256114572445848,
+      "magnetization_z2": 0.7260017492384845,
+      "parameter_id": "class-0-00151",
+      "split": "val"
+    },
+    {
+      "energy": -3.806068785198949,
+      "g": 0.6736598681701285,
+      "label": 0,
+      "magnetization_x": 0.6245099587202513,
+      "magnetization_z2": 0.7268948289466327,
+      "parameter_id": "class-0-00152",
+      "split": "val"
+    },
+    {
+      "energy": -3.7043898304682714,
+      "g": 0.6317736391623714,
+      "label": 0,
+      "magnetization_x": 0.5887638104396729,
+      "magnetization_z2": 0.755099718238209,
+      "parameter_id": "class-0-00153",
+      "split": "val"
+    },
+    {
+      "energy": -3.7064500515206897,
+      "g": 0.632647871519321,
+      "label": 0,
+      "magnetization_x": 0.5895388937397532,
+      "magnetization_z2": 0.7545039635632239,
+      "parameter_id": "class-0-00154",
+      "split": "val"
+    },
+    {
+      "energy": -3.665678300843657,
+      "g": 0.6151251125566332,
+      "label": 0,
+      "magnetization_x": 0.573775944803594,
+      "magnetization_z2": 0.7664841107561255,
+      "parameter_id": "class-0-00155",
+      "split": "val"
+    },
+    {
+      "energy": -3.8465799633115583,
+      "g": 0.689710008946161,
+      "label": 0,
+      "magnetization_x": 0.6374373469031734,
+      "magnetization_z2": 0.7163216006500337,
+      "parameter_id": "class-0-00156",
+      "split": "val"
+    },
+    {
+      "energy": -3.7358926654783278,
+      "g": 0.6450191719384504,
+      "label": 0,
+      "magnetization_x": 0.6003765914054998,
+      "magnetization_z2": 0.7461008878637727,
+      "parameter_id": "class-0-00157",
+      "split": "val"
+    },
+    {
+      "energy": -3.821865554000399,
+      "g": 0.6799576418513119,
+      "label": 0,
+      "magnetization_x": 0.6296339768303632,
+      "magnetization_z2": 0.7227279972127871,
+      "parameter_id": "class-0-00158",
+      "split": "val"
+    },
+    {
+      "energy": -3.782000834404868,
+      "g": 0.6639630802240493,
+      "label": 0,
+      "magnetization_x": 0.6164909181289123,
+      "magnetization_z2": 0.7333529567217837,
+      "parameter_id": "class-0-00159",
+      "split": "val"
+    },
+    {
+      "energy": -3.7132364097594652,
+      "g": 0.6355195109278406,
+      "label": 0,
+      "magnetization_x": 0.5920763361887893,
+      "magnetization_z2": 0.7525487468103305,
+      "parameter_id": "class-0-00160",
+      "split": "val"
+    },
+    {
+      "energy": -3.6690791748943448,
+      "g": 0.6166051663908938,
+      "label": 0,
+      "magnetization_x": 0.5751256462290953,
+      "magnetization_z2": 0.7654694524144726,
+      "parameter_id": "class-0-00161",
+      "split": "val"
+    },
+    {
+      "energy": -3.770523701932822,
+      "g": 0.6592940526638176,
+      "label": 0,
+      "magnetization_x": 0.6125740431309794,
+      "magnetization_z2": 0.7364796734668877,
+      "parameter_id": "class-0-00162",
+      "split": "val"
+    },
+    {
+      "energy": -3.765217406238182,
+      "g": 0.6571252392473281,
+      "label": 0,
+      "magnetization_x": 0.6107423683075752,
+      "magnetization_z2": 0.7379356253925293,
+      "parameter_id": "class-0-00163",
+      "split": "val"
+    },
+    {
+      "energy": -3.7125262647987127,
+      "g": 0.6352195903333312,
+      "label": 0,
+      "magnetization_x": 0.591811931996356,
+      "magnetization_z2": 0.7527528298755681,
+      "parameter_id": "class-0-00164",
+      "split": "val"
+    },
+    {
+      "energy": -3.849053140571767,
+      "g": 0.6906793943683737,
+      "label": 0,
+      "magnetization_x": 0.6382042565203172,
+      "magnetization_z2": 0.7156880056636841,
+      "parameter_id": "class-0-00165",
+      "split": "val"
+    },
+    {
+      "energy": -3.8123298076164027,
+      "g": 0.6761621441420006,
+      "label": 0,
+      "magnetization_x": 0.6265538228892681,
+      "magnetization_z2": 0.7252365396821003,
+      "parameter_id": "class-0-00166",
+      "split": "val"
+    },
+    {
+      "energy": -3.7054351129658154,
+      "g": 0.6322173371351348,
+      "label": 0,
+      "magnetization_x": 0.5891573383247937,
+      "magnetization_z2": 0.7547973263321407,
+      "parameter_id": "class-0-00167",
+      "split": "val"
+    },
+    {
+      "energy": -3.7668881398820893,
+      "g": 0.657808810236447,
+      "label": 0,
+      "magnetization_x": 0.6113205155916601,
+      "magnetization_z2": 0.7374764978132218,
+      "parameter_id": "class-0-00168",
+      "split": "val"
+    },
+    {
+      "energy": -3.7963732401231884,
+      "g": 0.6697686534565366,
+      "label": 0,
+      "magnetization_x": 0.6213108204703472,
+      "magnetization_z2": 0.7294804293013732,
+      "parameter_id": "class-0-00169",
+      "split": "val"
+    },
+    {
+      "energy": -4.120864804545238,
+      "g": 0.791328511413369,
+      "label": 0,
+      "magnetization_x": 0.7093026054619844,
+      "magnetization_z2": 0.6537324180289686,
+      "parameter_id": "class-0-00170",
+      "split": "test"
+    },
+    {
+      "energy": -4.129573848134032,
+      "g": 0.7943939636910338,
+      "label": 0,
+      "magnetization_x": 0.7112102379158994,
+      "magnetization_z2": 0.6519786833290457,
+      "parameter_id": "class-0-00171",
+      "split": "test"
+    },
+    {
+      "energy": -4.024715801595724,
+      "g": 0.756902939905455,
+      "label": 0,
+      "magnetization_x": 0.686858325635647,
+      "magnetization_z2": 0.6739965123001359,
+      "parameter_id": "class-0-00172",
+      "split": "test"
+    },
+    {
+      "energy": -4.06545652917091,
+      "g": 0.7716256044878596,
+      "label": 0,
+      "magnetization_x": 0.69668898573082,
+      "magnetization_z2": 0.665203784949348,
+      "parameter_id": "class-0-00173",
+      "split": "test"
+    },
+    {
+      "energy": -3.976953046251457,
+      "g": 0.7393640966551008,
+      "label": 0,
+      "magnetization_x": 0.6746851063561328,
+      "magnetization_z2": 0.6847090817597468,
+      "parameter_id": "class-0-00174",
+      "split": "test"
+    },
+    {
+      "energy": -4.099486131477959,
+      "g": 0.7837680790417354,
+      "label": 0,
+      "magnetization_x": 0.7045350044719902,
+      "magnetization_z2": 0.6580936169407343,
+      "parameter_id": "class-0-00175",
+      "split": "test"
+    },
+    {
+      "energy": -3.985049294810446,
+      "g": 0.7423594066501928,
+      "label": 0,
+      "magnetization_x": 0.6768000024284226,
+      "magnetization_z2": 0.6828617119353784,
+      "parameter_id": "class-0-00176",
+      "split": "test"
+    },
+    {
+      "energy": -4.105417706473022,
+      "g": 0.7858708686655078,
+      "label": 0,
+      "magnetization_x": 0.7058700236115003,
+      "magnetization_z2": 0.656875521992188,
+      "parameter_id": "class-0-00177",
+      "split": "test"
+    },
+    {
+      "energy": -4.124485806730289,
+      "g": 0.7926040500862186,
+      "label": 0,
+      "magnetization_x": 0.7100981486001932,
+      "magnetization_z2": 0.6530016629345432,
+      "parameter_id": "class-0-00178",
+      "split": "test"
+    },
+    {
+      "energy": -3.930498377677565,
+      "g": 0.7219899698598212,
+      "label": 0,
+      "magnetization_x": 0.6621230603872953,
+      "magnetization_z2": 0.6955644541118589,
+      "parameter_id": "class-0-00179",
+      "split": "test"
+    },
+    {
+      "energy": -4.015051278990866,
+      "g": 0.7533791238424294,
+      "label": 0,
+      "magnetization_x": 0.6844531416133774,
+      "magnetization_z2": 0.6761283696493334,
+      "parameter_id": "class-0-00180",
+      "split": "test"
+    },
+    {
+      "energy": -4.109174186363929,
+      "g": 0.7872005197256616,
+      "label": 0,
+      "magnetization_x": 0.7067106049791595,
+      "magnetization_z2": 0.6561073164004368,
+      "parameter_id": "class-0-00181",
+      "split": "test"
+    },
+    {
+      "energy": -4.011397061319168,
+      "g": 0.7520435080407945,
+      "label": 0,
+      "magnetization_x": 0.683536202727324,
+      "magnetization_z2": 0.6769391168680889,
+      "parameter_id": "class-0-00182",
+      "split": "test"
+    },
+    {
+      "energy": -4.0456451003305105,
+      "g": 0.764492378332839,
+      "label": 0,
+      "magnetization_x": 0.6919697719437663,
+      "magnetization_z2": 0.6694407023618322,
+      "parameter_id": "class-0-00183",
+      "split": "test"
+    },
+    {
+      "energy": -4.112182774432169,
+      "g": 0.788264307666555,
+      "label": 0,
+      "magnetization_x": 0.7073811156363701,
+      "magnetization_z2": 0.6554938472796907,
+      "parameter_id": "class-0-00184",
+      "split": "test"
+    },
+    {
+      "energy": -4.141684311637351,
+      "g": 0.7986431140771406,
+      "label": 0,
+      "magnetization_x": 0.713830403658912,
+      "magnetization_z2": 0.649561726207571,
+      "parameter_id": "class-0-00185",
+      "split": "test"
+    },
+    {
+      "energy": -4.068487150633065,
+      "g": 0.772712557625327,
+      "label": 0,
+      "magnetization_x": 0.6974009118738895,
+      "magnetization_z2": 0.664562040285543,
+      "parameter_id": "class-0-00186",
+      "split": "test"
+    },
+    {
+      "energy": -4.0836193242803285,
+      "g": 0.7781233772318366,
+      "label": 0,
+      "magnetization_x": 0.7009167650833965,
+      "magnetization_z2": 0.6613828163607489,
+      "parameter_id": "class-0-00187",
+      "split": "test"
+    },
+    {
+      "energy": -3.9772718068142425,
+      "g": 0.7394822039002216,
+      "label": 0,
+      "magnetization_x": 0.6747687800150228,
+      "magnetization_z2": 0.6846361016875079,
+      "parameter_id": "class-0-00188",
+      "split": "test"
+    },
+    {
+      "energy": -3.9896332349152703,
+      "g": 0.7440511612485883,
+      "label": 0,
+      "magnetization_x": 0.6779879316324979,
+      "magnetization_z2": 0.6818215259518914,
+      "parameter_id": "class-0-00189",
+      "split": "test"
+    },
+    {
+      "energy": -3.9225499676837856,
+      "g": 0.7189838175521539,
+      "label": 0,
+      "magnetization_x": 0.6598982433569396,
+      "magnetization_z2": 0.6974662113937946,
+      "parameter_id": "class-0-00190",
+      "split": "test"
+    },
+    {
+      "energy": -3.9187924691583618,
+      "g": 0.7175591599287813,
+      "label": 0,
+      "magnetization_x": 0.6588385687725242,
+      "magnetization_z2": 0.698369831365072,
+      "parameter_id": "class-0-00191",
+      "split": "test"
+    },
+    {
+      "energy": -4.0769659913169525,
+      "g": 0.7757476910430727,
+      "label": 0,
+      "magnetization_x": 0.6993788378123476,
+      "magnetization_z2": 0.6627755355250986,
+      "parameter_id": "class-0-00192",
+      "split": "test"
+    },
+    {
+      "energy": -3.9540808021375513,
+      "g": 0.7308506292662037,
+      "label": 0,
+      "magnetization_x": 0.6685925844592612,
+      "magnetization_z2": 0.6899989092899506,
+      "parameter_id": "class-0-00193",
+      "split": "test"
+    },
+    {
+      "energy": -3.9408008340395573,
+      "g": 0.7258715355677952,
+      "label": 0,
+      "magnetization_x": 0.6649733296349813,
+      "magnetization_z2": 0.6931189672068194,
+      "parameter_id": "class-0-00194",
+      "split": "test"
+    },
+    {
+      "energy": -4.011044914691873,
+      "g": 0.7519147038003139,
+      "label": 0,
+      "magnetization_x": 0.683447620213498,
+      "magnetization_z2": 0.6770173824745039,
+      "parameter_id": "class-0-00195",
+      "split": "test"
+    },
+    {
+      "energy": -4.135001738620599,
+      "g": 0.7963003590688321,
+      "label": 0,
+      "magnetization_x": 0.7123892352106471,
+      "magnetization_z2": 0.6508922970582892,
+      "parameter_id": "class-0-00196",
+      "split": "test"
+    },
+    {
+      "energy": -3.95530824343005,
+      "g": 0.7313094801030817,
+      "label": 0,
+      "magnetization_x": 0.6689240332281334,
+      "magnetization_z2": 0.6897123463224315,
+      "parameter_id": "class-0-00197",
+      "split": "test"
+    },
+    {
+      "energy": -4.08556951327287,
+      "g": 0.7788187398046743,
+      "label": 0,
+      "magnetization_x": 0.7013652174925584,
+      "magnetization_z2": 0.6609761062441619,
+      "parameter_id": "class-0-00198",
+      "split": "test"
+    },
+    {
+      "energy": -4.1425622022443465,
+      "g": 0.7989505311828081,
+      "label": 0,
+      "magnetization_x": 0.7140188862823245,
+      "magnetization_z2": 0.6493874955322461,
+      "parameter_id": "class-0-00199",
+      "split": "test"
+    },
+    {
+      "energy": -6.050004053564794,
+      "g": 1.3749248918607324,
+      "label": 1,
+      "magnetization_x": 0.8987296484745427,
+      "magnetization_z2": 0.4492329752505744,
+      "parameter_id": "class-1-00000",
+      "split": "train"
+    },
+    {
+      "energy": -6.7092702955307475,
+      "g": 1.5559243556215447,
+      "label": 1,
+      "magnetization_x": 0.9210814106482799,
+      "magnetization_z2": 0.41916456950947606,
+      "parameter_id": "class-1-00001",
+      "split": "train"
+    },
+    {
+      "energy": -6.03695036057091,
+      "g": 1.3712926504619574,
+      "label": 1,
+      "magnetization_x": 0.8981894502049657,
+      "magnetization_z2": 0.4499351721927646,
+      "parameter_id": "class-1-00002",
+      "split": "train"
+    },
+    {
+      "energy": -5.709006538942796,
+      "g": 1.2792598637051584,
+      "label": 1,
+      "magnetization_x": 0.8829617379235469,
+      "magnetization_z2": 0.4693224014731512,
+      "parameter_id": "class-1-00003",
+      "split": "train"
+    },
+    {
+      "energy": -6.471514336136166,
+      "g": 1.4911491025338666,
+      "label": 1,
+      "magnetization_x": 0.9140060117791153,
+      "magnetization_z2": 0.428912483553666,
+      "parameter_id": "class-1-00004",
+      "split": "train"
+    },
+    {
+      "energy": -6.188401128299181,
+      "g": 1.4133047142221171,
+      "label": 1,
+      "magnetization_x": 0.9041887885826676,
+      "magnetization_z2": 0.44207656665461054,
+      "parameter_id": "class-1-00005",
+      "split": "train"
+    },
+    {
+      "energy": -5.710966764995875,
+      "g": 1.2798148462268417,
+      "label": 1,
+      "magnetization_x": 0.8830632743646705,
+      "magnetization_z2": 0.4691955934956034,
+      "parameter_id": "class-1-00006",
+      "split": "train"
+    },
+    {
+      "energy": -5.694242774245384,
+      "g": 1.2750778624040078,
+      "label": 1,
+      "magnetization_x": 0.8821924804313368,
+      "magnetization_z2": 0.4702821026336509,
+      "parameter_id": "class-1-00007",
+      "split": "train"
+    },
+    {
+      "energy": -6.661176950013993,
+      "g": 1.542861283625006,
+      "label": 1,
+      "magnetization_x": 0.9197258756794453,
+      "magnetization_z2": 0.42105035175015426,
+      "parameter_id": "class-1-00008",
+      "split": "train"
+    },
+    {
+      "energy": -6.599061922166382,
+      "g": 1.5259606704388862,
+      "label": 1,
+      "magnetization_x": 0.9179202302687779,
+      "magnetization_z2": 0.4235486141598426,
+      "parameter_id": "class-1-00009",
+      "split": "train"
+    },
+    {
+      "energy": -5.872881863030718,
+      "g": 1.3254455564094665,
+      "label": 1,
+      "magnetization_x": 0.8909913475657052,
+      "magnetization_z2": 0.4591947280247115,
+      "parameter_id": "class-1-00010",
+      "split": "train"
+    },
+    {
+      "energy": -5.944899826283797,
+      "g": 1.3456156882532924,
+      "label": 1,
+      "magnetization_x": 0.8942471380634396,
+      "magnetization_z2": 0.4550285317069661,
+      "parameter_id": "class-1-00011",
+      "split": "train"
+    },
+    {
+      "energy": -5.94659902665165,
+      "g": 1.346090704912023,
+      "label": 1,
+      "magnetization_x": 0.8943220881814288,
+      "magnetization_z2": 0.45493220149468416,
+      "parameter_id": "class-1-00012",
+      "split": "train"
+    },
+    {
+      "energy": -5.7168969677748676,
+      "g": 1.281493427455293,
+      "label": 1,
+      "magnetization_x": 0.8833695988437288,
+      "magnetization_z2": 0.468812836970092,
+      "parameter_id": "class-1-00013",
+      "split": "train"
+    },
+    {
+      "energy": -5.5793592559094485,
+      "g": 1.2424069550256625,
+      "label": 1,
+      "magnetization_x": 0.8759218077477047,
+      "magnetization_z2": 0.478039586497898,
+      "parameter_id": "class-1-00014",
+      "split": "train"
+    },
+    {
+      "energy": -5.8429844384650895,
+      "g": 1.3170501792571951,
+      "label": 1,
+      "magnetization_x": 0.8895928398833464,
+      "magnetization_z2": 0.4609734769187393,
+      "parameter_id": "class-1-00015",
+      "split": "train"
+    },
+    {
+      "energy": -6.512303931702523,
+      "g": 1.5022980656667273,
+      "label": 1,
+      "magnetization_x": 0.915289182173718,
+      "magnetization_z2": 0.4271617158779102,
+      "parameter_id": "class-1-00016",
+      "split": "train"
+    },
+    {
+      "energy": -5.636036640083145,
+      "g": 1.2585541601358468,
+      "label": 1,
+      "magnetization_x": 0.8790800128097749,
+      "magnetization_z2": 0.47414698852645665,
+      "parameter_id": "class-1-00017",
+      "split": "train"
+    },
+    {
+      "energy": -5.992658357231551,
+      "g": 1.3589517440733416,
+      "label": 1,
+      "magnetization_x": 0.8963221089015447,
+      "magnetization_z2": 0.4523545046874776,
+      "parameter_id": "class-1-00018",
+      "split": "train"
+    },
+    {
+      "energy": -6.636811999535487,
+      "g": 1.5362358812167625,
+      "label": 1,
+      "magnetization_x": 0.919025116966746,
+      "magnetization_z2": 0.42202174838857986,
+      "parameter_id": "class-1-00019",
+      "split": "train"
+    },
+    {
+      "energy": -6.049541345340166,
+      "g": 1.3747961787559495,
+      "label": 1,
+      "magnetization_x": 0.898710577919941,
+      "magnetization_z2": 0.44925778267660665,
+      "parameter_id": "class-1-00020",
+      "split": "train"
+    },
+    {
+      "energy": -6.516666849511582,
+      "g": 1.503489654875224,
+      "label": 1,
+      "magnetization_x": 0.915424645349143,
+      "magnetization_z2": 0.42697645994308264,
+      "parameter_id": "class-1-00021",
+      "split": "train"
+    },
+    {
+      "energy": -6.348306324943292,
+      "g": 1.4573748032984857,
+      "label": 1,
+      "magnetization_x": 0.9099382626248438,
+      "magnetization_z2": 0.4344152528720198,
+      "parameter_id": "class-1-00022",
+      "split": "train"
+    },
+    {
+      "energy": -5.6226681688656255,
+      "g": 1.2547507403370721,
+      "label": 1,
+      "magnetization_x": 0.8783466936475379,
+      "magnetization_z2": 0.47505341087444924,
+      "parameter_id": "class-1-00023",
+      "split": "train"
+    },
+    {
+      "energy": -6.356335500543556,
+      "g": 1.4595804378049442,
+      "label": 1,
+      "magnetization_x": 0.9102125075241445,
+      "magnetization_z2": 0.4340464660929001,
+      "parameter_id": "class-1-00024",
+      "split": "train"
+    },
+    {
+      "energy": -6.039410634280585,
+      "g": 1.3719773984751262,
+      "label": 1,
+      "magnetization_x": 0.8982916114149436,
+      "magnetization_z2": 0.44980245437210375,
+      "parameter_id": "class-1-00025",
+      "split": "train"
+    },
+    {
+      "energy": -6.45279515556935,
+      "g": 1.48602733439663,
+      "label": 1,
+      "magnetization_x": 0.913406860850341,
+      "magnetization_z2": 0.4297274776154987,
+      "parameter_id": "class-1-00026",
+      "split": "train"
+    },
+    {
+      "energy": -6.271971253846764,
+      "g": 1.4363715608919811,
+      "label": 1,
+      "magnetization_x": 0.9072635775776086,
+      "magnetization_z2": 0.4379957871545342,
+      "parameter_id": "class-1-00027",
+      "split": "train"
+    },
+    {
+      "energy": -5.828546180081872,
+      "g": 1.3129910706614554,
+      "label": 1,
+      "magnetization_x": 0.8889072483530487,
+      "magnetization_z2": 0.4618431440101309,
+      "parameter_id": "class-1-00028",
+      "split": "train"
+    },
+    {
+      "energy": -5.599695234986894,
+      "g": 1.2482073102160292,
+      "label": 1,
+      "magnetization_x": 0.877069906780416,
+      "magnetization_z2": 0.47662785114045375,
+      "parameter_id": "class-1-00029",
+      "split": "train"
+    },
+    {
+      "energy": -6.472980142583981,
+      "g": 1.491550021407939,
+      "label": 1,
+      "magnetization_x": 0.9140526524558961,
+      "magnetization_z2": 0.42884897449853243,
+      "parameter_id": "class-1-00030",
+      "split": "train"
+    },
+    {
+      "energy": -6.746666592848125,
+      "g": 1.5660687751867013,
+      "label": 1,
+      "magnetization_x": 0.9221107589966069,
+      "magnetization_z2": 0.41772654077542903,
+      "parameter_id": "class-1-00031",
+      "split": "train"
+    },
+    {
+      "energy": -5.911789791252564,
+      "g": 1.3363516619141842,
+      "label": 1,
+      "magnetization_x": 0.8927697095096159,
+      "magnetization_z2": 0.45692350553804995,
+      "parameter_id": "class-1-00032",
+      "split": "train"
+    },
+    {
+      "energy": -5.602916558572331,
+      "g": 1.2491254218581131,
+      "label": 1,
+      "magnetization_x": 0.8772502218202252,
+      "magnetization_z2": 0.4764057861704735,
+      "parameter_id": "class-1-00033",
+      "split": "train"
+    },
+    {
+      "energy": -5.6233318546387645,
+      "g": 1.2549396383997453,
+      "label": 1,
+      "magnetization_x": 0.8783832662670705,
+      "magnetization_z2": 0.47500824238595973,
+      "parameter_id": "class-1-00034",
+      "split": "train"
+    },
+    {
+      "energy": -6.474801138326526,
+      "g": 1.4920480611182338,
+      "label": 1,
+      "magnetization_x": 0.9141105394687279,
+      "magnetization_z2": 0.42877013834731925,
+      "parameter_id": "class-1-00035",
+      "split": "train"
+    },
+    {
+      "energy": -6.146717030192174,
+      "g": 1.401769310377649,
+      "label": 1,
+      "magnetization_x": 0.9025944677251574,
+      "magnetization_z2": 0.44417808646321055,
+      "parameter_id": "class-1-00036",
+      "split": "train"
+    },
+    {
+      "energy": -6.703687435472012,
+      "g": 1.5544089273781725,
+      "label": 1,
+      "magnetization_x": 0.9209259075638191,
+      "magnetization_z2": 0.4193813562856017,
+      "parameter_id": "class-1-00037",
+      "split": "train"
+    },
+    {
+      "energy": -5.8400350887798345,
+      "g": 1.3162212660871853,
+      "label": 1,
+      "magnetization_x": 0.8894533381858406,
+      "magnetization_z2": 0.4611505572325787,
+      "parameter_id": "class-1-00038",
+      "split": "train"
+    },
+    {
+      "energy": -6.069208808294188,
+      "g": 1.3802647453628203,
+      "label": 1,
+      "magnetization_x": 0.89951619063743,
+      "magnetization_z2": 0.448208678539581,
+      "parameter_id": "class-1-00039",
+      "split": "train"
+    },
+    {
+      "energy": -6.8237225071981165,
+      "g": 1.5869365374213533,
+      "label": 1,
+      "magnetization_x": 0.9241664049558498,
+      "magnetization_z2": 0.41483878146835446,
+      "parameter_id": "class-1-00040",
+      "split": "train"
+    },
+    {
+      "energy": -6.833714371766093,
+      "g": 1.5896390962646116,
+      "label": 1,
+      "magnetization_x": 0.9244267151399268,
+      "magnetization_z2": 0.4144715525138433,
+      "parameter_id": "class-1-00041",
+      "split": "train"
+    },
+    {
+      "energy": -5.967583215898407,
+      "g": 1.3519536356131847,
+      "label": 1,
+      "magnetization_x": 0.8952407882715818,
+      "magnetization_z2": 0.4537498676880971,
+      "parameter_id": "class-1-00042",
+      "split": "train"
+    },
+    {
+      "energy": -5.481742809983525,
+      "g": 1.2144550535258944,
+      "label": 1,
+      "magnetization_x": 0.8701656862568823,
+      "magnetization_z2": 0.4850614862721183,
+      "parameter_id": "class-1-00043",
+      "split": "train"
+    },
+    {
+      "energy": -6.822604602192935,
+      "g": 1.5866341236284027,
+      "label": 1,
+      "magnetization_x": 0.9241371935528141,
+      "magnetization_z2": 0.4148799690942071,
+      "parameter_id": "class-1-00044",
+      "split": "train"
+    },
+    {
+      "energy": -6.58674944244422,
+      "g": 1.5226066401993945,
+      "label": 1,
+      "magnetization_x": 0.9175547281408081,
+      "magnetization_z2": 0.4240524479150406,
+      "parameter_id": "class-1-00045",
+      "split": "train"
+    },
+    {
+      "energy": -6.067222005308991,
+      "g": 1.3797125339740621,
+      "label": 1,
+      "magnetization_x": 0.899435268906518,
+      "magnetization_z2": 0.4483141645451232,
+      "parameter_id": "class-1-00046",
+      "split": "train"
+    },
+    {
+      "energy": -5.704287769448359,
+      "g": 1.2779236155645273,
+      "label": 1,
+      "magnetization_x": 0.882716738575325,
+      "magnetization_z2": 0.4696282498087332,
+      "parameter_id": "class-1-00047",
+      "split": "train"
+    },
+    {
+      "energy": -5.642926218877332,
+      "g": 1.2605130568497196,
+      "label": 1,
+      "magnetization_x": 0.8794551973980076,
+      "magnetization_z2": 0.47368262991801496,
+      "parameter_id": "class-1-00048",
+      "split": "train"
+    },
+    {
+      "energy": -5.75367998581316,
+      "g": 1.291892227220665,
+      "label": 1,
+      "magnetization_x": 0.8852414880320041,
+      "magnetization_z2": 0.46646762195585345,
+      "parameter_id": "class-1-00049",
+      "split": "train"
+    },
+    {
+      "energy": -5.893285363674233,
+      "g": 1.331167480531873,
+      "label": 1,
+      "magnetization_x": 0.8919297087180817,
+      "magnetization_z2": 0.45799762066757954,
+      "parameter_id": "class-1-00050",
+      "split": "train"
+    },
+    {
+      "energy": -5.946871759914566,
+      "g": 1.3461669446228992,
+      "label": 1,
+      "magnetization_x": 0.8943341103502098,
+      "magnetization_z2": 0.45491674812095795,
+      "parameter_id": "class-1-00051",
+      "split": "train"
+    },
+    {
+      "energy": -6.605253694384676,
+      "g": 1.5276468614214427,
+      "label": 1,
+      "magnetization_x": 0.9181030738240414,
+      "magnetization_z2": 0.42329633564202074,
+      "parameter_id": "class-1-00052",
+      "split": "train"
+    },
+    {
+      "energy": -6.347262691690786,
+      "g": 1.4570880657825152,
+      "label": 1,
+      "magnetization_x": 0.9099025192304758,
+      "magnetization_z2": 0.4344632952280051,
+      "parameter_id": "class-1-00053",
+      "split": "train"
+    },
+    {
+      "energy": -6.166146142183156,
+      "g": 1.4071485385215934,
+      "label": 1,
+      "magnetization_x": 0.9033427623549956,
+      "magnetization_z2": 0.4431929440183656,
+      "parameter_id": "class-1-00054",
+      "split": "train"
+    },
+    {
+      "energy": -6.105507406032877,
+      "g": 1.390344899727767,
+      "label": 1,
+      "magnetization_x": 0.900976675977147,
+      "magnetization_z2": 0.4463007409079357,
+      "parameter_id": "class-1-00055",
+      "split": "train"
+    },
+    {
+      "energy": -6.519705884215626,
+      "g": 1.5043195643585354,
+      "label": 1,
+      "magnetization_x": 0.9155188021920736,
+      "magnetization_z2": 0.4268476448580004,
+      "parameter_id": "class-1-00056",
+      "split": "train"
+    },
+    {
+      "energy": -5.7684189896141636,
+      "g": 1.2960529178046627,
+      "label": 1,
+      "magnetization_x": 0.8859782060771633,
+      "magnetization_z2": 0.46554163664499565,
+      "parameter_id": "class-1-00057",
+      "split": "train"
+    },
+    {
+      "energy": -6.6817225091827135,
+      "g": 1.5484442057606906,
+      "label": 1,
+      "magnetization_x": 0.9203094055564803,
+      "magnetization_z2": 0.4202396566451334,
+      "parameter_id": "class-1-00058",
+      "split": "train"
+    },
+    {
+      "energy": -6.336533186987475,
+      "g": 1.4541394869461155,
+      "label": 1,
+      "magnetization_x": 0.9095337431570463,
+      "magnetization_z2": 0.434958654328231,
+      "parameter_id": "class-1-00059",
+      "split": "train"
+    },
+    {
+      "energy": -6.114496792558124,
+      "g": 1.3928387508564395,
+      "label": 1,
+      "magnetization_x": 0.9013331830381146,
+      "magnetization_z2": 0.44583381732474425,
+      "parameter_id": "class-1-00060",
+      "split": "train"
+    },
+    {
+      "energy": -6.766822245501852,
+      "g": 1.5715316970051325,
+      "label": 1,
+      "magnetization_x": 0.9226568328847156,
+      "magnetization_z2": 0.41696151299217815,
+      "parameter_id": "class-1-00061",
+      "split": "train"
+    },
+    {
+      "energy": -5.6601924599377265,
+      "g": 1.2654186728734644,
+      "label": 1,
+      "magnetization_x": 0.880387377984758,
+      "magnetization_z2": 0.4725270894497529,
+      "parameter_id": "class-1-00062",
+      "split": "train"
+    },
+    {
+      "energy": -6.251044928921323,
+      "g": 1.4306028348223392,
+      "label": 1,
+      "magnetization_x": 0.9065084138067614,
+      "magnetization_z2": 0.4390014717877971,
+      "parameter_id": "class-1-00063",
+      "split": "train"
+    },
+    {
+      "energy": -6.5027872560386415,
+      "g": 1.4996982816127458,
+      "label": 1,
+      "magnetization_x": 0.9149925132293422,
+      "magnetization_z2": 0.42756714510297966,
+      "parameter_id": "class-1-00064",
+      "split": "train"
+    },
+    {
+      "energy": -6.690432199950734,
+      "g": 1.5508098582666703,
+      "label": 1,
+      "magnetization_x": 0.920554766149156,
+      "magnetization_z2": 0.41989828535516627,
+      "parameter_id": "class-1-00065",
+      "split": "train"
+    },
+    {
+      "energy": -6.65117827669422,
+      "g": 1.540143020144137,
+      "label": 1,
+      "magnetization_x": 0.9194394623924903,
+      "magnetization_z2": 0.4214476638584944,
+      "parameter_id": "class-1-00066",
+      "split": "train"
+    },
+    {
+      "energy": -6.20688097094584,
+      "g": 1.4184122604699092,
+      "label": 1,
+      "magnetization_x": 0.9048824463296311,
+      "magnetization_z2": 0.4411591933632236,
+      "parameter_id": "class-1-00067",
+      "split": "train"
+    },
+    {
+      "energy": -5.4374261129442685,
+      "g": 1.2017027117743018,
+      "label": 1,
+      "magnetization_x": 0.8674109783956966,
+      "magnetization_z2": 0.48838981161349976,
+      "parameter_id": "class-1-00068",
+      "split": "train"
+    },
+    {
+      "energy": -6.0468613252188375,
+      "g": 1.3740506147735658,
+      "label": 1,
+      "magnetization_x": 0.8986000088260144,
+      "magnetization_z2": 0.44940158776542743,
+      "parameter_id": "class-1-00069",
+      "split": "train"
+    },
+    {
+      "energy": -6.077700357307273,
+      "g": 1.3826243251681585,
+      "label": 1,
+      "magnetization_x": 0.8998608899692445,
+      "magnetization_z2": 0.44775907680119775,
+      "parameter_id": "class-1-00070",
+      "split": "train"
+    },
+    {
+      "energy": -6.811792838451564,
+      "g": 1.5837088489756181,
+      "label": 1,
+      "magnetization_x": 0.9238537631747177,
+      "magnetization_z2": 0.4152793722905219,
+      "parameter_id": "class-1-00071",
+      "split": "train"
+    },
+    {
+      "energy": -5.944957834137978,
+      "g": 1.3456319051827847,
+      "label": 1,
+      "magnetization_x": 0.8942496981230109,
+      "magnetization_z2": 0.455025241687877,
+      "parameter_id": "class-1-00072",
+      "split": "train"
+    },
+    {
+      "energy": -6.095596669884457,
+      "g": 1.3875942987593057,
+      "label": 1,
+      "magnetization_x": 0.900581262869008,
+      "magnetization_z2": 0.44681807067495766,
+      "parameter_id": "class-1-00073",
+      "split": "train"
+    },
+    {
+      "energy": -5.576354813636184,
+      "g": 1.2415493626133696,
+      "label": 1,
+      "magnetization_x": 0.8757507424241375,
+      "magnetization_z2": 0.4782496102321507,
+      "parameter_id": "class-1-00074",
+      "split": "train"
+    },
+    {
+      "energy": -5.921161200835514,
+      "g": 1.3389752936821966,
+      "label": 1,
+      "magnetization_x": 0.8931911808404163,
+      "magnetization_z2": 0.4563836737162761,
+      "parameter_id": "class-1-00075",
+      "split": "train"
+    },
+    {
+      "energy": -6.151001440592833,
+      "g": 1.4029558944220888,
+      "label": 1,
+      "magnetization_x": 0.9027602630237271,
+      "magnetization_z2": 0.4439599970536985,
+      "parameter_id": "class-1-00076",
+      "split": "train"
+    },
+    {
+      "energy": -6.428332746379932,
+      "g": 1.479329057572701,
+      "label": 1,
+      "magnetization_x": 0.9126139158902749,
+      "magnetization_z2": 0.430803672309305,
+      "parameter_id": "class-1-00077",
+      "split": "train"
+    },
+    {
+      "energy": -5.657265343693658,
+      "g": 1.2645873974526738,
+      "label": 1,
+      "magnetization_x": 0.8802301548589185,
+      "magnetization_z2": 0.4727221653000377,
+      "parameter_id": "class-1-00078",
+      "split": "train"
+    },
+    {
+      "energy": -6.1583783495519215,
+      "g": 1.4049984483881688,
+      "label": 1,
+      "magnetization_x": 0.9030446865702003,
+      "magnetization_z2": 0.4435856202283799,
+      "parameter_id": "class-1-00079",
+      "split": "train"
+    },
+    {
+      "energy": -5.946854400191221,
+      "g": 1.3461620919256323,
+      "label": 1,
+      "magnetization_x": 0.8943333451926581,
+      "magnetization_z2": 0.4549177316741831,
+      "parameter_id": "class-1-00080",
+      "split": "train"
+    },
+    {
+      "energy": -6.207177346319354,
+      "g": 1.4184941422556139,
+      "label": 1,
+      "magnetization_x": 0.9048935063507848,
+      "magnetization_z2": 0.441144551219426,
+      "parameter_id": "class-1-00081",
+      "split": "train"
+    },
+    {
+      "energy": -5.769036582653706,
+      "g": 1.2962271834729984,
+      "label": 1,
+      "magnetization_x": 0.8860089120388281,
+      "magnetization_z2": 0.4655030052721307,
+      "parameter_id": "class-1-00082",
+      "split": "train"
+    },
+    {
+      "energy": -5.563005094248582,
+      "g": 1.2377367648211148,
+      "label": 1,
+      "magnetization_x": 0.8749860889812882,
+      "magnetization_z2": 0.4791873876982534,
+      "parameter_id": "class-1-00083",
+      "split": "train"
+    },
+    {
+      "energy": -6.839493679370801,
+      "g": 1.5912019131626447,
+      "label": 1,
+      "magnetization_x": 0.9245766394036541,
+      "magnetization_z2": 0.41425988889768983,
+      "parameter_id": "class-1-00084",
+      "split": "train"
+    },
+    {
+      "energy": -6.49652308176469,
+      "g": 1.4979865611943224,
+      "label": 1,
+      "magnetization_x": 0.9147963425480569,
+      "magnetization_z2": 0.4278350167413476,
+      "parameter_id": "class-1-00085",
+      "split": "train"
+    },
+    {
+      "energy": -5.51781242002777,
+      "g": 1.2248049201735576,
+      "label": 1,
+      "magnetization_x": 0.8723411612834275,
+      "magnetization_z2": 0.48241844875831774,
+      "parameter_id": "class-1-00086",
+      "split": "train"
+    },
+    {
+      "energy": -5.724562798990069,
+      "g": 1.2836624290371517,
+      "label": 1,
+      "magnetization_x": 0.8837636930723289,
+      "magnetization_z2": 0.4683199888972803,
+      "parameter_id": "class-1-00087",
+      "split": "train"
+    },
+    {
+      "energy": -6.7208193759683,
+      "g": 1.5590584628332358,
+      "label": 1,
+      "magnetization_x": 0.9214015737321694,
+      "magnetization_z2": 0.41871785535204,
+      "parameter_id": "class-1-00088",
+      "split": "train"
+    },
+    {
+      "energy": -6.716215370149031,
+      "g": 1.5578091910431455,
+      "label": 1,
+      "magnetization_x": 0.9212741867226598,
+      "magnetization_z2": 0.4188956552874359,
+      "parameter_id": "class-1-00089",
+      "split": "train"
+    },
+    {
+      "energy": -5.487945921362565,
+      "g": 1.2162368298015156,
+      "label": 1,
+      "magnetization_x": 0.8705439971905365,
+      "magnetization_z2": 0.48460279796159295,
+      "parameter_id": "class-1-00090",
+      "split": "train"
+    },
+    {
+      "energy": -6.760978329737196,
+      "g": 1.5699481139243858,
+      "label": 1,
+      "magnetization_x": 0.9224991250319132,
+      "magnetization_z2": 0.417182609499696,
+      "parameter_id": "class-1-00091",
+      "split": "train"
+    },
+    {
+      "energy": -5.579679485339154,
+      "g": 1.2424983519111794,
+      "label": 1,
+      "magnetization_x": 0.8759400187147217,
+      "magnetization_z2": 0.4780172232474595,
+      "parameter_id": "class-1-00092",
+      "split": "train"
+    },
+    {
+      "energy": -5.57944392551502,
+      "g": 1.2424311208165135,
+      "label": 1,
+      "magnetization_x": 0.8759266231943803,
+      "magnetization_z2": 0.47803367317309736,
+      "parameter_id": "class-1-00093",
+      "split": "train"
+    },
+    {
+      "energy": -5.623400005015658,
+      "g": 1.2549590348960877,
+      "label": 1,
+      "magnetization_x": 0.8783870207263956,
+      "magnetization_z2": 0.4750036052739821,
+      "parameter_id": "class-1-00094",
+      "split": "train"
+    },
+    {
+      "energy": -6.126587736343631,
+      "g": 1.3961914916267568,
+      "label": 1,
+      "magnetization_x": 0.9018095025968742,
+      "magnetization_z2": 0.44520923603286444,
+      "parameter_id": "class-1-00095",
+      "split": "train"
+    },
+    {
+      "energy": -6.312824036159728,
+      "g": 1.4476197003979554,
+      "label": 1,
+      "magnetization_x": 0.9087103584588784,
+      "magnetization_z2": 0.43606264340116524,
+      "parameter_id": "class-1-00096",
+      "split": "train"
+    },
+    {
+      "energy": -6.48910282261335,
+      "g": 1.495958458196013,
+      "label": 1,
+      "magnetization_x": 0.9145630436846868,
+      "magnetization_z2": 0.4281533638039743,
+      "parameter_id": "class-1-00097",
+      "split": "train"
+    },
+    {
+      "energy": -6.161010423513091,
+      "g": 1.405727074153122,
+      "label": 1,
+      "magnetization_x": 0.9031458504544005,
+      "magnetization_z2": 0.4434523877786636,
+      "parameter_id": "class-1-00098",
+      "split": "train"
+    },
+    {
+      "energy": -6.133003328598954,
+      "g": 1.3979697768493904,
+      "label": 1,
+      "magnetization_x": 0.9020607685562025,
+      "magnetization_z2": 0.44487941847180157,
+      "parameter_id": "class-1-00099",
+      "split": "train"
+    },
+    {
+      "energy": -5.7913114849308505,
+      "g": 1.3025084595727314,
+      "label": 1,
+      "magnetization_x": 0.8871076821106274,
+      "magnetization_z2": 0.4641186817573751,
+      "parameter_id": "class-1-00100",
+      "split": "train"
+    },
+    {
+      "energy": -6.740556289081762,
+      "g": 1.5644120176017435,
+      "label": 1,
+      "magnetization_x": 0.9219440167885002,
+      "magnetization_z2": 0.4179598418979854,
+      "parameter_id": "class-1-00101",
+      "split": "train"
+    },
+    {
+      "energy": -6.707400073281048,
+      "g": 1.555416725391316,
+      "label": 1,
+      "magnetization_x": 0.9210293716761095,
+      "magnetization_z2": 0.41923713024494513,
+      "parameter_id": "class-1-00102",
+      "split": "train"
+    },
+    {
+      "energy": -6.387092512358243,
+      "g": 1.4680233635454394,
+      "label": 1,
+      "magnetization_x": 0.9112509568532525,
+      "magnetization_z2": 0.43264717351957205,
+      "parameter_id": "class-1-00103",
+      "split": "train"
+    },
+    {
+      "energy": -5.919434755180398,
+      "g": 1.338492048736544,
+      "label": 1,
+      "magnetization_x": 0.8931137328477426,
+      "magnetization_z2": 0.4564829161507334,
+      "parameter_id": "class-1-00104",
+      "split": "train"
+    },
+    {
+      "energy": -6.057775113137976,
+      "g": 1.3770861863388855,
+      "label": 1,
+      "magnetization_x": 0.8990490862413066,
+      "magnetization_z2": 0.44881724819711655,
+      "parameter_id": "class-1-00105",
+      "split": "train"
+    },
+    {
+      "energy": -5.781693283187167,
+      "g": 1.2997971876489924,
+      "label": 1,
+      "magnetization_x": 0.8866353088459926,
+      "magnetization_z2": 0.4647142843854526,
+      "parameter_id": "class-1-00106",
+      "split": "train"
+    },
+    {
+      "energy": -5.515085663072183,
+      "g": 1.224023399457081,
+      "label": 1,
+      "magnetization_x": 0.8721787345999594,
+      "magnetization_z2": 0.48261623458120345,
+      "parameter_id": "class-1-00107",
+      "split": "train"
+    },
+    {
+      "energy": -5.9419017544994714,
+      "g": 1.3447774709337714,
+      "label": 1,
+      "magnetization_x": 0.8941146904327422,
+      "magnetization_z2": 0.4551987140658841,
+      "parameter_id": "class-1-00108",
+      "split": "train"
+    },
+    {
+      "energy": -6.713710375814672,
+      "g": 1.557129401907736,
+      "label": 1,
+      "magnetization_x": 0.9212047403910724,
+      "magnetization_z2": 0.4189925509982929,
+      "parameter_id": "class-1-00109",
+      "split": "train"
+    },
+    {
+      "energy": -5.4751844701662575,
+      "g": 1.212570397059638,
+      "label": 1,
+      "magnetization_x": 0.8697637941584286,
+      "magnetization_z2": 0.4855483396310506,
+      "parameter_id": "class-1-00110",
+      "split": "train"
+    },
+    {
+      "energy": -5.70419216939358,
+      "g": 1.277896539969425,
+      "label": 1,
+      "magnetization_x": 0.8827117665886689,
+      "magnetization_z2": 0.4696344547677723,
+      "parameter_id": "class-1-00111",
+      "split": "train"
+    },
+    {
+      "energy": -5.6793911616138315,
+      "g": 1.2708672769905,
+      "label": 1,
+      "magnetization_x": 0.8814105122618006,
+      "magnetization_z2": 0.47125582774169417,
+      "parameter_id": "class-1-00112",
+      "split": "train"
+    },
+    {
+      "energy": -6.291853932229487,
+      "g": 1.4418481672916017,
+      "label": 1,
+      "magnetization_x": 0.9079721980104258,
+      "magnetization_z2": 0.4370500086105966,
+      "parameter_id": "class-1-00113",
+      "split": "train"
+    },
+    {
+      "energy": -5.574725588097013,
+      "g": 1.2410842439777052,
+      "label": 1,
+      "magnetization_x": 0.875657821594964,
+      "magnetization_z2": 0.47836365787452084,
+      "parameter_id": "class-1-00114",
+      "split": "train"
+    },
+    {
+      "energy": -5.839065592772472,
+      "g": 1.3159487613394334,
+      "label": 1,
+      "magnetization_x": 0.8894074208091657,
+      "magnetization_z2": 0.46120882988101,
+      "parameter_id": "class-1-00115",
+      "split": "train"
+    },
+    {
+      "energy": -6.015226824375881,
+      "g": 1.365243116009729,
+      "label": 1,
+      "magnetization_x": 0.897280302641095,
+      "magnetization_z2": 0.4511146079456938,
+      "parameter_id": "class-1-00116",
+      "split": "train"
+    },
+    {
+      "energy": -6.761993670884037,
+      "g": 1.5702232702955639,
+      "label": 1,
+      "magnetization_x": 0.9225265619408701,
+      "magnetization_z2": 0.4171441536888546,
+      "parameter_id": "class-1-00117",
+      "split": "train"
+    },
+    {
+      "energy": -6.167625950003015,
+      "g": 1.4075580623202189,
+      "label": 1,
+      "magnetization_x": 0.903399383221563,
+      "magnetization_z2": 0.44311831516090094,
+      "parameter_id": "class-1-00118",
+      "split": "train"
+    },
+    {
+      "energy": -6.3578822109559345,
+      "g": 1.4600052467470228,
+      "label": 1,
+      "magnetization_x": 0.9102651857404422,
+      "magnetization_z2": 0.4339755919588542,
+      "parameter_id": "class-1-00119",
+      "split": "train"
+    },
+    {
+      "energy": -5.751119035130611,
+      "g": 1.2911689395774535,
+      "label": 1,
+      "magnetization_x": 0.8851127104881005,
+      "magnetization_z2": 0.4666293093625781,
+      "parameter_id": "class-1-00120",
+      "split": "train"
+    },
+    {
+      "energy": -6.70407632664255,
+      "g": 1.554514497456312,
+      "label": 1,
+      "magnetization_x": 0.9209367552008607,
+      "magnetization_z2": 0.41936623745350177,
+      "parameter_id": "class-1-00121",
+      "split": "train"
+    },
+    {
+      "energy": -5.880106478701269,
+      "g": 1.3274723050112516,
+      "label": 1,
+      "magnetization_x": 0.8913250809998856,
+      "magnetization_z2": 0.4587693046952673,
+      "parameter_id": "class-1-00122",
+      "split": "train"
+    },
+    {
+      "energy": -6.697970351081422,
+      "g": 1.5528567992499156,
+      "label": 1,
+      "magnetization_x": 0.9207661662912103,
+      "magnetization_z2": 0.4196039279665334,
+      "parameter_id": "class-1-00123",
+      "split": "train"
+    },
+    {
+      "energy": -5.808371507690805,
+      "g": 1.3073139723559444,
+      "label": 1,
+      "magnetization_x": 0.8879378958023469,
+      "magnetization_z2": 0.4630701706565662,
+      "parameter_id": "class-1-00124",
+      "split": "train"
+    },
+    {
+      "energy": -5.982666385990309,
+      "g": 1.3561641415070051,
+      "label": 1,
+      "magnetization_x": 0.8958933505646587,
+      "magnetization_z2": 0.4529082721295532,
+      "parameter_id": "class-1-00125",
+      "split": "train"
+    },
+    {
+      "energy": -6.689840208710367,
+      "g": 1.5506490865743903,
+      "label": 1,
+      "magnetization_x": 0.9205381267993009,
+      "magnetization_z2": 0.41992144502449136,
+      "parameter_id": "class-1-00126",
+      "split": "train"
+    },
+    {
+      "energy": -6.433576987383662,
+      "g": 1.4807655219805715,
+      "label": 1,
+      "magnetization_x": 0.9127848680033301,
+      "magnetization_z2": 0.43057188451130035,
+      "parameter_id": "class-1-00127",
+      "split": "train"
+    },
+    {
+      "energy": -5.973001561096274,
+      "g": 1.3534665339636223,
+      "label": 1,
+      "magnetization_x": 0.8954759526678733,
+      "magnetization_z2": 0.45344675154042513,
+      "parameter_id": "class-1-00128",
+      "split": "train"
+    },
+    {
+      "energy": -6.290867244920057,
+      "g": 1.4415764887347982,
+      "label": 1,
+      "magnetization_x": 0.9079372341913801,
+      "magnetization_z2": 0.4370967214539873,
+      "parameter_id": "class-1-00129",
+      "split": "train"
+    },
+    {
+      "energy": -5.872977257703471,
+      "g": 1.3254723227850729,
+      "label": 1,
+      "magnetization_x": 0.8909957648010018,
+      "magnetization_z2": 0.45918909960307736,
+      "parameter_id": "class-1-00130",
+      "split": "train"
+    },
+    {
+      "energy": -6.046645556452201,
+      "g": 1.3739905853293615,
+      "label": 1,
+      "magnetization_x": 0.8985910985873533,
+      "magnetization_z2": 0.4494131744208879,
+      "parameter_id": "class-1-00131",
+      "split": "train"
+    },
+    {
+      "energy": -5.47417752684557,
+      "g": 1.2122809566550434,
+      "label": 1,
+      "magnetization_x": 0.8697019138335048,
+      "magnetization_z2": 0.4856232627284147,
+      "parameter_id": "class-1-00132",
+      "split": "train"
+    },
+    {
+      "energy": -5.937342446225499,
+      "g": 1.3435025162299623,
+      "label": 1,
+      "magnetization_x": 0.893912766828793,
+      "magnetization_z2": 0.4554580510343409,
+      "parameter_id": "class-1-00133",
+      "split": "train"
+    },
+    {
+      "energy": -6.748927526657956,
+      "g": 1.566681732553912,
+      "label": 1,
+      "magnetization_x": 0.9221723151596334,
+      "magnetization_z2": 0.4176403779338188,
+      "parameter_id": "class-1-00134",
+      "split": "train"
+    },
+    {
+      "energy": -6.519975232162635,
+      "g": 1.5043931146559029,
+      "label": 1,
+      "magnetization_x": 0.9155271392981723,
+      "magnetization_z2": 0.4268362370180996,
+      "parameter_id": "class-1-00135",
+      "split": "train"
+    },
+    {
+      "energy": -5.5552559022663806,
+      "g": 1.2355221091795432,
+      "label": 1,
+      "magnetization_x": 0.8745387875205265,
+      "magnetization_z2": 0.4797351936970433,
+      "parameter_id": "class-1-00136",
+      "split": "train"
+    },
+    {
+      "energy": -5.60733599994431,
+      "g": 1.2503847033145399,
+      "label": 1,
+      "magnetization_x": 0.8774969188618487,
+      "magnetization_z2": 0.47610181699874043,
+      "parameter_id": "class-1-00137",
+      "split": "train"
+    },
+    {
+      "energy": -6.399259560152221,
+      "g": 1.4713606268995199,
+      "label": 1,
+      "magnetization_x": 0.9116565343922078,
+      "magnetization_z2": 0.4320994290469444,
+      "parameter_id": "class-1-00138",
+      "split": "train"
+    },
+    {
+      "energy": -5.750933734169068,
+      "g": 1.2911166010629265,
+      "label": 1,
+      "magnetization_x": 0.8851033837212913,
+      "magnetization_z2": 0.46664101763635535,
+      "parameter_id": "class-1-00139",
+      "split": "train"
+    },
+    {
+      "energy": -7.004350061731112,
+      "g": 1.6356784141967189,
+      "label": 1,
+      "magnetization_x": 0.9286644162941265,
+      "magnetization_z2": 0.40844244187399587,
+      "parameter_id": "class-1-00140",
+      "split": "val"
+    },
+    {
+      "energy": -6.921552638561246,
+      "g": 1.6133650702736142,
+      "label": 1,
+      "magnetization_x": 0.9266560095903613,
+      "magnetization_z2": 0.4113119844911325,
+      "parameter_id": "class-1-00141",
+      "split": "val"
+    },
+    {
+      "energy": -7.104251080324302,
+      "g": 1.6625384577850517,
+      "label": 1,
+      "magnetization_x": 0.930975217560057,
+      "magnetization_z2": 0.40511271607376964,
+      "parameter_id": "class-1-00142",
+      "split": "val"
+    },
+    {
+      "energy": -7.073263322789343,
+      "g": 1.6542140014377507,
+      "label": 1,
+      "magnetization_x": 0.9302711319890538,
+      "magnetization_z2": 0.4061305233124474,
+      "parameter_id": "class-1-00143",
+      "split": "val"
+    },
+    {
+      "energy": -7.222852648042324,
+      "g": 1.6943424612106273,
+      "label": 1,
+      "magnetization_x": 0.9335698560234806,
+      "magnetization_z2": 0.4013364883870388,
+      "parameter_id": "class-1-00144",
+      "split": "val"
+    },
+    {
+      "energy": -7.087589368205322,
+      "g": 1.6580632893851666,
+      "label": 1,
+      "magnetization_x": 0.9305980305117167,
+      "magnetization_z2": 0.40565832758166054,
+      "parameter_id": "class-1-00145",
+      "split": "val"
+    },
+    {
+      "energy": -7.0379213925731205,
+      "g": 1.6447120919636424,
+      "label": 1,
+      "magnetization_x": 0.9294542950981256,
+      "magnetization_z2": 0.4073077201649657,
+      "parameter_id": "class-1-00146",
+      "split": "val"
+    },
+    {
+      "energy": -7.139199176529059,
+      "g": 1.671919321215698,
+      "label": 1,
+      "magnetization_x": 0.9317560249298245,
+      "magnetization_z2": 0.4039805908100378,
+      "parameter_id": "class-1-00147",
+      "split": "val"
+    },
+    {
+      "energy": -7.043126038013532,
+      "g": 1.6461119203147314,
+      "label": 1,
+      "magnetization_x": 0.9295755250145122,
+      "magnetization_z2": 0.4071332500451108,
+      "parameter_id": "class-1-00148",
+      "split": "val"
+    },
+    {
+      "energy": -6.994372880637017,
+      "g": 1.6329921759290809,
+      "label": 1,
+      "magnetization_x": 0.928426997007946,
+      "magnetization_z2": 0.40878282458279974,
+      "parameter_id": "class-1-00149",
+      "split": "val"
+    },
+    {
+      "energy": -6.993540140613379,
+      "g": 1.6327679394145846,
+      "label": 1,
+      "magnetization_x": 0.9284071249765813,
+      "magnetization_z2": 0.40881130033323365,
+      "parameter_id": "class-1-00150",
+      "split": "val"
+    },
+    {
+      "energy": -7.193538913428861,
+      "g": 1.6864899268279758,
+      "label": 1,
+      "magnetization_x": 0.9329429274397683,
+      "magnetization_z2": 0.40225265752756567,
+      "parameter_id": "class-1-00151",
+      "split": "val"
+    },
+    {
+      "energy": -7.046504904066292,
+      "g": 1.647020594007554,
+      "label": 1,
+      "magnetization_x": 0.9296540531619426,
+      "magnetization_z2": 0.407020190033317,
+      "parameter_id": "class-1-00152",
+      "split": "val"
+    },
+    {
+      "energy": -6.985696560473601,
+      "g": 1.630655619303373,
+      "label": 1,
+      "magnetization_x": 0.9282195253216485,
+      "magnetization_z2": 0.40908001359627777,
+      "parameter_id": "class-1-00153",
+      "split": "val"
+    },
+    {
+      "energy": -7.174283399449807,
+      "g": 1.6813288902599886,
+      "label": 1,
+      "magnetization_x": 0.9325260626937675,
+      "magnetization_z2": 0.4028605147342504,
+      "parameter_id": "class-1-00154",
+      "split": "val"
+    },
+    {
+      "energy": -7.076866940813417,
+      "g": 1.6551823906941008,
+      "label": 1,
+      "magnetization_x": 0.9303535876175243,
+      "magnetization_z2": 0.4060114770868148,
+      "parameter_id": "class-1-00155",
+      "split": "val"
+    },
+    {
+      "energy": -7.163768170381119,
+      "g": 1.6785095263593923,
+      "label": 1,
+      "magnetization_x": 0.9322967037853891,
+      "magnetization_z2": 0.4031945075737054,
+      "parameter_id": "class-1-00156",
+      "split": "val"
+    },
+    {
+      "energy": -7.0371840179243845,
+      "g": 1.6445137547576774,
+      "label": 1,
+      "magnetization_x": 0.9294370932694513,
+      "magnetization_z2": 0.4073324696695534,
+      "parameter_id": "class-1-00157",
+      "split": "val"
+    },
+    {
+      "energy": -7.165932654821778,
+      "g": 1.679089928902634,
+      "label": 1,
+      "magnetization_x": 0.932344015244531,
+      "magnetization_z2": 0.4031256385941422,
+      "parameter_id": "class-1-00158",
+      "split": "val"
+    },
+    {
+      "energy": -7.131365606616413,
+      "g": 1.6698172955910664,
+      "label": 1,
+      "magnetization_x": 0.9315822138836238,
+      "magnetization_z2": 0.4042329197917006,
+      "parameter_id": "class-1-00159",
+      "split": "val"
+    },
+    {
+      "energy": -7.051276257237119,
+      "g": 1.6483036167328151,
+      "label": 1,
+      "magnetization_x": 0.929764710766503,
+      "magnetization_z2": 0.40686081198833,
+      "parameter_id": "class-1-00160",
+      "split": "val"
+    },
+    {
+      "energy": -7.120023371756262,
+      "g": 1.6667730733541755,
+      "label": 1,
+      "magnetization_x": 0.9313293224190563,
+      "magnetization_z2": 0.40459973225622514,
+      "parameter_id": "class-1-00161",
+      "split": "val"
+    },
+    {
+      "energy": -7.059891705307851,
+      "g": 1.6506199352769666,
+      "label": 1,
+      "magnetization_x": 0.9299638317429144,
+      "magnetization_z2": 0.40657384457067747,
+      "parameter_id": "class-1-00162",
+      "split": "val"
+    },
+    {
+      "energy": -6.941425186649022,
+      "g": 1.6187250112277036,
+      "label": 1,
+      "magnetization_x": 0.9271460675960397,
+      "magnetization_z2": 0.4106138538582411,
+      "parameter_id": "class-1-00163",
+      "split": "val"
+    },
+    {
+      "energy": -7.222372521174985,
+      "g": 1.6942138876803172,
+      "label": 1,
+      "magnetization_x": 0.9335596615460702,
+      "magnetization_z2": 0.40135140559549065,
+      "parameter_id": "class-1-00164",
+      "split": "val"
+    },
+    {
+      "energy": -6.921989559762993,
+      "g": 1.6134829453653305,
+      "label": 1,
+      "magnetization_x": 0.9266668395917657,
+      "magnetization_z2": 0.41129657031055633,
+      "parameter_id": "class-1-00165",
+      "split": "val"
+    },
+    {
+      "energy": -7.016363727714023,
+      "g": 1.6389120434963458,
+      "label": 1,
+      "magnetization_x": 0.9289486628916126,
+      "magnetization_z2": 0.4080345067308965,
+      "parameter_id": "class-1-00166",
+      "split": "val"
+    },
+    {
+      "energy": -7.045238158820125,
+      "g": 1.6466799389846285,
+      "label": 1,
+      "magnetization_x": 0.9296246288397758,
+      "magnetization_z2": 0.4070625575062663,
+      "parameter_id": "class-1-00167",
+      "split": "val"
+    },
+    {
+      "energy": -7.138066994053052,
+      "g": 1.6716155405905113,
+      "label": 1,
+      "magnetization_x": 0.9317309468299622,
+      "magnetization_z2": 0.4040170088916124,
+      "parameter_id": "class-1-00168",
+      "split": "val"
+    },
+    {
+      "energy": -7.149970146269936,
+      "g": 1.6748089172093734,
+      "label": 1,
+      "magnetization_x": 0.9319938853466552,
+      "magnetization_z2": 0.40363498605643805,
+      "parameter_id": "class-1-00169",
+      "split": "val"
+    },
+    {
+      "energy": -7.347354684109638,
+      "g": 1.7276366165776376,
+      "label": 1,
+      "magnetization_x": 0.9361331555021298,
+      "magnetization_z2": 0.3975649000487984,
+      "parameter_id": "class-1-00170",
+      "split": "test"
+    },
+    {
+      "energy": -7.521116421828888,
+      "g": 1.773957316273597,
+      "label": 1,
+      "magnetization_x": 0.9394606087351473,
+      "magnetization_z2": 0.39260444671942907,
+      "parameter_id": "class-1-00171",
+      "split": "test"
+    },
+    {
+      "energy": -7.4435791198425365,
+      "g": 1.7533080059486679,
+      "label": 1,
+      "magnetization_x": 0.9380100546139567,
+      "magnetization_z2": 0.3947761360027862,
+      "parameter_id": "class-1-00172",
+      "split": "test"
+    },
+    {
+      "energy": -7.397490754456019,
+      "g": 1.7410186611863387,
+      "label": 1,
+      "magnetization_x": 0.9371219793506571,
+      "magnetization_z2": 0.39609860290098886,
+      "parameter_id": "class-1-00173",
+      "split": "test"
+    },
+    {
+      "energy": -7.334370490266566,
+      "g": 1.7241686281803843,
+      "label": 1,
+      "magnetization_x": 0.9358731103435638,
+      "magnetization_z2": 0.3979494453913458,
+      "parameter_id": "class-1-00174",
+      "split": "test"
+    },
+    {
+      "energy": -7.429815555152215,
+      "g": 1.7496392037133035,
+      "label": 1,
+      "magnetization_x": 0.9377469051043288,
+      "magnetization_z2": 0.3951685577976355,
+      "parameter_id": "class-1-00175",
+      "split": "test"
+    },
+    {
+      "energy": -7.504299876253946,
+      "g": 1.7694815251822475,
+      "label": 1,
+      "magnetization_x": 0.9391505350182083,
+      "magnetization_z2": 0.3930699012098603,
+      "parameter_id": "class-1-00176",
+      "split": "test"
+    },
+    {
+      "energy": -7.416075426218405,
+      "g": 1.7459756180374373,
+      "label": 1,
+      "magnetization_x": 0.9374824609369775,
+      "magnetization_z2": 0.39556243746623776,
+      "parameter_id": "class-1-00177",
+      "split": "test"
+    },
+    {
+      "energy": -7.47282417824722,
+      "g": 1.7611001437858989,
+      "label": 1,
+      "magnetization_x": 0.9385634708376991,
+      "magnetization_z2": 0.3939493100971434,
+      "parameter_id": "class-1-00178",
+      "split": "test"
+    },
+    {
+      "energy": -7.30593527769144,
+      "g": 1.7165703930582596,
+      "label": 1,
+      "magnetization_x": 0.9352978055153096,
+      "magnetization_z2": 0.398798625832951,
+      "parameter_id": "class-1-00179",
+      "split": "test"
+    },
+    {
+      "energy": -7.357239891498269,
+      "g": 1.7302762429942713,
+      "label": 1,
+      "magnetization_x": 0.9363300324090331,
+      "magnetization_z2": 0.3972734715459724,
+      "parameter_id": "class-1-00180",
+      "split": "test"
+    },
+    {
+      "energy": -7.541337939368856,
+      "g": 1.7793374073213568,
+      "label": 1,
+      "magnetization_x": 0.9398302148812208,
+      "magnetization_z2": 0.39204874206426643,
+      "parameter_id": "class-1-00181",
+      "split": "test"
+    },
+    {
+      "energy": -7.450815147808394,
+      "g": 1.7552364225830273,
+      "label": 1,
+      "magnetization_x": 0.9381477068974435,
+      "magnetization_z2": 0.39457067410123453,
+      "parameter_id": "class-1-00182",
+      "split": "test"
+    },
+    {
+      "energy": -7.430074695122811,
+      "g": 1.7497082893275484,
+      "label": 1,
+      "magnetization_x": 0.9377518757636454,
+      "magnetization_z2": 0.39516114965773197,
+      "parameter_id": "class-1-00183",
+      "split": "test"
+    },
+    {
+      "energy": -7.42144835747509,
+      "g": 1.7474083473015551,
+      "label": 1,
+      "magnetization_x": 0.9375860773498963,
+      "magnetization_z2": 0.3954081609979049,
+      "parameter_id": "class-1-00184",
+      "split": "test"
+    },
+    {
+      "energy": -7.544600331126433,
+      "g": 1.7802051940665662,
+      "label": 1,
+      "magnetization_x": 0.9398895148244847,
+      "magnetization_z2": 0.39195949414437947,
+      "parameter_id": "class-1-00185",
+      "split": "test"
+    },
+    {
+      "energy": -7.3428112644853165,
+      "g": 1.7264232101589545,
+      "label": 1,
+      "magnetization_x": 0.9360423482873637,
+      "magnetization_z2": 0.39769923259747386,
+      "parameter_id": "class-1-00186",
+      "split": "test"
+    },
+    {
+      "energy": -7.425129655994204,
+      "g": 1.748389899690363,
+      "label": 1,
+      "magnetization_x": 0.9376569161816952,
+      "magnetization_z2": 0.39530264598187137,
+      "parameter_id": "class-1-00187",
+      "split": "test"
+    },
+    {
+      "energy": -7.5919253830276725,
+      "g": 1.7927874134549848,
+      "label": 1,
+      "magnetization_x": 0.9407395906127385,
+      "magnetization_z2": 0.39067734064408544,
+      "parameter_id": "class-1-00188",
+      "split": "test"
+    },
+    {
+      "energy": -7.584057501272602,
+      "g": 1.790696381283001,
+      "label": 1,
+      "magnetization_x": 0.9405995671727589,
+      "magnetization_z2": 0.39088889353033757,
+      "parameter_id": "class-1-00189",
+      "split": "test"
+    },
+    {
+      "energy": -7.545794393448982,
+      "g": 1.780522797500332,
+      "label": 1,
+      "magnetization_x": 0.9399111963220976,
+      "magnetization_z2": 0.39192685669403415,
+      "parameter_id": "class-1-00190",
+      "split": "test"
+    },
+    {
+      "energy": -7.4091769236428515,
+      "g": 1.7441358520775387,
+      "label": 1,
+      "magnetization_x": 0.9373490299456004,
+      "magnetization_z2": 0.39576099890381977,
+      "parameter_id": "class-1-00191",
+      "split": "test"
+    },
+    {
+      "energy": -7.400896533955281,
+      "g": 1.7419272032608872,
+      "label": 1,
+      "magnetization_x": 0.9371882826747135,
+      "magnetization_z2": 0.3960000514642826,
+      "parameter_id": "class-1-00192",
+      "split": "test"
+    },
+    {
+      "energy": -7.557523159017215,
+      "g": 1.7836420921362552,
+      "label": 1,
+      "magnetization_x": 0.94012351809447,
+      "magnetization_z2": 0.39160706872140827,
+      "parameter_id": "class-1-00193",
+      "split": "test"
+    },
+    {
+      "energy": -7.504129008561654,
+      "g": 1.769436040466625,
+      "label": 1,
+      "magnetization_x": 0.9391473717561192,
+      "magnetization_z2": 0.39307464613719995,
+      "parameter_id": "class-1-00194",
+      "split": "test"
+    },
+    {
+      "energy": -7.5378221893117585,
+      "g": 1.7784021666538776,
+      "label": 1,
+      "magnetization_x": 0.9397662075345621,
+      "magnetization_z2": 0.39214504670031464,
+      "parameter_id": "class-1-00195",
+      "split": "test"
+    },
+    {
+      "energy": -7.348583765749806,
+      "g": 1.7279648459347943,
+      "label": 1,
+      "magnetization_x": 0.9361576859896557,
+      "magnetization_z2": 0.39752860246177324,
+      "parameter_id": "class-1-00196",
+      "split": "test"
+    },
+    {
+      "energy": -7.529797902297738,
+      "g": 1.7762673505637525,
+      "label": 1,
+      "magnetization_x": 0.9396197200535753,
+      "magnetization_z2": 0.3923653405530605,
+      "parameter_id": "class-1-00197",
+      "split": "test"
+    },
+    {
+      "energy": -7.461288948852704,
+      "g": 1.7580272125312724,
+      "label": 1,
+      "magnetization_x": 0.9383461089266925,
+      "magnetization_z2": 0.39427430811980246,
+      "parameter_id": "class-1-00198",
+      "split": "test"
+    },
+    {
+      "energy": -7.4837154037704705,
+      "g": 1.764000864041365,
+      "label": 1,
+      "magnetization_x": 0.9387676025536258,
+      "magnetization_z2": 0.39364379682577766,
+      "parameter_id": "class-1-00199",
+      "split": "test"
+    }
+  ]
+}
