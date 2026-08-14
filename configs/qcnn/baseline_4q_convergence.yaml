@@ -1,15 +1,14 @@
-# Frozen development benchmark protocol. Test metrics are descriptive only;
-# a new split seed will be used for final confirmatory evaluation.
+# Validation-only convergence study; test states are never evaluated.
 datasets:
   random: data/tfim_4q_random
   blocked: data/tfim_4q_blocked
-real_states_per_class: [10, 25, 50, 100]
+real_states_per_class: [10, 100]
 subset_seed: 31415
 seeds:
   - {run_seed: 0, init_seed: 1000, spsa_seed: 2000}
   - {run_seed: 1, init_seed: 1001, spsa_seed: 2001}
   - {run_seed: 2, init_seed: 1002, spsa_seed: 2002}
-evaluate_test: true
+evaluate_test: false
 training:
   optimizer: spsa
   steps: 300

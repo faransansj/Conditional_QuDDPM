@@ -8,7 +8,7 @@
 |---|---|
 | Repository and research design | ✅ Documented |
 | TFIM dataset generator | ✅ Implemented and tested (4-qubit dense exact diagonalization) |
-| QCNN baseline | ✅ Implemented and smoke/full-sweep tested (4 qubits) |
+| QCNN baseline | ✅ Development protocol frozen (4 qubits) |
 | Conditional QuDDPM | 📋 Planned |
 | Conditional MSQuDDPM | 📋 Planned |
 | Augmentation benchmarks | 📋 Planned |
@@ -124,7 +124,8 @@ Implemented paths are shown without a planning annotation.
 │   ├── experiment_plan.md
 │   ├── methodology.md
 │   ├── tfim_simulation_guide.md
-│   └── qcnn_baseline.md
+│   ├── qcnn_baseline.md
+│   └── upstream_audit.md
 ├── configs/
 │   ├── dataset/             # random and blocked TFIM configs
 │   └── qcnn/                # full and smoke baseline configs
@@ -175,7 +176,7 @@ The QCNN loader treats `split_manifest.json` as the source of truth and stores e
 5. Run matched multi-seed comparisons, scaling and near-critical analyses.
 6. Produce paper-ready tables, figures, and reproduction commands.
 
-See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), and [QCNN baseline guide](docs/qcnn_baseline.md).
+See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), [QCNN baseline guide](docs/qcnn_baseline.md), and [upstream diffusion audit](docs/upstream_audit.md).
 
 ## Limitations
 

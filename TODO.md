@@ -4,7 +4,7 @@ Priority order is top-to-bottom within each section. Check an item only after it
 
 ## P0 — Start here
 
-- [ ] Audit upstream QuDDPM, MSQuDDPM, and conditioning repositories
+- [x] Audit upstream QuDDPM, MSQuDDPM, and conditioning repositories
   - Goal: identify reusable code, APIs, licenses, framework/version constraints, and reference smoke tasks.
   - Inputs: papers arXiv:2310.05866, 2411.17608, 2509.17569 and linked official repositories.
   - Outputs: `docs/upstream_audit.md` with commit URLs, license findings, reuse decision, and risks.

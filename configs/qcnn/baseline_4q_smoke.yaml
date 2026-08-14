@@ -3,9 +3,13 @@ datasets:
   blocked: data/tfim_4q_blocked
 real_states_per_class: [10]
 subset_seed: 31415
-model_seeds: [0]
+seeds:
+  - {run_seed: 0, init_seed: 1000, spsa_seed: 2000}
+evaluate_test: true
 training:
   optimizer: spsa
-  steps: 10
+  steps: 20
   learning_rate: 0.15
   perturbation: 0.1
+  early_stopping_patience: 10
+  early_stopping_min_delta: 1.0e-4

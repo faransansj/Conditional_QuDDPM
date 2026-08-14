@@ -58,9 +58,60 @@ uv run run-qcnn-baseline \
   --output results/qcnn_baseline
 ```
 
-## Initial full-sweep result
+## Circuit verification
 
-Three model seeds, 60 SPSA steps, and one fixed nested-subset seed:
+The research baseline is protected by five independent checks:
+
+1. every Euler, Pauli-interaction, and CNOT gate is unitary;
+2. the full QCNN preserves state norm;
+3. zero-parameter computational-basis outputs match the circuit's parity mapping;
+4. a fixed state/parameter pair has a committed golden expectation;
+5. an independent explicit basis-index simulator matches the optimized tensor-axis simulator.
+
+A direct TensorFlow Quantum/PennyLane numerical equivalence test was not added because it would introduce a large framework solely for testing. The explicit simulator cross-check validates wire ordering, CNOT direction, gate application, pooling, and readout independently while retaining the minimal NumPy environment.
+
+## Optimizer freeze study
+
+The initial 60-step pilot placed 15/24 best checkpoints at the final step, so it was not treated as a frozen training protocol. A replacement convergence study used **train and validation only** (`evaluate_test: false`):
+
+```bash
+uv run run-qcnn-baseline \
+  --config configs/qcnn/baseline_4q_convergence.yaml \
+  --output results/qcnn_convergence
+```
+
+The study covered random/blocked datasets, 10 and 100 real states/class, and three paired seed specifications. With a 300-step cap, patience 40, and minimum validation improvement `1e-4`:
+
+- test evaluation was absent (`test: null`) for all 12 runs;
+- 5/12 runs stopped early;
+- 2/12 best checkpoints occurred at the final step, down from 15/24;
+- 3/12 occurred within the final five steps;
+- final ten-step validation-loss ranges were approximately `6.6e-4` to `6.3e-3`.
+
+The remaining late checkpoints showed small validation changes rather than the systematic boundary concentration of the pilot. The frozen development protocol is therefore:
+
+- full-batch SPSA;
+- maximum 300 steps;
+- learning rate `0.15`;
+- perturbation `0.1`;
+- patience `40`;
+- validation `min_delta = 1e-4`;
+- separate initialization and SPSA seeds;
+- validation-loss checkpoint selection.
+
+No test metric was used to select these settings.
+
+## Provenance contract
+
+Every frozen run records an immutable run ID, status, Git SHA/dirty flag, all three dataset checksums, Python/NumPy/SciPy versions, resolved run config, exact training IDs, separate initialization/SPSA seeds, history, checkpoint, and train/validation/test metrics. Summary artifacts include per-seed values, mean and population standard deviation for accuracy/macro-F1/loss, failure rate, and the balanced majority/random baseline of `0.5`.
+
+## Development and confirmatory benchmarks
+
+The current random/blocked datasets, split seeds, nested subset seed, and any test metrics already observed are designated **development benchmarks**. The frozen protocol must not be changed in response to their test results. Final confirmatory evaluation will generate new random and blocked manifests using previously unused dataset/split seeds, apply the frozen protocol once, and keep those test states unopened until model and augmentation protocols are fixed.
+
+## Initial pilot result (superseded for protocol freeze)
+
+Pilot implementation commit: `1b96a21`. Three model seeds, 60 SPSA steps, and one fixed nested-subset seed:
 
 | Split | Real/class | Accuracy mean ± std | Macro-F1 mean | Test loss mean |
 |---|---:|---:|---:|---:|

@@ -60,8 +60,8 @@ def _pool(state: np.ndarray, source: int, sink: int, parameters: np.ndarray) -> 
     return _apply_gate(state, sink_basis.conj().T, (sink,))
 
 
-def qcnn_expectation(state: np.ndarray, parameters: np.ndarray) -> float:
-    """Return <Z_3> for one normalized 4-qubit statevector."""
+def qcnn_state(state: np.ndarray, parameters: np.ndarray) -> np.ndarray:
+    """Apply the complete 4→2→1 QCNN unitary circuit."""
     if state.shape != (16,):
         raise ValueError(f"QCNN expects a 4-qubit statevector with shape (16,), got {state.shape}")
     if parameters.shape != (42,):
@@ -73,8 +73,12 @@ def qcnn_expectation(state: np.ndarray, parameters: np.ndarray) -> float:
     for source, sink in ((0, 2), (1, 3)):
         output = _pool(output, source, sink, parameters[15:21])
     output = _convolution(output, (2, 3), parameters[21:36])
-    output = _pool(output, 2, 3, parameters[36:42])
-    probabilities = np.abs(output.reshape(2, 2, 2, 2)) ** 2
+    return _pool(output, 2, 3, parameters[36:42])
+
+
+def qcnn_expectation(state: np.ndarray, parameters: np.ndarray) -> float:
+    """Return <Z_3> for one normalized 4-qubit statevector."""
+    probabilities = np.abs(qcnn_state(state, parameters).reshape(2, 2, 2, 2)) ** 2
     return float(probabilities[:, :, :, 0].sum() - probabilities[:, :, :, 1].sum())
 
 
@@ -97,6 +101,7 @@ class QCNNTrainingResult:
     parameters: np.ndarray
     history: list[dict[str, float]]
     best_step: int
+    stopped_early: bool
 
 
 def train_qcnn_spsa(
@@ -105,18 +110,24 @@ def train_qcnn_spsa(
     val_states: np.ndarray,
     val_labels: np.ndarray,
     *,
-    seed: int,
+    init_seed: int,
+    spsa_seed: int,
     steps: int,
     learning_rate: float,
     perturbation: float,
+    early_stopping_patience: int,
+    early_stopping_min_delta: float,
 ) -> QCNNTrainingResult:
     """Train full-batch with two objective evaluations per SPSA step."""
-    rng = np.random.default_rng(seed)
-    parameters = rng.normal(0.0, 0.1, 42)
+    init_rng = np.random.default_rng(init_seed)
+    spsa_rng = np.random.default_rng(spsa_seed)
+    parameters = init_rng.normal(0.0, 0.1, 42)
     best_parameters = parameters.copy()
     best_step = 0
     best_val_loss = np.inf
     history: list[dict[str, float]] = []
+    stale_steps = 0
+    stopped_early = False
 
     targets = 2 * train_labels.astype(float) - 1
 
@@ -134,17 +145,21 @@ def train_qcnn_spsa(
             "val_loss": val_metrics["loss"],
             "val_accuracy": val_metrics["accuracy"],
         })
-        if val_metrics["loss"] < best_val_loss:
+        if val_metrics["loss"] < best_val_loss - early_stopping_min_delta:
             best_val_loss = val_metrics["loss"]
             best_parameters = parameters.copy()
             best_step = step
-        if step == steps:
+            stale_steps = 0
+        else:
+            stale_steps += 1
+        if step == steps or stale_steps >= early_stopping_patience:
+            stopped_early = stale_steps >= early_stopping_patience
             break
 
-        delta = rng.choice((-1.0, 1.0), size=parameters.shape)
+        delta = spsa_rng.choice((-1.0, 1.0), size=parameters.shape)
         scale = perturbation / (step + 1) ** 0.101
         rate = learning_rate / (step + 1) ** 0.602
         gradient = (loss(parameters + scale * delta) - loss(parameters - scale * delta)) / (2 * scale) * delta
         parameters = parameters - rate * gradient
 
-    return QCNNTrainingResult(best_parameters, history, best_step)
+    return QCNNTrainingResult(best_parameters, history, best_step, stopped_early)
