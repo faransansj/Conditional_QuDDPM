@@ -1,0 +1,16 @@
+n_qubits: 4
+J: 1.0
+boundary: open
+# The thermodynamic critical point is g/J = 1. The MVP excludes [0.8, 1.2]
+# from training labels to avoid imposing ambiguous finite-size labels.
+phase_regions:
+  ferromagnetic: [0.2, 0.8]
+  paramagnetic: [1.2, 1.8]
+samples_per_class: 100
+dataset_seed: 1729
+split_seed: 2718
+split_ratios:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+numerical_tolerance: 1.0e-10
