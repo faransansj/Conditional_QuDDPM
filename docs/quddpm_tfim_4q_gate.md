@@ -47,6 +47,8 @@ No test metric or QCNN performance is consulted.
 
 ## Observed result
 
+Frozen implementation commit: `57804e2a9a619463441fd03f9229d39155d9a6a9`; run ID: `ea1acc83bda156e5`; `git_dirty: false`.
+
 | Check | Result |
 |---|---|
 | Physicality | Pass, max norm error `4.44e-16` |
