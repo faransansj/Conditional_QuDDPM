@@ -1,0 +1,11 @@
+datasets:
+  random: data/tfim_4q_random
+  blocked: data/tfim_4q_blocked
+real_states_per_class: [10, 25, 50, 100]
+subset_seed: 31415
+model_seeds: [0, 1, 2]
+training:
+  optimizer: spsa
+  steps: 60
+  learning_rate: 0.15
+  perturbation: 0.1

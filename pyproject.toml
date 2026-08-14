@@ -18,6 +18,7 @@ dev = ["pytest>=8,<10"]
 
 [project.scripts]
 generate-tfim = "conditional_quddpm.datasets.tfim:main"
+run-qcnn-baseline = "conditional_quddpm.experiments.qcnn_baseline:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

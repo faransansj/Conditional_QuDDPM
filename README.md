@@ -8,12 +8,12 @@
 |---|---|
 | Repository and research design | ✅ Documented |
 | TFIM dataset generator | ✅ Implemented and tested (4-qubit dense exact diagonalization) |
-| QCNN baseline | 📋 Planned |
+| QCNN baseline | ✅ Implemented and smoke/full-sweep tested (4 qubits) |
 | Conditional QuDDPM | 📋 Planned |
 | Conditional MSQuDDPM | 📋 Planned |
 | Augmentation benchmarks | 📋 Planned |
 
-The 4-qubit TFIM dataset simulator is executable. QCNN and diffusion-model training remain unimplemented; the repository does **not** claim augmentation results.
+The 4-qubit TFIM simulator and real-only QCNN baseline are executable. Diffusion-model training remains unimplemented; the repository does **not** claim augmentation results.
 
 ## Motivation and problem statement
 
@@ -123,12 +123,17 @@ Implemented paths are shown without a planning annotation.
 │   ├── research_plan.md
 │   ├── experiment_plan.md
 │   ├── methodology.md
-│   └── tfim_simulation_guide.md
-├── configs/dataset/tfim_4q.yaml
+│   ├── tfim_simulation_guide.md
+│   └── qcnn_baseline.md
+├── configs/
+│   ├── dataset/             # random and blocked TFIM configs
+│   └── qcnn/                # full and smoke baseline configs
 ├── src/conditional_quddpm/
-│   └── datasets/tfim.py     # TFIM Hamiltonian, eigensolver, dataset CLI
+│   ├── datasets/            # TFIM generator and manifest-first loader
+│   ├── models/qcnn.py       # 4→2→1, 42-parameter QCNN
+│   └── experiments/qcnn_baseline.py
 ├── scripts/generate_tfim.py
-├── tests/test_tfim.py
+├── tests/
 ├── data/                    # generated, not source-controlled
 └── results/                 # generated, not source-controlled
 ```
@@ -147,7 +152,19 @@ uv run generate-tfim --config configs/dataset/tfim_4q.yaml --output data/tfim_4q
 uv run generate-tfim --config configs/dataset/tfim_4q_blocked.yaml --output data/tfim_4q_blocked
 ```
 
-Each command creates 200 states per class (140 train states per class), compressed statevectors and observables, a split manifest, SHA-256 checksums, and `validation.json`. The default convention is open-boundary `H = -J Σ ZZ - g Σ X`, `J=1`, with samples in `g/J ∈ [0.2,0.8]` and `[1.2,1.8]`; the finite-size critical neighborhood is excluded from this initial classification dataset. Random and blocked-g results are reported as separate benchmarks. See the [TFIM simulation guide](docs/tfim_simulation_guide.md) for artifact schemas, examples, and interpretation.
+Each command creates 200 states per class (140 train states per class), compressed statevectors and observables, a split manifest, SHA-256 checksums, and `validation.json`.
+
+Run the real-only QCNN baseline:
+
+```bash
+# Fast end-to-end check
+uv run run-qcnn-baseline --config configs/qcnn/baseline_4q_smoke.yaml --output results/qcnn_baseline_smoke
+
+# {10,25,50,100} states/class × 3 seeds × random/blocked
+uv run run-qcnn-baseline --config configs/qcnn/baseline_4q.yaml --output results/qcnn_baseline
+```
+
+The QCNN loader treats `split_manifest.json` as the source of truth and stores exact training IDs with each run. The default convention is open-boundary `H = -J Σ ZZ - g Σ X`, `J=1`, with samples in `g/J ∈ [0.2,0.8]` and `[1.2,1.8]`; the finite-size critical neighborhood is excluded from this initial classification dataset. Random and blocked-g results are reported as separate benchmarks. See the [TFIM simulation guide](docs/tfim_simulation_guide.md) for artifact schemas, examples, and interpretation.
 
 ## Roadmap
 
@@ -158,7 +175,7 @@ Each command creates 200 states per class (140 train states per class), compress
 5. Run matched multi-seed comparisons, scaling and near-critical analyses.
 6. Produce paper-ready tables, figures, and reproduction commands.
 
-See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), and [experiment plan](docs/experiment_plan.md).
+See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), and [QCNN baseline guide](docs/qcnn_baseline.md).
 
 ## Limitations
 

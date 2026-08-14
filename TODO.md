@@ -78,42 +78,42 @@ Priority order is top-to-bottom within each section. Check an item only after it
 
 ## P2 — Reproducible QCNN baseline
 
-- [ ] Select and document one QCNN topology
+- [x] Select and document one QCNN topology
   - Goal: fix a minimal architecture that supports the planned qubit counts.
   - Inputs: QCNN reference and chosen framework.
   - Outputs: architecture diagram/parameter table and rationale.
   - Acceptance criteria: input/readout conventions and parameter count are explicit; no augmentation-specific branch exists.
   - Dependencies: environment; upstream audit.
 
-- [ ] Implement QCNN forward pass
+- [x] Implement QCNN forward pass
   - Goal: map a supported quantum state to a binary prediction.
   - Inputs: fixed QCNN topology.
   - Outputs: model module and shape/range test.
   - Acceptance criteria: pure-state input runs at 4 qubits; output is finite and in the declared prediction domain.
   - Dependencies: topology.
 
-- [ ] Implement QCNN training and validation selection
+- [x] Implement QCNN training and validation selection
   - Goal: train without test access using separate initialization/training seeds.
   - Inputs: train/validation datasets and QCNN config.
   - Outputs: checkpoint and training history.
   - Acceptance criteria: fixed config/seeds reproduce metrics within declared deterministic limits; test loader is absent from training API.
   - Dependencies: QCNN forward pass; dataset validation.
 
-- [ ] Implement metric and result artifact writer
+- [x] Implement metric and result artifact writer
   - Goal: save accuracy, macro-F1, confusion counts, resolved config, seeds, code revision, and status.
   - Inputs: predictions and run metadata.
   - Outputs: `results/<id>/config.yaml` and `metrics.json` contract.
   - Acceptance criteria: metrics recompute from saved counts; interrupted/failed runs are represented explicitly.
   - Dependencies: environment.
 
-- [ ] Run the real-only limited-data smoke benchmark
+- [x] Run the real-only limited-data smoke benchmark
   - Goal: verify end-to-end operation at the smallest budget and one seed.
   - Inputs: 4-qubit dataset and QCNN.
   - Outputs: one complete result directory.
   - Acceptance criteria: run completes, artifacts validate, and performance is compared with declared random/majority guessing without imposing an arbitrary pass threshold.
   - Dependencies: QCNN training; result writer.
 
-- [ ] Run the 3-seed real-data pilot sweep
+- [x] Run the 3-seed real-data pilot sweep
   - Goal: estimate baseline variance/runtime over `{10,25,50,100}` real states per class.
   - Inputs: frozen baseline configs.
   - Outputs: per-seed runs and aggregate mean/std table.

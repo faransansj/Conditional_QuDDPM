@@ -24,14 +24,14 @@
 
 **Acceptance:** norm and ground-energy checks pass at declared numerical tolerances; split identifiers are disjoint; fixed seeds reproduce manifests and states; labels/counts are reported; tests pass. **Met for the 4-qubit dense MVP; 6/8-qubit scale validation remains deferred.**
 
-## Phase 2 — QCNN baseline
+## Phase 2 — QCNN baseline ✅ (4-qubit real-only)
 
 - Select one reference QCNN topology compatible with 4/6/8 qubits.
 - Implement state input, training, evaluation, and machine-readable result writing.
 - Freeze architecture/tuning protocol before augmentation comparison.
 - Run real-data sweep and at least 3 seeds.
 
-**Acceptance:** end-to-end smoke run succeeds; accuracy and macro-F1 are saved per seed and aggregated; sweep is config-driven; performance is compared with the declared majority/random baseline; the same test set and protocol can be reused by augmentation arms.
+**Acceptance:** end-to-end smoke run succeeds; accuracy and macro-F1 are saved per seed and aggregated; sweep is config-driven; performance is compared with the declared majority/random baseline; the same test set and protocol can be reused by augmentation arms. **Met for random and blocked 4-qubit datasets with 3 seeds; augmentation arms remain pending.**
 
 ## Phase 3 — Conditional QuDDPM
 
