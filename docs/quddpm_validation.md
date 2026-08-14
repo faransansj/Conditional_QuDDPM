@@ -95,6 +95,18 @@ Generation is repeated from the serialized checkpoint—not the in-memory result
 
 No arbitrary accuracy threshold is used. Strict directional improvement, physical tolerance, and reproducibility are the smoke gates.
 
+## Frozen smoke result
+
+Implementation commit: `2ef0b7f715fb5d53ba96e18e0840297eaa307413`; run ID: `98c95aa85d6cbb13`; `git_dirty: false`.
+
+| Task/class | Initial→final reverse losses | Haar→generated target MMD | Mean Bloch Z | Max norm error |
+|---|---|---:|---:|---:|
+| Unconditional / 0 | `0.1633→0.0223`, `0.3012→0.00012` | `0.4603→0.0340` | `+0.7343` | `5.55e-16` |
+| Conditional / 0 | `0.2321→0.00277`, `0.2527→0.01072` | `0.4603→0.00396` | `+0.9311` | `6.66e-16` |
+| Conditional / 1 | shared step losses | `0.5389→0.00479` | `-0.8984` | `6.66e-16` |
+
+Both serialized-checkpoint generation tasks were byte-reproducible under fixed seeds. Purities remained within floating-point error of one. The forward terminal MMD-to-Haar decreased from `0.4737→0.0396` for the unconditional target and from `0.4737→0.0306` / `0.5118→0.0919` for the two conditional classes.
+
 ## Interpretation boundaries
 
 Passing this validation shows that the independently implemented forward scrambling, measured reverse map, stepwise optimization, checkpointing, and class conditioning are operational on a controlled one-qubit task. It does **not** show:
