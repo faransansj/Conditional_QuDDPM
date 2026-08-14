@@ -13,7 +13,7 @@
 | Conditional MSQuDDPM | 📋 Planned |
 | Augmentation benchmarks | 📋 Planned |
 
-The 4-qubit TFIM simulator and real-only QCNN baseline are executable. Diffusion-model training remains unimplemented; the repository does **not** claim augmentation results.
+The 4-qubit TFIM simulator and real-only QCNN baseline are executable. The QCNN development protocol is frozen at commit `6861c39`; current splits are development-only and new unseen split seeds are reserved for final confirmation. Diffusion-model training remains unimplemented; the repository does **not** claim augmentation results.
 
 ## Motivation and problem statement
 

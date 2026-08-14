@@ -124,4 +124,21 @@ Pilot implementation commit: `1b96a21`. Three model seeds, 60 SPSA steps, and on
 | Blocked | 50 | 0.8333 ± 0.2357 | 0.7778 | 0.6958 |
 | Blocked | 100 | 0.8333 ± 0.2357 | 0.7778 | 0.7187 |
 
-These are baseline engineering results, not final research claims. Blocked-split variance is high with three seeds, and SPSA/config tuning was not expanded after observing test metrics. Future augmentation comparisons must reuse the exact split, nested-subset IDs, model seeds, architecture, optimizer settings, and test protocol.
+These are baseline engineering results, not final research claims. Blocked-split variance is high with three seeds, and SPSA/config tuning was not expanded after observing test metrics.
+
+## Frozen development result
+
+Protocol freeze commit: `6861c39193c11155b13622438c84a6d1b0f147ff`. All 24 runs recorded `git_dirty: false`, complete dataset checksums, resolved configs, versions, separate seeds, and zero failures.
+
+| Split | Real/class | Accuracy mean ± std | Macro-F1 mean ± std | Loss mean ± std |
+|---|---:|---:|---:|---:|
+| Random | 10 | 0.9222 ± 0.0079 | 0.9217 ± 0.0080 | 0.4115 ± 0.0214 |
+| Random | 25 | 0.9944 ± 0.0079 | 0.9944 ± 0.0079 | 0.3845 ± 0.0196 |
+| Random | 50 | 0.9722 ± 0.0393 | 0.9720 ± 0.0396 | 0.4157 ± 0.0339 |
+| Random | 100 | 0.9944 ± 0.0079 | 0.9944 ± 0.0079 | 0.3911 ± 0.0132 |
+| Blocked | 10 | 0.9000 ± 0.0720 | 0.8976 ± 0.0739 | 0.6190 ± 0.0208 |
+| Blocked | 25 | 0.8000 ± 0.0471 | 0.7900 ± 0.0545 | 0.6158 ± 0.0072 |
+| Blocked | 50 | 0.8389 ± 0.0643 | 0.8322 ± 0.0713 | 0.6091 ± 0.0077 |
+| Blocked | 100 | 0.7722 ± 0.0283 | 0.7591 ± 0.0336 | 0.6254 ± 0.0080 |
+
+Result directory: `results/qcnn_baseline_frozen/` (generated locally and excluded from Git). The non-monotonic blocked result is retained without post-test tuning. Future development augmentation comparisons must reuse the exact split, nested-subset IDs, seed specifications, architecture, optimizer settings, and evaluation protocol. Final claims require the separately planned unseen confirmatory splits.
