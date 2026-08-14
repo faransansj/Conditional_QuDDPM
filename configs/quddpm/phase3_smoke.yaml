@@ -1,0 +1,25 @@
+# Phase 3 functional validation only; no TFIM train/val/test data are loaded.
+target:
+  samples: 48
+  spread: 0.22
+  seed: 11
+model:
+  diffusion_steps: 2
+  layers: 3
+training:
+  unconditional_steps: 800
+  conditional_steps: 1000
+  learning_rate: 0.35
+  perturbation: 0.12
+seeds:
+  forward: 12
+  source: 13
+  init: 14
+  spsa: 15
+  measurement: 16
+generation:
+  samples_per_class: 128
+  source_seed: 101
+  measurement_seed: 102
+validation:
+  physical_tolerance: 1.0e-10

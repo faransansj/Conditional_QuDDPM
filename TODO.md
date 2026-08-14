@@ -122,14 +122,14 @@ Priority order is top-to-bottom within each section. Check an item only after it
 
 ## P3 — Pure-state augmentation
 
-- [ ] Reproduce a minimal upstream QuDDPM task
+- [x] Reproduce a minimal upstream QuDDPM task
   - Goal: verify the reused implementation before TFIM modifications.
   - Inputs: pinned upstream code/config.
   - Outputs: reproduction log and diagnostic comparison.
   - Acceptance criteria: declared qualitative/quantitative reference behavior is met or discrepancy is documented before proceeding.
   - Dependencies: upstream audit; environment.
 
-- [ ] Specify the class-conditioning mechanism
+- [x] Specify the class-conditioning mechanism
   - Goal: choose label injection consistent with the conditioning reference and current QuDDPM architecture.
   - Inputs: upstream reproduction and conditioning paper.
   - Outputs: design note and config fields.

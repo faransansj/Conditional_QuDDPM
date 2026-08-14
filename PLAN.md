@@ -33,14 +33,15 @@
 
 **Acceptance:** end-to-end smoke run succeeds; accuracy and macro-F1 are saved per seed and aggregated; sweep is config-driven; performance is compared with the declared majority/random baseline; the same test set and protocol can be reused by augmentation arms. **Met for the frozen random/blocked 4-qubit development protocol. Current test splits are development-only; new unseen split seeds are required for final confirmatory evaluation.**
 
-## Phase 3 — Conditional QuDDPM
+## Phase 3 — Conditional QuDDPM 🚧
 
-- Review upstream QuDDPM and conditioning implementations/licenses; reuse rather than rederive where compatible.
-- Define label injection and pure-state representation.
+- ✅ Review upstream QuDDPM and conditioning implementations/licenses; direct reuse is blocked by absent source licensing.
+- ✅ Validate independent one-qubit forward/reverse diffusion, measured ancilla map, MMD training, checkpoint generation, and class conditioning.
+- Define the 4-qubit TFIM label injection and pure-state representation.
 - Train only on the training split; generate by class.
 - Validate physicality, diversity, class consistency, and reproducibility.
 
-**Acceptance:** both labels generate samples from a fixed checkpoint; all samples meet declared physical tolerances; class-conditioned distributions are distinguishable by preregistered diagnostics; generation is seed-reproducible; no validation/test access occurs in training.
+**Acceptance:** both labels generate samples from a fixed checkpoint; all samples meet declared physical tolerances; class-conditioned distributions are distinguishable by preregistered diagnostics; generation is seed-reproducible; no validation/test access occurs in training. **Met for the isolated one-qubit functional smoke task; not yet met for train-only 4-qubit TFIM generation. Phase 4 remains blocked.**
 
 ## Phase 4 — QuDDPM augmentation benchmark
 
