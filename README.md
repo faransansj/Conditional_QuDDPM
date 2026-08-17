@@ -9,7 +9,7 @@
 | Repository and research design | ✅ Documented |
 | TFIM dataset generator | ✅ Implemented and tested (4-qubit dense exact diagonalization) |
 | QCNN baseline | ✅ Development protocol frozen (4 qubits) |
-| Conditional QuDDPM | 🚧 One-qubit validation passed; first 4-qubit TFIM learning gate failed (underfitting) |
+| Conditional QuDDPM | 🚧 4-qubit gate remains blocked; support-generalization diagnostics archived and frozen RDM-kernel K0 completed |
 | Conditional MSQuDDPM | 📋 Planned |
 | Augmentation benchmarks | 📋 Planned |
 
@@ -188,7 +188,7 @@ The QCNN loader treats `split_manifest.json` as the source of truth and stores e
 5. Run matched multi-seed comparisons, scaling and near-critical analyses.
 6. Produce paper-ready tables, figures, and reproduction commands.
 
-See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), [QCNN baseline guide](docs/qcnn_baseline.md), [QuDDPM validation](docs/quddpm_validation.md), [4-qubit TFIM learning gate](docs/quddpm_tfim_4q_gate.md), and [upstream diffusion audit](docs/upstream_audit.md).
+See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), [QCNN baseline guide](docs/qcnn_baseline.md), [QuDDPM validation](docs/quddpm_validation.md), [4-qubit TFIM learning gate](docs/quddpm_tfim_4q_gate.md), [RDM-kernel diagnostic](docs/rdm_kernel_diagnostics.md), and [upstream diffusion audit](docs/upstream_audit.md).
 
 ## Limitations
 

@@ -1,0 +1,344 @@
+{
+  "git_commit": "3fe68f9475f26c5b3f889e6997d811e0839bd92c",
+  "branch": "research/quddpm-rdm-kernel",
+  "dirty": true,
+  "dataset": "data/tfim_4q_random",
+  "train_ids": [
+    "class-0-00125",
+    "class-1-00034"
+  ],
+  "validation_ids": [
+    "class-0-00093",
+    "class-1-00016"
+  ],
+  "realization_ids": {
+    "train": {
+      "0": [
+        {
+          "realization": 0,
+          "forward_seed": 121
+        },
+        {
+          "realization": 1,
+          "forward_seed": 122
+        },
+        {
+          "realization": 2,
+          "forward_seed": 123
+        },
+        {
+          "realization": 3,
+          "forward_seed": 124
+        }
+      ],
+      "1": [
+        {
+          "realization": 0,
+          "forward_seed": 100121
+        },
+        {
+          "realization": 1,
+          "forward_seed": 100122
+        },
+        {
+          "realization": 2,
+          "forward_seed": 100123
+        },
+        {
+          "realization": 3,
+          "forward_seed": 100124
+        }
+      ]
+    },
+    "holdout": {
+      "0": [
+        {
+          "realization": 0,
+          "forward_seed": 10121
+        },
+        {
+          "realization": 1,
+          "forward_seed": 10122
+        },
+        {
+          "realization": 2,
+          "forward_seed": 10123
+        },
+        {
+          "realization": 3,
+          "forward_seed": 10124
+        },
+        {
+          "realization": 4,
+          "forward_seed": 10125
+        },
+        {
+          "realization": 5,
+          "forward_seed": 10126
+        },
+        {
+          "realization": 6,
+          "forward_seed": 10127
+        },
+        {
+          "realization": 7,
+          "forward_seed": 10128
+        },
+        {
+          "realization": 8,
+          "forward_seed": 10129
+        },
+        {
+          "realization": 9,
+          "forward_seed": 10130
+        },
+        {
+          "realization": 10,
+          "forward_seed": 10131
+        },
+        {
+          "realization": 11,
+          "forward_seed": 10132
+        },
+        {
+          "realization": 12,
+          "forward_seed": 10133
+        },
+        {
+          "realization": 13,
+          "forward_seed": 10134
+        },
+        {
+          "realization": 14,
+          "forward_seed": 10135
+        },
+        {
+          "realization": 15,
+          "forward_seed": 10136
+        }
+      ],
+      "1": [
+        {
+          "realization": 0,
+          "forward_seed": 110121
+        },
+        {
+          "realization": 1,
+          "forward_seed": 110122
+        },
+        {
+          "realization": 2,
+          "forward_seed": 110123
+        },
+        {
+          "realization": 3,
+          "forward_seed": 110124
+        },
+        {
+          "realization": 4,
+          "forward_seed": 110125
+        },
+        {
+          "realization": 5,
+          "forward_seed": 110126
+        },
+        {
+          "realization": 6,
+          "forward_seed": 110127
+        },
+        {
+          "realization": 7,
+          "forward_seed": 110128
+        },
+        {
+          "realization": 8,
+          "forward_seed": 110129
+        },
+        {
+          "realization": 9,
+          "forward_seed": 110130
+        },
+        {
+          "realization": 10,
+          "forward_seed": 110131
+        },
+        {
+          "realization": 11,
+          "forward_seed": 110132
+        },
+        {
+          "realization": 12,
+          "forward_seed": 110133
+        },
+        {
+          "realization": 13,
+          "forward_seed": 110134
+        },
+        {
+          "realization": 14,
+          "forward_seed": 110135
+        },
+        {
+          "realization": 15,
+          "forward_seed": 110136
+        }
+      ]
+    },
+    "validation": {
+      "0": [
+        {
+          "realization": 0,
+          "forward_seed": 20121
+        },
+        {
+          "realization": 1,
+          "forward_seed": 20122
+        },
+        {
+          "realization": 2,
+          "forward_seed": 20123
+        },
+        {
+          "realization": 3,
+          "forward_seed": 20124
+        },
+        {
+          "realization": 4,
+          "forward_seed": 20125
+        },
+        {
+          "realization": 5,
+          "forward_seed": 20126
+        },
+        {
+          "realization": 6,
+          "forward_seed": 20127
+        },
+        {
+          "realization": 7,
+          "forward_seed": 20128
+        },
+        {
+          "realization": 8,
+          "forward_seed": 20129
+        },
+        {
+          "realization": 9,
+          "forward_seed": 20130
+        },
+        {
+          "realization": 10,
+          "forward_seed": 20131
+        },
+        {
+          "realization": 11,
+          "forward_seed": 20132
+        },
+        {
+          "realization": 12,
+          "forward_seed": 20133
+        },
+        {
+          "realization": 13,
+          "forward_seed": 20134
+        },
+        {
+          "realization": 14,
+          "forward_seed": 20135
+        },
+        {
+          "realization": 15,
+          "forward_seed": 20136
+        }
+      ],
+      "1": [
+        {
+          "realization": 0,
+          "forward_seed": 120121
+        },
+        {
+          "realization": 1,
+          "forward_seed": 120122
+        },
+        {
+          "realization": 2,
+          "forward_seed": 120123
+        },
+        {
+          "realization": 3,
+          "forward_seed": 120124
+        },
+        {
+          "realization": 4,
+          "forward_seed": 120125
+        },
+        {
+          "realization": 5,
+          "forward_seed": 120126
+        },
+        {
+          "realization": 6,
+          "forward_seed": 120127
+        },
+        {
+          "realization": 7,
+          "forward_seed": 120128
+        },
+        {
+          "realization": 8,
+          "forward_seed": 120129
+        },
+        {
+          "realization": 9,
+          "forward_seed": 120130
+        },
+        {
+          "realization": 10,
+          "forward_seed": 120131
+        },
+        {
+          "realization": 11,
+          "forward_seed": 120132
+        },
+        {
+          "realization": 12,
+          "forward_seed": 120133
+        },
+        {
+          "realization": 13,
+          "forward_seed": 120134
+        },
+        {
+          "realization": 14,
+          "forward_seed": 120135
+        },
+        {
+          "realization": 15,
+          "forward_seed": 120136
+        }
+      ]
+    }
+  },
+  "model": {
+    "T": 2,
+    "L": 3,
+    "optimizer": "SPSA",
+    "iterations": 512,
+    "measurement_samples": 8
+  },
+  "kernels": {
+    "global": "squared pure-state fidelity",
+    "1-rdm": "equal mean Uhlmann fidelity over 4 one-qubit RDMs",
+    "2-rdm": "equal mean Uhlmann fidelity over 6 two-qubit RDMs",
+    "version": 1,
+    "note": "mixed-state Uhlmann-fidelity Gram PSD is checked empirically, not assumed"
+  },
+  "dtype": "complex128",
+  "test_split_used": false,
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.2",
+    "scipy": "1.18.0"
+  },
+  "runtime_seconds": 654.3519335219753
+}

@@ -1,0 +1,39 @@
+ancillas: 2
+class_separation_samples_per_class: 32
+dataset: data/tfim_4q_random
+diffusion_steps: 2
+evaluation_measurement_outcomes: 32
+holdout_realizations: 16
+iterations: 512
+kernel_evaluation_samples: 64
+kernels:
+- global
+- 1-rdm
+- 2-rdm
+layers: 3
+measurement_outcomes: 8
+perturbation_strengths:
+- 0.0
+- 0.05
+- 0.15
+- 0.3
+seeds:
+  evaluation: 7160
+  holdout_forward: 10121
+  init: 140
+  kernel_subsample: 80160
+  measurement: 160
+  permutation: 50160
+  perturbation: 90160
+  scale_probe: 40160
+  spsa: 150
+  train_forward: 121
+  validation_forward: 20121
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+subset_seed: 31415
+train_realizations: 4
+train_states_per_class: 1
+validation_realizations: 16
+validation_states_per_class: 1
