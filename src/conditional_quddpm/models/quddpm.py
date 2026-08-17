@@ -218,6 +218,92 @@ def load_quddpm_checkpoint(path: str | Path) -> QuDDPMTrainingResult:
     return QuDDPMTrainingResult(checkpoint["parameters"], [], conditioning, n_data, n_ancilla)
 
 
+def train_single_reverse_steps(
+    targets: dict[int, np.ndarray],
+    *,
+    diffusion_steps: int,
+    layers: int,
+    samples: int,
+    forward_seed: int,
+    source_seed: int,
+    init_seed: int,
+    spsa_seed: int,
+    measurement_seed: int,
+    training_steps: int,
+    learning_rate: float,
+    perturbation: float,
+    n_ancilla: int = 1,
+    optimizer: str = "spsa",
+    source_mode: str = "haar",
+    measurement_repeats: int = 1,
+    forward_trajectories: dict[int, list[np.ndarray]] | None = None,
+) -> tuple[QuDDPMTrainingResult, dict[int, list[np.ndarray]], list[dict]]:
+    """Fit each q_t -> q_(t-1) map independently from a Haar source.
+
+    Unlike the chain trainer, each step starts from Haar and targets the
+    adjacent forward ensemble; this isolates ansatz/optimizer failures.
+    """
+    labels = sorted(targets)
+    n_data = _qubit_count(targets[labels[0]].shape[1])
+    forward = forward_trajectories if forward_trajectories is not None else forward_diffusion(targets, diffusion_steps, forward_seed)
+    angles = condition_angles(labels)
+    rng = np.random.default_rng(init_seed)
+    spsa_rng = np.random.default_rng(spsa_seed)
+    measurement_rng = np.random.default_rng(measurement_seed)
+    parameters = rng.normal(0, 0.15, (diffusion_steps, layers, reverse_parameter_count(n_data, n_ancilla)))
+    histories, diagnostics = [[] for _ in range(diffusion_steps)], []
+    from scipy.optimize import minimize
+    for step in range(diffusion_steps):
+        if source_mode == "haar":
+            source = {label: haar_states(samples, source_seed + 100 * step + label, n_data) for label in labels}
+        elif source_mode == "teacher_forced":
+            source = {label: forward[label][step + 1][:samples].copy() for label in labels}
+        else:
+            raise ValueError(f"unknown source_mode: {source_mode}")
+        uniforms = {
+            label: [measurement_rng.random(samples) for _ in range(measurement_repeats)]
+            for label in labels
+        }
+        target = {label: forward[label][step] for label in labels}
+        def loss(p):
+            return float(np.mean([
+                fidelity_mmd(reverse_step(source[label], p, angles[label], repeat), target[label])
+                for label in labels for repeat in uniforms[label]
+            ]))
+        p = parameters[step].copy()
+        initial_parameters = p.copy()
+        initial = loss(p)
+        if optimizer == "lbfgs":
+            shape = p.shape
+            result = minimize(lambda flat: loss(flat.reshape(shape)), p.ravel(), method="L-BFGS-B", options={"maxiter": training_steps})
+            p = result.x.reshape(shape)
+            history = [{"iteration": 0, "loss": initial}, {"iteration": training_steps, "loss": loss(p), "parameter_update_norm": float(np.linalg.norm(p - initial_parameters))}]
+        else:
+            local = np.random.default_rng(spsa_seed + step)
+            history = []
+            for iteration in range(training_steps + 1):
+                value = loss(p)
+                record = {"iteration": iteration, "loss": value, "parameter_update_norm": float(np.linalg.norm(p - initial_parameters))}
+                if iteration == training_steps:
+                    history.append(record)
+                    break
+                delta = local.choice((-1.0, 1.0), size=p.shape)
+                scale = perturbation / (iteration + 1) ** 0.101
+                rate = learning_rate / (iteration + 1) ** 0.602
+                loss_plus, loss_minus = loss(p + scale * delta), loss(p - scale * delta)
+                record.update({"learning_rate": rate, "perturbation": scale, "loss_plus": loss_plus, "loss_minus": loss_minus})
+                history.append(record)
+                grad = (loss_plus - loss_minus) / (2 * scale) * delta
+                p -= rate * grad
+        parameters[step] = p; histories[step] = history
+        outputs = {label: reverse_step(source[label], p, angles[label], uniforms[label][0]) for label in labels}
+        from conditional_quddpm.datasets.tfim import tfim_observables
+        diagnostics.append({"step": step + 1, "initial_mmd": initial, "final_mmd": loss(p), "best_mmd": min(item["loss"] for item in history), "parameter_update_norm": float(np.linalg.norm(p - initial_parameters)), "optimizer": optimizer, "source_mode": source_mode,
+                            "output_observables": {str(label): np.asarray([tfim_observables(s, n_data) for s in outputs[label]]).mean(axis=0).tolist() for label in labels},
+                            "target_observables": {str(label): np.asarray([tfim_observables(s, n_data) for s in target[label]]).mean(axis=0).tolist() for label in labels}})
+    return QuDDPMTrainingResult(parameters, histories, angles, n_data, n_ancilla), forward, diagnostics
+
+
 def train_stepwise_quddpm(
     targets: dict[int, np.ndarray],
     *,

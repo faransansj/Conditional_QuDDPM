@@ -1,0 +1,27 @@
+dataset: data/tfim_4q_random
+subset_seed: 31415
+tiny_train_states_per_class: 1
+reverse:
+  diffusion_steps: 2
+  layers: 3
+  iterations: 512
+  ancillas: 2
+  measurement_objective_samples: 8
+  evaluation_samples: 32
+forward_terminal_samples: 64
+forward_steps: [1, 2, 3, 4, 5]
+mixture_alphas: [0.0, 0.1, 0.25, 0.5, 0.75, 1.0]
+coverage_training_alpha: 0.25
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+seeds:
+  forward: 121
+  haar: 9000
+  source: 130
+  init: 140
+  spsa: 150
+  measurement: 160
+  evaluation: 4160
+  mixture: 5160
+  coverage: 6160

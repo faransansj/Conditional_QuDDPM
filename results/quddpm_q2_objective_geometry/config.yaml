@@ -1,0 +1,29 @@
+ancillas: 2
+conditions:
+- PER_OUTCOME_ENSEMBLE_MMD
+- COMBINED_ENSEMBLE_MMD
+dataset: data/tfim_4q_random
+diffusion_steps: 2
+evaluation_measurement_outcomes: 32
+holdout_realizations: 16
+iterations: 512
+layers: 3
+measurement_outcomes: 8
+seeds:
+  evaluation: 7160
+  holdout_forward: 10121
+  init: 140
+  measurement: 160
+  permutation: 50160
+  scale_probe: 40160
+  spsa: 150
+  train_forward: 121
+  validation_forward: 20121
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+subset_seed: 31415
+train_realizations: 4
+train_states_per_class: 1
+validation_realizations: 16
+validation_states_per_class: 1

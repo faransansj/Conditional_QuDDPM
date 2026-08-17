@@ -21,6 +21,15 @@ generate-tfim = "conditional_quddpm.datasets.tfim:main"
 run-qcnn-baseline = "conditional_quddpm.experiments.qcnn_baseline:main"
 run-quddpm-smoke = "conditional_quddpm.experiments.quddpm_smoke:main"
 run-quddpm-tfim = "conditional_quddpm.experiments.quddpm_tfim:main"
+run-quddpm-diagnostics = "conditional_quddpm.experiments.underfitting_diagnostics:main"
+run-quddpm-t1-multiseed-t2 = "conditional_quddpm.experiments.t1_multiseed_t2_diagnostics:main"
+run-quddpm-terminal-prior = "conditional_quddpm.experiments.terminal_prior_diagnostics:main"
+run-quddpm-q2-ensemble = "conditional_quddpm.experiments.q2_ensemble_generalization:main"
+run-quddpm-q2-sampling = "conditional_quddpm.experiments.q2_sampling_semantics:main"
+run-quddpm-q2-objective = "conditional_quddpm.experiments.q2_objective_geometry:main"
+run-quddpm-q2-gradient-signal = "conditional_quddpm.experiments.q2_gradient_signal:main"
+run-quddpm-q2-single-class = "conditional_quddpm.experiments.q2_single_class_controls:main"
+run-quddpm-q2-conflict-aware = "conditional_quddpm.experiments.q2_conflict_aware_step0:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

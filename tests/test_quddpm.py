@@ -1,5 +1,12 @@
 import numpy as np
 
+from conditional_quddpm.experiments.q2_objective_geometry import (
+    combined_ensemble_mmd,
+    equal_class_objective,
+    per_outcome_ensemble_mmd,
+)
+from conditional_quddpm.experiments.q2_sampling_semantics import _batch, spsa_pair_batches
+
 from conditional_quddpm.datasets.loader import load_tfim_dataset, nested_train_subsets
 from conditional_quddpm.experiments.quddpm_tfim import run_tfim_learning_gate
 from conditional_quddpm.models.quddpm import (
@@ -16,6 +23,36 @@ from conditional_quddpm.models.quddpm import (
     save_quddpm_checkpoint,
     train_stepwise_quddpm,
 )
+
+
+def test_ensemble_mmd_objectives_are_deterministic_and_permutation_invariant():
+    target = haar_states(4, 80, 2)
+    generated = [haar_states(4, 81, 2), haar_states(4, 82, 2)]
+    permutation = [2, 0, 3, 1]
+    for objective in (per_outcome_ensemble_mmd, combined_ensemble_mmd):
+        first = objective(generated, target)
+        assert first == objective(generated, target)
+        assert np.isclose(first, objective(generated, target[permutation]))
+
+
+def test_combined_ensemble_mmd_uses_all_samples_and_equal_class_weighting():
+    target = haar_states(4, 83, 2)
+    generated = [target.copy(), target.copy()]
+    baseline = combined_ensemble_mmd(generated, target)
+    generated[1][3] = haar_states(1, 84, 2)[0]
+    changed = combined_ensemble_mmd(generated, target)
+    assert changed != baseline
+    assert equal_class_objective({0: 0.2, 1: 0.8}) == 0.5
+
+
+def test_resampled_spsa_uses_common_random_numbers_within_iteration():
+    rng = np.random.default_rng(1)
+    fixed = _batch(4, 4, 8, (0, 1), rng)
+    plus, minus = spsa_pair_batches("RESAMPLED_CRN", fixed, 4, 4, 8, (0, 1), rng)
+    next_plus, _ = spsa_pair_batches("RESAMPLED_CRN", fixed, 4, 4, 8, (0, 1), rng)
+    assert plus is minus
+    assert plus["id"] == minus["id"]
+    assert next_plus["id"] != plus["id"]
 
 
 def test_reverse_circuit_is_unitary_and_measurement_preserves_pure_states():

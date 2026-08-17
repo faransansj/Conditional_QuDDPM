@@ -1,0 +1,26 @@
+dataset: data/tfim_4q_random
+subset_seed: 31415
+train_states_per_class: 1
+validation_states_per_class: 1
+train_realizations: 4
+holdout_realizations: 16
+validation_realizations: 16
+diffusion_steps: 2
+layers: 3
+iterations: 512
+ancillas: 2
+measurement_outcomes: 8
+evaluation_measurement_outcomes: 32
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+seeds:
+  train_forward: 121
+  holdout_forward: 10121
+  validation_forward: 20121
+  init: 140
+  spsa: 150
+  measurement: 160
+  scale_probe: 40160
+  permutation: 50160
+  evaluation: 7160

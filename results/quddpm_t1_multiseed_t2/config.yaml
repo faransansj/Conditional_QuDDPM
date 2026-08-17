@@ -1,0 +1,30 @@
+ancillas: 2
+dataset: data/tfim_4q_random
+evaluation_samples: 32
+haar_samples: 32
+iterations: 512
+measurement_objective_samples: 8
+off_target_strengths:
+- 0.0
+- 0.05
+- 0.1
+- 0.2
+seed_offsets:
+- 0
+- 1
+- 2
+seeds:
+  evaluation_measurement: 1160
+  forward: 121
+  haar: 9000
+  init: 140
+  measurement: 160
+  perturbation: 3160
+  rollout_measurement: 2160
+  source: 130
+  spsa: 150
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+subset_seed: 31415
+tiny_train_states_per_class: 1

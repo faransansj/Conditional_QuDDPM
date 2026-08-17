@@ -1,0 +1,25 @@
+dataset: data/tfim_4q_random
+subset_seed: 31415
+tiny_train_states_per_class: 1
+diffusion_steps: 1
+ancillas: 2
+haar_samples: 32
+spsa_iteration_budgets: [8, 32, 128, 512]
+capacity_iteration_budget: 128
+capacity_layers: [1, 3, 6]
+conditioning_layers: 3
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+optimizer_control:
+  enabled: true
+  optimizer: lbfgs
+  layers: 3
+  iterations: 2
+seeds:
+  forward: 121
+  haar: 9000
+  source: 130
+  init: 140
+  spsa: 150
+  measurement: 160
