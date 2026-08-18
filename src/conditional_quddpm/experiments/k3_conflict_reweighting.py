@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import io
 import json
 import time
 from pathlib import Path
@@ -23,12 +24,18 @@ from conditional_quddpm.experiments.q2_objective_geometry import train
 from conditional_quddpm.models.quddpm import condition_angles, reverse_parameter_count
 
 SCHEMA_VERSION = "k3-conflict-reweighting-v1"
-REQUIRED_CONFIG = {"schema_version", "k2_config", "k2_artifact", "checkpoint", "step", "directional_step",
+REQUIRED_CONFIG = {"schema_version", "k2_config", "k2_artifact", "k2_gradient_sha256", "checkpoint", "step", "directional_step",
                    "near_zero_threshold", "primary_tau", "tau_candidates", "physics_weight_floor", "reconstruction"}
 
 
-def _sha256(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def load_verified_gradients(path, expected_sha256):
+    """Verify and load one immutable byte snapshot of the K2 gradient artifact."""
+    payload = Path(path).read_bytes()
+    actual = hashlib.sha256(payload).hexdigest()
+    if actual != expected_sha256:
+        raise ValueError(f"K2 gradient SHA256 mismatch: expected {expected_sha256}, got {actual}")
+    with np.load(io.BytesIO(payload)) as data:
+        return {name: np.asarray(data[name]).copy() for name in data.files}, actual
 
 
 def safe_cosine(left, right, threshold=1e-10):
@@ -142,18 +149,28 @@ def probe(name, vector, parameters, center, path, step, angles, uniforms, step_s
     return summary, rows
 
 
-def classify(probes, weighting_rows, task_count):
-    """Conservative K3 rule: a candidate must Pareto-improve both primary losses over global."""
+def classify(probes, weighting_rows, task_count, ranking_stable=True):
+    """Apply the prompt's conservative A/B/C/D interpretation without fitted thresholds."""
+    required = ("global_mmd_delta", "aggregate_physics_delta", "2rdm_delta",
+                "fraction_realizations_improved", "same_class_damage", "between_class_damage")
+    if not ranking_stable or any(not np.isfinite(row.get(key, np.nan)) for row in probes for key in required):
+        return "K3-D"
     baseline = next(row for row in probes if row["method"] == "global_mmd")
     candidates = [row for row in probes if row["method"] not in ("global_mmd", "2rdm")]
-    promising = [row for row in candidates if row["global_mmd_delta"] < 0 and row["aggregate_physics_delta"] < 0
-                 and row["global_mmd_delta"] <= baseline["global_mmd_delta"]
-                 and row["aggregate_physics_delta"] <= baseline["aggregate_physics_delta"]]
-    if not promising:
-        return "K3-B"
     stats = {row["method"]: row for row in weighting_rows}
-    collapsed = [row for row in promising if stats[row["method"]]["effective_sample_size"] < task_count / 2]
-    return "K3-C" if len(collapsed) == len(promising) else "K3-A"
+    joint = [row for row in candidates if row["global_mmd_delta"] < 0 and row["aggregate_physics_delta"] < 0]
+    apparent = [row for row in joint if row["global_mmd_delta"] <= baseline["global_mmd_delta"]
+                and row["aggregate_physics_delta"] <= baseline["aggregate_physics_delta"]]
+    if apparent and all(stats[row["method"]]["effective_sample_size"] < task_count / 2 for row in apparent):
+        return "K3-C"
+    def secondary_count(row):
+        return sum((row["2rdm_delta"] <= baseline["2rdm_delta"],
+                    row["fraction_realizations_improved"] >= baseline["fraction_realizations_improved"],
+                    row["same_class_damage"] <= baseline["same_class_damage"],
+                    row["between_class_damage"] <= baseline["between_class_damage"]))
+    promising = [row for row in apparent if stats[row["method"]]["effective_sample_size"] >= task_count / 2
+                 and secondary_count(row) >= 2]
+    return "K3-A" if promising else "K3-B"
 
 
 def _write_csv(path, rows):
@@ -208,10 +225,10 @@ def run(config, output):
     started = time.perf_counter(); output = Path(output); output.mkdir(parents=True, exist_ok=True)
     artifact = Path(config["k2_artifact"]); gradient_path = artifact / "per_realization_gradients.npz"
     k2_manifest = json.loads((artifact / "run_manifest.json").read_text())
-    with np.load(gradient_path) as data:
-        vectors = np.asarray(data["realization_raw"]); global_gradient = np.asarray(data["global_raw"])
-        rdm_gradient = np.asarray(data["2rdm_raw"]); physics_gradient = np.asarray(data["physics_raw"])
-        realization_ids = data["realization_ids"].astype(str).tolist()
+    data, gradient_sha256 = load_verified_gradients(gradient_path, config["k2_gradient_sha256"])
+    vectors = data["realization_raw"]; global_gradient = data["global_raw"]
+    rdm_gradient = data["2rdm_raw"]; physics_gradient = data["physics_raw"]
+    realization_ids = data["realization_ids"].astype(str).tolist()
     metadata = k2_manifest["realizations"]
     if realization_ids != [item["realization_id"] for item in metadata]:
         raise ValueError("K2 realization ordering mismatch")
@@ -260,7 +277,7 @@ def run(config, output):
     pattern = classify(probes, weighting_rows, len(vectors))
     git = provenance(); config_text = yaml.safe_dump(config, sort_keys=True)
     manifest = {"schema_version": SCHEMA_VERSION, **git, "k2_run_id": k2_manifest["run_id"], "k2_checkpoint_hash": checkpoint_hash,
-                "k2_gradient_sha256": _sha256(gradient_path), "k2_parameter_order": k2_manifest["parameter_order"],
+                "k2_gradient_sha256": gradient_sha256, "k2_parameter_order": k2_manifest["parameter_order"],
                 "gradient_source": "loaded verbatim from K2 NPZ; no re-estimation", "train_only": True,
                 "test_split_used": False, "validation_split_used": False, "directional_step": config["directional_step"],
                 "weighting": {"conflict_score": "mean j!=i cosine(g_i,g_j)", "conflict": "softmax(tau*s_i)",

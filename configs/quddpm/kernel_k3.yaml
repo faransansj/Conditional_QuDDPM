@@ -1,6 +1,7 @@
 schema_version: k3-conflict-reweighting-v1
 k2_config: configs/quddpm/kernel_k2.yaml
 k2_artifact: results/quddpm_kernel_diagnostics/k2_realization
+k2_gradient_sha256: 1c656e583ac0fa571a082e628e39f9cee3fd53e59ae8ede80d0572bc0b84993d
 checkpoint: best
 step: 1
 directional_step: 0.15

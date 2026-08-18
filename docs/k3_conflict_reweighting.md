@@ -2,7 +2,7 @@
 
 ## Scope and method
 
-K3 asks whether simple nonnegative reweighting of the frozen K2 realization-gradient sketches produces a more jointly useful local direction than uniform global MMD. It loads `results/quddpm_kernel_diagnostics/k2_realization/per_realization_gradients.npz` verbatim, preserves NumPy C-order, and verifies the uniform reconstruction error (`1.817e-15`). The deterministic `rho1 -> rho0` best checkpoint is replayed only for the one-step probe using the same train states, seeds, common measurement randomness, 32 Rademacher directions, and step size 0.15. Gradients are not re-estimated. Validation and test are not evaluated.
+K3 asks whether simple nonnegative reweighting of the frozen K2 realization-gradient sketches produces a more jointly useful local direction than uniform global MMD. It verifies the pinned K2 NPZ SHA256 (`1c656e583ac0fa571a082e628e39f9cee3fd53e59ae8ede80d0572bc0b84993d`), loads exactly those verified bytes, preserves NumPy C-order, and verifies the uniform reconstruction error (`1.817e-15`). The deterministic `rho1 -> rho0` best checkpoint is replayed only for the one-step probe using the same train states, seeds, common measurement randomness, 32 Rademacher directions, and step size 0.15. Gradients are not re-estimated. Validation and test are not evaluated.
 
 For realization sketches `g_i`, define
 

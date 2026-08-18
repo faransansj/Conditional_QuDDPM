@@ -64,19 +64,37 @@ def test_frozen_context_uses_train_only_loader(monkeypatch):
     assert calls == ["data/tfim_4q_random"] and actual is parameters
 
 
-def test_classification_requires_pareto_improvement_over_global_and_checks_collapse():
-    baseline = {"method": "global_mmd", "global_mmd_delta": -0.01, "aggregate_physics_delta": -0.01}
-    rdm = {"method": "2rdm", "global_mmd_delta": 0.0, "aggregate_physics_delta": -0.02}
-    weaker = {"method": "conflict_tau_1p0", "global_mmd_delta": -0.005, "aggregate_physics_delta": -0.005}
-    weights = [{"method": "conflict_tau_1p0", "effective_sample_size": 8.0}]
+def _probe(method, mmd=-0.01, physics=-0.01, rdm=-0.01, improved=0.5, same=0.01, between=0.01):
+    return {"method": method, "global_mmd_delta": mmd, "aggregate_physics_delta": physics,
+            "2rdm_delta": rdm, "fraction_realizations_improved": improved,
+            "same_class_damage": same, "between_class_damage": between}
+
+
+def test_classification_covers_prompt_a_b_c_d_patterns():
+    baseline = _probe("global_mmd")
+    rdm = _probe("2rdm", mmd=0.0, physics=-0.02)
+    weaker = _probe("conflict_tau_1p0", mmd=-0.005, physics=-0.005)
+    weights = [{"method": weaker["method"], "effective_sample_size": 8.0}]
     assert k3.classify([baseline, rdm, weaker], weights, 8) == "K3-B"
-    stronger = {**weaker, "global_mmd_delta": -0.02, "aggregate_physics_delta": -0.02}
+
+    stronger = _probe("conflict_tau_1p0", mmd=-0.02, physics=-0.02, rdm=-0.02,
+                      improved=0.75, same=0.005, between=0.02)
     assert k3.classify([baseline, rdm, stronger], weights, 8) == "K3-A"
-    weights[0]["effective_sample_size"] = 2.0
-    assert k3.classify([baseline, rdm, stronger], weights, 8) == "K3-C"
-    other = {**stronger, "method": "physics_conflict_tau_1p0"}
-    mixed = [*weights, {"method": other["method"], "effective_sample_size": 8.0}]
-    assert k3.classify([baseline, rdm, stronger, other], mixed, 8) == "K3-A"
+
+    collapsed = [{"method": stronger["method"], "effective_sample_size": 2.0}]
+    assert k3.classify([baseline, rdm, stronger], collapsed, 8) == "K3-C"
+    assert k3.classify([baseline, rdm, stronger], weights, 8, ranking_stable=False) == "K3-D"
+    assert k3.classify([baseline, rdm, {**stronger, "2rdm_delta": np.nan}], weights, 8) == "K3-D"
+
+
+def test_verified_gradient_load_rejects_hash_mismatch_and_uses_verified_bytes(tmp_path):
+    path = tmp_path / "gradients.npz"
+    np.savez(path, realization_raw=np.eye(2), global_raw=np.ones(2))
+    digest = hashlib.sha256(path.read_bytes()).hexdigest()
+    loaded, actual = k3.load_verified_gradients(path, digest)
+    assert actual == digest and np.array_equal(loaded["realization_raw"], np.eye(2))
+    with pytest.raises(ValueError, match="SHA256 mismatch"):
+        k3.load_verified_gradients(path, "0" * 64)
 
 
 def test_k2_artifacts_are_read_only_during_weight_calculation():
