@@ -1,0 +1,60 @@
+{
+  "augmentation_ratios": [
+    0,
+    0.5,
+    1,
+    2
+  ],
+  "datasets": {
+    "blocked-g": "data/tfim_4q_blocked",
+    "random": "data/tfim_4q_random"
+  },
+  "decision_gate": {
+    "GO": "dataset_improvement and nontrivial candidates in both random and blocked-g",
+    "NO-GO": "random does not satisfy dataset_improvement or generator/leakage/reproducibility validation fails",
+    "RESTRICTED-GO": "dataset_improvement and nontrivial candidates in random but not blocked-g",
+    "dataset_improvement": "mean delta > 0 and positive paired delta in at least 2 of 3 seeds for at least one frozen radius/ratio",
+    "nontrivial_median_nearest_source_infidelity": 0.0001
+  },
+  "namespace": "phase_c_local_random_tangent",
+  "radius_quantiles": {
+    "large": 0.75,
+    "medium": 0.5,
+    "small": 0.25
+  },
+  "radius_rationale": "q10 was rejected pre-QCNN because blocked-g class 1 q10=0.0029781031 gives duplicate-like sin(delta)^2 below 1e-4; q25 is feasible and nontrivial in every class",
+  "radius_rule": "per-dataset/per-class q25, q50, q75 of all 45 same-class frozen-source FS distances",
+  "real_states_per_class": 10,
+  "seeds": [
+    {
+      "init_seed": 1000,
+      "run_seed": 0,
+      "spsa_seed": 2000
+    },
+    {
+      "init_seed": 1001,
+      "run_seed": 1,
+      "spsa_seed": 2001
+    },
+    {
+      "init_seed": 1002,
+      "run_seed": 2,
+      "spsa_seed": 2002
+    }
+  ],
+  "subset_seed": 31415,
+  "tolerances": {
+    "duplicate_infidelity": 1e-10,
+    "maximum_redraws": 100,
+    "normalization": 1e-10,
+    "orthogonal": 1e-12
+  },
+  "training": {
+    "early_stopping_min_delta": 0.0001,
+    "early_stopping_patience": 40,
+    "learning_rate": 0.15,
+    "optimizer": "spsa",
+    "perturbation": 0.1,
+    "steps": 300
+  }
+}

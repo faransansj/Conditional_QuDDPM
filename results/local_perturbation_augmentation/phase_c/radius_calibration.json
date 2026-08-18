@@ -1,0 +1,83 @@
+{
+  "cells": [
+    {
+      "class_label": 0,
+      "dataset": "random",
+      "distance_distribution": {
+        "max": 0.5462699362921799,
+        "median": 0.19623257907665465,
+        "min": 0.004359749273378524,
+        "q10": 0.015874446192441834,
+        "q25": 0.07117419695801637,
+        "q75": 0.38872881867648423
+      },
+      "pair_count": 45,
+      "radii": {
+        "large": 0.38872881867648423,
+        "medium": 0.19623257907665465,
+        "small": 0.07117419695801637
+      },
+      "radius_rule": "small=q25, medium=q50, large=q75"
+    },
+    {
+      "class_label": 1,
+      "dataset": "random",
+      "distance_distribution": {
+        "max": 0.09607125317144839,
+        "median": 0.03755795022806133,
+        "min": 0.0004221981774429232,
+        "q10": 0.006431344442447265,
+        "q25": 0.0131838117339272,
+        "q75": 0.04974271783759932
+      },
+      "pair_count": 45,
+      "radii": {
+        "large": 0.04974271783759932,
+        "medium": 0.03755795022806133,
+        "small": 0.0131838117339272
+      },
+      "radius_rule": "small=q25, medium=q50, large=q75"
+    },
+    {
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "distance_distribution": {
+        "max": 0.293553827508296,
+        "median": 0.12019658033497213,
+        "min": 0.002609431411354989,
+        "q10": 0.03364292585246914,
+        "q25": 0.06402352479880274,
+        "q75": 0.1886592227205946
+      },
+      "pair_count": 45,
+      "radii": {
+        "large": 0.1886592227205946,
+        "medium": 0.12019658033497213,
+        "small": 0.06402352479880274
+      },
+      "radius_rule": "small=q25, medium=q50, large=q75"
+    },
+    {
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "distance_distribution": {
+        "max": 0.07250319809858428,
+        "median": 0.025322005393635248,
+        "min": 0.00012503941195692088,
+        "q10": 0.0029781030819898747,
+        "q25": 0.012508830205004545,
+        "q75": 0.035452442156319555
+      },
+      "pair_count": 45,
+      "radii": {
+        "large": 0.035452442156319555,
+        "medium": 0.025322005393635248,
+        "small": 0.012508830205004545
+      },
+      "radius_rule": "small=q25, medium=q50, large=q75"
+    }
+  ],
+  "frozen_before_qcnn": true,
+  "rationale": "q10 was rejected pre-QCNN because blocked-g class 1 q10=0.0029781031 gives duplicate-like sin(delta)^2 below 1e-4; q25 is feasible and nontrivial in every class",
+  "rule": "per-dataset/per-class q25, q50, q75 of all 45 same-class frozen-source FS distances"
+}
