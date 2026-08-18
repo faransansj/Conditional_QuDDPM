@@ -1,6 +1,6 @@
-# Conditional Quantum Diffusion Augmentation for QCNNs
+# Quantum-State Augmentation for QCNNs
 
-> **Research question:** Can quantum-state data augmentation using Conditional QuDDPM and Conditional MSQuDDPM improve downstream QCNN classification under limited quantum training data?
+> **Research question:** Under limited quantum training data, can state-level augmentation improve downstream QCNN generalization, and does learned geometry-aware generation add value beyond physics-aware perturbation?
 
 ## Status
 
@@ -9,11 +9,13 @@
 | Repository and research design | ✅ Documented |
 | TFIM dataset generator | ✅ Implemented and tested (4-qubit dense exact diagonalization) |
 | QCNN baseline | ✅ Development protocol frozen (4 qubits) |
-| Conditional QuDDPM | 🚧 4-qubit gate remains blocked; support-generalization diagnostics archived and frozen RDM-kernel K0 completed |
-| Conditional MSQuDDPM | 📋 Planned |
-| Augmentation benchmarks | 📋 Planned |
+| Conditional QuDDPM | ⛔ **NO-GO** after preserved K0–K3 diagnostics; no K4 |
+| Conditional MSQuDDPM | ⏸️ **HOLD**, not evaluated as failed |
+| Physics-aware perturbation | ▶️ **GO**, next implementation |
+| Pure-state score model (formerly SSDM) | ▶️ **GO**, feasibility first |
+| Augmentation benchmarks | 📋 Planned after method gates |
 
-The 4-qubit TFIM simulator and real-only QCNN baseline are executable. The QCNN development protocol is frozen at commit `6861c39`; current splits are development-only and new unseen split seeds are reserved for final confirmation. Independent one-qubit QuDDPM/C-QuDDPM forward, measured reverse, conditioning, and checkpoint smoke validation passes. Four-qubit TFIM generator training and augmentation remain unimplemented; the repository does **not** claim augmentation results.
+The 4-qubit TFIM simulator and real-only QCNN baseline are executable. The QCNN development protocol is frozen at commit `6861c39`; current splits are development-only and new unseen split seeds are reserved for final confirmation. Conditional QuDDPM did not reach an augmentation-ready 4-qubit generator: K2 found realization conflict and K3 found that simple reweighting did not outperform uniform aggregation. Those negative results are retained. The repository does **not** yet claim augmentation results.
 
 ## Motivation and problem statement
 
@@ -25,8 +27,8 @@ The initial claim is deliberately limited to controlled classical simulation. Re
 
 ## Research questions
 
-- **RQ1:** Does Conditional QuDDPM augmentation improve QCNN performance under limited training data?
-- **RQ2:** Does Conditional MSQuDDPM improve QCNN performance on mixed/noisy quantum-state datasets?
+- **RQ1:** Does physics-aware state perturbation improve QCNN performance under limited training data?
+- **RQ2:** Does a learned pure-state score model improve beyond the physics-aware baseline?
 - **RQ3:** How does effectiveness change as the amount of real training data decreases?
 - **RQ4:** How does synthetic-data quantity affect QCNN performance?
 - **RQ5:** Is generative quality correlated with downstream QCNN improvement?
@@ -40,25 +42,28 @@ TFIM parameter sampling
   -> split parameter points into train / validation / test
   -> exact-diagonalization ground states
        |-> real-only QCNN baseline
-       |-> train-only Conditional QuDDPM -> synthetic pure states -> QCNN
-       `-> train-only noise channels -> Conditional MSQuDDPM
-             -> synthetic mixed states -> QCNN
+       |-> train-only physics-aware perturbation -> synthetic pure states -> QCNN
+       `-> train-only pure-state score model -> synthetic pure states -> QCNN
+  [MSQuDDPM mixed-state work remains on HOLD]
   -> evaluate every QCNN on the untouched corresponding test set
 ```
 
 - **TFIM simulator:** constructs `H = -J Σ Z_i Z_(i+1) - g Σ X_i`, computes ground states, and assigns phase labels. Initial training excludes a predeclared near-critical interval; it is never selected after observing test performance.
 - **QCNN:** downstream classifier only. Its architecture, optimizer protocol, tuning budget, and test set remain fixed across augmentation arms.
-- **Conditional QuDDPM:** learns the train-only pure-state distribution `p_theta(rho | y)` and generates class-conditioned pure states.
-- **Conditional MSQuDDPM:** learns class-conditioned mixed/noisy states. Its initial forward process will follow the published depolarizing-channel MSQuDDPM unless evidence supports another channel.
+- **Physics-aware perturbation:** applies small symmetry-preserving TFIM-structured unitaries selected by train/validation state-quality gates.
+- **Pure-state score model:** feasibility track pinned to arXiv:2605.03573v4 and Fubini–Study geometry; no QCNN use before state-quality and conditional gates.
+- **Conditional QuDDPM:** preserved negative diagnostic track, locally NO-GO after K0–K3.
+- **Conditional MSQuDDPM:** preserved future mixed-state track, currently HOLD and not classified as failed.
 
 ## Experimental design
 
-Two primary benchmarks avoid an invalid apples-to-oranges comparison:
+The primary benchmark compares matched pure-state arms:
 
-1. **Pure-state benchmark:** real-only QCNN vs simple perturbation vs Conditional QuDDPM augmentation.
-2. **Mixed/noisy benchmark:** noisy real-only QCNN vs matched simple perturbation vs Conditional MSQuDDPM augmentation.
+1. real-only QCNN;
+2. real plus physics-aware perturbations;
+3. real plus pure-state score-model samples.
 
-A cross-model comparison is secondary and will use the same state representation, noise condition, real-data budget, synthetic budget, split, and QCNN protocol. It will be reported only if both models support that matched condition.
+A symmetry- and displacement-matched random-unitary control is retained through the pilot. MSQuDDPM mixed-state comparisons remain deferred. Every reported comparison uses the same real IDs, synthetic count, split, QCNN initialization, optimizer updates, and evaluation code.
 
 ### Limited-data protocol
 
@@ -183,10 +188,10 @@ The QCNN loader treats `split_manifest.json` as the source of truth and stores e
 
 1. Validate a deterministic 4-qubit TFIM dataset and leakage-safe split.
 2. Establish a fixed QCNN real-only baseline and limited-data sweep.
-3. Adapt the published QuDDPM conditioning approach and benchmark pure-state augmentation.
-4. Build controlled noisy datasets and adapt MSQuDDPM conditioning.
-5. Run matched multi-seed comparisons, scaling and near-critical analyses.
-6. Produce paper-ready tables, figures, and reproduction commands.
+3. Implement and gate physics-aware plus matched-random perturbations.
+4. Reproduce the pinned pure-state score-model geometry and pass S0–S2 gates.
+5. Run matched real-only/physics-aware/score-model comparisons.
+6. Freeze a new confirmatory split, then produce paper-ready tables and reproduction commands.
 
 See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.md), [experiment plan](docs/experiment_plan.md), [QCNN baseline guide](docs/qcnn_baseline.md), [QuDDPM validation](docs/quddpm_validation.md), [4-qubit TFIM learning gate](docs/quddpm_tfim_4q_gate.md), [RDM-kernel diagnostic](docs/rdm_kernel_diagnostics.md), and [upstream diffusion audit](docs/upstream_audit.md).
 
@@ -196,7 +201,7 @@ See [PLAN.md](PLAN.md), [TODO.md](TODO.md), [research plan](docs/research_plan.m
 - Finite TFIM chains do not exhibit a sharp thermodynamic transition, so phase labels and the excluded critical interval are operational benchmark definitions.
 - Synthetic samples are not independent ground-truth observations; effective sample size may saturate or decline at high augmentation ratios.
 - A QCNN simulation result does not establish quantum advantage or hardware utility.
-- QuDDPM, MSQuDDPM, and conditioning choices are active research implementations; reproduction against reference code is required before modification.
+- Conditional QuDDPM is a preserved local NO-GO, MSQuDDPM is HOLD, and the pure-state score model has no verified drop-in implementation; future work must remain version-pinned and gate-limited.
 
 Negative findings—including no gain, degradation at high synthetic ratios, disagreement between fidelity and downstream utility, or regime-specific model advantages—are valid outcomes.
 

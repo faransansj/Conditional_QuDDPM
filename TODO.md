@@ -4,7 +4,11 @@ Priority order is top-to-bottom within each section. Check an item only after it
 
 ## P0 — Start here
 
-- [x] Audit upstream QuDDPM, MSQuDDPM, and conditioning repositories
+- [ ] Complete the missing MSQuDDPM upstream audit (HOLD; not active execution)
+  - Goal: identify source, license, framework/version constraints, and a reproducible reference smoke task before any future resume.
+  - Outputs: add a verified MSQuDDPM section to `docs/upstream_audit.md`; mark unavailable when no source can be verified.
+
+- [x] Audit upstream QuDDPM and conditioning repositories
   - Goal: identify reusable code, APIs, licenses, framework/version constraints, and reference smoke tasks.
   - Inputs: papers arXiv:2310.05866, 2411.17608, 2509.17569 and linked official repositories.
   - Outputs: `docs/upstream_audit.md` with commit URLs, license findings, reuse decision, and risks.
@@ -122,6 +126,30 @@ Priority order is top-to-bottom within each section. Check an item only after it
 
 ## P3 — Pure-state augmentation
 
+> **Track decision (2026-08-18):** Conditional QuDDPM is **NO-GO** after preserved K0–K3 diagnostics; no K4 or augmentation run. MSQuDDPM is **HOLD**, not failed. Primary work moves to physics-aware perturbation and the v4 pure-state score model formerly called SSDM. See `docs/augmentation_track_transition.md`.
+
+- [ ] Implement the shared train-only augmentation contract and provenance
+  - Goal: let the frozen QCNN runner consume validated synthetic train states without exposing validation/test states to augmentation.
+  - Acceptance criteria: source IDs, method/config/seed, state hash, synthetic count, and split audit are recorded; QCNN integration smoke passes.
+
+- [ ] Implement physics-aware and displacement-matched random perturbations
+  - Goal: establish the smallest physically structured augmentation baseline and its generic-unitary control.
+  - Acceptance criteria: normalization, determinism, observable/label gate, diversity, and train-only tests pass before a 10/class pilot.
+
+- [ ] Run physics-aware 10/class pilot
+  - Goal: compare paired real-only, random-control, and physics-aware 1x arms under frozen QCNN seeds.
+  - Acceptance criteria: identical real IDs, synthetic counts, QCNN initialization/SPSA, and evaluation split; per-seed deltas reported without threshold tuning.
+
+- [ ] Implement pure-state score-model S0 geometry feasibility
+  - Goal: reproduce the pinned arXiv:2605.03573v4 Fubini–Study primitives, forward process, finite local-time teacher, and normalized sampling before network scaling.
+  - Acceptance criteria: phase invariance, tangent projection, log/exp round-trip, Haar statistics, finite loss, deterministic sampling, and train-only tests pass.
+
+- [ ] Gate score-model S1/S2 state quality and class-specific generation
+  - Goal: establish characteristic distribution quality and conditional separation before QCNN use.
+  - Acceptance criteria: one bounded diagnostic per failed gate; no QCNN augmentation on S2 failure.
+
+### Preserved Conditional QuDDPM history (NO-GO; do not resume)
+
 - [x] Reproduce a minimal upstream QuDDPM task
   - Goal: verify the reused implementation before TFIM modifications.
   - Inputs: pinned upstream code/config.
@@ -136,21 +164,21 @@ Priority order is top-to-bottom within each section. Check an item only after it
   - Acceptance criteria: parameter sharing, label encoding, training loss, and sampling API are explicit.
   - Dependencies: QuDDPM reproduction.
 
-- [ ] Train Conditional QuDDPM on train-only TFIM states
+- ~~Train Conditional QuDDPM on train-only TFIM states~~ — **CANCELED: K0–K3 NO-GO**
   - Goal: produce one checkpoint for both classes.
   - Inputs: one limited-data training subset; no validation/test states in fitting.
   - Outputs: checkpoint, resolved config, train log.
   - Acceptance criteria: data-access audit lists only train IDs; run is reproducible under fixed seeds.
   - Dependencies: conditioning mechanism; validated dataset.
 
-- [ ] Generate class-conditioned pure states
+- ~~Generate class-conditioned QuDDPM pure states~~ — **CANCELED: K0–K3 NO-GO**
   - Goal: materialize requested counts per class with provenance.
   - Inputs: fixed checkpoint and generation seed.
   - Outputs: synthetic-state artifact and metadata.
   - Acceptance criteria: requested counts/labels are exact; normalization/purity checks pass; fixed seed reproduces outputs.
   - Dependencies: trained Conditional QuDDPM.
 
-- [ ] Implement pure-state generative diagnostics
+- ~~Implement QuDDPM generative diagnostics~~ — **CANCELED: K0–K3 NO-GO**
   - Goal: measure physicality, memorization, diversity/coverage, and class consistency.
   - Inputs: real train/validation and synthetic states.
   - Outputs: metrics JSON.
@@ -164,14 +192,16 @@ Priority order is top-to-bottom within each section. Check an item only after it
   - Acceptance criteria: normalization passes; labels/provenance are retained; strength selection never uses test data.
   - Dependencies: validated dataset.
 
-- [ ] Run the pure augmentation pilot and declared sweep
+- ~~Run the Conditional QuDDPM augmentation pilot and sweep~~ — **CANCELED: K0–K3 NO-GO**
   - Goal: compare real-only, perturbation, and Conditional QuDDPM across matched budgets/seeds.
   - Inputs: frozen QCNN and augmentation configs.
   - Outputs: complete run matrix, paired deltas, mean/std.
   - Acceptance criteria: all arms use matched splits/QCNN seeds; missing/failed cells remain visible; null/negative deltas are reported.
   - Dependencies: baseline pilot; diagnostics; perturbation baseline.
 
-## P4 — Mixed-state augmentation
+## P4 — Mixed-state augmentation (**MSQuDDPM HOLD; excluded from active priority queue**)
+
+The tasks below are preserved for a possible post-SSDM resume and are not failures or current work.
 
 - [ ] Implement a depolarizing channel for density matrices
   - Goal: create the first controlled mixed-state dataset transformation.
