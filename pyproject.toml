@@ -31,6 +31,7 @@ run-quddpm-q2-gradient-signal = "conditional_quddpm.experiments.q2_gradient_sign
 run-quddpm-q2-single-class = "conditional_quddpm.experiments.q2_single_class_controls:main"
 run-quddpm-q2-conflict-aware = "conditional_quddpm.experiments.q2_conflict_aware_step0:main"
 run-quddpm-kernel-k0 = "conditional_quddpm.experiments.kernel_diagnostics:main"
+run-physics-aware-augmentation = "conditional_quddpm.experiments.physics_aware_augmentation:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

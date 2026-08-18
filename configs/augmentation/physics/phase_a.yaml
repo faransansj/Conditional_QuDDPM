@@ -1,0 +1,22 @@
+datasets:
+  random: data/tfim_4q_random
+  blocked: data/tfim_4q_blocked
+real_states_per_class: 10
+subset_seed: 31415
+operators: [field, interaction]
+# Generators are spectral-norm normalized, so epsilon is dimensionless.
+epsilon_sweep: [0.0, 0.1, 0.2, 0.4, 0.8]
+generation_seed: 7000
+selection_seed: 27182
+augmentation_ratios: [0, 0.5, 1, 2]
+seeds:
+  - {run_seed: 0, init_seed: 1000, spsa_seed: 2000}
+  - {run_seed: 1, init_seed: 1001, spsa_seed: 2001}
+  - {run_seed: 2, init_seed: 1002, spsa_seed: 2002}
+training:
+  optimizer: spsa
+  steps: 300
+  learning_rate: 0.15
+  perturbation: 0.1
+  early_stopping_patience: 40
+  early_stopping_min_delta: 1.0e-4
