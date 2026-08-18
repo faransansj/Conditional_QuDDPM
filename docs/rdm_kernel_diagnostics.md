@@ -81,3 +81,55 @@ This is **partial evidence only**, not enough to select an RDM training objectiv
 ## Next action
 
 The smallest next diagnostic is frozen-checkpoint directional-gradient alignment for global versus 2-RDM MMD at T=1 initialization/best parameters. Proceed to objective training only if 2-RDM both preserves usable class signal and reduces the previously observed class/realization gradient conflict.
+
+# K1 directional-gradient alignment diagnostic
+
+## Setup
+
+Same frozen setting as K0 (T=2, L=3, N=4 train realizations per class, 8 fixed measurement outcomes, train IDs `class-0-00125`/`class-1-00034`, identical forward realizations, conditioning angles, and deterministic PER_OUTCOME_ENSEMBLE_MMD SPSA checkpoints `initial`/`best`). 32 shared Rademacher directions, epsilon 0.15, central finite differences; identical directions, plus/minus points, source states, and measurement uniforms for both kernels, so both kernels see exactly the same generated ensembles. Derivatives are computed from **raw unclipped** biased MMD; the clip is only accounted for. Reported values are directional derivatives, not exact gradient norms. Primary step: rho1->rho0; secondary control: rho2->rho1. Test split untouched. Artifacts: `results/quddpm_kernel_diagnostics/k1_gradient/`. Pre-registered operationalizations: near-zero slack 0.05; catastrophic reversal = conflict increase > 0.05 or alignment drop > 0.10 at the controls.
+
+## Raw-MMD validity
+
+No raw MMD value was negative anywhere (both kernels, all 4 checkpoint/step analyses; 5200 components each). Minimum raw 2-RDM value at the primary point: 1.69e-1. Clipped fraction: 0.0. Min Gram eigenvalues: global -3.6e-15, 2-RDM -3.6e-15 (numerically PSD at these centers). The raw/clipped distinction is not a confound for this diagnostic.
+
+## Primary result: rho1 -> rho0, best checkpoint
+
+| signal | global | 2-RDM |
+|---|---:|---:|
+| center raw MMD | 0.3106 | 0.2459 |
+| mean abs directional derivative | 0.1235 | 0.1273 |
+| median abs derivative / std | 0.0965 / 0.1501 | 0.1236 / 0.1453 |
+| near-zero fraction / descent fraction | 0.0 / 0.0 | 0.0 / 0.0 |
+| class conflict rate (sign) | 0.5625 | 0.5000 |
+| all class-realization conflict | 0.4648 | 0.4355 |
+| corr/cos vs physics derivative | 0.464 / 0.468 | **0.829 / 0.829** |
+| beneficial-direction fraction | 0.781 | **0.844** |
+
+corr(dL_global, dL_2rdm) = 0.655. Signal ratio 2-RDM/global = 1.03. Per-class physics alignment (corr): class 0: global 0.708 / 2-RDM 0.893; class 1: global 0.636 / 2-RDM 0.929.
+
+## Secondary and initialization controls
+
+- rho1->rho0 initial: conflict reduction +0.035; alignment gain +0.169; ratio 1.97; 2-RDM beneficial 0.906 vs global 0.750.
+- rho2->rho1 initial: alignment gain +0.303; ratio 0.99.
+- rho2->rho1 best: alignment gain +0.448; ratio 1.26; conflict change **-0.020** (2-RDM conflict slightly higher: 0.449 vs 0.430); beneficial 0.781 vs 0.719.
+
+## Decision
+
+Fixed rule (thresholds declared in `configs/quddpm/kernel_k1.yaml` before the run):
+
+| check | value | threshold | pass |
+|---|---:|---:|---|
+| validity min raw | 0.169 | >= -1e-8 | yes |
+| validity clipped fraction | 0.0 | <= 0.05 | yes |
+| usable signal ratio | 1.03 | >= 0.5 | yes |
+| usable near-zero | 0.0 vs 0.0 | slack 0.05 | yes |
+| **conflict reduction** | **0.0293** | **>= 0.05** | **no** |
+| physics alignment gain | 0.365 | >= 0.10 | yes |
+| beneficial not lower | 0.844 vs 0.781 | >= | yes |
+| consistency | see controls | not catastrophic | yes |
+
+**RDM OBJECTIVE: NO-GO.** 2-RDM gives a clearly better physics-aligned directional signal (+0.36 correlation gain, higher beneficial fraction), but it does not reduce the class/realization conflict that blocks the generation gate: +0.029 at the primary point (below the 0.05 bar) and slightly negative at the rho2->rho1 best control. Since the gate blocker is conflict, not physics-metric alignment, the RDM-objective hypothesis is frozen; no replacement objective is trained.
+
+## Next action after K1
+
+Smallest remaining bottleneck experiment: attack the class/realization conflict directly at the frozen checkpoints (e.g., conflict-aware reweighting or per-realization objective terms evaluated with the existing global MMD, measured with this same directional diagnostic), rather than swapping the kernel. K0 numbers above are unchanged. 4Q generation gate not retested; QCNN augmentation still blocked.

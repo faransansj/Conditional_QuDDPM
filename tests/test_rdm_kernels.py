@@ -1,12 +1,21 @@
 import numpy as np
 import pytest
-from conditional_quddpm.models.quddpm import fidelity_matrix,haar_states
-from conditional_quddpm.models.rdm_kernels import (class_weighted_kernel_mmd,density_fidelity,global_fidelity_kernel,kernel_matrix,kernel_mmd,one_rdm_kernel,reduced_density_matrix,two_rdm_kernel)
+from conditional_quddpm.models.quddpm import fidelity_matrix,fidelity_mmd,haar_states
+from conditional_quddpm.models.rdm_kernels import (class_weighted_kernel_mmd,density_fidelity,global_fidelity_kernel,kernel_matrix,kernel_mmd,kernel_mmd_raw,one_rdm_kernel,reduced_density_matrix,two_rdm_kernel)
 
 
 def test_global_kernel_matches_existing_fidelity_implementation():
     states=haar_states(5,90,4)
     assert np.allclose(kernel_matrix(states,states,"global"),fidelity_matrix(states,states))
+
+
+def test_global_kernel_mmd_matches_existing_fidelity_mmd_implementation():
+    for seed in (96,97,98):
+        left=haar_states(4,seed,4); right=haar_states(5,seed+100,4)
+        assert np.isclose(kernel_mmd(left,right,"global"),fidelity_mmd(left,right))
+        raw=fidelity_matrix(left,left).mean()+fidelity_matrix(right,right).mean()-2*fidelity_matrix(left,right).mean()
+        assert np.isclose(kernel_mmd_raw(left,right,"global"),raw)
+        assert np.isclose(kernel_mmd(left,right,"global"),max(raw,0.0))
 
 
 def test_rdm_kernels_are_symmetric_deterministic_and_maximal_for_identical_states():

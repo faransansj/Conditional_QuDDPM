@@ -48,9 +48,13 @@ def kernel_matrix(left: np.ndarray, right: np.ndarray, kernel: str) -> np.ndarra
     return np.asarray([[function(a,b) for b in right] for a in left],dtype=float)
 
 
+def kernel_mmd_raw(left: np.ndarray, right: np.ndarray, kernel: str) -> float:
+    """Biased empirical MMD without the nonnegativity clip."""
+    return float(kernel_matrix(left,left,kernel).mean()+kernel_matrix(right,right,kernel).mean()-2*kernel_matrix(left,right,kernel).mean())
+
+
 def kernel_mmd(left: np.ndarray, right: np.ndarray, kernel: str) -> float:
-    value=kernel_matrix(left,left,kernel).mean()+kernel_matrix(right,right,kernel).mean()-2*kernel_matrix(left,right,kernel).mean()
-    return float(max(value,0.0))
+    return float(max(kernel_mmd_raw(left,right,kernel),0.0))
 
 
 def class_weighted_kernel_mmd(generated: dict[int,np.ndarray],target: dict[int,np.ndarray],kernel: str) -> float:

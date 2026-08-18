@@ -1,0 +1,50 @@
+dataset: data/tfim_4q_random
+subset_seed: 31415
+train_states_per_class: 1
+validation_states_per_class: 1
+train_realizations: 4
+holdout_realizations: 4      # prefix of the K0 holdout pool (same forward seeds 10121+)
+validation_realizations: 4   # prefix of the K0 validation pool (same forward seeds 20121+)
+diffusion_steps: 2
+layers: 3
+iterations: 512
+ancillas: 2
+measurement_outcomes: 8
+evaluation_outcomes: 8
+trained_objective: PER_OUTCOME_ENSEMBLE_MMD
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+# Pre-registered diagnosis decision rules, declared before the run and not
+# fitted to results. Rule (per step, aggregated over all 8 class x
+# realization cells; primary step = rho1->rho0):
+#   fit_ok := oracle_seen_mmd <= seen_fit_ratio_max * shared_seen_mmd
+#             AND oracle_mean_loss_improvement >= min_loss_improvement
+#   not fit_ok                    -> FUNDAMENTAL REVERSE-LEARNING BOTTLENECK
+#   fit_ok and unseen_advantage >= unseen_advantage_min
+#                                 -> SHARED SUPPORT BOTTLENECK
+#   fit_ok and unseen_advantage <  unseen_advantage_min
+#                                 -> TRAJECTORY MEMORIZATION / SUPPORT
+#                                    GENERALIZATION FAILURE
+#   primary/secondary step categories disagree -> INCONCLUSIVE
+# Rationale: the oracle has the full shared parameter budget for a 4x narrower
+# target support, so seen-fit within 2x of the shared model (ratio 0.5) is a
+# weak bar; the shared SPSA run reduces the step-1 objective by 76% and the
+# step-2 objective by 27%, so 0.2 mean relative loss improvement is weak;
+# 0.05 absolute unseen MMD advantage matches the K1 "material" convention
+# (K0 seen-vs-unseen MMD differences are ~0.17, so 0.05 is conservative).
+decision:
+  seen_fit_ratio_max: 0.5
+  min_loss_improvement: 0.2
+  unseen_advantage_min: 0.05
+seeds:
+  train_forward: 121
+  holdout_forward: 10121
+  validation_forward: 20121
+  init: 140
+  spsa: 150
+  measurement: 160
+  scale_probe: 40160
+  permutation: 50160
+  oracle_spsa: 70160
+  evaluation: 7160
