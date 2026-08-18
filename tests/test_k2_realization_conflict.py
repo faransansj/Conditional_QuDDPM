@@ -1,10 +1,10 @@
 import hashlib
+import json
 from pathlib import Path
 
 import numpy as np
 import pytest
 
-from conditional_quddpm.datasets.loader import load_tfim_dataset
 from conditional_quddpm.experiments import k2_realization_conflict as k2
 from conditional_quddpm.models.quddpm import condition_angles, haar_states, reverse_parameter_count
 from conditional_quddpm.models.rdm_kernels import kernel_mmd_raw
@@ -80,14 +80,26 @@ def test_schema_validation_rejects_missing_fields():
         k2.validate_required({"schema_version": k2.SCHEMA_VERSION}, k2.REQUIRED_MANIFEST, "manifest")
 
 
-def test_run_is_reproducible_records_seed_and_never_accesses_test_or_k0_k1(tmp_path, monkeypatch):
-    dataset = load_tfim_dataset("data/tfim_4q_random")
-    class Guard:
-        def __getattr__(self, name):
-            if name == "test":
-                raise AssertionError("test split accessed")
-            return getattr(dataset, name)
-    monkeypatch.setattr(k2, "load_tfim_dataset", lambda path: Guard())
+def test_run_is_reproducible_records_seed_and_never_materializes_nontrain_states(tmp_path, monkeypatch):
+    dataset_path = Path("data/tfim_4q_random")
+    manifest = json.loads((dataset_path / "split_manifest.json").read_text())
+    original_np_load = np.load
+    with original_np_load(dataset_path / "states.npz") as data:
+        ids = data["parameter_ids"].tolist()
+    allowed = {ids.index(record["parameter_id"]) for record in manifest["records"] if record["split"] == "train"}
+    original_rows = k2._read_state_rows
+    def guarded_rows(path, indices):
+        assert set(indices) <= allowed
+        return original_rows(path, indices)
+    class MetadataOnlyNPZ:
+        def __init__(self, loaded): self.loaded = loaded
+        def __enter__(self): return self
+        def __exit__(self, *args): self.loaded.close()
+        def __getitem__(self, key):
+            if key == "states": raise AssertionError("full state array materialized")
+            return self.loaded[key]
+    monkeypatch.setattr(k2, "_read_state_rows", guarded_rows)
+    monkeypatch.setattr(k2.np, "load", lambda path: MetadataOnlyNPZ(original_np_load(path)))
     historical = [p for root in (Path("results/quddpm_kernel_diagnostics/frozen"), Path("results/quddpm_kernel_diagnostics/k1_gradient"))
                   for p in root.glob("*") if p.is_file()]
     before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in historical}

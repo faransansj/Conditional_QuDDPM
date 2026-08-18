@@ -19,18 +19,19 @@ import hashlib
 import json
 import platform
 import time
+import zipfile
 from pathlib import Path
 
 import numpy as np
 import yaml
 
-from conditional_quddpm.datasets.loader import load_tfim_dataset, nested_train_subsets
+from conditional_quddpm.datasets.loader import QuantumSplit, nested_train_subsets
+from conditional_quddpm.datasets.tfim import tfim_observables, verify_checksums
 from conditional_quddpm.experiments.kernel_diagnostics import provenance
 from conditional_quddpm.experiments.q2_ensemble_generalization import trajectories
 from conditional_quddpm.experiments.q2_objective_geometry import train
 from conditional_quddpm.models.quddpm import condition_angles, reverse_parameter_count, reverse_step
 from conditional_quddpm.models.rdm_kernels import kernel_matrix, kernel_mmd_raw
-from conditional_quddpm.datasets.tfim import tfim_observables
 
 SCHEMA_VERSION = "k2-realization-conflict-v1"
 REQUIRED_CONFIG = {
@@ -272,8 +273,43 @@ def _write_csv(path, rows):
         writer.writerows(rows)
 
 
-def _manifest_g(dataset, state_ids):
-    records = {record["parameter_id"]: record for record in dataset.manifest["records"]}
+def _read_state_rows(npz_path, indices):
+    """Read selected C-order rows without materializing the full NPZ state array."""
+    with zipfile.ZipFile(npz_path) as archive, archive.open("states.npy") as handle:
+        version = np.lib.format.read_magic(handle)
+        header = np.lib.format.read_array_header_1_0(handle) if version == (1, 0) else np.lib.format.read_array_header_2_0(handle)
+        shape, fortran_order, dtype = header
+        if fortran_order or len(shape) < 2:
+            raise ValueError("train-only state loading requires a row-major state array")
+        start = handle.tell(); row_shape = shape[1:]; row_bytes = int(np.prod(row_shape)) * dtype.itemsize
+        rows = []
+        for index in indices:
+            handle.seek(start + int(index) * row_bytes)
+            rows.append(np.frombuffer(handle.read(row_bytes), dtype=dtype).reshape(row_shape).copy())
+    return np.asarray(rows, dtype=np.complex128)
+
+
+def load_train_split(path):
+    """Load manifest metadata and train state rows only; validation/test states stay compressed."""
+    path = Path(path)
+    if not all(verify_checksums(path).values()):
+        raise ValueError(f"checksum verification failed for {path}")
+    manifest = json.loads((path / "split_manifest.json").read_text())
+    with np.load(path / "states.npz") as data:
+        array_ids = data["parameter_ids"].tolist()
+        labels = np.asarray(data["labels"], dtype=np.int8)
+    index = {parameter_id: i for i, parameter_id in enumerate(array_ids)}
+    records = [record for record in manifest["records"] if record["split"] == "train"]
+    indices = [index[record["parameter_id"]] for record in records]
+    if any(int(labels[i]) != int(record["label"]) for i, record in zip(indices, records)):
+        raise ValueError("train label mismatch")
+    return QuantumSplit(_read_state_rows(path / "states.npz", indices),
+                        np.asarray([record["label"] for record in records], dtype=np.int8),
+                        np.asarray([record["parameter_id"] for record in records])), manifest
+
+
+def _manifest_g(manifest, state_ids):
+    records = {record["parameter_id"]: record for record in manifest["records"]}
     return {state_id: float(records[state_id]["g"]) for state_id in state_ids}
 
 
@@ -380,7 +416,7 @@ Frozen global-MMD diagnostic at rho1->rho0 best checkpoint; train split only. Th
 - Mean realization-step target physics delta: {target:+.6f}
 - Mean realization-step other-class objective delta: {other:+.6f}
 
-No K3 training, generation gate, QCNN evaluation, or test split access was performed.
+No K3 training, generation gate, QCNN evaluation, or validation/test evaluation was performed.
 """
 
 
@@ -390,8 +426,8 @@ def run(config, output):
         raise ValueError(f"unsupported schema_version: {config['schema_version']}")
     started = time.perf_counter()
     out = Path(output); out.mkdir(parents=True, exist_ok=True)
-    dataset = load_tfim_dataset(config["dataset"])
-    split = nested_train_subsets(dataset.train, [config["train_states_per_class"]], config["subset_seed"])[config["train_states_per_class"]]
+    train_data, dataset_manifest = load_train_split(config["dataset"])
+    split = nested_train_subsets(train_data, [config["train_states_per_class"]], config["subset_seed"])[config["train_states_per_class"]]
     states = {c: split.states[split.labels == c] for c in (0, 1)}
     path, realization_ids = trajectories(states, config["train_realizations"], config["diffusion_steps"], config["seeds"]["train_forward"])
     angles = condition_angles([0, 1])
@@ -404,7 +440,7 @@ def run(config, output):
     model, _, checkpoints = train(path, config, config["trained_objective"])
     parameters = checkpoints[step][config["checkpoint"]]
     state_ids = {c: split.parameter_ids[split.labels == c][0] for c in (0, 1)}
-    g_values = _manifest_g(dataset, state_ids.values())
+    g_values = _manifest_g(dataset_manifest, state_ids.values())
     metadata = []
     for c in (0, 1):
         for item in realization_ids[str(c)]:
@@ -430,6 +466,7 @@ def run(config, output):
         "parameter_count": int(parameters.size), "parameter_shape": list(parameters.shape), "parameter_order": "NumPy C-order flatten",
         "dtype": str(parameters.dtype), "reconstruction_tolerance": config["reconstruction"],
         "test_split_used": False, "validation_split_used": False,
+        "split_loading": "manifest metadata read; only train state rows materialized from states.npz",
         "versions": {"python": platform.python_version(), "numpy": np.__version__},
     }
     validate_required(manifest, REQUIRED_MANIFEST, "manifest")

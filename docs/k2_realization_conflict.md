@@ -2,7 +2,7 @@
 
 ## Scope and method
 
-K2 tests whether the frozen global-MMD objective loses useful realization-specific directions through aggregation. It does not train a new objective. The deterministic K1 `rho1 -> rho0` best checkpoint was reconstructed from commit `451216c799e9f7abd8cdba59deeb3c9cd1a43ae3` with the same T=2, L=3, N=4 per class, R=8, SPSA training, 32 Rademacher directions, central-difference epsilon 0.15, and common measurement/perturbation randomness. Only train states `class-0-00125` (`g=0.2265828901`) and `class-1-00034` (`g=1.2840912833`) were loaded; each realization is one forward-noise seed of its class state. Validation and test were not accessed.
+K2 tests whether the frozen global-MMD objective loses useful realization-specific directions through aggregation. It does not train a new objective. The deterministic K1 `rho1 -> rho0` best checkpoint was reconstructed from commit `451216c799e9f7abd8cdba59deeb3c9cd1a43ae3` with the same T=2, L=3, N=4 per class, R=8, SPSA training, 32 Rademacher directions, central-difference epsilon 0.15, and common measurement/perturbation randomness. Only train states `class-0-00125` (`g=0.2265828901`) and `class-1-00034` (`g=1.2840912833`) were used; each realization is one forward-noise seed of its class state. Validation and test were not evaluated. The recorded run used the repository's generic dataset loader, which materialized all split arrays; the K2 loader was corrected afterward to materialize train state rows only, without changing numerical artifacts.
 
 For generated states `G`, targets `T`, and raw biased global-fidelity MMD, K2 allocates
 
