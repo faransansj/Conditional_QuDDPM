@@ -99,6 +99,13 @@ def _phase_a_runs() -> list[dict]:
     return json.loads((PHASE_A / "qcnn_pilot.json").read_text())["runs"]
 
 
+def _immutable_evidence_unchanged() -> bool:
+    return subprocess.run(
+        ["git", "diff", "--quiet", "be6be80", "--", str(PHASE_A), str(PHASE_B)],
+        check=False,
+    ).returncode == 0
+
+
 def _ground_truth() -> dict:
     comparison = json.loads((PHASE_B / "comparison_table.json").read_text())
     aggregate = next(item for item in comparison["primary_table"] if item["dataset"] == "random" and item["ratio"] == .5)
@@ -233,8 +240,9 @@ def run_phase_c(config_path: str | Path, output_path: str | Path, *, run_qcnn: b
     np.savez_compressed(output / "synthetic_states.npz", **all_states)
 
     qcnn_path = output / "qcnn_results.json"
-    runs = json.loads(qcnn_path.read_text())["runs"] if qcnn_path.exists() else []
-    completed = {(item["dataset"], item["radius_name"], item["ratio"], item["run_seed"]) for item in runs}
+    # A full run never trusts cached metrics: candidates, code, config, or source may differ.
+    runs = [] if run_qcnn else (json.loads(qcnn_path.read_text())["runs"] if qcnn_path.exists() else [])
+    completed = set()
     if run_qcnn:
         for dataset_name, (dataset, subset) in loaded.items():
             for radius_name in config["radius_quantiles"]:
@@ -271,7 +279,9 @@ def run_phase_c(config_path: str | Path, output_path: str | Path, *, run_qcnn: b
         improvement[dataset_name] = bool(qualifying) and nontrivial[dataset_name]
     generator_valid = all(item["unique_candidate_count"] == item["number_of_generated_states"] and item["finite_value_failures"] == 0 and item["normalization_error"]["max"] <= config["tolerances"]["normalization"] for item in diagnostics)
     reproducible = all(item["displacement_error"]["max"] <= 1e-10 for item in diagnostics)
-    if not generator_valid or not reproducible:
+    budget_pure = all(value["budget_pure"] and not value["unused_training_states_used"] and not value["validation_states_used_for_generation"] and not value["test_states_used_for_generation"] for value in source_audit.values())
+    immutable_evidence = _immutable_evidence_unchanged()
+    if not generator_valid or not reproducible or not budget_pure or not immutable_evidence:
         decision = "NO-GO"
     elif improvement["random"] and improvement["blocked-g"]:
         decision = "GO"
@@ -281,8 +291,8 @@ def run_phase_c(config_path: str | Path, output_path: str | Path, *, run_qcnn: b
         decision = "NO-GO"
     validation = {
         "phase_b_ground_truth": ground_truth, "radius_frozen_before_qcnn": True,
-        "generator_valid": generator_valid, "reproducible": reproducible, "budget_pure": all(value["budget_pure"] for value in source_audit.values()),
-        "phase_a_b_immutable_hashes_verified": True, "dataset_improvement_gate": improvement,
+        "generator_valid": generator_valid, "reproducible": reproducible, "budget_pure": budget_pure,
+        "phase_a_b_immutable_git_diff_verified": immutable_evidence, "dataset_improvement_gate": improvement,
         "decision": decision, "protocol": {"input": "4-qubit complex[16]", "architecture": "4 -> 2 -> 1", "parameters": 42, "readout": "Z on qubit 3", "loss": "MSE against {-1,+1}", **config["training"]},
     }
     (output / "validation.json").write_text(json.dumps(validation, indent=2, sort_keys=True) + "\n")

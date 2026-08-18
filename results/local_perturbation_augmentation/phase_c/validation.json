@@ -6,7 +6,7 @@
   },
   "decision": "RESTRICTED-GO",
   "generator_valid": true,
-  "phase_a_b_immutable_hashes_verified": true,
+  "phase_a_b_immutable_git_diff_verified": true,
   "phase_b_ground_truth": {
     "blocked_g_class_1": {
       "eligible_pairs": 0,
