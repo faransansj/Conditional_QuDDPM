@@ -153,7 +153,7 @@ def classify(probes, weighting_rows, task_count):
         return "K3-B"
     stats = {row["method"]: row for row in weighting_rows}
     collapsed = [row for row in promising if stats[row["method"]]["effective_sample_size"] < task_count / 2]
-    return "K3-C" if collapsed else "K3-A"
+    return "K3-C" if len(collapsed) == len(promising) else "K3-A"
 
 
 def _write_csv(path, rows):

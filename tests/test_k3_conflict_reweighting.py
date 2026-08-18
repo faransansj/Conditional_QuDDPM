@@ -74,6 +74,9 @@ def test_classification_requires_pareto_improvement_over_global_and_checks_colla
     assert k3.classify([baseline, rdm, stronger], weights, 8) == "K3-A"
     weights[0]["effective_sample_size"] = 2.0
     assert k3.classify([baseline, rdm, stronger], weights, 8) == "K3-C"
+    other = {**stronger, "method": "physics_conflict_tau_1p0"}
+    mixed = [*weights, {"method": other["method"], "effective_sample_size": 8.0}]
+    assert k3.classify([baseline, rdm, stronger, other], mixed, 8) == "K3-A"
 
 
 def test_k2_artifacts_are_read_only_during_weight_calculation():
