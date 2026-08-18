@@ -1,0 +1,33 @@
+{
+  "schema_version": "k3-conflict-reweighting-v1",
+  "git_commit": "a592fb4ebc8ce49f6e3b19d7b9735fc1a0d288b0",
+  "branch": "research/quddpm-rdm-kernel",
+  "dirty": false,
+  "k2_run_id": "k2-451216c7-s1-best",
+  "k2_checkpoint_hash": "38aedf2c66e3bb4aecca45a527e6df551a95145253b47614d838af4cf196c238",
+  "k2_gradient_sha256": "1c656e583ac0fa571a082e628e39f9cee3fd53e59ae8ede80d0572bc0b84993d",
+  "k2_parameter_order": "NumPy C-order flatten",
+  "gradient_source": "loaded verbatim from K2 NPZ; no re-estimation",
+  "train_only": true,
+  "test_split_used": false,
+  "validation_split_used": false,
+  "directional_step": 0.15,
+  "weighting": {
+    "conflict_score": "mean j!=i cosine(g_i,g_j)",
+    "conflict": "softmax(tau*s_i)",
+    "physics_alignment": "max(0, cosine(g_i,g_physics))",
+    "physics_conflict": "normalize(exp(tau*s_i)*(physics_weight_floor+physics_alignment_i))",
+    "tau_candidates": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "primary_tau": 1.0,
+    "physics_weight_floor": 0.05
+  },
+  "definitions": {
+    "same_class_damage": "mean positive per-realization objective delta, grouped within the two classes",
+    "between_class_damage": "maximum positive class-aggregate objective delta"
+  },
+  "runtime_seconds": 400.1657184349606
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "k2-realization-conflict-v1",
+  "git_commit": "451216c799e9f7abd8cdba59deeb3c9cd1a43ae3",
+  "branch": "research/quddpm-rdm-kernel",
+  "dirty": false,
+  "run_id": "k2-451216c7-s1-best",
+  "checkpoint": {
+    "identifier": "rho1->rho0/best",
+    "construction": "deterministic K1 SPSA replay"
+  },
+  "checkpoint_hash": "38aedf2c66e3bb4aecca45a527e6df551a95145253b47614d838af4cf196c238",
+  "dataset": "data/tfim_4q_random",
+  "dataset_hashes": {
+    "split_manifest.json": "a247020ee01ac6ae24846de675c1852738818ed300b012a1ed49e65e9b333002",
+    "states.npz": "9306262fe151d66ae283e2bf39ef42f5fa8d12d3fbbc2bc84038096b09b60a25",
+    "validation.json": "f844c576d7ff367c8793379ffe1abad034f7ddac09719d90dd1eb6bd28558334"
+  },
+  "train_state_ids": [
+    "class-0-00125",
+    "class-1-00034"
+  ],
+  "realizations": [
+    {
+      "realization_id": "class-0-00125/forward-0",
+      "state_id": "class-0-00125",
+      "class": 0,
+      "g": 0.2265828901251097,
+      "split": "train",
+      "forward_seed": 121,
+      "measurement_seed": 160
+    },
+    {
+      "realization_id": "class-0-00125/forward-1",
+      "state_id": "class-0-00125",
+      "class": 0,
+      "g": 0.2265828901251097,
+      "split": "train",
+      "forward_seed": 122,
+      "measurement_seed": 160
+    },
+    {
+      "realization_id": "class-0-00125/forward-2",
+      "state_id": "class-0-00125",
+      "class": 0,
+      "g": 0.2265828901251097,
+      "split": "train",
+      "forward_seed": 123,
+      "measurement_seed": 160
+    },
+    {
+      "realization_id": "class-0-00125/forward-3",
+      "state_id": "class-0-00125",
+      "class": 0,
+      "g": 0.2265828901251097,
+      "split": "train",
+      "forward_seed": 124,
+      "measurement_seed": 160
+    },
+    {
+      "realization_id": "class-1-00034/forward-0",
+      "state_id": "class-1-00034",
+      "class": 1,
+      "g": 1.2840912832649163,
+      "split": "train",
+      "forward_seed": 100121,
+      "measurement_seed": 161
+    },
+    {
+      "realization_id": "class-1-00034/forward-1",
+      "state_id": "class-1-00034",
+      "class": 1,
+      "g": 1.2840912832649163,
+      "split": "train",
+      "forward_seed": 100122,
+      "measurement_seed": 161
+    },
+    {
+      "realization_id": "class-1-00034/forward-2",
+      "state_id": "class-1-00034",
+      "class": 1,
+      "g": 1.2840912832649163,
+      "split": "train",
+      "forward_seed": 100123,
+      "measurement_seed": 161
+    },
+    {
+      "realization_id": "class-1-00034/forward-3",
+      "state_id": "class-1-00034",
+      "class": 1,
+      "g": 1.2840912832649163,
+      "split": "train",
+      "forward_seed": 100124,
+      "measurement_seed": 161
+    }
+  ],
+  "config_hash": "4d784f7a4649bf3331c614f9436b61e0609fd64a7dfe6d939172dcad3854241e",
+  "seeds": {
+    "train_forward": 121,
+    "init": 140,
+    "spsa": 150,
+    "measurement": 160,
+    "scale_probe": 40160,
+    "permutation": 50160,
+    "directions": 60160
+  },
+  "gradient_estimator": {
+    "name": "central finite-difference Rademacher directional sketch",
+    "directions": 32,
+    "sketch": "mean_d directional_derivative[d] * rademacher_direction[d]",
+    "common_random_numbers": true,
+    "mmd": "raw biased empirical global MMD; no clipping",
+    "realization_allocation": "N times row sum of A_ij; mean over 2N tasks equals equal-class global MMD"
+  },
+  "epsilon": 0.15,
+  "directional_step": 0.15,
+  "parameter_count": 81,
+  "parameter_shape": [
+    3,
+    27
+  ],
+  "parameter_order": "NumPy C-order flatten",
+  "dtype": "float64",
+  "reconstruction_tolerance": {
+    "atol": 1e-10,
+    "rtol": 1e-08
+  },
+  "test_split_used": false,
+  "validation_split_used": false,
+  "split_loading": "generic loader materialized all split arrays; only train rows were used numerically; corrected post-run to train-only materialization",
+  "versions": {
+    "python": "3.12.13",
+    "numpy": "2.5.2"
+  },
+  "runtime_seconds": 438.93413693096954
+}

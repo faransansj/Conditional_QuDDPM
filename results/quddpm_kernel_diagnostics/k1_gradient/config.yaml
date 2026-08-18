@@ -1,0 +1,39 @@
+ancillas: 2
+checkpoints:
+- initial
+- best
+dataset: data/tfim_4q_random
+decision:
+  conflict_min_reduction: 0.05
+  consistency_alignment_tolerance: 0.1
+  consistency_conflict_tolerance: 0.05
+  physics_min_alignment_gain: 0.1
+  usable_min_signal_ratio: 0.5
+  usable_near_zero_slack: 0.05
+  validity_max_clipped_fraction: 0.05
+  validity_min_raw: -1.0e-08
+diffusion_steps: 2
+directions: 32
+epsilon: 0.15
+iterations: 512
+kernels:
+- global
+- 2-rdm
+layers: 3
+measurement_outcomes: 8
+near_zero_threshold: 1.0e-06
+seeds:
+  directions: 60160
+  init: 140
+  measurement: 160
+  permutation: 50160
+  scale_probe: 40160
+  spsa: 150
+  train_forward: 121
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+subset_seed: 31415
+train_realizations: 4
+train_states_per_class: 1
+trained_objective: PER_OUTCOME_ENSEMBLE_MMD

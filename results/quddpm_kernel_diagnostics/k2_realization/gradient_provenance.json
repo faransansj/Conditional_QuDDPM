@@ -1,0 +1,82 @@
+{
+  "schema_version": "k2-realization-conflict-v1",
+  "run_id": "k2-451216c7-s1-best",
+  "checkpoint_hash": "38aedf2c66e3bb4aecca45a527e6df551a95145253b47614d838af4cf196c238",
+  "parameter_order": "NumPy C-order flatten",
+  "parameter_shape": [
+    3,
+    27
+  ],
+  "directions_seed": 60160,
+  "measurement_seeds": [
+    160,
+    161
+  ],
+  "gradients": [
+    {
+      "source_objective": "global_mmd",
+      "norm": 0.25259045802783114,
+      "status": "valid"
+    },
+    {
+      "source_objective": "class_0_global_mmd",
+      "norm": 0.47507718591240117,
+      "status": "valid"
+    },
+    {
+      "source_objective": "class_1_global_mmd",
+      "norm": 0.4466474214928878,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_0_0_decomposed_global_mmd",
+      "norm": 0.6910305666001081,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_0_1_decomposed_global_mmd",
+      "norm": 0.8049816756261647,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_0_2_decomposed_global_mmd",
+      "norm": 0.9297746170457927,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_0_3_decomposed_global_mmd",
+      "norm": 0.7014983098499381,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_1_0_decomposed_global_mmd",
+      "norm": 0.7911542744049533,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_1_1_decomposed_global_mmd",
+      "norm": 1.1919500161081886,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_1_2_decomposed_global_mmd",
+      "norm": 0.831002403177844,
+      "status": "valid"
+    },
+    {
+      "source_objective": "realization_1_3_decomposed_global_mmd",
+      "norm": 0.8051946258170056,
+      "status": "valid"
+    },
+    {
+      "source_objective": "2rdm_mmd",
+      "norm": 0.259481733590818,
+      "status": "valid"
+    },
+    {
+      "source_objective": "tfim_observable_error",
+      "norm": 0.11125774603599209,
+      "status": "valid"
+    }
+  ]
+}

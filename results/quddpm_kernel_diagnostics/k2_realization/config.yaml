@@ -1,0 +1,31 @@
+ancillas: 2
+checkpoint: best
+dataset: data/tfim_4q_random
+diffusion_steps: 2
+directional_step: 0.15
+directions: 32
+epsilon: 0.15
+iterations: 512
+layers: 3
+measurement_outcomes: 8
+near_zero_threshold: 1.0e-10
+reconstruction:
+  atol: 1.0e-10
+  rtol: 1.0e-08
+schema_version: k2-realization-conflict-v1
+seeds:
+  directions: 60160
+  init: 140
+  measurement: 160
+  permutation: 50160
+  scale_probe: 40160
+  spsa: 150
+  train_forward: 121
+spsa:
+  learning_rate: 0.5
+  perturbation: 0.15
+step: 1
+subset_seed: 31415
+train_realizations: 4
+train_states_per_class: 1
+trained_objective: PER_OUTCOME_ENSEMBLE_MMD
