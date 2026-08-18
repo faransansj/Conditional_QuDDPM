@@ -1,0 +1,81 @@
+{
+  "augmentation_ratio": 1,
+  "best_step": 40,
+  "dataset": "blocked",
+  "init_seed": 1000,
+  "method": "state_local_physics",
+  "real_states_per_class": 10,
+  "run_seed": 0,
+  "spsa_seed": 2000,
+  "steps_completed": 80,
+  "stopped_early": true,
+  "synthetic_ids": [
+    "syn-991fc1f632987ae7",
+    "syn-6beaba67909cac49",
+    "syn-4bde8a84c8da3be4",
+    "syn-512004866ba4dc1a",
+    "syn-2ccc8969d8d3465a",
+    "syn-a9f12bd3c6902098",
+    "syn-af850374e3729e40",
+    "syn-14f5d6144280904d",
+    "syn-b234a73b975404e6",
+    "syn-921930deb608c7cd",
+    "syn-c1e89ec43af5e593",
+    "syn-608c58170df14009",
+    "syn-13d3c731d50fe1a4",
+    "syn-f87c8095a85653d3",
+    "syn-d653079701434bf6",
+    "syn-34bce97c31b10389",
+    "syn-ae1c17ffbf546ced",
+    "syn-65a5895fac6bab0d",
+    "syn-f10a0ff40ebc19b9",
+    "syn-dd71d118dbf7fb15"
+  ],
+  "synthetic_samples": 20,
+  "test": {
+    "accuracy": 1.0,
+    "loss": 0.6421157511461699,
+    "macro_f1": 1.0,
+    "samples": 60
+  },
+  "train_augmented": {
+    "accuracy": 1.0,
+    "loss": 0.4356401033909699,
+    "macro_f1": 1.0,
+    "samples": 40
+  },
+  "train_parameter_ids": [
+    "class-0-00001",
+    "class-0-00004",
+    "class-0-00011",
+    "class-0-00030",
+    "class-0-00043",
+    "class-0-00045",
+    "class-0-00052",
+    "class-0-00086",
+    "class-0-00093",
+    "class-0-00134",
+    "class-1-00011",
+    "class-1-00012",
+    "class-1-00022",
+    "class-1-00077",
+    "class-1-00095",
+    "class-1-00106",
+    "class-1-00107",
+    "class-1-00125",
+    "class-1-00133",
+    "class-1-00135"
+  ],
+  "train_real": {
+    "accuracy": 1.0,
+    "loss": 0.4408510885933673,
+    "macro_f1": 1.0,
+    "samples": 20
+  },
+  "validation": {
+    "accuracy": 1.0,
+    "loss": 0.5531241344555198,
+    "macro_f1": 1.0,
+    "samples": 60
+  }
+}

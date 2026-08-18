@@ -1,0 +1,38 @@
+augmentation_ratios:
+- 0
+- 0.5
+- 1
+- 2
+datasets:
+  blocked: data/tfim_4q_blocked
+  random: data/tfim_4q_random
+epsilon_sweep:
+- 0.0
+- 0.1
+- 0.2
+- 0.4
+- 0.8
+generation_seed: 7000
+operators:
+- field
+- interaction
+real_states_per_class: 10
+seeds:
+- init_seed: 1000
+  run_seed: 0
+  spsa_seed: 2000
+- init_seed: 1001
+  run_seed: 1
+  spsa_seed: 2001
+- init_seed: 1002
+  run_seed: 2
+  spsa_seed: 2002
+selection_seed: 27182
+subset_seed: 31415
+training:
+  early_stopping_min_delta: 0.0001
+  early_stopping_patience: 40
+  learning_rate: 0.15
+  optimizer: spsa
+  perturbation: 0.1
+  steps: 300

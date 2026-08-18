@@ -1,0 +1,71 @@
+{
+  "augmentation_ratio": 0.5,
+  "best_step": 296,
+  "dataset": "random",
+  "init_seed": 1002,
+  "method": "state_local_physics",
+  "real_states_per_class": 10,
+  "run_seed": 2,
+  "spsa_seed": 2002,
+  "steps_completed": 300,
+  "stopped_early": false,
+  "synthetic_ids": [
+    "syn-45875a49f9676690",
+    "syn-81a2c898cb44b24f",
+    "syn-34e2c003a3198cfe",
+    "syn-b18dd5cc40ddabcc",
+    "syn-d955c6f28208b53f",
+    "syn-7a43a226a40d0b7b",
+    "syn-76a2a9a7ba864ebe",
+    "syn-f40d6cc78d07dbbf",
+    "syn-6e2d728f6ce5b2e8",
+    "syn-0c2d80ddc504f332"
+  ],
+  "synthetic_samples": 10,
+  "test": {
+    "accuracy": 0.9333333333333333,
+    "loss": 0.3838278821265812,
+    "macro_f1": 0.9330357142857143,
+    "samples": 60
+  },
+  "train_augmented": {
+    "accuracy": 0.9666666666666667,
+    "loss": 0.3427750575614658,
+    "macro_f1": 0.9666295884315907,
+    "samples": 30
+  },
+  "train_parameter_ids": [
+    "class-0-00001",
+    "class-0-00005",
+    "class-0-00013",
+    "class-0-00046",
+    "class-0-00066",
+    "class-0-00068",
+    "class-0-00081",
+    "class-0-00125",
+    "class-0-00138",
+    "class-0-00191",
+    "class-1-00015",
+    "class-1-00018",
+    "class-1-00034",
+    "class-1-00115",
+    "class-1-00136",
+    "class-1-00157",
+    "class-1-00158",
+    "class-1-00182",
+    "class-1-00191",
+    "class-1-00193"
+  ],
+  "train_real": {
+    "accuracy": 0.95,
+    "loss": 0.32073123906311696,
+    "macro_f1": 0.949874686716792,
+    "samples": 20
+  },
+  "validation": {
+    "accuracy": 0.95,
+    "loss": 0.3843428027049505,
+    "macro_f1": 0.949874686716792,
+    "samples": 60
+  }
+}

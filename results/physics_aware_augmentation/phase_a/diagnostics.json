@@ -1,0 +1,474 @@
+{
+  "acceptance_gate": "per-class train empirical Mx/Mz2 ranges plus maximum within-class train-state energy excess",
+  "candidate_pool_counts": {
+    "blocked": {
+      "0": 48,
+      "1": 25
+    },
+    "random": {
+      "0": 67,
+      "1": 23
+    }
+  },
+  "data_access": {
+    "augmentation_sources": [
+      "train"
+    ],
+    "gate_fit_splits": [
+      "train"
+    ],
+    "operator_tuning_splits": [
+      "train"
+    ],
+    "validation_test_use": "downstream QCNN evaluation only"
+  },
+  "diagnostic_pass": true,
+  "diversity": [
+    {
+      "accepted_nonzero": 40,
+      "dataset": "blocked",
+      "diversity_one_minus_mean_fidelity": 0.1935789471915712,
+      "mean_pairwise_fidelity": 0.8064210528084288,
+      "mean_source_conditioned_pairwise_fidelity": 0.9831070370917305,
+      "operator": "field",
+      "source_conditioned_diversity": 0.01689296290826947,
+      "sources_covered": 17
+    },
+    {
+      "accepted_nonzero": 33,
+      "dataset": "blocked",
+      "diversity_one_minus_mean_fidelity": 0.15696969755290402,
+      "mean_pairwise_fidelity": 0.843030302447096,
+      "mean_source_conditioned_pairwise_fidelity": 0.9780819644501947,
+      "operator": "interaction",
+      "source_conditioned_diversity": 0.021918035549805315,
+      "sources_covered": 17
+    },
+    {
+      "accepted_nonzero": 50,
+      "dataset": "random",
+      "diversity_one_minus_mean_fidelity": 0.25027417594626233,
+      "mean_pairwise_fidelity": 0.7497258240537377,
+      "mean_source_conditioned_pairwise_fidelity": 0.9486514871427422,
+      "operator": "field",
+      "source_conditioned_diversity": 0.05134851285725783,
+      "sources_covered": 16
+    },
+    {
+      "accepted_nonzero": 40,
+      "dataset": "random",
+      "diversity_one_minus_mean_fidelity": 0.1905518462728616,
+      "mean_pairwise_fidelity": 0.8094481537271384,
+      "mean_source_conditioned_pairwise_fidelity": 0.9606561518733364,
+      "operator": "interaction",
+      "source_conditioned_diversity": 0.03934384812666358,
+      "sources_covered": 18
+    }
+  ],
+  "full_h_max_one_minus_fidelity": 3.774758283725532e-15,
+  "gates": {
+    "blocked": {
+      "0": {
+        "max_energy_excess": 0.17271246906037696,
+        "mx_range": [
+          0.21596484861821516,
+          0.5126366807147722
+        ],
+        "mz2_range": [
+          0.8102928858429688,
+          0.9627158280843147
+        ],
+        "norm_tolerance": 1e-10
+      },
+      "1": {
+        "max_energy_excess": 0.0267595554014175,
+        "mx_range": [
+          0.8721787345999594,
+          0.9155271392981721
+        ],
+        "mz2_range": [
+          0.4268362370180996,
+          0.4826162345812035
+        ],
+        "norm_tolerance": 1e-10
+      }
+    },
+    "random": {
+      "0": {
+        "max_energy_excess": 0.6592070220274913,
+        "mx_range": [
+          0.16403882273487674,
+          0.705833876573297
+        ],
+        "mz2_range": [
+          0.6569085351129287,
+          0.9781431403796608
+        ],
+        "norm_tolerance": 1e-10
+      },
+      "1": {
+        "max_energy_excess": 0.0534043681113312,
+        "mx_range": [
+          0.8782730413740959,
+          0.9326742277116484
+        ],
+        "mz2_range": [
+          0.40264458702836003,
+          0.4751443622159499
+        ],
+        "norm_tolerance": 1e-10
+      }
+    }
+  },
+  "git_dirty": false,
+  "git_sha": "e97b27cbe1a18e2d59680052badfc9845897c5d0",
+  "normalization": "spectral norm",
+  "required_candidates_per_class": 20,
+  "summary": [
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "accepted_diversity_one_minus_mean_fidelity": 0.17881954094558583,
+      "accepted_mean_pairwise_fidelity": 0.8211804590544142,
+      "accepted_source_coverage": 20,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.0,
+      "epsilon": 0.0,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.0,
+      "magnetization_z2_drift_absolute_mean": 0.0,
+      "nearest_same_class_train_fidelity_mean": 1.0,
+      "operator": "field",
+      "source_fidelity_mean": 1.0,
+      "source_fidelity_min": 0.9999999999999993
+    },
+    {
+      "acceptance_rate": 0.85,
+      "accepted": 17,
+      "accepted_diversity_one_minus_mean_fidelity": 0.1909008842756661,
+      "accepted_mean_pairwise_fidelity": 0.8090991157243339,
+      "accepted_source_coverage": 17,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.006571343743885216,
+      "epsilon": 0.1,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 1.8041124150158794e-16,
+      "magnetization_z2_drift_absolute_mean": 0.0013322774811464072,
+      "nearest_same_class_train_fidelity_mean": 0.998079308551706,
+      "operator": "field",
+      "source_fidelity_mean": 0.9980792323329751,
+      "source_fidelity_min": 0.9970158865990089
+    },
+    {
+      "acceptance_rate": 0.8,
+      "accepted": 16,
+      "accepted_diversity_one_minus_mean_fidelity": 0.19477113282921343,
+      "accepted_mean_pairwise_fidelity": 0.8052288671707866,
+      "accepted_source_coverage": 16,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.0262197162810462,
+      "epsilon": 0.2,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 2.5951463200613033e-16,
+      "magnetization_z2_drift_absolute_mean": 0.005315798248385672,
+      "nearest_same_class_train_fidelity_mean": 0.9923498779378296,
+      "operator": "field",
+      "source_fidelity_mean": 0.9923444536028022,
+      "source_fidelity_min": 0.988108419723254
+    },
+    {
+      "acceptance_rate": 0.35,
+      "accepted": 7,
+      "accepted_diversity_one_minus_mean_fidelity": 0.09777147816103038,
+      "accepted_mean_pairwise_fidelity": 0.9022285218389696,
+      "accepted_source_coverage": 7,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.10383356777715289,
+      "epsilon": 0.4,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 1.6792123247455492e-16,
+      "magnetization_z2_drift_absolute_mean": 0.02105126889235005,
+      "nearest_same_class_train_fidelity_mean": 0.969968313148818,
+      "operator": "field",
+      "source_fidelity_mean": 0.9698133643946095,
+      "source_fidelity_min": 0.9531432974443353
+    },
+    {
+      "acceptance_rate": 0.0,
+      "accepted": 0,
+      "accepted_diversity_one_minus_mean_fidelity": null,
+      "accepted_mean_pairwise_fidelity": null,
+      "accepted_source_coverage": 0,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.3989412338496822,
+      "epsilon": 0.8,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 1.5681900222830337e-16,
+      "magnetization_z2_drift_absolute_mean": 0.08088154308671905,
+      "nearest_same_class_train_fidelity_mean": 0.8877425661100862,
+      "operator": "field",
+      "source_fidelity_mean": 0.885923474884048,
+      "source_fidelity_min": 0.8234103416618915
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "accepted_diversity_one_minus_mean_fidelity": 0.17881954094558583,
+      "accepted_mean_pairwise_fidelity": 0.8211804590544142,
+      "accepted_source_coverage": 20,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.0,
+      "epsilon": 0.0,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.0,
+      "magnetization_z2_drift_absolute_mean": 0.0,
+      "nearest_same_class_train_fidelity_mean": 1.0,
+      "operator": "interaction",
+      "source_fidelity_mean": 1.0,
+      "source_fidelity_min": 0.9999999999999993
+    },
+    {
+      "acceptance_rate": 0.85,
+      "accepted": 17,
+      "accepted_diversity_one_minus_mean_fidelity": 0.18420541572580262,
+      "accepted_mean_pairwise_fidelity": 0.8157945842741974,
+      "accepted_source_coverage": 17,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.009747164171170719,
+      "epsilon": 0.1,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.0022679154382531626,
+      "magnetization_z2_drift_absolute_mean": 1.1102230246251565e-16,
+      "nearest_same_class_train_fidelity_mean": 0.9979943336346458,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.9979943227019834,
+      "source_fidelity_min": 0.9968343469759325
+    },
+    {
+      "acceptance_rate": 0.35,
+      "accepted": 7,
+      "accepted_diversity_one_minus_mean_fidelity": 0.019678120894789597,
+      "accepted_mean_pairwise_fidelity": 0.9803218791052104,
+      "accepted_source_coverage": 7,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.038858902927324454,
+      "epsilon": 0.2,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.009041471377194943,
+      "magnetization_z2_drift_absolute_mean": 7.771561172376095e-17,
+      "nearest_same_class_train_fidelity_mean": 0.9920112641026554,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.9920099670709185,
+      "source_fidelity_min": 0.9873917511699428
+    },
+    {
+      "acceptance_rate": 0.35,
+      "accepted": 7,
+      "accepted_diversity_one_minus_mean_fidelity": 0.04647928229982323,
+      "accepted_mean_pairwise_fidelity": 0.9535207177001768,
+      "accepted_source_coverage": 7,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.15337640350451803,
+      "epsilon": 0.4,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.03568676050419543,
+      "magnetization_z2_drift_absolute_mean": 7.494005416219807e-17,
+      "nearest_same_class_train_fidelity_mean": 0.9685977874316161,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.9685563154606592,
+      "source_fidelity_min": 0.9504257916065875
+    },
+    {
+      "acceptance_rate": 0.1,
+      "accepted": 2,
+      "accepted_diversity_one_minus_mean_fidelity": 0.003760328034836613,
+      "accepted_mean_pairwise_fidelity": 0.9962396719651634,
+      "accepted_source_coverage": 2,
+      "dataset": "blocked",
+      "energy_drift_absolute_mean": 0.5816159381364683,
+      "epsilon": 0.8,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.13532713126297571,
+      "magnetization_z2_drift_absolute_mean": 5.2735593669694933e-17,
+      "nearest_same_class_train_fidelity_mean": 0.8840691329105912,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.8820943279117074,
+      "source_fidelity_min": 0.8147626190709072
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "accepted_diversity_one_minus_mean_fidelity": 0.20906619414810224,
+      "accepted_mean_pairwise_fidelity": 0.7909338058518978,
+      "accepted_source_coverage": 20,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.0,
+      "epsilon": 0.0,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.0,
+      "magnetization_z2_drift_absolute_mean": 0.0,
+      "nearest_same_class_train_fidelity_mean": 1.0,
+      "operator": "field",
+      "source_fidelity_mean": 1.0000000000000004,
+      "source_fidelity_min": 0.9999999999999996
+    },
+    {
+      "acceptance_rate": 0.8,
+      "accepted": 16,
+      "accepted_diversity_one_minus_mean_fidelity": 0.22218409967721242,
+      "accepted_mean_pairwise_fidelity": 0.7778159003227876,
+      "accepted_source_coverage": 16,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.006374097549876545,
+      "epsilon": 0.1,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 1.8596235662471373e-16,
+      "magnetization_z2_drift_absolute_mean": 0.0012900792932403343,
+      "nearest_same_class_train_fidelity_mean": 0.9982025336570294,
+      "operator": "field",
+      "source_fidelity_mean": 0.9982024404422521,
+      "source_fidelity_min": 0.9970159618898244
+    },
+    {
+      "acceptance_rate": 0.8,
+      "accepted": 16,
+      "accepted_diversity_one_minus_mean_fidelity": 0.2334891137064652,
+      "accepted_mean_pairwise_fidelity": 0.7665108862935348,
+      "accepted_source_coverage": 16,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.025432702323781343,
+      "epsilon": 0.2,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 2.8727020762175924e-16,
+      "magnetization_z2_drift_absolute_mean": 0.005147427127106141,
+      "nearest_same_class_train_fidelity_mean": 0.9928413538771672,
+      "operator": "field",
+      "source_fidelity_mean": 0.9928357258808053,
+      "source_fidelity_min": 0.9881089084723286
+    },
+    {
+      "acceptance_rate": 0.45,
+      "accepted": 9,
+      "accepted_diversity_one_minus_mean_fidelity": 0.11672855072475175,
+      "accepted_mean_pairwise_fidelity": 0.8832714492752483,
+      "accepted_source_coverage": 9,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.1007168877110037,
+      "epsilon": 0.4,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 1.9012569296705805e-16,
+      "magnetization_z2_drift_absolute_mean": 0.020384496832511652,
+      "nearest_same_class_train_fidelity_mean": 0.9718850895886904,
+      "operator": "field",
+      "source_fidelity_mean": 0.9717537198226232,
+      "source_fidelity_min": 0.9531481791447514
+    },
+    {
+      "acceptance_rate": 0.45,
+      "accepted": 9,
+      "accepted_diversity_one_minus_mean_fidelity": 0.33322612878790225,
+      "accepted_mean_pairwise_fidelity": 0.6667738712120977,
+      "accepted_source_coverage": 9,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.38696656883795155,
+      "epsilon": 0.8,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 1.2073675392798576e-16,
+      "magnetization_z2_drift_absolute_mean": 0.07831972349462632,
+      "nearest_same_class_train_fidelity_mean": 0.8957205678253592,
+      "operator": "field",
+      "source_fidelity_mean": 0.8933033483593279,
+      "source_fidelity_min": 0.8234735508592702
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "accepted_diversity_one_minus_mean_fidelity": 0.20906619414810224,
+      "accepted_mean_pairwise_fidelity": 0.7909338058518978,
+      "accepted_source_coverage": 20,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.0,
+      "epsilon": 0.0,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.0,
+      "magnetization_z2_drift_absolute_mean": 0.0,
+      "nearest_same_class_train_fidelity_mean": 1.0,
+      "operator": "interaction",
+      "source_fidelity_mean": 1.0000000000000004,
+      "source_fidelity_min": 0.9999999999999996
+    },
+    {
+      "acceptance_rate": 0.85,
+      "accepted": 17,
+      "accepted_diversity_one_minus_mean_fidelity": 0.21747081049967365,
+      "accepted_mean_pairwise_fidelity": 0.7825291895003263,
+      "accepted_source_coverage": 17,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.010324726949244111,
+      "epsilon": 0.1,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.0022398233010312574,
+      "magnetization_z2_drift_absolute_mean": 1.1102230246251565e-16,
+      "nearest_same_class_train_fidelity_mean": 0.9979809627359547,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.9979809555079238,
+      "source_fidelity_min": 0.9967947079004877
+    },
+    {
+      "acceptance_rate": 0.45,
+      "accepted": 9,
+      "accepted_diversity_one_minus_mean_fidelity": 0.08473294193440062,
+      "accepted_mean_pairwise_fidelity": 0.9152670580655994,
+      "accepted_source_coverage": 9,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.0411614655530758,
+      "epsilon": 0.2,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.008929476789419757,
+      "magnetization_z2_drift_absolute_mean": 7.216449660063518e-17,
+      "nearest_same_class_train_fidelity_mean": 0.9919573685955949,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.9919571372330838,
+      "source_fidelity_min": 0.9872342541126284
+    },
+    {
+      "acceptance_rate": 0.4,
+      "accepted": 8,
+      "accepted_diversity_one_minus_mean_fidelity": 0.10943491654966586,
+      "accepted_mean_pairwise_fidelity": 0.8905650834503341,
+      "accepted_source_coverage": 8,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.16246463677353518,
+      "epsilon": 0.4,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.03524471696228017,
+      "magnetization_z2_drift_absolute_mean": 8.881784197001253e-17,
+      "nearest_same_class_train_fidelity_mean": 0.9684005526866273,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.9683550303232504,
+      "source_fidelity_min": 0.949812483110367
+    },
+    {
+      "acceptance_rate": 0.3,
+      "accepted": 6,
+      "accepted_diversity_one_minus_mean_fidelity": 0.20264984234503547,
+      "accepted_mean_pairwise_fidelity": 0.7973501576549645,
+      "accepted_source_coverage": 6,
+      "dataset": "random",
+      "energy_drift_absolute_mean": 0.6160792662494308,
+      "epsilon": 0.8,
+      "generated": 20,
+      "magnetization_x_drift_absolute_mean": 0.13365086579153615,
+      "magnetization_z2_drift_absolute_mean": 4.718447854656915e-17,
+      "nearest_same_class_train_fidelity_mean": 0.882160384398467,
+      "operator": "interaction",
+      "source_fidelity_mean": 0.881438156608203,
+      "source_fidelity_min": 0.8125597692380994
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.2",
+    "python": "3.12.13",
+    "scipy": "1.18.0"
+  }
+}

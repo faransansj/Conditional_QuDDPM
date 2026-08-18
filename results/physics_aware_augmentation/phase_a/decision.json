@@ -1,0 +1,16 @@
+{
+  "decision": "NO-GO",
+  "diagnostic_pass": true,
+  "qcnn_pilot_completed": true,
+  "research_starting_sha": "52115e16de48b8139aeb3631564785c1aa59aacd",
+  "implementation_sha": "e97b27c",
+  "reasons": [
+    "Accepted component-unitary states are normalized, nontrivial, and diverse, while the full Hamiltonian changes eigenstates only by global phase.",
+    "Random-split test accuracy improves only at ratio 1 (0.9222 to 0.9500) and falls at ratio 2 (0.9167).",
+    "Blocked-g test accuracy degrades at every augmentation ratio (0.9000 real-only to 0.6889, 0.6833, and 0.6833).",
+    "The random-only gain therefore does not establish parameter-shift generalization and meets the predefined NO-GO pattern."
+  ],
+  "negative_control": "not run; the primary physics-aware method already failed blocked-g utility",
+  "simulator_resampling": "not run; exact ground states at new g are additional simulator-generated labeled data, not state-local augmentation",
+  "phase_b_authorized": false
+}

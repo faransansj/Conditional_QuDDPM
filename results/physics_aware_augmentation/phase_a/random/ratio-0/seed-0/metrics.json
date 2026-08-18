@@ -1,0 +1,60 @@
+{
+  "augmentation_ratio": 0,
+  "best_step": 292,
+  "dataset": "random",
+  "init_seed": 1000,
+  "method": "real_only",
+  "real_states_per_class": 10,
+  "run_seed": 0,
+  "spsa_seed": 2000,
+  "steps_completed": 300,
+  "stopped_early": false,
+  "synthetic_ids": [],
+  "synthetic_samples": 0,
+  "test": {
+    "accuracy": 0.9333333333333333,
+    "loss": 0.43421756964779673,
+    "macro_f1": 0.9330357142857143,
+    "samples": 60
+  },
+  "train_augmented": {
+    "accuracy": 0.95,
+    "loss": 0.3753709214093732,
+    "macro_f1": 0.949874686716792,
+    "samples": 20
+  },
+  "train_parameter_ids": [
+    "class-0-00001",
+    "class-0-00005",
+    "class-0-00013",
+    "class-0-00046",
+    "class-0-00066",
+    "class-0-00068",
+    "class-0-00081",
+    "class-0-00125",
+    "class-0-00138",
+    "class-0-00191",
+    "class-1-00015",
+    "class-1-00018",
+    "class-1-00034",
+    "class-1-00115",
+    "class-1-00136",
+    "class-1-00157",
+    "class-1-00158",
+    "class-1-00182",
+    "class-1-00191",
+    "class-1-00193"
+  ],
+  "train_real": {
+    "accuracy": 0.95,
+    "loss": 0.3753709214093732,
+    "macro_f1": 0.949874686716792,
+    "samples": 20
+  },
+  "validation": {
+    "accuracy": 0.95,
+    "loss": 0.43446738784229894,
+    "macro_f1": 0.949874686716792,
+    "samples": 60
+  }
+}
