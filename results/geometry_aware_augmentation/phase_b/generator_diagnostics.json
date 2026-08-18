@@ -1,7 +1,7 @@
 {
   "cells": [
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -217,7 +217,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.07216545733020752,
       "pair_distance_distribution": {
@@ -282,7 +282,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -498,7 +498,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.057704611278925344,
       "pair_distance_distribution": {
@@ -562,7 +562,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -778,7 +778,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.04745479586168133,
       "pair_distance_distribution": {
@@ -843,7 +843,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -996,7 +996,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 2.6428624844143656e-08,
       "pair_distance_distribution": {
@@ -1041,7 +1041,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -1194,7 +1194,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 1.0571447972562709e-07,
       "pair_distance_distribution": {
@@ -1237,7 +1237,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -1390,7 +1390,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 2.3785750025151486e-07,
       "pair_distance_distribution": {
@@ -1433,7 +1433,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -1649,7 +1649,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.07216545733020774,
       "pair_distance_distribution": {
@@ -1714,7 +1714,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -1930,7 +1930,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.057704611278925344,
       "pair_distance_distribution": {
@@ -1994,7 +1994,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -2210,7 +2210,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.047454795861681554,
       "pair_distance_distribution": {
@@ -2275,7 +2275,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -2428,7 +2428,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 2.6428624844143656e-08,
       "pair_distance_distribution": {
@@ -2473,7 +2473,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -2626,7 +2626,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 1.0571447972562709e-07,
       "pair_distance_distribution": {
@@ -2669,7 +2669,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -2822,7 +2822,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 2.3785750025151486e-07,
       "pair_distance_distribution": {
@@ -2865,7 +2865,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -3081,7 +3081,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.07216545733020774,
       "pair_distance_distribution": {
@@ -3146,7 +3146,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -3362,7 +3362,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.05770461127892523,
       "pair_distance_distribution": {
@@ -3426,7 +3426,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.5462699362921799,
@@ -3642,7 +3642,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 11,
       "number_of_knn_graph_edges": 19,
-      "number_of_raw_candidates": 33,
+      "number_of_raw_candidates": 11,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.047454795861681554,
       "pair_distance_distribution": {
@@ -3707,7 +3707,7 @@
       "unique_accepted_count": 11
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -3860,7 +3860,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 2.6428624844143656e-08,
       "pair_distance_distribution": {
@@ -3905,7 +3905,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -4058,7 +4058,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 1.0571447972562709e-07,
       "pair_distance_distribution": {
@@ -4101,7 +4101,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.09607125317144839,
@@ -4254,7 +4254,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 2,
       "number_of_knn_graph_edges": 21,
-      "number_of_raw_candidates": 6,
+      "number_of_raw_candidates": 2,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 2.3785750025151486e-07,
       "pair_distance_distribution": {
@@ -4297,7 +4297,7 @@
       "unique_accepted_count": 2
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -4506,7 +4506,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.01631600869650829,
       "pair_distance_distribution": {
@@ -4569,7 +4569,7 @@
       "unique_accepted_count": 10
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -4778,7 +4778,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.014556720907157539,
       "pair_distance_distribution": {
@@ -4840,7 +4840,7 @@
       "unique_accepted_count": 10
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -5049,7 +5049,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.014010630733521157,
       "pair_distance_distribution": {
@@ -5620,7 +5620,7 @@
       "unique_accepted_count": 0
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -5829,7 +5829,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.01631600869650862,
       "pair_distance_distribution": {
@@ -5892,7 +5892,7 @@
       "unique_accepted_count": 10
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -6101,7 +6101,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.014556720907157428,
       "pair_distance_distribution": {
@@ -6163,7 +6163,7 @@
       "unique_accepted_count": 10
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -6372,7 +6372,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.014010630733521157,
       "pair_distance_distribution": {
@@ -6943,7 +6943,7 @@
       "unique_accepted_count": 0
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -7152,7 +7152,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.01631600869650862,
       "pair_distance_distribution": {
@@ -7215,7 +7215,7 @@
       "unique_accepted_count": 10
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -7424,7 +7424,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.014556720907157539,
       "pair_distance_distribution": {
@@ -7486,7 +7486,7 @@
       "unique_accepted_count": 10
     },
     {
-      "acceptance_rate": 0.3333333333333333,
+      "acceptance_rate": 1.0,
       "all_pair_distance_distribution": {
         "count": 45,
         "max": 0.293553827508296,
@@ -7695,7 +7695,7 @@
       "number_of_all_same_class_pairs": 45,
       "number_of_distance_eligible_pairs": 10,
       "number_of_knn_graph_edges": 17,
-      "number_of_raw_candidates": 30,
+      "number_of_raw_candidates": 10,
       "number_of_real_sources": 10,
       "overall_pairwise_synthetic_diversity": 0.014010630733521268,
       "pair_distance_distribution": {

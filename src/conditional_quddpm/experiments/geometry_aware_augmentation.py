@@ -120,7 +120,8 @@ def _candidate_summary(items: list[dict], state_by_id: dict[str, np.ndarray], gr
         "energy_drift": _stats([item["source_conditioned_energy_excess"] for item in items]),
     }
     if graph is not None:
-        raw = graph["raw_candidate_count"]
+        # This summary is emitted per interpolation-position stratum.
+        raw = len(graph["eligible_pairs"])
         result.update({
             "number_of_real_sources": len(graph["sample_ids"]),
             "number_of_all_same_class_pairs": len(graph["all_pair_distances"]),
