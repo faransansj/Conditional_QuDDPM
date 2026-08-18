@@ -1,0 +1,43 @@
+{
+  "datasets": {
+    "random": "data/tfim_4q_random",
+    "blocked-g": "data/tfim_4q_blocked"
+  },
+  "real_states_per_class": 10,
+  "subset_seed": 31415,
+  "radius_quantiles": {
+    "small": 0.25,
+    "medium": 0.5,
+    "large": 0.75
+  },
+  "radius_rule": "per-dataset/per-class q25, q50, q75 of all 45 same-class frozen-source FS distances",
+  "radius_rationale": "q10 was rejected pre-QCNN because blocked-g class 1 q10=0.0029781031 gives duplicate-like sin(delta)^2 below 1e-4; q25 is feasible and nontrivial in every class",
+  "augmentation_ratios": [0, 0.5, 1, 2],
+  "namespace": "phase_c_local_random_tangent",
+  "seeds": [
+    {"run_seed": 0, "init_seed": 1000, "spsa_seed": 2000},
+    {"run_seed": 1, "init_seed": 1001, "spsa_seed": 2001},
+    {"run_seed": 2, "init_seed": 1002, "spsa_seed": 2002}
+  ],
+  "tolerances": {
+    "orthogonal": 1e-12,
+    "normalization": 1e-10,
+    "duplicate_infidelity": 1e-10,
+    "maximum_redraws": 100
+  },
+  "training": {
+    "optimizer": "spsa",
+    "steps": 300,
+    "learning_rate": 0.15,
+    "perturbation": 0.1,
+    "early_stopping_patience": 40,
+    "early_stopping_min_delta": 0.0001
+  },
+  "decision_gate": {
+    "nontrivial_median_nearest_source_infidelity": 0.0001,
+    "dataset_improvement": "mean delta > 0 and positive paired delta in at least 2 of 3 seeds for at least one frozen radius/ratio",
+    "GO": "dataset_improvement and nontrivial candidates in both random and blocked-g",
+    "RESTRICTED-GO": "dataset_improvement and nontrivial candidates in random but not blocked-g",
+    "NO-GO": "random does not satisfy dataset_improvement or generator/leakage/reproducibility validation fails"
+  }
+}
