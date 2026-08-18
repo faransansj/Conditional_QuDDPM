@@ -99,6 +99,7 @@ def metrics(states: np.ndarray, labels: np.ndarray, parameters: np.ndarray) -> d
 @dataclass(frozen=True)
 class QCNNTrainingResult:
     parameters: np.ndarray
+    final_parameters: np.ndarray
     history: list[dict[str, float]]
     best_step: int
     stopped_early: bool
@@ -162,4 +163,4 @@ def train_qcnn_spsa(
         gradient = (loss(parameters + scale * delta) - loss(parameters - scale * delta)) / (2 * scale) * delta
         parameters = parameters - rate * gradient
 
-    return QCNNTrainingResult(best_parameters, history, best_step, stopped_early)
+    return QCNNTrainingResult(best_parameters, parameters.copy(), history, best_step, stopped_early)
