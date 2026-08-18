@@ -1,0 +1,10 @@
+method: manifold-unaware, distance-matched random-direction control
+rng_namespace: distance_matched_random_tangent
+orthogonal_projection_tolerance: 1.0e-12
+normalization_tolerance: 1.0e-10
+duplicate_infidelity_tolerance: 1.0e-10
+maximum_redraws: 100
+matching:
+  anchor: nearest_geometry_endpoint
+  distance: nearest_anchor_fubini_study_displacement
+  tie_break: lexical_sample_id

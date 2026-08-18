@@ -1,0 +1,30 @@
+datasets:
+  random: data/tfim_4q_random
+  blocked-g: data/tfim_4q_blocked
+real_states_per_class: 10
+subset_seed: 31415
+k_nearest_neighbors: 3
+same_class_pair_distance_quantile: 0.75
+minimum_pair_distance_radians: 0.04
+interpolation_positions: [0.25, 0.50, 0.75]
+augmentation_ratios: [0, 0.5, 1, 2]
+augmentation_namespace: phase_b_geometry
+seeds:
+  - {run_seed: 0, init_seed: 1000, spsa_seed: 2000}
+  - {run_seed: 1, init_seed: 1001, spsa_seed: 2001}
+  - {run_seed: 2, init_seed: 1002, spsa_seed: 2002}
+tolerances:
+  overlap: 1.0e-12
+  normalization: 1.0e-10
+  duplicate_infidelity: 1.0e-10
+training:
+  optimizer: spsa
+  steps: 300
+  learning_rate: 0.15
+  perturbation: 0.1
+  early_stopping_patience: 40
+  early_stopping_min_delta: 1.0e-4
+primary_endpoint:
+  dataset: blocked-g
+  ratio: 1
+  metric: mean_paired_test_accuracy_delta

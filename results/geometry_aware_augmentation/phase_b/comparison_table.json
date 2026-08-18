@@ -1,0 +1,333 @@
+{
+  "per_seed_table": [
+    {
+      "control": 0.9333333333333333,
+      "dataset": "random",
+      "geometry": 0.9333333333333333,
+      "physics": 0.9333333333333333,
+      "ratio": 0,
+      "real": 0.9333333333333333,
+      "seed": 0
+    },
+    {
+      "control": 0.9166666666666666,
+      "dataset": "random",
+      "geometry": 0.9166666666666666,
+      "physics": 0.9166666666666666,
+      "ratio": 0,
+      "real": 0.9166666666666666,
+      "seed": 1
+    },
+    {
+      "control": 0.9166666666666666,
+      "dataset": "random",
+      "geometry": 0.9166666666666666,
+      "physics": 0.9166666666666666,
+      "ratio": 0,
+      "real": 0.9166666666666666,
+      "seed": 2
+    },
+    {
+      "control": 1.0,
+      "dataset": "random",
+      "geometry": 1.0,
+      "physics": 0.9166666666666666,
+      "ratio": 0.5,
+      "real": 0.9333333333333333,
+      "seed": 0
+    },
+    {
+      "control": 1.0,
+      "dataset": "random",
+      "geometry": 1.0,
+      "physics": 0.9166666666666666,
+      "ratio": 0.5,
+      "real": 0.9166666666666666,
+      "seed": 1
+    },
+    {
+      "control": 0.9333333333333333,
+      "dataset": "random",
+      "geometry": 0.9333333333333333,
+      "physics": 0.9333333333333333,
+      "ratio": 0.5,
+      "real": 0.9166666666666666,
+      "seed": 2
+    },
+    {
+      "control": null,
+      "dataset": "random",
+      "geometry": null,
+      "physics": 0.9666666666666667,
+      "ratio": 1,
+      "real": 0.9333333333333333,
+      "seed": 0
+    },
+    {
+      "control": null,
+      "dataset": "random",
+      "geometry": null,
+      "physics": 0.9166666666666666,
+      "ratio": 1,
+      "real": 0.9166666666666666,
+      "seed": 1
+    },
+    {
+      "control": null,
+      "dataset": "random",
+      "geometry": null,
+      "physics": 0.9666666666666667,
+      "ratio": 1,
+      "real": 0.9166666666666666,
+      "seed": 2
+    },
+    {
+      "control": null,
+      "dataset": "random",
+      "geometry": null,
+      "physics": 0.9,
+      "ratio": 2,
+      "real": 0.9333333333333333,
+      "seed": 0
+    },
+    {
+      "control": null,
+      "dataset": "random",
+      "geometry": null,
+      "physics": 0.9166666666666666,
+      "ratio": 2,
+      "real": 0.9166666666666666,
+      "seed": 1
+    },
+    {
+      "control": null,
+      "dataset": "random",
+      "geometry": null,
+      "physics": 0.9333333333333333,
+      "ratio": 2,
+      "real": 0.9166666666666666,
+      "seed": 2
+    },
+    {
+      "control": 0.8666666666666667,
+      "dataset": "blocked-g",
+      "geometry": 0.8666666666666667,
+      "physics": 0.8666666666666667,
+      "ratio": 0,
+      "real": 0.8666666666666667,
+      "seed": 0
+    },
+    {
+      "control": 1.0,
+      "dataset": "blocked-g",
+      "geometry": 1.0,
+      "physics": 1.0,
+      "ratio": 0,
+      "real": 1.0,
+      "seed": 1
+    },
+    {
+      "control": 0.8333333333333334,
+      "dataset": "blocked-g",
+      "geometry": 0.8333333333333334,
+      "physics": 0.8333333333333334,
+      "ratio": 0,
+      "real": 0.8333333333333334,
+      "seed": 2
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 0.8166666666666667,
+      "ratio": 0.5,
+      "real": 0.8666666666666667,
+      "seed": 0
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 0.5,
+      "ratio": 0.5,
+      "real": 1.0,
+      "seed": 1
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 0.75,
+      "ratio": 0.5,
+      "real": 0.8333333333333334,
+      "seed": 2
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 1.0,
+      "ratio": 1,
+      "real": 0.8666666666666667,
+      "seed": 0
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 0.55,
+      "ratio": 1,
+      "real": 1.0,
+      "seed": 1
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 0.5,
+      "ratio": 1,
+      "real": 0.8333333333333334,
+      "seed": 2
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 1.0,
+      "ratio": 2,
+      "real": 0.8666666666666667,
+      "seed": 0
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 0.55,
+      "ratio": 2,
+      "real": 1.0,
+      "seed": 1
+    },
+    {
+      "control": null,
+      "dataset": "blocked-g",
+      "geometry": null,
+      "physics": 0.5,
+      "ratio": 2,
+      "real": 0.8333333333333334,
+      "seed": 2
+    }
+  ],
+  "primary_blocked_g_r1_paired_deltas": {
+    "geometry_minus_control": {
+      "count": 0,
+      "max": null,
+      "mean": null,
+      "median": null,
+      "min": null,
+      "per_seed": [],
+      "positive_zero_negative": [
+        0,
+        0,
+        0
+      ],
+      "std": null,
+      "values": []
+    },
+    "geometry_minus_physics": {
+      "count": 0,
+      "max": null,
+      "mean": null,
+      "median": null,
+      "min": null,
+      "per_seed": [],
+      "positive_zero_negative": [
+        0,
+        0,
+        0
+      ],
+      "std": null,
+      "values": []
+    },
+    "geometry_minus_real": {
+      "count": 0,
+      "max": null,
+      "mean": null,
+      "median": null,
+      "min": null,
+      "per_seed": [],
+      "positive_zero_negative": [
+        0,
+        0,
+        0
+      ],
+      "std": null,
+      "values": []
+    }
+  },
+  "primary_table": [
+    {
+      "dataset": "random",
+      "geometry_aware": 0.9222222222222222,
+      "matched_control": 0.9222222222222222,
+      "physics_aware": 0.9222222222222222,
+      "ratio": 0,
+      "real_only": 0.9222222222222222
+    },
+    {
+      "dataset": "random",
+      "geometry_aware": 0.9777777777777779,
+      "matched_control": 0.9777777777777779,
+      "physics_aware": 0.9222222222222222,
+      "ratio": 0.5,
+      "real_only": 0.9222222222222222
+    },
+    {
+      "dataset": "random",
+      "geometry_aware": null,
+      "matched_control": null,
+      "physics_aware": 0.9500000000000001,
+      "ratio": 1,
+      "real_only": 0.9222222222222222
+    },
+    {
+      "dataset": "random",
+      "geometry_aware": null,
+      "matched_control": null,
+      "physics_aware": 0.9166666666666666,
+      "ratio": 2,
+      "real_only": 0.9222222222222222
+    },
+    {
+      "dataset": "blocked-g",
+      "geometry_aware": 0.9,
+      "matched_control": 0.9,
+      "physics_aware": 0.9,
+      "ratio": 0,
+      "real_only": 0.9
+    },
+    {
+      "dataset": "blocked-g",
+      "geometry_aware": null,
+      "matched_control": null,
+      "physics_aware": 0.6888888888888888,
+      "ratio": 0.5,
+      "real_only": 0.9
+    },
+    {
+      "dataset": "blocked-g",
+      "geometry_aware": null,
+      "matched_control": null,
+      "physics_aware": 0.6833333333333332,
+      "ratio": 1,
+      "real_only": 0.9
+    },
+    {
+      "dataset": "blocked-g",
+      "geometry_aware": null,
+      "matched_control": null,
+      "physics_aware": 0.6833333333333332,
+      "ratio": 2,
+      "real_only": 0.9
+    }
+  ]
+}

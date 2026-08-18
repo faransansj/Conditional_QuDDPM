@@ -373,9 +373,10 @@ def run_phase_b(config_path: str | Path, control_path: str | Path, output: str |
     primary_provenance = [item for item in provenance if item["candidate_id"] in {candidate for cell in primary_cells for candidate in cell["geometry_candidate_ids"] + cell["control_candidate_ids"]}]
     geometry_primary = [item for item in primary_provenance if item["augmentation_method"] == "same_class_local_projective_geodesic"]
     control_primary = [item for item in primary_provenance if item["augmentation_method"].startswith("manifold_unaware")]
+    primary_feasible = all(cell["feasible"] for cell in primary_cells)
     gate = {
-        "ten_unique_geometry_per_cell": all(cell["feasible"] for cell in primary_cells),
-        "ten_matched_controls_per_cell": all(cell["feasible"] for cell in primary_cells),
+        "ten_unique_geometry_per_cell": primary_feasible,
+        "ten_matched_controls_per_cell": primary_feasible,
         "no_finite_or_normalization_failures": all(sum(graph["failures"][key] for key in ("finite", "normalization")) == 0 for *_, graph in pools.values()),
         "no_accepted_duplicates": all(
             len({item["state_hash"] for item in geometry}) == len(geometry)
@@ -384,18 +385,35 @@ def run_phase_b(config_path: str | Path, control_path: str | Path, output: str |
         ),
         "mean_displacement_error_le_1e-8": bool(control_primary) and float(np.mean([item["displacement_matching_error"] for item in control_primary])) <= 1e-8,
         "max_displacement_error_le_1e-6": bool(control_primary) and max(item["displacement_matching_error"] for item in control_primary) <= 1e-6,
-        "near_copy_dominated": not geometry_primary or float(np.median([item["nearest_source_infidelity"] for item in geometry_primary])) < 1e-4,
+        "near_copy_dominated": None if not primary_feasible else float(np.median([item["nearest_source_infidelity"] for item in geometry_primary])) < 1e-4,
+        "near_copy_assessment": "not_evaluable_primary_pool_infeasible" if not primary_feasible else "evaluated",
     }
-    gate["passed"] = all(value for key, value in gate.items() if key not in ("near_copy_dominated", "passed")) and not gate["near_copy_dominated"]
+    gate["passed"] = primary_feasible and all(value for key, value in gate.items() if key not in ("near_copy_dominated", "near_copy_assessment", "passed")) and not gate["near_copy_dominated"]
     decision = "NO-GO" if not gate["passed"] else "UNRESOLVED"
     reason = "generator validity gate failed because preregistered pair eligibility left primary pools infeasible" if not gate["passed"] else "utility criteria require completed primary runs"
     manifest_entries = []
     dataset_hashes = {name: {file: _sha256(path / file) for file in ("states.npz", "split_manifest.json", "validation.json")} for name, (_, _, path) in datasets.items()}
     for item in planned:
-        dataset, _, ratio, seed = item["dataset"], item["method"], item["ratio"], item["run_seed"]
+        dataset, method, ratio, seed = item["dataset"], item["method"], item["ratio"], item["run_seed"]
         subset = datasets[dataset][1]
         selected = [cell for cell in selected_artifact if cell["dataset"] == dataset and cell["run_seed"] == seed and cell["ratio"] == ratio]
-        manifest_entries.append({**item, "git_commit_sha": git_sha, "dataset_path": config["datasets"][dataset], "dataset_artifact_hashes": dataset_hashes[dataset], "config_path": str(config_path), "config_hash": config_hash, "control_config_path": str(control_path), "control_config_hash": control_hash, "real_sample_ids": subset.parameter_ids.tolist(), "source_pair_ids": [], "synthetic_state_ids": [candidate for cell in selected for key in ("geometry_candidate_ids", "control_candidate_ids") for candidate in cell[key]], "dtype": "complex128", "tolerances": config["tolerances"]})
+        selected_key = "geometry_candidate_ids" if method.startswith("geometry") else "control_candidate_ids"
+        synthetic_ids = [candidate for cell in selected for candidate in cell[selected_key]]
+        pair_by_id = {entry["candidate_id"]: entry["source_pair_id"] for entry in provenance}
+        manifest_entries.append({**item, "git_commit_sha": git_sha, "dataset_path": config["datasets"][dataset], "dataset_artifact_hashes": dataset_hashes[dataset], "config_path": str(config_path), "config_hash": config_hash, "control_config_path": str(control_path), "control_config_hash": control_hash, "real_sample_ids": subset.parameter_ids.tolist(), "source_pair_ids": [pair_by_id[candidate] for candidate in synthetic_ids], "synthetic_state_ids": synthetic_ids, "dtype": "complex128", "tolerances": config["tolerances"]})
+    phase_a_config = PHASE_A / "config.yaml"
+    for run in historical_runs:
+        dataset = run["dataset"]
+        manifest_entries.append({
+            "dataset": dataset, "method": run["method"], "ratio": run["ratio"],
+            "run_seed": run["run_seed"], "init_seed": run["init_seed"], "spsa_seed": run["spsa_seed"],
+            "status": run["status"], "git_commit_sha": phase_a["git_sha"],
+            "dataset_path": config["datasets"][dataset], "dataset_artifact_hashes": dataset_hashes[dataset],
+            "config_path": str(phase_a_config), "config_hash": _sha256(phase_a_config),
+            "real_sample_ids": run["real_sample_ids"], "source_pair_ids": run["source_pair_ids"],
+            "synthetic_state_ids": run["synthetic_sample_ids"], "dtype": "complex128",
+            "tolerances": {"normalization": 1e-10},
+        })
     manifest = {
         "git_commit_sha": git_sha,
         "git_dirty_at_run": bool(subprocess.check_output(["git", "status", "--porcelain"], text=True).strip()),
