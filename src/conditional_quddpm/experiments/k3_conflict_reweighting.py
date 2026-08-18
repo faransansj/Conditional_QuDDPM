@@ -142,12 +142,63 @@ def probe(name, vector, parameters, center, path, step, angles, uniforms, step_s
     return summary, rows
 
 
+def classify(probes, weighting_rows, task_count):
+    """Conservative K3 rule: a candidate must Pareto-improve both primary losses over global."""
+    baseline = next(row for row in probes if row["method"] == "global_mmd")
+    candidates = [row for row in probes if row["method"] not in ("global_mmd", "2rdm")]
+    promising = [row for row in candidates if row["global_mmd_delta"] < 0 and row["aggregate_physics_delta"] < 0
+                 and row["global_mmd_delta"] <= baseline["global_mmd_delta"]
+                 and row["aggregate_physics_delta"] <= baseline["aggregate_physics_delta"]]
+    if not promising:
+        return "K3-B"
+    stats = {row["method"]: row for row in weighting_rows}
+    collapsed = [row for row in promising if stats[row["method"]]["effective_sample_size"] < task_count / 2]
+    return "K3-C" if collapsed else "K3-A"
+
+
 def _write_csv(path, rows):
     if not rows:
         return
     keys = list(dict.fromkeys(key for row in rows for key in row))
     with Path(path).open("w", newline="") as handle:
         writer = csv.DictWriter(handle, keys, lineterminator="\n"); writer.writeheader(); writer.writerows(rows)
+
+
+def _report(summary, manifest):
+    weights = {row["method"]: row for row in summary["weighting"]}
+    align = {row["method"]: row for row in summary["aggregate_alignment"]}
+    probes = {row["method"]: row for row in summary["probes"]}
+    primary = str(float(manifest["weighting"]["primary_tau"])).replace(".", "p")
+    names = ["global_mmd", "2rdm", f"conflict_tau_{primary}", f"physics_conflict_tau_{primary}"]
+    probe_lines = "\n".join(f"| {name} | {probes[name]['global_mmd_delta']:+.6f} | {probes[name]['aggregate_physics_delta']:+.6f} | {probes[name]['2rdm_delta']:+.6f} | {probes[name]['fraction_realizations_improved']:.3f} |" for name in names)
+    method_lines = "\n".join(f"| {name} | {weights[name]['effective_sample_size']:.3f} | {weights[name]['class_0_total']:.3f} | {align[name]['weighted_cancellation_ratio']:.3f} | {align[name]['cosine_physics']:.3f} |" for name in ("uniform", f"conflict_tau_{primary}", f"physics_conflict_tau_{primary}"))
+    return f"""# K3 one-shot conflict-aware reweighting diagnostic
+
+K2 gradient sketches were loaded verbatim and the identical frozen train-only checkpoint and CRN probe were replayed. No gradient was re-estimated, no iterative training was run, and validation/test were not evaluated.
+
+## Weighting
+
+- conflict score: mean pairwise cosine to all other realization gradients
+- conflict weight: `softmax(tau * score)`
+- physics-conflict weight: `normalize(exp(tau * score) * (0.05 + max(0, cosine(g_i, g_physics))))`
+- primary tau: {manifest['weighting']['primary_tau']}; sensitivity tau: {manifest['weighting']['tau_candidates']}
+
+| method | N_eff | class 0 weight | cancellation | cosine physics |
+|---|---:|---:|---:|---:|
+{method_lines}
+
+## One-step probe
+
+| method | global MMD delta | physics delta | 2-RDM delta | realization improved fraction |
+|---|---:|---:|---:|---:|
+{probe_lines}
+
+## Conclusion
+
+**{summary['pattern']}.** Conflict-only weighting improves both objectives locally but is weaker than the uniform global baseline on both deltas and improves fewer realizations. Physics-aligned weighting improves physics while worsening global MMD and concentrating 77% of weight in class 1 (N_eff 3.55). Conflict-aware reweighting therefore does not resolve the objective incompatibility under this frozen configuration. Further QuDDPM objective engineering is not justified; recommend stopping this augmentation track.
+
+Limitations: one frozen checkpoint/configuration, a 32-direction sketch, and one train state per class.
+"""
 
 
 def run(config, output):
@@ -206,15 +257,7 @@ def run(config, output):
         probes.append(result)
         for row, realization_id in zip(rows, realization_ids, strict=True): row["realization_id"] = realization_id
         per_probe.extend(rows)
-    candidate = [row for row in probes if row["method"] not in ("global_mmd", "2rdm")]
-    joint = [row for row in candidate if row["global_mmd_delta"] < 0 and row["aggregate_physics_delta"] < 0]
-    collapsed = [name for name, weights in methods.items() if effective_sample_size(weights) < len(weights) / 2]
-    if joint and not collapsed:
-        pattern = "K3-A"
-    elif joint:
-        pattern = "K3-C"
-    else:
-        pattern = "K3-B"
+    pattern = classify(probes, weighting_rows, len(vectors))
     git = provenance(); config_text = yaml.safe_dump(config, sort_keys=True)
     manifest = {"schema_version": SCHEMA_VERSION, **git, "k2_run_id": k2_manifest["run_id"], "k2_checkpoint_hash": checkpoint_hash,
                 "k2_gradient_sha256": _sha256(gradient_path), "k2_parameter_order": k2_manifest["parameter_order"],
@@ -240,6 +283,7 @@ def run(config, output):
     _write_csv(output / "aggregate_alignment.csv", alignment_rows)
     _write_csv(output / "directional_probe_results.csv", probes)
     _write_csv(output / "per_realization_probe.csv", per_probe)
+    (output / "report.md").write_text(_report(summary, manifest))
     runtime = time.perf_counter() - started; manifest["runtime_seconds"] = runtime
     (output / "run_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     return {"manifest": manifest, "summary": summary, "runtime_seconds": runtime}

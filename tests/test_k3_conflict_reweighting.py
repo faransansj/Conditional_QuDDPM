@@ -64,6 +64,18 @@ def test_frozen_context_uses_train_only_loader(monkeypatch):
     assert calls == ["data/tfim_4q_random"] and actual is parameters
 
 
+def test_classification_requires_pareto_improvement_over_global_and_checks_collapse():
+    baseline = {"method": "global_mmd", "global_mmd_delta": -0.01, "aggregate_physics_delta": -0.01}
+    rdm = {"method": "2rdm", "global_mmd_delta": 0.0, "aggregate_physics_delta": -0.02}
+    weaker = {"method": "conflict_tau_1p0", "global_mmd_delta": -0.005, "aggregate_physics_delta": -0.005}
+    weights = [{"method": "conflict_tau_1p0", "effective_sample_size": 8.0}]
+    assert k3.classify([baseline, rdm, weaker], weights, 8) == "K3-B"
+    stronger = {**weaker, "global_mmd_delta": -0.02, "aggregate_physics_delta": -0.02}
+    assert k3.classify([baseline, rdm, stronger], weights, 8) == "K3-A"
+    weights[0]["effective_sample_size"] = 2.0
+    assert k3.classify([baseline, rdm, stronger], weights, 8) == "K3-C"
+
+
 def test_k2_artifacts_are_read_only_during_weight_calculation():
     root = Path("results/quddpm_kernel_diagnostics/k2_realization")
     before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in root.iterdir() if p.is_file()}
