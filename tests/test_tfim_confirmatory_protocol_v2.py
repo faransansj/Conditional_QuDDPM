@@ -23,12 +23,14 @@ def test_exactly_300_updates_final_checkpoint_and_no_early_stopping(monkeypatch)
     calls = []
     monkeypatch.setattr(qcnn, "predict_expectations", lambda states, parameters: calls.append(parameters.copy()) or np.zeros(len(states)))
     monkeypatch.setattr(qcnn, "metrics", lambda states, labels, parameters: {"loss": float(300-len(calls)), "accuracy": 0.0})
-    result = qcnn.train_confirmatory_qcnn_spsa(np.zeros((1,16)), np.array([0]), np.zeros((1,16)), np.array([0]), init_seed=1, spsa_seed=2, learning_rate=.1, perturbation=.1)
+    result = qcnn.train_confirmatory_qcnn_spsa(np.zeros((1,16)), np.array([0]), np.zeros((1,16)), np.array([0]), init_seed=1, spsa_seed=2, learning_rate=.15, perturbation=.1)
     assert len(result.history) == 301 and result.best_step == 300 and not result.stopped_early
     assert np.array_equal(result.parameters, result.final_parameters)
     for conflict in ({"parameter_updates":299}, {"early_stopping":True}, {"checkpoint_selection":"best_validation"}):
         args={"parameter_updates":300,"early_stopping":False,"checkpoint_selection":"final",**conflict}
-        with pytest.raises(ValueError): qcnn.train_confirmatory_qcnn_spsa(np.zeros((1,16)),np.array([0]),np.zeros((1,16)),np.array([0]),init_seed=1,spsa_seed=2,learning_rate=.1,perturbation=.1,**args)
+        with pytest.raises(ValueError): qcnn.train_confirmatory_qcnn_spsa(np.zeros((1,16)),np.array([0]),np.zeros((1,16)),np.array([0]),init_seed=1,spsa_seed=2,learning_rate=.15,perturbation=.1,**args)
+    for learning_rate, perturbation in ((.1, .1), (.15, .2)):
+        with pytest.raises(ValueError): qcnn.train_confirmatory_qcnn_spsa(np.zeros((1,16)),np.array([0]),np.zeros((1,16)),np.array([0]),init_seed=1,spsa_seed=2,learning_rate=learning_rate,perturbation=perturbation)
 
 
 def test_training_config_conflicts_fail_closed():

@@ -174,8 +174,9 @@ def train_confirmatory_qcnn_spsa(
     checkpoint_selection: str = "final",
 ) -> QCNNTrainingResult:
     """Protocol-v2 trainer: exactly 300 updates; validation is record-only."""
-    if parameter_updates != 300 or early_stopping or checkpoint_selection != "final":
-        raise ValueError("confirmatory QCNN requires 300 updates, no early stopping, and final checkpoint")
+    if (learning_rate != 0.15 or perturbation != 0.1 or parameter_updates != 300
+            or early_stopping or checkpoint_selection != "final"):
+        raise ValueError("confirmatory QCNN requires a=0.15, c=0.1, 300 updates, no early stopping, and final checkpoint")
     init_rng = np.random.Generator(np.random.PCG64DXSM(init_seed))
     spsa_rng = np.random.Generator(np.random.PCG64DXSM(spsa_seed))
     parameters = init_rng.normal(0.0, 0.1, 42)
