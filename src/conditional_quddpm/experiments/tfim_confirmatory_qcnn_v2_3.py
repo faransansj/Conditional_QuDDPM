@@ -17,6 +17,7 @@ from conditional_quddpm.models.qcnn import train_confirmatory_qcnn_spsa
 PROTOCOL = ROOT / "results/tfim_manifold_augmentation/confirmatory_protocol_v2_3"
 OUTPUT = ROOT / "results/tfim_manifold_augmentation/confirmatory_qcnn_v2_3"
 RESULT_SCHEMA_VERSION = 1
+LOADER_DEFECT_FIXED_COMMIT = "a8652b882df7c06cae38c4dfbacdac2ffe92de33"
 
 
 def _json(path: Path) -> dict:
@@ -143,6 +144,37 @@ def _valid_completed(run_dir: Path, run: dict, protocol_hash: str) -> bool:
         return False
 
 
+def _recover_legacy_loader_failure(run_dir: Path, run: dict) -> bool:
+    """Archive the one pre-training failure caused by the pre-a8652b8 directory loader."""
+    failure_path = run_dir / "failure.json"
+    archive = run_dir / "implementation_failures" / "pre_a8652b8_directory_loader"
+    evidence = archive / "failure.json"
+    recovery = archive / "recovery.json"
+    if evidence.exists() and recovery.exists() and not failure_path.exists():
+        record = _json(recovery)
+        return (record.get("classification") == "implementation_failure_before_training"
+                and record.get("training_updates") == 0
+                and record.get("original_failure_sha256") == sha256(evidence)
+                and record.get("fixed_by_commit") == LOADER_DEFECT_FIXED_COMMIT)
+    if not failure_path.exists() or set(path.name for path in run_dir.iterdir()) != {"failure.json"}:
+        return False
+    failure = _json(failure_path)
+    expected_error = f"IsADirectoryError: [Errno 21] Is a directory: '{run['input_path']}'"
+    if failure != {"run_id": run["run_id"], "status": "failed", "error": expected_error}:
+        return False
+    digest = sha256(failure_path)
+    archive.mkdir(parents=True)
+    failure_path.replace(evidence)
+    recovery.write_text(json.dumps({
+        "classification": "implementation_failure_before_training",
+        "fixed_by_commit": LOADER_DEFECT_FIXED_COMMIT,
+        "original_failure_sha256": digest,
+        "preservation": "original failure.json moved byte-for-byte",
+        "training_updates": 0,
+    }, indent=2, sort_keys=True) + "\n")
+    return True
+
+
 def execute(output: Path = OUTPUT, protocol_dir: Path = PROTOCOL) -> dict:
     status = preflight(protocol_dir)
     output.mkdir(parents=True, exist_ok=True)
@@ -152,7 +184,7 @@ def execute(output: Path = OUTPUT, protocol_dir: Path = PROTOCOL) -> dict:
         if _valid_completed(run_dir, run, status["protocol_hash"]):
             skipped += 1
             continue
-        if run_dir.exists() and any(run_dir.iterdir()):
+        if run_dir.exists() and any(run_dir.iterdir()) and not _recover_legacy_loader_failure(run_dir, run):
             raise RuntimeError(f"retry forbidden for failed or invalid run: {run['run_id']}")
         run_dir.mkdir(parents=True, exist_ok=True)
         try:

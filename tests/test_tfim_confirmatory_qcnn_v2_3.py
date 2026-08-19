@@ -56,6 +56,23 @@ def test_frozen_directory_loader_resolves_manifest_declared_state_artifact(tmp_p
     assert len(test_states) == len(test_labels) > 0
 
 
+def test_pretraining_loader_defect_is_archived_without_losing_evidence(tmp_path):
+    run = runner.resolve_runs(output=tmp_path)[0]
+    run_dir = Path(run["output_path"])
+    run_dir.mkdir(parents=True)
+    original = json.dumps({"error": f"IsADirectoryError: [Errno 21] Is a directory: '{run['input_path']}'",
+                           "run_id": run["run_id"], "status": "failed"}, sort_keys=True) + "\n"
+    (run_dir / "failure.json").write_text(original)
+    digest = hashlib.sha256(original.encode()).hexdigest()
+    assert runner._recover_legacy_loader_failure(run_dir, run)
+    archive = run_dir / "implementation_failures" / "pre_a8652b8_directory_loader"
+    assert (archive / "failure.json").read_text() == original
+    recovery = json.loads((archive / "recovery.json").read_text())
+    assert recovery["original_failure_sha256"] == digest
+    assert recovery["training_updates"] == 0
+    assert runner._recover_legacy_loader_failure(run_dir, run)
+
+
 def test_execute_enforces_300_final_schema_and_integrity_resume(tmp_path, monkeypatch):
     runs = runner.resolve_runs(output=tmp_path)[:1]
     monkeypatch.setattr(runner, "resolve_runs", lambda protocol_dir=runner.PROTOCOL, output=runner.OUTPUT: [{**runs[0], "output_path": str(output / runs[0]["run_id"])}])

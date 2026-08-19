@@ -1,0 +1,7 @@
+{
+  "classification": "implementation_failure_before_training",
+  "fixed_by_commit": "a8652b882df7c06cae38c4dfbacdac2ffe92de33",
+  "original_failure_sha256": "c8cf60c2e1d14912a5eb45df6e54c6f48c0792013663084db79816d58b853788",
+  "preservation": "original failure.json moved byte-for-byte",
+  "training_updates": 0
+}
