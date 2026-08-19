@@ -1,0 +1,23 @@
+{
+  "constrained_split_deterministic": true,
+  "cross_split_separation_pass": true,
+  "dataset_freeze_ready": false,
+  "dataset_generation_performed": false,
+  "distribution_preservation_pass": true,
+  "epsilon_calibration_pass": true,
+  "focused_tests_pass": true,
+  "freshness_semantics_separated": true,
+  "full_suite_pass": true,
+  "independent_review_pass": true,
+  "independent_review_reference": "reviewer run 72a4d54b-1bec-4bd8-904e-e8a0913b2648",
+  "local_geometry_checked": true,
+  "nn_distribution_pass": true,
+  "numerical_floor_pass": true,
+  "parent_protocol_hash": "2e52ac26f626fb0703b06fc73e724820f23b4304ca51db8ca8c9cc0e07b959aa",
+  "protocol_hash": "3a1c242f43b7b8366fdcf4cfc37de51edecee4e4f3979f3dc751b21beec2e28d",
+  "protocol_version": "2.1.0",
+  "qcnn_confirmatory_ready": false,
+  "qcnn_run_count": 0,
+  "schema_version": 1,
+  "status": "FROZEN"
+}

@@ -1,0 +1,13 @@
+schema_version: 1
+protocol_version: tfim-manifold-confirmatory-dataset-freeze-v1
+recovery_namespace: confirmatory-dataset-freeze-evidence-recovery-v1
+frozen_seed_source: results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/seed_manifest.json
+frozen_generation_config: configs/augmentation/tfim_manifold_confirmatory.yaml
+freeze_config: configs/augmentation/tfim_manifold_confirmatory_dataset_freeze.yaml
+historical_result: results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1
+recovery_result: results/tfim_manifold_augmentation/confirmatory_dataset_freeze_evidence_recovery_v1
+projective_duplicate_infidelity_tolerance: 1.0e-10
+retain_failed_candidates: true
+export_pair_evidence: true
+qcnn_execution: false
+promotion: false

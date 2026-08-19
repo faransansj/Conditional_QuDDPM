@@ -1,0 +1,51 @@
+{
+  "blocked_g_contract_pass": true,
+  "counts": {
+    "0": {
+      "test": 30,
+      "train": 140,
+      "val": 30
+    },
+    "1": {
+      "test": 30,
+      "train": 140,
+      "val": 30
+    }
+  },
+  "distribution": {
+    "blocked_g_like": true,
+    "verdict": "NOT_APPLICABLE_BLOCKED_G"
+  },
+  "exact_duplicates": {
+    "cross_split": 0,
+    "within_split": {
+      "test": 0,
+      "train": 0,
+      "val": 0
+    }
+  },
+  "freshness": {
+    "calibration_exact_g_overlap": 0,
+    "calibration_state_hash_overlap": 0,
+    "pass": true
+  },
+  "manifest_protocol_hash": "8af9bf4d0ab8320ec46f5983c2073ec4b85e1955916fd35b1f3a5e4f6fa33004",
+  "numerics": {
+    "max_energy_error": 1.3322676295501878e-14,
+    "max_gap_error": 1.4654943925052066e-14,
+    "max_norm_error": 2.76711986657574e-12,
+    "max_observable_error": 0.0,
+    "max_residual": 2.0570725687574337e-11
+  },
+  "physical_pass": true,
+  "projective_separation": {
+    "argmin_pair": null,
+    "epsilon_sep": 1.2991569026968808e-06,
+    "overall_minimum_fs": null,
+    "pair_minima": {},
+    "violation_count": null
+  },
+  "provenance_records_pass": true,
+  "schema_pass": true,
+  "valid": true
+}

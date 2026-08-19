@@ -1,0 +1,34 @@
+schema_version: 1
+protocol_version: tfim-manifold-confirmatory-dataset-freeze-v1
+frozen_seed_source: configs/augmentation/tfim_manifold_confirmatory.yaml
+source_regimes:
+  random_split: random
+  blocked_g: blocked-g
+output_datasets:
+  random_split: data/tfim_4q_confirmatory_random
+  blocked_g: data/tfim_4q_confirmatory_blocked_g
+result_directory: results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1
+immutable_paths:
+  pilot_v1: results/tfim_manifold_augmentation/pilot_v1
+  phase_a: results/physics_aware_augmentation/phase_a
+  phase_b: results/geometry_aware_augmentation/phase_b
+  phase_c: results/local_perturbation_augmentation/phase_c
+  legacy_tfim_4q: data/tfim_4q
+  legacy_random: data/tfim_4q_random
+  legacy_blocked_g: data/tfim_4q_blocked
+freshness_corpora:
+  legacy_tfim_4q: data/tfim_4q
+  legacy_random: data/tfim_4q_random
+  legacy_blocked_g: data/tfim_4q_blocked
+  pilot_v1: results/tfim_manifold_augmentation/pilot_v1
+  phase_a: results/physics_aware_augmentation/phase_a
+  phase_b: results/geometry_aware_augmentation/phase_b
+  phase_c: results/local_perturbation_augmentation/phase_c
+projective_duplicate_infidelity_tolerance: 1.0e-10
+expected_contract:
+  n_qubits: 4
+  state_dimension: 16
+  classes: 2
+  samples_per_class: 200
+  split_per_class: {train: 140, val: 30, test: 30}
+  blocked_g_minimum_cross_split_gap: 0.02

@@ -1,0 +1,21 @@
+{
+  "config": "configs/augmentation/local_perturbation/phase_c.json",
+  "config_sha256": "bb30b8a6d8192196b39ecd4aeddd4a3c7d45538cb3cec108ba0140daaf486739",
+  "data_scope": "balanced frozen train subsets only",
+  "datasets": {
+    "blocked-g": {
+      "path": "data/tfim_4q_blocked",
+      "states_sha256": "3fa4cb11b21f4a6417d4314ca51bfdc68640dfde8f2207e26dfeb6b804902eab"
+    },
+    "random": {
+      "path": "data/tfim_4q_random",
+      "states_sha256": "9306262fe151d66ae283e2bf39ef42f5fa8d12d3fbbc2bc84038096b09b60a25"
+    }
+  },
+  "forbidden_inputs": [
+    "validation",
+    "test",
+    "QCNN artifacts",
+    "QCNN metrics"
+  ]
+}

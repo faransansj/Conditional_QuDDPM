@@ -1,0 +1,27 @@
+{
+  "blocked_g_generation_pass": true,
+  "blocking_reasons": [],
+  "dataset_hashes": {
+    "blocked_g": "cb0446120e7df9b0b6052f4575f6a1ff10742d8aaa49542054530ec6215e8867",
+    "random": "09fd5792318cd171a3c39316adff1dbce6c402c9bc0fa66bd2df639fab73cff7"
+  },
+  "distribution_audit_pass": true,
+  "exact_duplicates_pass": true,
+  "freeze_manifest_hash": "01b7be5ab171778ef10a72b38602c8f15037293472062160414795e01c77a93f",
+  "freshness_pass": true,
+  "independent_review_pass": true,
+  "independent_review_reference": "reviewer run 6b2e665b-4ad8-4f96-99c3-709724161295",
+  "physical_validation_pass": true,
+  "projective_separation_pass": true,
+  "protocol_hash": "8af9bf4d0ab8320ec46f5983c2073ec4b85e1955916fd35b1f3a5e4f6fa33004",
+  "protocol_integrity_pass": true,
+  "protocol_version": "2.2.0",
+  "provenance_checksums_pass": true,
+  "qcnn_confirmatory_ready": true,
+  "qcnn_run_count": 0,
+  "random_generation_pass": true,
+  "reproducibility_pass": true,
+  "rng_contract_pass": true,
+  "schema_version": 1,
+  "status": "FROZEN"
+}

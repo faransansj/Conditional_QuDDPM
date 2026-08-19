@@ -1,0 +1,13 @@
+{
+  "bit_generator": "PCG64DXSM",
+  "derivation": "SeedSequence([root_seed, uint32_le(SHA256('tfim-confirmatory-v2|root_seed|domain'))])",
+  "domains": {
+    "confirmatory.blocked_g.parameter_generation": 374512485654526267,
+    "confirmatory.blocked_g.replacement_sampling": 13777056988502427486,
+    "confirmatory.random.parameter_generation": 18216488271865553355,
+    "confirmatory.random.replacement_sampling": 1133755480393092915
+  },
+  "frozen_random_split_seed": 15007963261698017722,
+  "root_seed": 92001,
+  "schema_version": 1
+}

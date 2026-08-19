@@ -1,0 +1,99 @@
+protocol_version: tfim-manifold-confirmatory-v1
+resource_model: RESOURCE_MODEL_A
+method_name: Hamiltonian-assisted augmentation
+interpretation: physics-guided data expansion
+pilot_datasets:
+  random: data/tfim_4q_random
+  blocked-g: data/tfim_4q_blocked
+real_states_per_class: 10
+synthetic_states_per_anchor: 1
+augmentation_ratio: 1.0
+subset_seed: 31415
+endpoint_rule:
+  name: fractional_move_to_deterministic_training_support_boundary
+  fraction: 0.25
+  direction_namespace: tfim-manifold-confirmatory-v1-endpoint
+  support_source: dataset_config_only
+random_control:
+  namespace: tfim-manifold-confirmatory-v1-random-control
+  maximum_redraws: 100
+tolerances:
+  normalization: 1.0e-10
+  eigenpair_residual: 1.0e-10
+  energy_residual: 1.0e-10
+  tangent_orthogonality: 1.0e-12
+  distance_match: 1.0e-8
+  projective_duplicate_infidelity: 1.0e-10
+fresh_confirmatory_datasets:
+  random:
+    n_qubits: 4
+    J: 1.0
+    boundary: open
+    phase_regions:
+      ferromagnetic: [0.2, 0.8]
+      paramagnetic: [1.2, 1.8]
+    samples_per_class: 200
+    dataset_seed: 91001
+    split_seed: 92001
+    split_strategy: random
+    split_ratios: {train: 0.7, val: 0.15, test: 0.15}
+    numerical_tolerance: 1.0e-10
+  blocked-g:
+    n_qubits: 4
+    J: 1.0
+    boundary: open
+    phase_regions:
+      ferromagnetic: [0.2, 0.8]
+      paramagnetic: [1.2, 1.8]
+    samples_per_class: 200
+    dataset_seed: 91002
+    split_seed: 92002
+    split_strategy: blocked
+    blocked_g_gap: 0.02
+    split_ratios: {train: 0.7, val: 0.15, test: 0.15}
+    numerical_tolerance: 1.0e-10
+qcnn:
+  config: configs/qcnn/baseline_4q.yaml
+  real_states_per_class: 10
+  paired_seeds: 20
+  run_seeds: [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119]
+  init_seed_offset: 11000
+  spsa_seed_offset: 21000
+  primary_metric: accuracy
+  secondary_metric: macro_f1
+  primary_contrasts:
+    - random:physical_minus_real
+    - random:physical_minus_random
+    - blocked-g:physical_minus_real
+    - blocked-g:physical_minus_random
+  multiplicity_correction: Holm
+statistics:
+  metrics:
+    primary: accuracy
+    secondary: macro_f1
+    diagnostic: [validation_loss, train_test_accuracy_gap]
+    descriptive: [mean, sample_standard_deviation, median, wins_ties_losses]
+  primary_contrasts:
+    - random:physical_minus_real
+    - random:physical_minus_random
+    - blocked-g:physical_minus_real
+    - blocked-g:physical_minus_random
+  paired_difference_rule: method_metric_minus_control_metric_within_seed
+  confidence_interval:
+    method: paired_percentile_bootstrap
+    level: 0.95
+    resamples: 10000
+    seed: 73001
+  paired_effect_size:
+    name: dz
+    rule: mean_paired_difference_divided_by_sample_standard_deviation
+  robustness_test:
+    method: exact_two_sided_paired_sign_flip
+    zero_difference_rule: retain_zero
+  wins_ties_losses:
+    tie_absolute_tolerance: 1.0e-12
+  multiplicity:
+    method: Holm
+    family_size: 4
+    alpha: 0.05
+  interpretation_priority: effect_magnitude_and_confidence_interval_before_p_value

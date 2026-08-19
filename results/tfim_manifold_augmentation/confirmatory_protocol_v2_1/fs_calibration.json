@@ -1,0 +1,3362 @@
+{
+  "epsilon_sep": 1.2991569026968808e-06,
+  "known_pair_post_hoc_check": [
+    {
+      "fs_distance": 2.946513881278822e-07,
+      "pair_id": "random_split:tfim-confirmatory-v1-random_split-class-0-00046--tfim-confirmatory-v1-random_split-class-0-00069",
+      "passes_epsilon_sep": false
+    },
+    {
+      "fs_distance": 5.7281544422672924e-06,
+      "pair_id": "random_split:tfim-confirmatory-v1-random_split-class-1-00247--tfim-confirmatory-v1-random_split-class-1-00336",
+      "passes_epsilon_sep": true
+    }
+  ],
+  "local_geometry": {
+    "bins": [
+      {
+        "class": 0,
+        "count": 48,
+        "g_range": [
+          0.2014406130255435,
+          0.3507066218845951
+        ],
+        "max_nn_fs": 0.005701767853185054,
+        "median_nn_fs": 0.0012571267348630418,
+        "min_nn_fs": 0.0001818312803538888
+      },
+      {
+        "class": 0,
+        "count": 35,
+        "g_range": [
+          0.3507066218845951,
+          0.49997263074364673
+        ],
+        "max_nn_fs": 0.009488680390689345,
+        "median_nn_fs": 0.0016197337635758537,
+        "min_nn_fs": 0.0006824952582334782
+      },
+      {
+        "class": 0,
+        "count": 52,
+        "g_range": [
+          0.49997263074364673,
+          0.6492386396026983
+        ],
+        "max_nn_fs": 0.006222660848063418,
+        "median_nn_fs": 0.0011237170492088598,
+        "min_nn_fs": 6.625132348611887e-05
+      },
+      {
+        "class": 0,
+        "count": 65,
+        "g_range": [
+          0.6492386396026983,
+          0.79850464846175
+        ],
+        "max_nn_fs": 0.004360260890687632,
+        "median_nn_fs": 0.0006957454027186916,
+        "min_nn_fs": 0.0
+      },
+      {
+        "class": 1,
+        "count": 51,
+        "g_range": [
+          1.2040601589139133,
+          1.3511853519670987
+        ],
+        "max_nn_fs": 0.0018620209209071772,
+        "median_nn_fs": 0.00032396045570911935,
+        "min_nn_fs": 7.035197858747768e-05
+      },
+      {
+        "class": 1,
+        "count": 50,
+        "g_range": [
+          1.3511853519670987,
+          1.4983105450202838
+        ],
+        "max_nn_fs": 0.0008434164338989249,
+        "median_nn_fs": 0.00013267689624542133,
+        "min_nn_fs": 5.7281544422672924e-06
+      },
+      {
+        "class": 1,
+        "count": 44,
+        "g_range": [
+          1.4983105450202838,
+          1.645435738073469
+        ],
+        "max_nn_fs": 0.0018275270800874972,
+        "median_nn_fs": 0.00022785436817738825,
+        "min_nn_fs": 4.41972887256325e-05
+      },
+      {
+        "class": 1,
+        "count": 55,
+        "g_range": [
+          1.645435738073469,
+          1.7925609311266544
+        ],
+        "max_nn_fs": 0.0009409577920040445,
+        "median_nn_fs": 0.00018082920085379424,
+        "min_nn_fs": 1.706914193258844e-05
+      }
+    ],
+    "global_to_bin_median_ratio": 12.2081071340388
+  },
+  "method": "largest >=10x log-gap in unique NN-FS values below the 10th percentile; geometric gap midpoint",
+  "nearest_neighbors": [
+    {
+      "class": 0,
+      "delta_g": 0.00021617962353270848,
+      "fs_distance": 0.0001620111098249772,
+      "g": 0.7590222823213004,
+      "nearest_index": 66,
+      "state_index": 0
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008326926644892652,
+      "fs_distance": 0.000610745573623296,
+      "g": 0.7715292025159219,
+      "nearest_index": 25,
+      "state_index": 1
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0007165904903626563,
+      "fs_distance": 0.0007509049588782083,
+      "g": 0.44359018752459345,
+      "nearest_index": 11,
+      "state_index": 2
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0004717881492591891,
+      "fs_distance": 0.0004077855309951743,
+      "g": 0.6718108513268138,
+      "nearest_index": 96,
+      "state_index": 3
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0019167738245652322,
+      "fs_distance": 0.001972324847017511,
+      "g": 0.3630904874095885,
+      "nearest_index": 186,
+      "state_index": 4
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0020468798619616146,
+      "fs_distance": 0.0019393757468066217,
+      "g": 0.25523355121603,
+      "nearest_index": 116,
+      "state_index": 5
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0044499485300413255,
+      "fs_distance": 0.004375887264627713,
+      "g": 0.5692806772759962,
+      "nearest_index": 173,
+      "state_index": 6
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0002423935190480897,
+      "fs_distance": 0.00023440355965421408,
+      "g": 0.27593106354353847,
+      "nearest_index": 169,
+      "state_index": 7
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0028705602938328134,
+      "fs_distance": 0.003000001998365063,
+      "g": 0.4075837597925225,
+      "nearest_index": 162,
+      "state_index": 8
+    },
+    {
+      "class": 0,
+      "delta_g": 0.004698453176435691,
+      "fs_distance": 0.004852524652007742,
+      "g": 0.5002804378284105,
+      "nearest_index": 67,
+      "state_index": 9
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0006522666483828599,
+      "fs_distance": 0.0006824952582334782,
+      "g": 0.4124066127674128,
+      "nearest_index": 143,
+      "state_index": 10
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0007165904903626563,
+      "fs_distance": 0.0007509049588782083,
+      "g": 0.4428735970342308,
+      "nearest_index": 2,
+      "state_index": 11
+    },
+    {
+      "class": 0,
+      "delta_g": 0.003053011948998874,
+      "fs_distance": 0.0031678218665506324,
+      "g": 0.38285750750383585,
+      "nearest_index": 22,
+      "state_index": 12
+    },
+    {
+      "class": 0,
+      "delta_g": 0.004597347681226049,
+      "fs_distance": 0.004791338312293166,
+      "g": 0.47630534591458495,
+      "nearest_index": 176,
+      "state_index": 13
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0022681418950070142,
+      "fs_distance": 0.0020757569104566578,
+      "g": 0.22034317955744942,
+      "nearest_index": 193,
+      "state_index": 14
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0015197319380869656,
+      "fs_distance": 0.0012673275946199004,
+      "g": 0.6957367413491111,
+      "nearest_index": 77,
+      "state_index": 15
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0012774842874525572,
+      "fs_distance": 0.0009824243925192749,
+      "g": 0.7434053848682987,
+      "nearest_index": 124,
+      "state_index": 16
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001815844116889509,
+      "fs_distance": 0.0018081890040931709,
+      "g": 0.309952660137057,
+      "nearest_index": 48,
+      "state_index": 17
+    },
+    {
+      "class": 0,
+      "delta_g": 0.004373425866158354,
+      "fs_distance": 0.004584054572499183,
+      "g": 0.4320538956392151,
+      "nearest_index": 78,
+      "state_index": 18
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0010876656806625418,
+      "fs_distance": 0.0010336481122956269,
+      "g": 0.6003875533841456,
+      "nearest_index": 180,
+      "state_index": 19
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0017371053278691928,
+      "fs_distance": 0.0012166965357440713,
+      "g": 0.795845242237551,
+      "nearest_index": 31,
+      "state_index": 20
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00039060407390167917,
+      "fs_distance": 0.0002916408063632786,
+      "g": 0.7612326045629876,
+      "nearest_index": 125,
+      "state_index": 21
+    },
+    {
+      "class": 0,
+      "delta_g": 0.003053011948998874,
+      "fs_distance": 0.0031678218665506324,
+      "g": 0.379804495554837,
+      "nearest_index": 12,
+      "state_index": 22
+    },
+    {
+      "class": 0,
+      "delta_g": 0.005195354335838065,
+      "fs_distance": 0.0048233492863273796,
+      "g": 0.6168283661877993,
+      "nearest_index": 63,
+      "state_index": 23
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002485548626216083,
+      "fs_distance": 0.0019301721439714701,
+      "g": 0.739597133512387,
+      "nearest_index": 115,
+      "state_index": 24
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008326926644892652,
+      "fs_distance": 0.000610745573623296,
+      "g": 0.7706965098514327,
+      "nearest_index": 1,
+      "state_index": 25
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00021620768464547524,
+      "fs_distance": 0.00021535388283128656,
+      "g": 0.5528480654988832,
+      "nearest_index": 104,
+      "state_index": 26
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0015628441076009358,
+      "fs_distance": 0.0014749373603252496,
+      "g": 0.24935259346928645,
+      "nearest_index": 35,
+      "state_index": 27
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008991710698497135,
+      "fs_distance": 0.0007963975199299217,
+      "g": 0.6543050236279955,
+      "nearest_index": 65,
+      "state_index": 28
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00018424811347439451,
+      "fs_distance": 0.0001818312803538888,
+      "g": 0.2994769138634099,
+      "nearest_index": 183,
+      "state_index": 29
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0034121917223708387,
+      "fs_distance": 0.0024841438370890204,
+      "g": 0.7769960612097726,
+      "nearest_index": 164,
+      "state_index": 30
+    },
+    {
+      "class": 0,
+      "delta_g": 2.3302038298922412e-08,
+      "fs_distance": 0.0,
+      "g": 0.7975823475654202,
+      "nearest_index": 134,
+      "state_index": 31
+    },
+    {
+      "class": 0,
+      "delta_g": 0.004449213222020798,
+      "fs_distance": 0.004660902349131677,
+      "g": 0.4245215330063575,
+      "nearest_index": 198,
+      "state_index": 32
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001065977863218659,
+      "fs_distance": 0.0010909917685079163,
+      "g": 0.352443477454927,
+      "nearest_index": 75,
+      "state_index": 33
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0011467427835542,
+      "fs_distance": 0.0011837222253994338,
+      "g": 0.3682364867761371,
+      "nearest_index": 73,
+      "state_index": 34
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0015628441076009358,
+      "fs_distance": 0.0014749373603252496,
+      "g": 0.2509154375768874,
+      "nearest_index": 27,
+      "state_index": 35
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0007698295027782631,
+      "fs_distance": 0.0006349421089778793,
+      "g": 0.7015349252124936,
+      "nearest_index": 56,
+      "state_index": 36
+    },
+    {
+      "class": 0,
+      "delta_g": 5.756816928159658e-05,
+      "fs_distance": 4.0192406846431725e-05,
+      "g": 0.7984466570038677,
+      "nearest_index": 46,
+      "state_index": 37
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003134463828814993,
+      "fs_distance": 0.00031422324617182465,
+      "g": 0.3199518683907192,
+      "nearest_index": 84,
+      "state_index": 38
+    },
+    {
+      "class": 0,
+      "delta_g": 0.004261971748575566,
+      "fs_distance": 0.0042339777852404645,
+      "g": 0.30569068838848146,
+      "nearest_index": 17,
+      "state_index": 39
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0051073827293180996,
+      "fs_distance": 0.0049925699853773636,
+      "g": 0.2856949925703848,
+      "nearest_index": 74,
+      "state_index": 40
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005549908178053009,
+      "fs_distance": 0.0005408071004906993,
+      "g": 0.5767155897253013,
+      "nearest_index": 97,
+      "state_index": 41
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008363671859186739,
+      "fs_distance": 0.0008652637715140058,
+      "g": 0.49377254534081255,
+      "nearest_index": 101,
+      "state_index": 42
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008564496180499814,
+      "fs_distance": 0.0007636029461008234,
+      "g": 0.6496093470349599,
+      "nearest_index": 140,
+      "state_index": 43
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009927667970201781,
+      "fs_distance": 0.0009070655084066018,
+      "g": 0.21708227086542223,
+      "nearest_index": 193,
+      "state_index": 44
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00044431958382329384,
+      "fs_distance": 0.0003386336574304926,
+      "g": 0.7494832799235562,
+      "nearest_index": 137,
+      "state_index": 45
+    },
+    {
+      "class": 0,
+      "delta_g": 4.232886006150238e-07,
+      "fs_distance": 2.946513881278822e-07,
+      "g": 0.7985042251731493,
+      "nearest_index": 69,
+      "state_index": 46
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0010903654695082476,
+      "fs_distance": 0.0009145454278474217,
+      "g": 0.6918334516544082,
+      "nearest_index": 54,
+      "state_index": 47
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001815844116889509,
+      "fs_distance": 0.0018081890040931709,
+      "g": 0.31176850425394653,
+      "nearest_index": 17,
+      "state_index": 48
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0019209222892689892,
+      "fs_distance": 0.001883409146444304,
+      "g": 0.29272329758897186,
+      "nearest_index": 74,
+      "state_index": 49
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0030456463643397935,
+      "fs_distance": 0.0030885679808707813,
+      "g": 0.3350575942439695,
+      "nearest_index": 163,
+      "state_index": 50
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009815951551650492,
+      "fs_distance": 0.0007950945173031582,
+      "g": 0.7126192123080946,
+      "nearest_index": 185,
+      "state_index": 51
+    },
+    {
+      "class": 0,
+      "delta_g": 7.052642398064357e-05,
+      "fs_distance": 6.625132348611887e-05,
+      "g": 0.6097484446332698,
+      "nearest_index": 144,
+      "state_index": 52
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00909172510638162,
+      "fs_distance": 0.009488680390689345,
+      "g": 0.39562147439230805,
+      "nearest_index": 162,
+      "state_index": 53
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0010903654695082476,
+      "fs_distance": 0.0009145454278474217,
+      "g": 0.6907430861849,
+      "nearest_index": 47,
+      "state_index": 54
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001633328022914049,
+      "fs_distance": 0.0016499230278345044,
+      "g": 0.3298594111411277,
+      "nearest_index": 93,
+      "state_index": 55
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0007698295027782631,
+      "fs_distance": 0.0006349421089778793,
+      "g": 0.7023047547152719,
+      "nearest_index": 36,
+      "state_index": 56
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013993175977856653,
+      "fs_distance": 0.0014113864594203411,
+      "g": 0.5376893398495117,
+      "nearest_index": 196,
+      "state_index": 57
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013004616059090202,
+      "fs_distance": 0.0013630233679354467,
+      "g": 0.4392731202728514,
+      "nearest_index": 119,
+      "state_index": 58
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0007836576750315238,
+      "fs_distance": 0.0007957488212250846,
+      "g": 0.5271382370824944,
+      "nearest_index": 166,
+      "state_index": 59
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00010593501728084487,
+      "fs_distance": 0.00010254064392920197,
+      "g": 0.5829310739061225,
+      "nearest_index": 179,
+      "state_index": 60
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005632330128414464,
+      "fs_distance": 0.0005741404312472815,
+      "g": 0.5213623788859726,
+      "nearest_index": 131,
+      "state_index": 61
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00020814993649764801,
+      "fs_distance": 0.00015694570212797964,
+      "g": 0.7553310251847731,
+      "nearest_index": 154,
+      "state_index": 62
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002042952686166055,
+      "fs_distance": 0.0018880852612194563,
+      "g": 0.6220237205236374,
+      "nearest_index": 128,
+      "state_index": 63
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0002393507292740571,
+      "fs_distance": 0.0002453239065384593,
+      "g": 0.5127193224992387,
+      "nearest_index": 150,
+      "state_index": 64
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008991710698497135,
+      "fs_distance": 0.0007963975199299217,
+      "g": 0.6552041946978452,
+      "nearest_index": 28,
+      "state_index": 65
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00021617962353270848,
+      "fs_distance": 0.0001620111098249772,
+      "g": 0.7588061026977677,
+      "nearest_index": 0,
+      "state_index": 66
+    },
+    {
+      "class": 0,
+      "delta_g": 0.000973072125243557,
+      "fs_distance": 0.0010062887732895014,
+      "g": 0.4955819846519748,
+      "nearest_index": 101,
+      "state_index": 67
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00027861350110403027,
+      "fs_distance": 0.00026923717912833177,
+      "g": 0.5844395373290946,
+      "nearest_index": 184,
+      "state_index": 68
+    },
+    {
+      "class": 0,
+      "delta_g": 4.232886006150238e-07,
+      "fs_distance": 2.946513881278822e-07,
+      "g": 0.79850464846175,
+      "nearest_index": 46,
+      "state_index": 69
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0002258113254566263,
+      "fs_distance": 0.00021861356157200511,
+      "g": 0.5827052625806659,
+      "nearest_index": 60,
+      "state_index": 70
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0012256907144808649,
+      "fs_distance": 0.0012137859861220926,
+      "g": 0.5600160382065428,
+      "nearest_index": 167,
+      "state_index": 71
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003693709342993401,
+      "fs_distance": 0.0002829811569068727,
+      "g": 0.7464339292174156,
+      "nearest_index": 80,
+      "state_index": 72
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0011467427835542,
+      "fs_distance": 0.0011837222253994338,
+      "g": 0.3693832295596913,
+      "nearest_index": 34,
+      "state_index": 73
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0019209222892689892,
+      "fs_distance": 0.001883409146444304,
+      "g": 0.2908023752997029,
+      "nearest_index": 49,
+      "state_index": 74
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001065977863218659,
+      "fs_distance": 0.0010909917685079163,
+      "g": 0.35137749959170833,
+      "nearest_index": 33,
+      "state_index": 75
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0030011696953154976,
+      "fs_distance": 0.0028951536575486684,
+      "g": 0.5877193205255141,
+      "nearest_index": 184,
+      "state_index": 76
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0015197319380869656,
+      "fs_distance": 0.0012673275946199004,
+      "g": 0.6942170094110242,
+      "nearest_index": 15,
+      "state_index": 77
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0015453371615689604,
+      "fs_distance": 0.0016197337635758537,
+      "g": 0.43642732150537344,
+      "nearest_index": 119,
+      "state_index": 78
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0022244424927954642,
+      "fs_distance": 0.0020757602488964554,
+      "g": 0.2397464120637121,
+      "nearest_index": 191,
+      "state_index": 79
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003693709342993401,
+      "fs_distance": 0.0002829811569068727,
+      "g": 0.7460645582831162,
+      "nearest_index": 72,
+      "state_index": 80
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009880622458069421,
+      "fs_distance": 0.0009449271412988746,
+      "g": 0.26449244156959495,
+      "nearest_index": 102,
+      "state_index": 81
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0023540804143581395,
+      "fs_distance": 0.002113166753066957,
+      "g": 0.6439548315821958,
+      "nearest_index": 105,
+      "state_index": 82
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005593050175100589,
+      "fs_distance": 0.0005212012173533367,
+      "g": 0.2369626645534066,
+      "nearest_index": 191,
+      "state_index": 83
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003134463828814993,
+      "fs_distance": 0.00031422324617182465,
+      "g": 0.3196384220078377,
+      "nearest_index": 38,
+      "state_index": 84
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0032397653508915436,
+      "fs_distance": 0.002633263269750359,
+      "g": 0.709379446957203,
+      "nearest_index": 51,
+      "state_index": 85
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001552012944598835,
+      "fs_distance": 0.0016096974561166542,
+      "g": 0.48735559583518956,
+      "nearest_index": 88,
+      "state_index": 86
+    },
+    {
+      "class": 0,
+      "delta_g": 0.003613338818024725,
+      "fs_distance": 0.0037338093902809567,
+      "g": 0.372996568377716,
+      "nearest_index": 73,
+      "state_index": 87
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001552012944598835,
+      "fs_distance": 0.0016096974561166542,
+      "g": 0.4889076087797884,
+      "nearest_index": 86,
+      "state_index": 88
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002421545322387253,
+      "fs_distance": 0.001702519786813666,
+      "g": 0.7934236969151638,
+      "nearest_index": 20,
+      "state_index": 89
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005315828727570082,
+      "fs_distance": 0.0004813640178928071,
+      "g": 0.6384347622127982,
+      "nearest_index": 121,
+      "state_index": 90
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00043086458113139603,
+      "fs_distance": 0.00043335188046071806,
+      "g": 0.3241526388424439,
+      "nearest_index": 103,
+      "state_index": 91
+    },
+    {
+      "class": 0,
+      "delta_g": 0.004594366701585417,
+      "fs_distance": 0.003991002684365744,
+      "g": 0.6658967934847244,
+      "nearest_index": 160,
+      "state_index": 92
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001633328022914049,
+      "fs_distance": 0.0016499230278345044,
+      "g": 0.33149273916404176,
+      "nearest_index": 55,
+      "state_index": 93
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0017876579736961773,
+      "fs_distance": 0.0018717744151941032,
+      "g": 0.45077451971663773,
+      "nearest_index": 132,
+      "state_index": 94
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005755062937080613,
+      "fs_distance": 0.0004655685756020446,
+      "g": 0.7141763137569677,
+      "nearest_index": 185,
+      "state_index": 95
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0004717881492591891,
+      "fs_distance": 0.0004077855309951743,
+      "g": 0.6713390631775547,
+      "nearest_index": 3,
+      "state_index": 96
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005549908178053009,
+      "fs_distance": 0.0005408071004906993,
+      "g": 0.576160598907496,
+      "nearest_index": 41,
+      "state_index": 97
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0004317460077332136,
+      "fs_distance": 0.0004301591958123102,
+      "g": 0.5522001118065045,
+      "nearest_index": 104,
+      "state_index": 98
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00048480087053007215,
+      "fs_distance": 0.00044969172235089053,
+      "g": 0.23284763862481295,
+      "nearest_index": 113,
+      "state_index": 99
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003298585887673289,
+      "fs_distance": 0.0003284797373758619,
+      "g": 0.5531779240876505,
+      "nearest_index": 26,
+      "state_index": 100
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008363671859186739,
+      "fs_distance": 0.0008652637715140058,
+      "g": 0.4946089125267312,
+      "nearest_index": 42,
+      "state_index": 101
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009880622458069421,
+      "fs_distance": 0.0009449271412988746,
+      "g": 0.263504379323788,
+      "nearest_index": 81,
+      "state_index": 102
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00043086458113139603,
+      "fs_distance": 0.00043335188046071806,
+      "g": 0.3245835034235753,
+      "nearest_index": 91,
+      "state_index": 103
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00021620768464547524,
+      "fs_distance": 0.00021535388283128656,
+      "g": 0.5526318578142377,
+      "nearest_index": 26,
+      "state_index": 104
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0023540804143581395,
+      "fs_distance": 0.002113166753066957,
+      "g": 0.6463089119965539,
+      "nearest_index": 82,
+      "state_index": 105
+    },
+    {
+      "class": 0,
+      "delta_g": 0.003350096088278798,
+      "fs_distance": 0.0034952994514611635,
+      "g": 0.4683579021450801,
+      "nearest_index": 176,
+      "state_index": 106
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0006775947011918859,
+      "fs_distance": 0.000613083992786074,
+      "g": 0.639643939786747,
+      "nearest_index": 121,
+      "state_index": 107
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003022457290080549,
+      "fs_distance": 0.00024389232552000426,
+      "g": 0.7152772032253172,
+      "nearest_index": 178,
+      "state_index": 108
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0017988676292525208,
+      "fs_distance": 0.0016602790086718924,
+      "g": 0.22671606401195543,
+      "nearest_index": 130,
+      "state_index": 109
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0014062063084372411,
+      "fs_distance": 0.0010664974026338638,
+      "g": 0.7527834594749061,
+      "nearest_index": 117,
+      "state_index": 110
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013106569821471625,
+      "fs_distance": 0.001323284991382202,
+      "g": 0.5349793652695789,
+      "nearest_index": 196,
+      "state_index": 111
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0016229735241446441,
+      "fs_distance": 0.0015339709468574522,
+      "g": 0.6037729610726777,
+      "nearest_index": 172,
+      "state_index": 112
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00048480087053007215,
+      "fs_distance": 0.00044969172235089053,
+      "g": 0.23236283775428287,
+      "nearest_index": 99,
+      "state_index": 113
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003925225194660875,
+      "fs_distance": 0.00027416018935190077,
+      "g": 0.7980541344844017,
+      "nearest_index": 37,
+      "state_index": 114
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002485548626216083,
+      "fs_distance": 0.0019301721439714701,
+      "g": 0.7371115848861709,
+      "nearest_index": 24,
+      "state_index": 115
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0020468798619616146,
+      "fs_distance": 0.0019393757468066217,
+      "g": 0.25318667135406836,
+      "nearest_index": 5,
+      "state_index": 116
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0014062063084372411,
+      "fs_distance": 0.0010664974026338638,
+      "g": 0.7513772531664689,
+      "nearest_index": 110,
+      "state_index": 117
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00217156165959409,
+      "fs_distance": 0.0021537110683267006,
+      "g": 0.5566187858324678,
+      "nearest_index": 167,
+      "state_index": 118
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013004616059090202,
+      "fs_distance": 0.0013630233679354467,
+      "g": 0.4379726586669424,
+      "nearest_index": 58,
+      "state_index": 119
+    },
+    {
+      "class": 0,
+      "delta_g": 8.283359230976117e-05,
+      "fs_distance": 6.31595890690175e-05,
+      "g": 0.7489561267474232,
+      "nearest_index": 137,
+      "state_index": 120
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005315828727570082,
+      "fs_distance": 0.0004813640178928071,
+      "g": 0.6389663450855552,
+      "nearest_index": 90,
+      "state_index": 121
+    },
+    {
+      "class": 0,
+      "delta_g": 0.006228317221661284,
+      "fs_distance": 0.006222660848063418,
+      "g": 0.5459717945848432,
+      "nearest_index": 98,
+      "state_index": 122
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001296458995131311,
+      "fs_distance": 0.0011732205944249134,
+      "g": 0.20743361083994372,
+      "nearest_index": 170,
+      "state_index": 123
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0012774842874525572,
+      "fs_distance": 0.0009824243925192749,
+      "g": 0.7446828691557512,
+      "nearest_index": 16,
+      "state_index": 124
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00039060407390167917,
+      "fs_distance": 0.0002916408063632786,
+      "g": 0.7608420004890859,
+      "nearest_index": 21,
+      "state_index": 125
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0004724297086660112,
+      "fs_distance": 0.00036167352291830064,
+      "g": 0.7469063589260816,
+      "nearest_index": 72,
+      "state_index": 126
+    },
+    {
+      "class": 0,
+      "delta_g": 0.003847069108939949,
+      "fs_distance": 0.0036874488349097367,
+      "g": 0.2683395106785349,
+      "nearest_index": 81,
+      "state_index": 127
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002042952686166055,
+      "fs_distance": 0.0018880852612194563,
+      "g": 0.6240666732098035,
+      "nearest_index": 63,
+      "state_index": 128
+    },
+    {
+      "class": 0,
+      "delta_g": 0.005429028768912936,
+      "fs_distance": 0.004360260890687632,
+      "g": 0.7210084777232382,
+      "nearest_index": 178,
+      "state_index": 129
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005107696108347382,
+      "fs_distance": 0.00047196532430605193,
+      "g": 0.22851493164120795,
+      "nearest_index": 135,
+      "state_index": 130
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005632330128414464,
+      "fs_distance": 0.0005741404312472815,
+      "g": 0.521925611898814,
+      "nearest_index": 61,
+      "state_index": 131
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0017876579736961773,
+      "fs_distance": 0.0018717744151941032,
+      "g": 0.4525621776903339,
+      "nearest_index": 94,
+      "state_index": 132
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0006736330061049012,
+      "fs_distance": 0.0006416197514879426,
+      "g": 0.26004650928210427,
+      "nearest_index": 155,
+      "state_index": 133
+    },
+    {
+      "class": 0,
+      "delta_g": 2.3302038298922412e-08,
+      "fs_distance": 0.0,
+      "g": 0.7975823708674585,
+      "nearest_index": 31,
+      "state_index": 134
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005107696108347382,
+      "fs_distance": 0.00047196532430605193,
+      "g": 0.2290257012520427,
+      "nearest_index": 130,
+      "state_index": 135
+    },
+    {
+      "class": 0,
+      "delta_g": 0.000279804677644685,
+      "fs_distance": 0.00025340905681271443,
+      "g": 0.2090098745127197,
+      "nearest_index": 170,
+      "state_index": 136
+    },
+    {
+      "class": 0,
+      "delta_g": 8.283359230976117e-05,
+      "fs_distance": 6.31595890690175e-05,
+      "g": 0.7490389603397329,
+      "nearest_index": 120,
+      "state_index": 137
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005697004288627294,
+      "fs_distance": 0.00047191910937668285,
+      "g": 0.6989158696818998,
+      "nearest_index": 159,
+      "state_index": 138
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00033492536140988793,
+      "fs_distance": 0.00031619677894077005,
+      "g": 0.6057308599582323,
+      "nearest_index": 172,
+      "state_index": 139
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008564496180499814,
+      "fs_distance": 0.0007636029461008234,
+      "g": 0.6504657966530099,
+      "nearest_index": 43,
+      "state_index": 140
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0011037556726165576,
+      "fs_distance": 0.0007911178456141254,
+      "g": 0.7845393185314498,
+      "nearest_index": 161,
+      "state_index": 141
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002305551680011536,
+      "fs_distance": 0.0020748457249391184,
+      "g": 0.2014406130255435,
+      "nearest_index": 146,
+      "state_index": 142
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0006522666483828599,
+      "fs_distance": 0.0006824952582334782,
+      "g": 0.41305887941579567,
+      "nearest_index": 10,
+      "state_index": 143
+    },
+    {
+      "class": 0,
+      "delta_g": 7.052642398064357e-05,
+      "fs_distance": 6.625132348611887e-05,
+      "g": 0.6098189710572505,
+      "nearest_index": 52,
+      "state_index": 144
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009688841699106998,
+      "fs_distance": 0.0006957454027186916,
+      "g": 0.7824666786889225,
+      "nearest_index": 161,
+      "state_index": 145
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002305551680011536,
+      "fs_distance": 0.0020748457249391184,
+      "g": 0.20374616470555504,
+      "nearest_index": 142,
+      "state_index": 146
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013224374154954255,
+      "fs_distance": 0.0013585462635193148,
+      "g": 0.5091558150162176,
+      "nearest_index": 158,
+      "state_index": 147
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0023442469850063485,
+      "fs_distance": 0.002071530340135874,
+      "g": 0.6575484416828515,
+      "nearest_index": 65,
+      "state_index": 148
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0001573849430982488,
+      "fs_distance": 0.00013315424100383857,
+      "g": 0.685629775490548,
+      "nearest_index": 168,
+      "state_index": 149
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0002393507292740571,
+      "fs_distance": 0.0002453239065384593,
+      "g": 0.5124799717699646,
+      "nearest_index": 64,
+      "state_index": 150
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0019558005533666933,
+      "fs_distance": 0.002047322085917808,
+      "g": 0.4545179782437006,
+      "nearest_index": 132,
+      "state_index": 151
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001200322734135506,
+      "fs_distance": 0.0012264295034309664,
+      "g": 0.5172963779456525,
+      "nearest_index": 156,
+      "state_index": 152
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00319295426766808,
+      "fs_distance": 0.0030417381077900416,
+      "g": 0.596106933435815,
+      "nearest_index": 180,
+      "state_index": 153
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00020814993649764801,
+      "fs_distance": 0.00015694570212797964,
+      "g": 0.7555391751212708,
+      "nearest_index": 62,
+      "state_index": 154
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0006736330061049012,
+      "fs_distance": 0.0006416197514879426,
+      "g": 0.25937287627599936,
+      "nearest_index": 133,
+      "state_index": 155
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001200322734135506,
+      "fs_distance": 0.0012264295034309664,
+      "g": 0.518496700679788,
+      "nearest_index": 152,
+      "state_index": 156
+    },
+    {
+      "class": 0,
+      "delta_g": 0.005607238527592429,
+      "fs_distance": 0.005701767853185054,
+      "g": 0.34371047913590175,
+      "nearest_index": 163,
+      "state_index": 157
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013224374154954255,
+      "fs_distance": 0.0013585462635193148,
+      "g": 0.5078333776007222,
+      "nearest_index": 147,
+      "state_index": 158
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005697004288627294,
+      "fs_distance": 0.00047191910937668285,
+      "g": 0.6994855701107625,
+      "nearest_index": 138,
+      "state_index": 159
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0008479029912448199,
+      "fs_distance": 0.0007335952146409633,
+      "g": 0.6704911601863098,
+      "nearest_index": 96,
+      "state_index": 160
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009688841699106998,
+      "fs_distance": 0.0006957454027186916,
+      "g": 0.7834355628588332,
+      "nearest_index": 145,
+      "state_index": 161
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0028705602938328134,
+      "fs_distance": 0.003000001998365063,
+      "g": 0.40471319949868967,
+      "nearest_index": 8,
+      "state_index": 162
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0030456463643397935,
+      "fs_distance": 0.0030885679808707813,
+      "g": 0.3381032406083093,
+      "nearest_index": 50,
+      "state_index": 163
+    },
+    {
+      "class": 0,
+      "delta_g": 0.002054666971479824,
+      "fs_distance": 0.0015031471908093976,
+      "g": 0.7735838694874018,
+      "nearest_index": 1,
+      "state_index": 164
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001775923286420844,
+      "fs_distance": 0.00152071992717775,
+      "g": 0.6786999951221305,
+      "nearest_index": 195,
+      "state_index": 165
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0007836576750315238,
+      "fs_distance": 0.0007957488212250846,
+      "g": 0.5279218947575259,
+      "nearest_index": 59,
+      "state_index": 166
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0012256907144808649,
+      "fs_distance": 0.0012137859861220926,
+      "g": 0.5587903474920619,
+      "nearest_index": 71,
+      "state_index": 167
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0001573849430982488,
+      "fs_distance": 0.00013315424100383857,
+      "g": 0.6857871604336463,
+      "nearest_index": 149,
+      "state_index": 168
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0002423935190480897,
+      "fs_distance": 0.00023440355965421408,
+      "g": 0.27617345706258656,
+      "nearest_index": 7,
+      "state_index": 169
+    },
+    {
+      "class": 0,
+      "delta_g": 0.000279804677644685,
+      "fs_distance": 0.00025340905681271443,
+      "g": 0.20873006983507503,
+      "nearest_index": 136,
+      "state_index": 170
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0011494854141498867,
+      "fs_distance": 0.0010418005034755324,
+      "g": 0.2101593599268696,
+      "nearest_index": 136,
+      "state_index": 171
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00033492536140988793,
+      "fs_distance": 0.00031619677894077005,
+      "g": 0.6053959345968224,
+      "nearest_index": 139,
+      "state_index": 172
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0044499485300413255,
+      "fs_distance": 0.004375887264627713,
+      "g": 0.5648307287459549,
+      "nearest_index": 6,
+      "state_index": 173
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0025889960681403368,
+      "fs_distance": 0.0026364589161556955,
+      "g": 0.5245146079669544,
+      "nearest_index": 131,
+      "state_index": 174
+    },
+    {
+      "class": 0,
+      "delta_g": 0.003137621831868498,
+      "fs_distance": 0.0028498578626715357,
+      "g": 0.2132969817587381,
+      "nearest_index": 171,
+      "state_index": 175
+    },
+    {
+      "class": 0,
+      "delta_g": 0.003350096088278798,
+      "fs_distance": 0.0034952994514611635,
+      "g": 0.4717079982333589,
+      "nearest_index": 106,
+      "state_index": 176
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0010407563729356029,
+      "fs_distance": 0.0010771550622593817,
+      "g": 0.49273178896787695,
+      "nearest_index": 42,
+      "state_index": 177
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0003022457290080549,
+      "fs_distance": 0.00024389232552000426,
+      "g": 0.7155794489543252,
+      "nearest_index": 108,
+      "state_index": 178
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00010593501728084487,
+      "fs_distance": 0.00010254064392920197,
+      "g": 0.5830370089234034,
+      "nearest_index": 60,
+      "state_index": 179
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0010876656806625418,
+      "fs_distance": 0.0010336481122956269,
+      "g": 0.5992998877034831,
+      "nearest_index": 19,
+      "state_index": 180
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009691287044970576,
+      "fs_distance": 0.0007119546579409186,
+      "g": 0.7697273811469356,
+      "nearest_index": 25,
+      "state_index": 181
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0027385454590878044,
+      "fs_distance": 0.002018456967476545,
+      "g": 0.7669888356878478,
+      "nearest_index": 181,
+      "state_index": 182
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00018424811347439451,
+      "fs_distance": 0.0001818312803538888,
+      "g": 0.2996611619768843,
+      "nearest_index": 29,
+      "state_index": 183
+    },
+    {
+      "class": 0,
+      "delta_g": 0.00027861350110403027,
+      "fs_distance": 0.00026923717912833177,
+      "g": 0.5847181508301986,
+      "nearest_index": 68,
+      "state_index": 184
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005755062937080613,
+      "fs_distance": 0.0004655685756020446,
+      "g": 0.7136008074632596,
+      "nearest_index": 95,
+      "state_index": 185
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0019167738245652322,
+      "fs_distance": 0.001972324847017511,
+      "g": 0.36117371358502326,
+      "nearest_index": 4,
+      "state_index": 186
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0014030162399967239,
+      "fs_distance": 0.0013620567802468178,
+      "g": 0.5794333762819708,
+      "nearest_index": 190,
+      "state_index": 187
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001359719207653487,
+      "fs_distance": 0.0013410328753011703,
+      "g": 0.2981171946557564,
+      "nearest_index": 29,
+      "state_index": 188
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0028996351081017058,
+      "fs_distance": 0.0028000586203666155,
+      "g": 0.27303142843543676,
+      "nearest_index": 7,
+      "state_index": 189
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0014030162399967239,
+      "fs_distance": 0.0013620567802468178,
+      "g": 0.5808363925219675,
+      "nearest_index": 187,
+      "state_index": 190
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0005593050175100589,
+      "fs_distance": 0.0005212012173533367,
+      "g": 0.23752196957091665,
+      "nearest_index": 83,
+      "state_index": 191
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013970245784200586,
+      "fs_distance": 0.0013257606160661198,
+      "g": 0.6017845779625657,
+      "nearest_index": 19,
+      "state_index": 192
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0009927667970201781,
+      "fs_distance": 0.0009070655084066018,
+      "g": 0.2180750376624424,
+      "nearest_index": 44,
+      "state_index": 193
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0028780379249595534,
+      "fs_distance": 0.0020332287414390293,
+      "g": 0.7905456589902042,
+      "nearest_index": 89,
+      "state_index": 194
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001775923286420844,
+      "fs_distance": 0.00152071992717775,
+      "g": 0.6769240718357097,
+      "nearest_index": 165,
+      "state_index": 195
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0013106569821471625,
+      "fs_distance": 0.001323284991382202,
+      "g": 0.5362900222517261,
+      "nearest_index": 111,
+      "state_index": 196
+    },
+    {
+      "class": 0,
+      "delta_g": 0.001625763430540439,
+      "fs_distance": 0.0014030207343754104,
+      "g": 0.6734366147573543,
+      "nearest_index": 3,
+      "state_index": 197
+    },
+    {
+      "class": 0,
+      "delta_g": 0.004449213222020798,
+      "fs_distance": 0.004660902349131677,
+      "g": 0.4200723197843367,
+      "nearest_index": 32,
+      "state_index": 198
+    },
+    {
+      "class": 0,
+      "delta_g": 0.0011658015179162318,
+      "fs_distance": 0.0012027594542333776,
+      "g": 0.36707068525822084,
+      "nearest_index": 34,
+      "state_index": 199
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0033419791773250385,
+      "fs_distance": 0.0007512041415406508,
+      "g": 1.4495183042934383,
+      "nearest_index": 329,
+      "state_index": 200
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006051655298497938,
+      "fs_distance": 0.00015372756510157072,
+      "g": 1.3686738278067554,
+      "nearest_index": 297,
+      "state_index": 201
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009425978487800357,
+      "fs_distance": 0.00019434059040459513,
+      "g": 1.5124760434926996,
+      "nearest_index": 240,
+      "state_index": 202
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005477259144290869,
+      "fs_distance": 0.0001263157847110167,
+      "g": 1.4333067723154176,
+      "nearest_index": 228,
+      "state_index": 203
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00105354110257605,
+      "fs_distance": 0.00018082920085379424,
+      "g": 1.6499470821087936,
+      "nearest_index": 218,
+      "state_index": 204
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008791476386424968,
+      "fs_distance": 0.0001267010748827886,
+      "g": 1.7916817834880119,
+      "nearest_index": 343,
+      "state_index": 205
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00032180732190512096,
+      "fs_distance": 5.133535026152906e-05,
+      "g": 1.7075717124776282,
+      "nearest_index": 367,
+      "state_index": 206
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0023878740560661083,
+      "fs_distance": 0.00045535238845597904,
+      "g": 1.56787776901448,
+      "nearest_index": 235,
+      "state_index": 207
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001577916559572401,
+      "fs_distance": 0.0002378951181492523,
+      "g": 1.754921563620207,
+      "nearest_index": 377,
+      "state_index": 208
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009831711744932026,
+      "fs_distance": 0.00016956865363021664,
+      "g": 1.6461335930083292,
+      "nearest_index": 393,
+      "state_index": 209
+    },
+    {
+      "class": 1,
+      "delta_g": 0.006061949213324702,
+      "fs_distance": 0.0009409577920040445,
+      "g": 1.7330560821967183,
+      "nearest_index": 311,
+      "state_index": 210
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0036175524457617847,
+      "fs_distance": 0.0008434164338989249,
+      "g": 1.4243527297229268,
+      "nearest_index": 285,
+      "state_index": 211
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005231906553757604,
+      "fs_distance": 0.00012754000934462622,
+      "g": 1.3964377563675934,
+      "nearest_index": 261,
+      "state_index": 212
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00019397314595126502,
+      "fs_distance": 2.9581552362162276e-05,
+      "g": 1.7447058701043505,
+      "nearest_index": 279,
+      "state_index": 213
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0019895692104028306,
+      "fs_distance": 0.0004417404264014126,
+      "g": 1.4607053006768689,
+      "nearest_index": 215,
+      "state_index": 214
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0019895692104028306,
+      "fs_distance": 0.0004417404264014126,
+      "g": 1.458715731466466,
+      "nearest_index": 214,
+      "state_index": 215
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006537386556353386,
+      "fs_distance": 0.00014370698718194373,
+      "g": 1.4663270513826216,
+      "nearest_index": 292,
+      "state_index": 216
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006868436287117419,
+      "fs_distance": 0.00014412514969877418,
+      "g": 1.499074285937124,
+      "nearest_index": 324,
+      "state_index": 217
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00105354110257605,
+      "fs_distance": 0.00018082920085379424,
+      "g": 1.6488935410062175,
+      "nearest_index": 204,
+      "state_index": 218
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004220881133266019,
+      "fs_distance": 0.0008624201267045661,
+      "g": 1.5206124649098958,
+      "nearest_index": 316,
+      "state_index": 219
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0007625598564224845,
+      "fs_distance": 0.00015390835586451634,
+      "g": 1.5277506432988086,
+      "nearest_index": 270,
+      "state_index": 220
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00026209803552545985,
+      "fs_distance": 7.035197858747768e-05,
+      "g": 1.3334552440395901,
+      "nearest_index": 222,
+      "state_index": 221
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00026209803552545985,
+      "fs_distance": 7.035197858747768e-05,
+      "g": 1.3331931460040647,
+      "nearest_index": 221,
+      "state_index": 222
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012035581153366781,
+      "fs_distance": 0.0002068762870047333,
+      "g": 1.6476899828908809,
+      "nearest_index": 218,
+      "state_index": 223
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003737476205429857,
+      "fs_distance": 6.37730634683925e-05,
+      "g": 1.6538493513475574,
+      "nearest_index": 389,
+      "state_index": 224
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004381333300936152,
+      "fs_distance": 0.0006546652001263552,
+      "g": 1.7594198508152405,
+      "nearest_index": 376,
+      "state_index": 225
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0013525677209680342,
+      "fs_distance": 0.0002659285645195231,
+      "g": 1.5471634223535777,
+      "nearest_index": 304,
+      "state_index": 226
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00014454128467455973,
+      "fs_distance": 2.181434319869715e-05,
+      "g": 1.75319910577596,
+      "nearest_index": 377,
+      "state_index": 227
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005477259144290869,
+      "fs_distance": 0.0001263157847110167,
+      "g": 1.4338544982298467,
+      "nearest_index": 203,
+      "state_index": 228
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012988320849842694,
+      "fs_distance": 0.00019305938089475582,
+      "g": 1.765349442887476,
+      "nearest_index": 359,
+      "state_index": 229
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006193320278784498,
+      "fs_distance": 0.00015747349901971096,
+      "g": 1.368054495778877,
+      "nearest_index": 201,
+      "state_index": 230
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0019361123583672146,
+      "fs_distance": 0.00048006011985088224,
+      "g": 1.383932366208234,
+      "nearest_index": 249,
+      "state_index": 231
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006755858827047767,
+      "fs_distance": 0.00012661685379372663,
+      "g": 1.5816852445078369,
+      "nearest_index": 397,
+      "state_index": 232
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003042160862638532,
+      "fs_distance": 7.233159946125912e-05,
+      "g": 1.412742174426128,
+      "nearest_index": 307,
+      "state_index": 233
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00023567781702116264,
+      "fs_distance": 3.422621242395928e-05,
+      "g": 1.7857361640997222,
+      "nearest_index": 337,
+      "state_index": 234
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0023878740560661083,
+      "fs_distance": 0.00045535238845597904,
+      "g": 1.5702656430705462,
+      "nearest_index": 207,
+      "state_index": 235
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00021244604182735216,
+      "fs_distance": 4.492496718345195e-05,
+      "g": 1.4940282038400468,
+      "nearest_index": 276,
+      "state_index": 236
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005681700678195067,
+      "fs_distance": 0.00011674397456560742,
+      "g": 1.5147388989150998,
+      "nearest_index": 341,
+      "state_index": 237
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0018488212359168976,
+      "fs_distance": 0.0003696865040472052,
+      "g": 1.5332202553498697,
+      "nearest_index": 371,
+      "state_index": 238
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0011912882106448475,
+      "fs_distance": 0.00037264380273575664,
+      "g": 1.239002207286067,
+      "nearest_index": 338,
+      "state_index": 239
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009425978487800357,
+      "fs_distance": 0.00019434059040459513,
+      "g": 1.5115334456439196,
+      "nearest_index": 202,
+      "state_index": 240
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005810685871956434,
+      "fs_distance": 0.00013781378314621645,
+      "g": 1.414861416128301,
+      "nearest_index": 300,
+      "state_index": 241
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006672535445355621,
+      "fs_distance": 0.00015374420806015074,
+      "g": 1.4345217517743822,
+      "nearest_index": 228,
+      "state_index": 242
+    },
+    {
+      "class": 1,
+      "delta_g": 0.006452940127334328,
+      "fs_distance": 0.0011649079550487315,
+      "g": 1.6071785837495878,
+      "nearest_index": 357,
+      "state_index": 243
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0010200057919811378,
+      "fs_distance": 0.00032396045570911935,
+      "g": 1.2287573900646542,
+      "nearest_index": 378,
+      "state_index": 244
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001993827269997528,
+      "fs_distance": 0.00031888767166289664,
+      "g": 1.704628907929533,
+      "nearest_index": 332,
+      "state_index": 245
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0022443122719733033,
+      "fs_distance": 0.00035989098753096073,
+      "g": 1.7023845956575596,
+      "nearest_index": 245,
+      "state_index": 246
+    },
+    {
+      "class": 1,
+      "delta_g": 2.5097300467180617e-05,
+      "fs_distance": 5.7281544422672924e-06,
+      "g": 1.4406610811816443,
+      "nearest_index": 336,
+      "state_index": 247
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001831271975099913,
+      "fs_distance": 0.0002778985097402865,
+      "g": 1.7477925801263174,
+      "nearest_index": 266,
+      "state_index": 248
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001330402622267579,
+      "fs_distance": 0.00032906065278857515,
+      "g": 1.3858684785666011,
+      "nearest_index": 346,
+      "state_index": 249
+    },
+    {
+      "class": 1,
+      "delta_g": 0.000314498216893222,
+      "fs_distance": 7.540976396276562e-05,
+      "g": 1.4073814046813984,
+      "nearest_index": 333,
+      "state_index": 250
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008826467840628016,
+      "fs_distance": 0.00023206503021276715,
+      "g": 1.346177087469609,
+      "nearest_index": 358,
+      "state_index": 251
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00027456764635025444,
+      "fs_distance": 8.408618713454185e-05,
+      "g": 1.2510743414377357,
+      "nearest_index": 295,
+      "state_index": 252
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00020136104366019758,
+      "fs_distance": 4.974687889128803e-05,
+      "g": 1.387400242232529,
+      "nearest_index": 346,
+      "state_index": 253
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0013457798943612431,
+      "fs_distance": 0.0004324278742386035,
+      "g": 1.221648943729852,
+      "nearest_index": 325,
+      "state_index": 254
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0016108369216929486,
+      "fs_distance": 0.000312885683864151,
+      "g": 1.554615572902051,
+      "nearest_index": 369,
+      "state_index": 255
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006143564734790719,
+      "fs_distance": 0.00016519907573336212,
+      "g": 1.3318768934704774,
+      "nearest_index": 362,
+      "state_index": 256
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005847489823191943,
+      "fs_distance": 0.0001666817423519976,
+      "g": 1.2956459181735367,
+      "nearest_index": 361,
+      "state_index": 257
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00024118695064578866,
+      "fs_distance": 7.553489446055177e-05,
+      "g": 1.2375697321247763,
+      "nearest_index": 338,
+      "state_index": 258
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0018976737740266092,
+      "fs_distance": 0.00038230814134585515,
+      "g": 1.5296483170728352,
+      "nearest_index": 220,
+      "state_index": 259
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0016335848399329223,
+      "fs_distance": 0.00024107581921312292,
+      "g": 1.7712318628168449,
+      "nearest_index": 281,
+      "state_index": 260
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005231906553757604,
+      "fs_distance": 0.00012754000934462622,
+      "g": 1.3959145657122176,
+      "nearest_index": 212,
+      "state_index": 261
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0013613404450887323,
+      "fs_distance": 0.00022158629342564464,
+      "g": 1.690789053353113,
+      "nearest_index": 284,
+      "state_index": 262
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003745213113213186,
+      "fs_distance": 9.960187839657908e-05,
+      "g": 1.3390698978262316,
+      "nearest_index": 313,
+      "state_index": 263
+    },
+    {
+      "class": 1,
+      "delta_g": 0.000509780095626855,
+      "fs_distance": 8.398219892305138e-05,
+      "g": 1.6815788166142154,
+      "nearest_index": 282,
+      "state_index": 264
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004836898156216574,
+      "fs_distance": 0.000962753077292601,
+      "g": 1.5399059747420032,
+      "nearest_index": 371,
+      "state_index": 265
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001831271975099913,
+      "fs_distance": 0.0002778985097402865,
+      "g": 1.7496238521014174,
+      "nearest_index": 248,
+      "state_index": 266
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00047083754725418814,
+      "fs_distance": 0.00010889852511211603,
+      "g": 1.431371659946123,
+      "nearest_index": 399,
+      "state_index": 267
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0014142928240010733,
+      "fs_distance": 0.0003253760123231078,
+      "g": 1.4359360445983833,
+      "nearest_index": 242,
+      "state_index": 268
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00029294084941677845,
+      "fs_distance": 7.57509495469585e-05,
+      "g": 1.3575173679608479,
+      "nearest_index": 352,
+      "state_index": 269
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00021883332460381766,
+      "fs_distance": 4.41972887256325e-05,
+      "g": 1.5269880834423861,
+      "nearest_index": 273,
+      "state_index": 270
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003979413357977357,
+      "fs_distance": 8.386104381036204e-05,
+      "g": 1.4965706504469454,
+      "nearest_index": 355,
+      "state_index": 271
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0035950391417807204,
+      "fs_distance": 0.0008121614446388801,
+      "g": 1.4459232651516576,
+      "nearest_index": 200,
+      "state_index": 272
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00021883332460381766,
+      "fs_distance": 4.41972887256325e-05,
+      "g": 1.5267692501177823,
+      "nearest_index": 270,
+      "state_index": 273
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009663501183401202,
+      "fs_distance": 0.00018287104098405063,
+      "g": 1.5752655086680993,
+      "nearest_index": 298,
+      "state_index": 274
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004483178439262714,
+      "fs_distance": 0.0007219096218474056,
+      "g": 1.697901417218297,
+      "nearest_index": 246,
+      "state_index": 275
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00021244604182735216,
+      "fs_distance": 4.492496718345195e-05,
+      "g": 1.4938157577982194,
+      "nearest_index": 236,
+      "state_index": 276
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00031191970927468837,
+      "fs_distance": 8.124636194150634e-05,
+      "g": 1.3525065746489175,
+      "nearest_index": 353,
+      "state_index": 277
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0020078504458531654,
+      "fs_distance": 0.0005410161330062577,
+      "g": 1.3298690430246243,
+      "nearest_index": 256,
+      "state_index": 278
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00019397314595126502,
+      "fs_distance": 2.9581552362162276e-05,
+      "g": 1.7445118969583993,
+      "nearest_index": 213,
+      "state_index": 279
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008669650361174952,
+      "fs_distance": 0.00012775232445675643,
+      "g": 1.7737324126928953,
+      "nearest_index": 281,
+      "state_index": 280
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008669650361174952,
+      "fs_distance": 0.00012775232445675643,
+      "g": 1.7728654476567778,
+      "nearest_index": 280,
+      "state_index": 281
+    },
+    {
+      "class": 1,
+      "delta_g": 0.000509780095626855,
+      "fs_distance": 8.398219892305138e-05,
+      "g": 1.6820885967098422,
+      "nearest_index": 264,
+      "state_index": 282
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008301195688948937,
+      "fs_distance": 0.00013218773491232202,
+      "g": 1.709585766841686,
+      "nearest_index": 364,
+      "state_index": 283
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0013613404450887323,
+      "fs_distance": 0.00022158629342564464,
+      "g": 1.6921503937982016,
+      "nearest_index": 262,
+      "state_index": 284
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0034013777774344334,
+      "fs_distance": 0.0007889340505254618,
+      "g": 1.4279702821686886,
+      "nearest_index": 267,
+      "state_index": 285
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012429330846350783,
+      "fs_distance": 0.0003041250504166652,
+      "g": 1.393075107086283,
+      "nearest_index": 289,
+      "state_index": 286
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0024363840258494474,
+      "fs_distance": 0.0003543807303479412,
+      "g": 1.7830641022568516,
+      "nearest_index": 337,
+      "state_index": 287
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0004058115027363307,
+      "fs_distance": 9.089604999785834e-05,
+      "g": 1.4538309932541134,
+      "nearest_index": 351,
+      "state_index": 288
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012429330846350783,
+      "fs_distance": 0.0003041250504166652,
+      "g": 1.394318040170918,
+      "nearest_index": 286,
+      "state_index": 289
+    },
+    {
+      "class": 1,
+      "delta_g": 0.002286563200551317,
+      "fs_distance": 0.00037735398322989505,
+      "g": 1.679292253413664,
+      "nearest_index": 264,
+      "state_index": 290
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012874321621842988,
+      "fs_distance": 0.0002658497120809105,
+      "g": 1.5102460134817353,
+      "nearest_index": 240,
+      "state_index": 291
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006537386556353386,
+      "fs_distance": 0.00014370698718194373,
+      "g": 1.466980790038257,
+      "nearest_index": 216,
+      "state_index": 292
+    },
+    {
+      "class": 1,
+      "delta_g": 0.000552433789857032,
+      "fs_distance": 0.00018230272709309048,
+      "g": 1.206239253685471,
+      "nearest_index": 394,
+      "state_index": 293
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0018653364395126992,
+      "fs_distance": 0.0004601192557212067,
+      "g": 1.3892655786720416,
+      "nearest_index": 253,
+      "state_index": 294
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00027456764635025444,
+      "fs_distance": 8.408618713454185e-05,
+      "g": 1.251348909084086,
+      "nearest_index": 252,
+      "state_index": 295
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003728965522165062,
+      "fs_distance": 0.000121482166117692,
+      "g": 1.214315767916022,
+      "nearest_index": 314,
+      "state_index": 296
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006051655298497938,
+      "fs_distance": 0.00015372756510157072,
+      "g": 1.3692789933366052,
+      "nearest_index": 201,
+      "state_index": 297
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009663501183401202,
+      "fs_distance": 0.00018287104098405063,
+      "g": 1.5742991585497592,
+      "nearest_index": 274,
+      "state_index": 298
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009452937347793622,
+      "fs_distance": 0.00016877675181405945,
+      "g": 1.6183736151766872,
+      "nearest_index": 309,
+      "state_index": 299
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005810685871956434,
+      "fs_distance": 0.00013781378314621645,
+      "g": 1.4142803475411054,
+      "nearest_index": 241,
+      "state_index": 300
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004308933608508925,
+      "fs_distance": 0.001279931774780838,
+      "g": 1.2676919444282275,
+      "nearest_index": 354,
+      "state_index": 301
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00372608540563224,
+      "fs_distance": 0.0010538000965717286,
+      "g": 1.302129723322499,
+      "nearest_index": 395,
+      "state_index": 302
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0021790947715576436,
+      "fs_distance": 0.0007207664835752637,
+      "g": 1.2040601589139133,
+      "nearest_index": 293,
+      "state_index": 303
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0013525677209680342,
+      "fs_distance": 0.0002659285645195231,
+      "g": 1.5458108546326097,
+      "nearest_index": 226,
+      "state_index": 304
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0016876540125185802,
+      "fs_distance": 0.00034921768100380215,
+      "g": 1.5085583594692167,
+      "nearest_index": 291,
+      "state_index": 305
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001527751278597389,
+      "fs_distance": 0.0002639172666702496,
+      "g": 1.6436226705552386,
+      "nearest_index": 393,
+      "state_index": 306
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003042160862638532,
+      "fs_distance": 7.233159946125912e-05,
+      "g": 1.4130463905123918,
+      "nearest_index": 233,
+      "state_index": 307
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008122926185882839,
+      "fs_distance": 0.0002498564170346953,
+      "g": 1.2481493222750972,
+      "nearest_index": 382,
+      "state_index": 308
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009452937347793622,
+      "fs_distance": 0.00016877675181405945,
+      "g": 1.6193189089114666,
+      "nearest_index": 299,
+      "state_index": 309
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0024026559004417525,
+      "fs_distance": 0.0005351489428577872,
+      "g": 1.4563130755660243,
+      "nearest_index": 215,
+      "state_index": 310
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004619377111407363,
+      "fs_distance": 0.0007217199193914017,
+      "g": 1.7269941329833935,
+      "nearest_index": 380,
+      "state_index": 311
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006954682626825193,
+      "fs_distance": 0.00012128905587408097,
+      "g": 1.6366383999018574,
+      "nearest_index": 330,
+      "state_index": 312
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003745213113213186,
+      "fs_distance": 9.960187839657908e-05,
+      "g": 1.339444419137553,
+      "nearest_index": 263,
+      "state_index": 313
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003728965522165062,
+      "fs_distance": 0.000121482166117692,
+      "g": 1.2139428713638054,
+      "nearest_index": 296,
+      "state_index": 314
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004922847053946633,
+      "fs_distance": 0.0008616562309207461,
+      "g": 1.6317155528479108,
+      "nearest_index": 312,
+      "state_index": 315
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0007917401776136312,
+      "fs_distance": 0.0001623336769870257,
+      "g": 1.5163915837766297,
+      "nearest_index": 345,
+      "state_index": 316
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001404676249293857,
+      "fs_distance": 0.0003756827417403962,
+      "g": 1.3349319139676312,
+      "nearest_index": 347,
+      "state_index": 317
+    },
+    {
+      "class": 1,
+      "delta_g": 0.009819288333554832,
+      "fs_distance": 0.0018275270800874972,
+      "g": 1.5921801187240965,
+      "nearest_index": 397,
+      "state_index": 318
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0028212100756459524,
+      "fs_distance": 0.0008331684224668725,
+      "g": 1.2748220881123824,
+      "nearest_index": 354,
+      "state_index": 319
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00036935148363981263,
+      "fs_distance": 9.864689138384028e-05,
+      "g": 1.336705941700565,
+      "nearest_index": 347,
+      "state_index": 320
+    },
+    {
+      "class": 1,
+      "delta_g": 0.000667518822131008,
+      "fs_distance": 0.0001540793939667294,
+      "g": 1.4326392534932866,
+      "nearest_index": 203,
+      "state_index": 321
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001057211567498717,
+      "fs_distance": 0.0003448338595805793,
+      "g": 1.2128856597963067,
+      "nearest_index": 314,
+      "state_index": 322
+    },
+    {
+      "class": 1,
+      "delta_g": 0.005920074925745311,
+      "fs_distance": 0.001043488350585708,
+      "g": 1.6257954779221655,
+      "nearest_index": 315,
+      "state_index": 323
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006868436287117419,
+      "fs_distance": 0.00014412514969877418,
+      "g": 1.4997611295658357,
+      "nearest_index": 217,
+      "state_index": 324
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0013457798943612431,
+      "fs_distance": 0.0004324278742386035,
+      "g": 1.2229947236242134,
+      "nearest_index": 254,
+      "state_index": 325
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0029580595619538297,
+      "fs_distance": 0.0007846423242884185,
+      "g": 1.3424024786995068,
+      "nearest_index": 313,
+      "state_index": 326
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0018268722314247476,
+      "fs_distance": 0.0004731789694846041,
+      "g": 1.3553975548800063,
+      "nearest_index": 352,
+      "state_index": 327
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006064392013069853,
+      "fs_distance": 0.00016140246263037885,
+      "g": 1.3384634586249247,
+      "nearest_index": 263,
+      "state_index": 328
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005648982806136793,
+      "fs_distance": 0.0001266181085408104,
+      "g": 1.4528602834707633,
+      "nearest_index": 351,
+      "state_index": 329
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006954682626825193,
+      "fs_distance": 0.00012128905587408097,
+      "g": 1.63733386816454,
+      "nearest_index": 312,
+      "state_index": 330
+    },
+    {
+      "class": 1,
+      "delta_g": 0.006317123194969465,
+      "fs_distance": 0.0018106927094831415,
+      "g": 1.288744045996248,
+      "nearest_index": 361,
+      "state_index": 331
+    },
+    {
+      "class": 1,
+      "delta_g": 0.000948977278097729,
+      "fs_distance": 0.00015150150055271694,
+      "g": 1.7066227351995304,
+      "nearest_index": 206,
+      "state_index": 332
+    },
+    {
+      "class": 1,
+      "delta_g": 0.000314498216893222,
+      "fs_distance": 7.540976396276562e-05,
+      "g": 1.4070669064645052,
+      "nearest_index": 250,
+      "state_index": 333
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0017796766206532588,
+      "fs_distance": 0.0003448881105266227,
+      "g": 1.5580060864443972,
+      "nearest_index": 369,
+      "state_index": 334
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0018108670167955587,
+      "fs_distance": 0.00045345779252297383,
+      "g": 1.3774839908766687,
+      "nearest_index": 396,
+      "state_index": 335
+    },
+    {
+      "class": 1,
+      "delta_g": 2.5097300467180617e-05,
+      "fs_distance": 5.7281544422672924e-06,
+      "g": 1.4406861784821114,
+      "nearest_index": 247,
+      "state_index": 336
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00023567781702116264,
+      "fs_distance": 3.422621242395928e-05,
+      "g": 1.785500486282701,
+      "nearest_index": 234,
+      "state_index": 337
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00024118695064578866,
+      "fs_distance": 7.553489446055177e-05,
+      "g": 1.237810919075422,
+      "nearest_index": 258,
+      "state_index": 338
+    },
+    {
+      "class": 1,
+      "delta_g": 9.993441831301908e-05,
+      "fs_distance": 1.706914193258844e-05,
+      "g": 1.6532945122016325,
+      "nearest_index": 388,
+      "state_index": 339
+    },
+    {
+      "class": 1,
+      "delta_g": 0.006731165176262488,
+      "fs_distance": 0.0018620209209071772,
+      "g": 1.3108193617259951,
+      "nearest_index": 349,
+      "state_index": 340
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005681700678195067,
+      "fs_distance": 0.00011674397456560742,
+      "g": 1.5141707288472803,
+      "nearest_index": 237,
+      "state_index": 341
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004076009132180758,
+      "fs_distance": 0.001197021122435544,
+      "g": 1.2788980972445632,
+      "nearest_index": 319,
+      "state_index": 342
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008791476386424968,
+      "fs_distance": 0.0001267010748827886,
+      "g": 1.7925609311266544,
+      "nearest_index": 205,
+      "state_index": 343
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0021575811584395588,
+      "fs_distance": 0.000588749396638099,
+      "g": 1.3239099335104205,
+      "nearest_index": 356,
+      "state_index": 344
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0007917401776136312,
+      "fs_distance": 0.0001623336769870257,
+      "g": 1.5155998435990161,
+      "nearest_index": 316,
+      "state_index": 345
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00020136104366019758,
+      "fs_distance": 4.974687889128803e-05,
+      "g": 1.3871988811888687,
+      "nearest_index": 253,
+      "state_index": 346
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00036935148363981263,
+      "fs_distance": 9.864689138384028e-05,
+      "g": 1.336336590216925,
+      "nearest_index": 320,
+      "state_index": 347
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001801618091611168,
+      "fs_distance": 0.0004950225396697116,
+      "g": 1.3193521449938688,
+      "nearest_index": 349,
+      "state_index": 348
+    },
+    {
+      "class": 1,
+      "delta_g": 0.001801618091611168,
+      "fs_distance": 0.0004950225396697116,
+      "g": 1.3175505269022576,
+      "nearest_index": 348,
+      "state_index": 349
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00109252269132587,
+      "fs_distance": 0.00019532270693904097,
+      "g": 1.6172810924853613,
+      "nearest_index": 299,
+      "state_index": 350
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0004058115027363307,
+      "fs_distance": 9.089604999785834e-05,
+      "g": 1.453425181751377,
+      "nearest_index": 288,
+      "state_index": 351
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00029294084941677845,
+      "fs_distance": 7.57509495469585e-05,
+      "g": 1.357224427111431,
+      "nearest_index": 269,
+      "state_index": 352
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00031191970927468837,
+      "fs_distance": 8.124636194150634e-05,
+      "g": 1.3528184943581922,
+      "nearest_index": 277,
+      "state_index": 353
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0028212100756459524,
+      "fs_distance": 0.0008331684224668725,
+      "g": 1.2720008780367364,
+      "nearest_index": 319,
+      "state_index": 354
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003979413357977357,
+      "fs_distance": 8.386104381036204e-05,
+      "g": 1.4961727091111476,
+      "nearest_index": 271,
+      "state_index": 355
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0021575811584395588,
+      "fs_distance": 0.000588749396638099,
+      "g": 1.321752352351981,
+      "nearest_index": 344,
+      "state_index": 356
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0036495686084392354,
+      "fs_distance": 0.0006544961313557457,
+      "g": 1.613631523876922,
+      "nearest_index": 350,
+      "state_index": 357
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008826467840628016,
+      "fs_distance": 0.00023206503021276715,
+      "g": 1.3470597342536719,
+      "nearest_index": 251,
+      "state_index": 358
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012988320849842694,
+      "fs_distance": 0.00019305938089475582,
+      "g": 1.7666482749724604,
+      "nearest_index": 229,
+      "state_index": 359
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0004726433483339676,
+      "fs_distance": 7.721859372348322e-05,
+      "g": 1.688728569476158,
+      "nearest_index": 366,
+      "state_index": 360
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0005847489823191943,
+      "fs_distance": 0.0001666817423519976,
+      "g": 1.2950611691912175,
+      "nearest_index": 257,
+      "state_index": 361
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006143564734790719,
+      "fs_distance": 0.00016519907573336212,
+      "g": 1.3324912499439565,
+      "nearest_index": 256,
+      "state_index": 362
+    },
+    {
+      "class": 1,
+      "delta_g": 0.003639918974352341,
+      "fs_distance": 0.0005729675132157754,
+      "g": 1.7167415236827992,
+      "nearest_index": 384,
+      "state_index": 363
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008301195688948937,
+      "fs_distance": 0.00013218773491232202,
+      "g": 1.7087556472727912,
+      "nearest_index": 283,
+      "state_index": 364
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0030108667112478393,
+      "fs_distance": 0.0005009617830631691,
+      "g": 1.6724297617152475,
+      "nearest_index": 375,
+      "state_index": 365
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0004726433483339676,
+      "fs_distance": 7.721859372348322e-05,
+      "g": 1.688255926127824,
+      "nearest_index": 360,
+      "state_index": 366
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00032180732190512096,
+      "fs_distance": 5.133535026152906e-05,
+      "g": 1.7078935197995333,
+      "nearest_index": 206,
+      "state_index": 367
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0014488365050300267,
+      "fs_distance": 0.00045221450987340954,
+      "g": 1.240451043791097,
+      "nearest_index": 239,
+      "state_index": 368
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0016108369216929486,
+      "fs_distance": 0.000312885683864151,
+      "g": 1.556226409823744,
+      "nearest_index": 255,
+      "state_index": 369
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012050918904513708,
+      "fs_distance": 0.0002283820485066669,
+      "g": 1.5730940666593078,
+      "nearest_index": 298,
+      "state_index": 370
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0018488212359168976,
+      "fs_distance": 0.0003696865040472052,
+      "g": 1.5350690765857866,
+      "nearest_index": 238,
+      "state_index": 371
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0023596307918329895,
+      "fs_distance": 0.0004086411091757333,
+      "g": 1.6412630397634056,
+      "nearest_index": 306,
+      "state_index": 372
+    },
+    {
+      "class": 1,
+      "delta_g": 0.002273688844217414,
+      "fs_distance": 0.0007390721498388174,
+      "g": 1.2165894567602393,
+      "nearest_index": 296,
+      "state_index": 373
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0011441630508888245,
+      "fs_distance": 0.0003499900593273618,
+      "g": 1.2524930721349747,
+      "nearest_index": 295,
+      "state_index": 374
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0030108667112478393,
+      "fs_distance": 0.0005009617830631691,
+      "g": 1.6754406284264953,
+      "nearest_index": 365,
+      "state_index": 375
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0015482587712993823,
+      "fs_distance": 0.00023052532275178833,
+      "g": 1.7638011841161767,
+      "nearest_index": 229,
+      "state_index": 376
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00014454128467455973,
+      "fs_distance": 2.181434319869715e-05,
+      "g": 1.7533436470606345,
+      "nearest_index": 227,
+      "state_index": 377
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0010200057919811378,
+      "fs_distance": 0.00032396045570911935,
+      "g": 1.2297773958566354,
+      "nearest_index": 244,
+      "state_index": 378
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0011426975629547087,
+      "fs_distance": 0.0003622733238588162,
+      "g": 1.23092009341959,
+      "nearest_index": 378,
+      "state_index": 379
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0019933132148346466,
+      "fs_distance": 0.00031269103975762263,
+      "g": 1.7223747558719862,
+      "nearest_index": 384,
+      "state_index": 380
+    },
+    {
+      "class": 1,
+      "delta_g": 0.002649849854643449,
+      "fs_distance": 0.0004483568915806833,
+      "g": 1.6593317590597794,
+      "nearest_index": 385,
+      "state_index": 381
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0008122926185882839,
+      "fs_distance": 0.0002498564170346953,
+      "g": 1.2489616148936855,
+      "nearest_index": 308,
+      "state_index": 382
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0012030128756734815,
+      "fs_distance": 0.00022732668784810958,
+      "g": 1.5764685215437728,
+      "nearest_index": 274,
+      "state_index": 383
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0019933132148346466,
+      "fs_distance": 0.00031269103975762263,
+      "g": 1.7203814426571515,
+      "nearest_index": 380,
+      "state_index": 384
+    },
+    {
+      "class": 1,
+      "delta_g": 0.002649849854643449,
+      "fs_distance": 0.0004483568915806833,
+      "g": 1.6619816089144228,
+      "nearest_index": 381,
+      "state_index": 385
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009307842485712925,
+      "fs_distance": 0.00014278316461392016,
+      "g": 1.7392880755425097,
+      "nearest_index": 391,
+      "state_index": 386
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00044746237536807953,
+      "fs_distance": 0.00014753724819806352,
+      "g": 1.207239149850696,
+      "nearest_index": 394,
+      "state_index": 387
+    },
+    {
+      "class": 1,
+      "delta_g": 9.993441831301908e-05,
+      "fs_distance": 1.706914193258844e-05,
+      "g": 1.6531945777833195,
+      "nearest_index": 339,
+      "state_index": 388
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0003737476205429857,
+      "fs_distance": 6.37730634683925e-05,
+      "g": 1.6542230989681004,
+      "nearest_index": 224,
+      "state_index": 389
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0014161574448778858,
+      "fs_distance": 0.000210158550396378,
+      "g": 1.7680644324173382,
+      "nearest_index": 359,
+      "state_index": 390
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009307842485712925,
+      "fs_distance": 0.00014278316461392016,
+      "g": 1.740218859791081,
+      "nearest_index": 386,
+      "state_index": 391
+    },
+    {
+      "class": 1,
+      "delta_g": 0.004699262341278487,
+      "fs_distance": 0.000785694263881597,
+      "g": 1.667730499373969,
+      "nearest_index": 365,
+      "state_index": 392
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0009831711744932026,
+      "fs_distance": 0.00016956865363021664,
+      "g": 1.645150421833836,
+      "nearest_index": 209,
+      "state_index": 393
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00044746237536807953,
+      "fs_distance": 0.00014753724819806352,
+      "g": 1.206791687475328,
+      "nearest_index": 387,
+      "state_index": 394
+    },
+    {
+      "class": 1,
+      "delta_g": 0.002757719743330167,
+      "fs_distance": 0.0007839830060703708,
+      "g": 1.2984036379168669,
+      "nearest_index": 257,
+      "state_index": 395
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0018108670167955587,
+      "fs_distance": 0.00045345779252297383,
+      "g": 1.3792948578934643,
+      "nearest_index": 335,
+      "state_index": 396
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0006755858827047767,
+      "fs_distance": 0.00012661685379372663,
+      "g": 1.5823608303905417,
+      "nearest_index": 232,
+      "state_index": 397
+    },
+    {
+      "class": 1,
+      "delta_g": 0.0011426792658935092,
+      "fs_distance": 0.00037625730966621407,
+      "g": 1.2083818291165895,
+      "nearest_index": 387,
+      "state_index": 398
+    },
+    {
+      "class": 1,
+      "delta_g": 0.00047083754725418814,
+      "fs_distance": 0.00010889852511211603,
+      "g": 1.4318424974933772,
+      "nearest_index": 267,
+      "state_index": 399
+    }
+  ],
+  "nn_fs_distribution": {
+    "count": 400,
+    "max": 0.009488680390689345,
+    "mean": 0.0008613580647097382,
+    "min": 0.0,
+    "p1": 5.6738194117259e-06,
+    "p25": 0.0001618589480263276,
+    "p5": 4.974687889128803e-05,
+    "p50": 0.00043335188046071806,
+    "p75": 0.0010909917685079163,
+    "p95": 0.0031678218665506324,
+    "p99": 0.004853925105341436
+  },
+  "numerical_fs_floor": {
+    "max": 2.1073424255447014e-08,
+    "median": 0.0,
+    "method": "deterministic ground-state regeneration at identical g using canonical TFIM eigensolver",
+    "sample_count": 400,
+    "upper_robust_bound": 2.1073424255447014e-08
+  },
+  "repeat_calibration": {
+    "epsilon_sep": 1.2991569026968808e-06,
+    "nn_fs_distribution": {
+      "count": 400,
+      "max": 0.009488680390689345,
+      "mean": 0.0008613580647097382,
+      "min": 0.0,
+      "p1": 5.6738194117259e-06,
+      "p25": 0.0001618589480263276,
+      "p5": 4.974687889128803e-05,
+      "p50": 0.00043335188046071806,
+      "p75": 0.0010909917685079163,
+      "p95": 0.0031678218665506324,
+      "p99": 0.004853925105341436
+    },
+    "numerical_fs_floor": {
+      "max": 2.1073424255447014e-08,
+      "median": 0.0,
+      "method": "deterministic ground-state regeneration at identical g using canonical TFIM eigensolver",
+      "sample_count": 400,
+      "upper_robust_bound": 2.1073424255447014e-08
+    }
+  },
+  "schema_version": 1,
+  "selection_rationale": "QCNN-independent numerical floor plus isolated near-zero NN population and local TFIM spacing",
+  "state_pool": {
+    "description": "predetermined same-seed random_split recovery candidate; no QCNN outputs",
+    "path": "results/tfim_manifold_augmentation/confirmatory_dataset_freeze_evidence_recovery_v1/candidates/random_split/states.npz",
+    "sha256": "02a4d4414437b310151f2e9f9cbabaf6161289715ee72a2d9e7f70062ec9c4c1",
+    "states": 400
+  }
+}

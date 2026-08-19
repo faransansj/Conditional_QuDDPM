@@ -1,0 +1,164 @@
+{
+  "assignment_attempts": 1,
+  "candidate_ordering": "per-class PCG64DXSM shuffle from retry seed",
+  "class_counts": {
+    "0": {
+      "test": 30,
+      "train": 140,
+      "val": 30
+    },
+    "1": {
+      "test": 30,
+      "train": 140,
+      "val": 30
+    }
+  },
+  "conflict_resolution": "first feasible preferred split with remaining class capacity",
+  "conflicts": 2,
+  "distribution": {
+    "blocked_g_like": false,
+    "diagnostics": {
+      "class_0.test": {
+        "count": 30,
+        "g_range": [
+          0.2180750376624424,
+          0.7905456589902042
+        ],
+        "ks_from_unconstrained": 0.03333333333333338,
+        "mean": 0.5305006955861944,
+        "quantiles": [
+          0.2180750376624424,
+          0.39998082564817994,
+          0.555401261665399,
+          0.6947609189254353,
+          0.7905456589902042
+        ],
+        "standardized_mean_shift": 0.05855501586874757,
+        "variance": 0.03296857198319142,
+        "variance_ratio": 0.9465464745886519
+      },
+      "class_0.train": {
+        "count": 140,
+        "g_range": [
+          0.2014406130255435,
+          0.79850464846175
+        ],
+        "ks_from_unconstrained": 0.0071428571428572285,
+        "mean": 0.5339806314440348,
+        "quantiles": [
+          0.2014406130255435,
+          0.36647079347835865,
+          0.5530129947932669,
+          0.6990582947891155,
+          0.79850464846175
+        ],
+        "standardized_mean_shift": 0.0077076485899179314,
+        "variance": 0.03303362022327147,
+        "variance_ratio": 1.0143382447387757
+      },
+      "class_0.val": {
+        "count": 30,
+        "g_range": [
+          0.2101593599268696,
+          0.7980541344844017
+        ],
+        "ks_from_unconstrained": 0.03333333333333344,
+        "mean": 0.47641858878848914,
+        "quantiles": [
+          0.2101593599268696,
+          0.26278751431585873,
+          0.5079856457063519,
+          0.6494265754888959,
+          0.7980541344844017
+        ],
+        "standardized_mean_shift": 0.0874359911999855,
+        "variance": 0.03787444761871135,
+        "variance_ratio": 0.9542768448977662
+      },
+      "class_1.test": {
+        "count": 30,
+        "g_range": [
+          1.207239149850696,
+          1.7925609311266544
+        ],
+        "ks_from_unconstrained": 0.0,
+        "mean": 1.512188570405036,
+        "quantiles": [
+          1.207239149850696,
+          1.3760686840943523,
+          1.4966655782466902,
+          1.6912949377176907,
+          1.7925609311266544
+        ],
+        "standardized_mean_shift": 0.0,
+        "variance": 0.03413096469605251,
+        "variance_ratio": 1.0
+      },
+      "class_1.train": {
+        "count": 140,
+        "g_range": [
+          1.2040601589139133,
+          1.7916817834880119
+        ],
+        "ks_from_unconstrained": 0.0,
+        "mean": 1.4841120709565112,
+        "quantiles": [
+          1.2040601589139133,
+          1.3393507888097227,
+          1.4635161760297453,
+          1.6329462646113975,
+          1.7916817834880119
+        ],
+        "standardized_mean_shift": 0.0,
+        "variance": 0.02903924420341094,
+        "variance_ratio": 1.0
+      },
+      "class_1.val": {
+        "count": 30,
+        "g_range": [
+          1.2128856597963067,
+          1.7638011841161767
+        ],
+        "ks_from_unconstrained": 0.0,
+        "mean": 1.5388667379894307,
+        "quantiles": [
+          1.2128856597963067,
+          1.4137638044058405,
+          1.5944319141287124,
+          1.6691552610513805,
+          1.7638011841161767
+        ],
+        "standardized_mean_shift": 0.0,
+        "variance": 0.028941555021357774,
+        "variance_ratio": 1.0
+      }
+    },
+    "thresholds": {
+      "max_ks": 0.2,
+      "max_standardized_mean_shift": 0.25,
+      "variance_ratio": [
+        0.5,
+        2.0
+      ]
+    },
+    "verdict": "PASS"
+  },
+  "epsilon_sep": 1.2991569026968808e-06,
+  "failure_condition": "no feasible assignment through maximum_retries",
+  "failure_rate": 0.0,
+  "maximum_retries": 32,
+  "minimum_cross_split_fs": 5.7281544422672924e-06,
+  "reassignment_rule": "none",
+  "reassignments": 0,
+  "restart_rule": "restart complete assignment deterministically after dead end",
+  "restarts": 0,
+  "retry_seed_derivation": "SeedSequence([split_seed, attempt])",
+  "split_preference_ordering": "original unconstrained split first, then PCG64DXSM permutation",
+  "split_seed": 15007963261698017722,
+  "split_seed_source": "named_seed(92001, dataset.split) inherited from Protocol v2 seed infrastructure",
+  "split_sizes": {
+    "test": 60,
+    "train": 280,
+    "val": 60
+  }
+}

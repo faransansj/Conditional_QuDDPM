@@ -1,0 +1,72 @@
+{
+  "calibration_pool": {
+    "reused": false,
+    "role": "calibration-only",
+    "sha256": "02a4d4414437b310151f2e9f9cbabaf6161289715ee72a2d9e7f70062ec9c4c1"
+  },
+  "freshness": {
+    "definition": "exact reuse only; projective proximity excluded",
+    "prior_corpora": {
+      "blocked_g": {
+        "artifact_hash_overlap": 0,
+        "exact_g_overlap": 0,
+        "pass": true,
+        "sample_id_overlap": 0,
+        "state_hash_overlap": 0
+      },
+      "random": {
+        "artifact_hash_overlap": 0,
+        "exact_g_overlap": 0,
+        "pass": true,
+        "sample_id_overlap": 0,
+        "state_hash_overlap": 0
+      }
+    },
+    "random_vs_blocked_g": {
+      "artifact_hash_equal": false,
+      "exact_g_overlap": 0,
+      "pass": true,
+      "sample_id_overlap": 0,
+      "state_hash_overlap": 0
+    },
+    "scanned_npz": [
+      "data/tfim_4q/states.npz",
+      "data/tfim_4q_blocked/states.npz",
+      "data/tfim_4q_random/states.npz",
+      "results/geometry_aware_augmentation/phase_b/qcnn_parameters.npz",
+      "results/geometry_aware_augmentation/phase_b/synthetic_states.npz",
+      "results/local_perturbation_augmentation/phase_c/synthetic_states.npz",
+      "results/physics_aware_augmentation/phase_a/synthetic_states.npz",
+      "results/quddpm_kernel_diagnostics/frozen/frozen_states.npz",
+      "results/quddpm_kernel_diagnostics/k2_realization/pairwise_cosine_matrix.npz",
+      "results/quddpm_kernel_diagnostics/k2_realization/per_realization_gradients.npz",
+      "results/quddpm_kernel_diagnostics/k3_conflict_reweighting/aggregate_gradients.npz",
+      "results/tfim_manifold_augmentation/confirmatory_dataset_freeze_evidence_recovery_v1/candidates/blocked_g/states.npz",
+      "results/tfim_manifold_augmentation/confirmatory_dataset_freeze_evidence_recovery_v1/candidates/random_split/states.npz",
+      "results/tfim_manifold_augmentation/confirmatory_dataset_freeze_evidence_recovery_v1/projective_pair_states.npz",
+      "results/tfim_manifold_augmentation/pilot_v1/synthetic_states.npz"
+    ],
+    "valid": true
+  },
+  "generator_commit": "c86b3ebbd878902db2d8153190d8aa8ce71aa0c5",
+  "generator_source_path": "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze_v2_2.py",
+  "generator_source_sha256": "7fb9403a0b59bdb8348905defb7828a48dce816c9b2ed47f08f03eff2b34ef78",
+  "generator_validation_replay": "same frozen seeds; arrays exact; metadata/validation hardened before freeze",
+  "independent_review_reference": "reviewer run 6b2e665b-4ad8-4f96-99c3-709724161295",
+  "protocol_hash": "8af9bf4d0ab8320ec46f5983c2073ec4b85e1955916fd35b1f3a5e4f6fa33004",
+  "protocol_version": "2.2.0",
+  "qcnn_runs": 0,
+  "seed_manifest": {
+    "bit_generator": "PCG64DXSM",
+    "derivation": "SeedSequence([root_seed, uint32_le(SHA256('tfim-confirmatory-v2|root_seed|domain'))])",
+    "domains": {
+      "confirmatory.blocked_g.parameter_generation": 374512485654526267,
+      "confirmatory.blocked_g.replacement_sampling": 13777056988502427486,
+      "confirmatory.random.parameter_generation": 18216488271865553355,
+      "confirmatory.random.replacement_sampling": 1133755480393092915
+    },
+    "frozen_random_split_seed": 15007963261698017722,
+    "root_seed": 92001,
+    "schema_version": 1
+  }
+}

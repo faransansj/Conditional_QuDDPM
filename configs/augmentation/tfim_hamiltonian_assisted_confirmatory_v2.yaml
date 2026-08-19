@@ -1,0 +1,55 @@
+protocol:
+  name: tfim_hamiltonian_assisted_augmentation_confirmatory
+  version: 2.0.0
+  status: FROZEN
+  artifact: results/tfim_manifold_augmentation/confirmatory_protocol_v2/protocol_manifest.json
+  protocol_hash: 2e52ac26f626fb0703b06fc73e724820f23b4304ca51db8ca8c9cc0e07b959aa
+training:
+  optimizer: SPSA
+  parameter_updates: 300
+  early_stopping: false
+  validation_use: record_only
+  checkpoint_selection: final
+  evaluation_step: 300
+physics:
+  degeneracy_gap_tolerance: 1.0e-10
+  maximum_replacement_retries: 100
+  basis: 10x the existing 1e-11-scale eigensolver residual envelope; equals repository
+    numerical validation tolerance
+rng:
+  family: numpy.Generator
+  bit_generator: PCG64DXSM
+  named_domains:
+  - dataset.parameter_sampling
+  - dataset.replacement_sampling
+  - dataset.split
+  - subset_selection
+  - augmentation
+  - qcnn.initialization
+  - qcnn.spsa
+  - statistics
+state_identity:
+  state_phase_tolerance: 1.0e-12
+  hash: SHA-256
+  exact_duplicate: canonical_state_hash equality
+  near_duplicate: Fubini-Study/projective infidelity <= 1.0e-10
+statistics:
+  primary_metric: test_accuracy
+  estimand: augmentation_minus_real_only
+  primary_regime: blocked-g
+  random_split_role: supportive_only
+  aggregation: mean_paired_delta
+  confidence_interval: paired_bootstrap_95_percent
+  bootstrap_draws: 100000
+  minimum_effect: 0.02
+  failed_runs: no_retry_count_failed
+  nan: failed_run
+  outlier_removal: forbidden
+  decisions:
+  - PASS
+  - FAIL
+  - INCONCLUSIVE
+runtime:
+  dataset_generation_allowed: false
+  qcnn_execution_allowed: false
+  qcnn_metrics_allowed: false

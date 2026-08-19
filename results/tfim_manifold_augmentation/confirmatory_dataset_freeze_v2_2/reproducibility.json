@@ -1,0 +1,22 @@
+{
+  "isolated_temporary_regeneration": true,
+  "regimes": {
+    "blocked_g": {
+      "arrays_equal": true,
+      "manifest_equal": true,
+      "scientific_hash_primary": "cb0446120e7df9b0b6052f4575f6a1ff10742d8aaa49542054530ec6215e8867",
+      "scientific_hash_reproduction": "cb0446120e7df9b0b6052f4575f6a1ff10742d8aaa49542054530ec6215e8867",
+      "valid": true,
+      "validation_equal": true
+    },
+    "random": {
+      "arrays_equal": true,
+      "manifest_equal": true,
+      "scientific_hash_primary": "09fd5792318cd171a3c39316adff1dbce6c402c9bc0fa66bd2df639fab73cff7",
+      "scientific_hash_reproduction": "09fd5792318cd171a3c39316adff1dbce6c402c9bc0fa66bd2df639fab73cff7",
+      "valid": true,
+      "validation_equal": true
+    }
+  },
+  "valid": true
+}

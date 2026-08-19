@@ -1,0 +1,13 @@
+{
+  "provenance": "NEW_DECISION",
+  "qcnn_runs": 0,
+  "reason": "Ratios 1.0 and 2.0 achieved full anchor coverage; radii were equivalent on validity, duplication, displacement, and redraw gates; deterministic q50/1.0 tie-break applied.",
+  "selected": {
+    "radius": "q50",
+    "ratio": 1.0
+  },
+  "selection_rule_frozen_before_diagnostics": true,
+  "status": "CALIBRATION_PASS",
+  "test_metrics_accessed": false,
+  "tie_break_used": true
+}

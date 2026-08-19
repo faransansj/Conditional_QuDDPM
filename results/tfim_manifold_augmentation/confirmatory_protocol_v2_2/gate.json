@@ -1,0 +1,16 @@
+{
+  "dataset_freeze_ready": false,
+  "dataset_generation_performed": false,
+  "focused_tests_pass": true,
+  "full_suite_pass": true,
+  "generation_spec_complete": true,
+  "independent_review_pass": true,
+  "independent_review_reference": "reviewer run 10db354d-0ece-4e3d-ac68-52d9e8c351b6",
+  "parent_protocol_hash": "3a1c242f43b7b8366fdcf4cfc37de51edecee4e4f3979f3dc751b21beec2e28d",
+  "protocol_hash": "8af9bf4d0ab8320ec46f5983c2073ec4b85e1955916fd35b1f3a5e4f6fa33004",
+  "protocol_version": "2.2.0",
+  "qcnn_confirmatory_ready": false,
+  "qcnn_run_count": 0,
+  "schema_version": 1,
+  "status": "FROZEN"
+}

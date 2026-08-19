@@ -4,4 +4,8 @@ __pycache__/
 .venv/
 data/
 results/
+!results/
+results/*
+!results/tfim_manifold_augmentation/
+!results/tfim_manifold_augmentation/**
 *.egg-info/

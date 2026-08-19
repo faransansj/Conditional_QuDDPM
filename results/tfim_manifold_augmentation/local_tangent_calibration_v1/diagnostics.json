@@ -1,0 +1,3156 @@
+{
+  "aggregate": [
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 60,
+      "anchor_coverage_min": 0.5,
+      "cells": 12,
+      "displacement_error_max": 4.210694293238504e-14,
+      "failed_redraws": 0,
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 60,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 120,
+      "anchor_coverage_min": 1.0,
+      "cells": 12,
+      "displacement_error_max": 4.210694293238504e-14,
+      "failed_redraws": 0,
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 120,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 240,
+      "anchor_coverage_min": 1.0,
+      "cells": 12,
+      "displacement_error_max": 4.210694293238504e-14,
+      "failed_redraws": 0,
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 240,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 60,
+      "anchor_coverage_min": 0.5,
+      "cells": 12,
+      "displacement_error_max": 1.4779844015322396e-14,
+      "failed_redraws": 0,
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 60,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 120,
+      "anchor_coverage_min": 1.0,
+      "cells": 12,
+      "displacement_error_max": 1.4779844015322396e-14,
+      "failed_redraws": 0,
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 120,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 240,
+      "anchor_coverage_min": 1.0,
+      "cells": 12,
+      "displacement_error_max": 1.4779844015322396e-14,
+      "failed_redraws": 0,
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 240,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 60,
+      "anchor_coverage_min": 0.5,
+      "cells": 12,
+      "displacement_error_max": 9.395262345890387e-15,
+      "failed_redraws": 0,
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 60,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 120,
+      "anchor_coverage_min": 1.0,
+      "cells": 12,
+      "displacement_error_max": 9.395262345890387e-15,
+      "failed_redraws": 0,
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 120,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    },
+    {
+      "acceptance_rate_min": 1.0,
+      "accepted": 240,
+      "anchor_coverage_min": 1.0,
+      "cells": 12,
+      "displacement_error_max": 9.395262345890387e-15,
+      "failed_redraws": 0,
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 240,
+      "source_near_duplicate_rate_max": 0.0,
+      "synthetic_pair_near_duplicate_rate_max": 0.0,
+      "valid_cells": 12
+    }
+  ],
+  "cells": [
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.07117419695801637,
+        "median": 0.0711741969580148,
+        "min": 0.0711741969580148
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.5681900222830336e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.07117419695801792,
+        "median": 0.0711741969580148,
+        "min": 0.07117419695800856
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 7.813194535799539e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.07117419695801792,
+        "median": 0.0711741969580148,
+        "min": 0.07117419695800856
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 7.813194535799539e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.07117419695801792,
+        "median": 0.0711741969580148,
+        "min": 0.07117419695801325
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 3.1225022567582528e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.07117419695801792,
+        "median": 0.0711741969580148,
+        "min": 0.07117419695801168
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 4.690692279041286e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.07117419695801792,
+        "median": 0.0711741969580148,
+        "min": 0.07117419695800856
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 7.813194535799539e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.07117419695801637,
+        "median": 0.0711741969580148,
+        "min": 0.07117419695801325
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 3.1225022567582528e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.07117419695802105,
+        "median": 0.0711741969580148,
+        "min": 0.071174196958007
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 9.367506770274758e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.07117419695802105,
+        "median": 0.0711741969580148,
+        "min": 0.071174196958007
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 9.367506770274758e-15,
+        "median": 1.5681900222830336e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.07117419695801637,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665465,
+        "median": 0.1962325790766541,
+        "min": 0.1962325790766535
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1379786002407855e-15,
+        "median": 5.551115123125783e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665523,
+        "median": 0.1962325790766541,
+        "min": 0.19623257907665237
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.275957200481571e-15,
+        "median": 5.551115123125783e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665523,
+        "median": 0.1962325790766541,
+        "min": 0.19623257907665237
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.275957200481571e-15,
+        "median": 5.551115123125783e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665523,
+        "median": 0.1962325790766535,
+        "min": 0.19623257907665295
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.6930901125533637e-15,
+        "median": 1.1379786002407855e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665578,
+        "median": 0.19623257907665437,
+        "min": 0.19623257907665295
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.6930901125533637e-15,
+        "median": 8.604228440844963e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665578,
+        "median": 0.19623257907665437,
+        "min": 0.19623257907665295
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.6930901125533637e-15,
+        "median": 8.604228440844963e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665578,
+        "median": 0.1962325790766541,
+        "min": 0.1962325790766535
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1379786002407855e-15,
+        "median": 1.1379786002407855e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665578,
+        "median": 0.1962325790766538,
+        "min": 0.19623257907665237
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.275957200481571e-15,
+        "median": 1.1379786002407855e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.19623257907665578,
+        "median": 0.1962325790766541,
+        "min": 0.19623257907665181
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.831068712794149e-15,
+        "median": 8.604228440844963e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.19623257907665465,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648423,
+        "median": 0.38872881867648423,
+        "min": 0.3887288186764837
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 5.551115123125783e-16,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648423,
+        "median": 0.38872881867648423,
+        "min": 0.3887288186764837
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 5.551115123125783e-16,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648457,
+        "median": 0.38872881867648423,
+        "min": 0.38872881867648307
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1657341758564144e-15,
+        "median": 1.3877787807814457e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648423,
+        "median": 0.38872881867648423,
+        "min": 0.3887288186764837
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 5.551115123125783e-16,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648423,
+        "median": 0.3887288186764841,
+        "min": 0.38872881867648307
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1657341758564144e-15,
+        "median": 1.3877787807814457e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648423,
+        "median": 0.38872881867648396,
+        "min": 0.38872881867648307
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1657341758564144e-15,
+        "median": 2.7755575615628914e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648423,
+        "median": 0.38872881867648423,
+        "min": 0.38872881867648307
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1657341758564144e-15,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648484,
+        "median": 0.38872881867648423,
+        "min": 0.38872881867648307
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1657341758564144e-15,
+        "median": 2.7755575615628914e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.38872881867648484,
+        "median": 0.3887288186764841,
+        "min": 0.3887288186764825
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.7208456881689926e-15,
+        "median": 4.163336342344337e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.38872881867648423,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.013183811733918778,
+        "median": 0.013183811733910358,
+        "min": 0.013183811733901936
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.526451270412622e-14,
+        "median": 1.684243022825882e-14,
+        "min": 8.422082475867398e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.01318381173393562,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733901936
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.526451270412622e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.01318381173393562,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733893516
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 3.368486045651764e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.0131838117339272,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733901936
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.526451270412622e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.0131838117339272,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733901936
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.526451270412622e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.01318381173393562,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733901936
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 2.526451270412622e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.0131838117339272,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733885093
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 4.210694293238504e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.01318381173393562,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733885093
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 4.210694293238504e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.01318381173393562,
+        "median": 0.013183811733918778,
+        "min": 0.013183811733885093
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 4.210694293238504e-14,
+        "median": 8.422082475867398e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.0131838117339272,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806133,
+        "median": 0.03755795022805542,
+        "min": 0.037557950228052465
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.867906409193438e-15,
+        "median": 5.9119376061289586e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806133,
+        "median": 0.03755795022805838,
+        "min": 0.037557950228046554
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.4779844015322396e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806133,
+        "median": 0.03755795022805838,
+        "min": 0.037557950228046554
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.4779844015322396e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.03755795022805838,
+        "median": 0.03755795022805838,
+        "min": 0.037557950228046554
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.4779844015322396e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 2.9559688030644793e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806429,
+        "median": 0.03755795022805838,
+        "min": 0.037557950228046554
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.4779844015322396e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806429,
+        "median": 0.03755795022805838,
+        "min": 0.037557950228046554
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.4779844015322396e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806429,
+        "median": 0.03755795022805838,
+        "min": 0.03755795022804951
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1823875212257917e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806429,
+        "median": 0.03755795022805838,
+        "min": 0.03755795022804951
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1823875212257917e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.03755795022806429,
+        "median": 0.03755795022805838,
+        "min": 0.03755795022804951
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 1.1823875212257917e-14,
+        "median": 2.9559688030644793e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.03755795022806133,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.049742717837597095,
+        "median": 0.04974271783759486,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 4.461708780212348e-15,
+        "min": 2.2273849431542203e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.049742717837601556,
+        "median": 0.04974271783759486,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 4.461708780212348e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.049742717837601556,
+        "median": 0.04974271783759598,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 3.3480163086352377e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.04974271783759932,
+        "median": 0.049742717837597095,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 2.2273849431542203e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.049742717837601556,
+        "median": 0.049742717837598205,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 2.230854390106174e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.04974271783760379,
+        "median": 0.049742717837597095,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 3.3480163086352377e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.049742717837601556,
+        "median": 0.04974271783759486,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 4.461708780212348e-15,
+        "min": 2.2273849431542203e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.049742717837601556,
+        "median": 0.04974271783759486,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 4.461708780212348e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.049742717837601556,
+        "median": 0.04974271783759486,
+        "min": 0.04974271783759039
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "random",
+      "displacement_error": {
+        "max": 8.930356454328603e-15,
+        "median": 4.461708780212348e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.04974271783759932,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880101,
+        "median": 0.06402352479879928,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 3.469446951953614e-15,
+        "min": 1.734723475976807e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880448,
+        "median": 0.06402352479880101,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 1.734723475976807e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880448,
+        "median": 0.06402352479880101,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 1.734723475976807e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880448,
+        "median": 0.06402352479880101,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 1.734723475976807e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880448,
+        "median": 0.06402352479880101,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880448,
+        "median": 0.06402352479880101,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880448,
+        "median": 0.06402352479880448,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 1.734723475976807e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880448,
+        "median": 0.06402352479880101,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.06402352479880795,
+        "median": 0.06402352479880101,
+        "min": 0.06402352479879754
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 5.204170427930421e-15,
+        "median": 1.734723475976807e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.06402352479880274,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497213,
+        "median": 0.1201965803349712,
+        "min": 0.12019658033497028
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.8457457784393227e-15,
+        "median": 9.298117831235686e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497306,
+        "median": 0.12019658033497166,
+        "min": 0.12019658033496843
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 3.70536934468646e-15,
+        "median": 9.298117831235686e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497306,
+        "median": 0.12019658033497213,
+        "min": 0.12019658033496843
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 3.70536934468646e-15,
+        "median": 9.298117831235686e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497213,
+        "median": 0.12019658033497213,
+        "min": 0.12019658033497028
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.8457457784393227e-15,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497213,
+        "median": 0.1201965803349712,
+        "min": 0.12019658033496936
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 2.7755575615628914e-15,
+        "median": 9.298117831235686e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497306,
+        "median": 0.12019658033497166,
+        "min": 0.12019658033496936
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 2.7755575615628914e-15,
+        "median": 9.298117831235686e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497398,
+        "median": 0.12019658033497213,
+        "min": 0.1201965803349712
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.8457457784393227e-15,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497398,
+        "median": 0.12019658033497213,
+        "min": 0.12019658033497028
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.8457457784393227e-15,
+        "median": 9.298117831235686e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.12019658033497398,
+        "median": 0.1201965803349712,
+        "min": 0.12019658033496936
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 2.7755575615628914e-15,
+        "median": 9.298117831235686e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.12019658033497213,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.1886592227205946,
+        "median": 0.188659222720594,
+        "min": 0.1886592227205934
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.1934897514720433e-15,
+        "median": 6.106226635438361e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.18865922272059577,
+        "median": 0.1886592227205943,
+        "min": 0.18865922272059282
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7763568394002505e-15,
+        "median": 8.881784197001252e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.18865922272059577,
+        "median": 0.1886592227205946,
+        "min": 0.1886592227205922
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 2.3869795029440866e-15,
+        "median": 5.967448757360216e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.18865922272059518,
+        "median": 0.1886592227205946,
+        "min": 0.1886592227205934
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.1934897514720433e-15,
+        "median": 5.828670879282072e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.18865922272059518,
+        "median": 0.188659222720594,
+        "min": 0.1886592227205934
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.1934897514720433e-15,
+        "median": 6.106226635438361e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.18865922272059577,
+        "median": 0.188659222720594,
+        "min": 0.18865922272059282
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7763568394002505e-15,
+        "median": 6.106226635438361e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.1886592227205946,
+        "median": 0.188659222720594,
+        "min": 0.18865922272059282
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7763568394002505e-15,
+        "median": 6.106226635438361e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.18865922272059518,
+        "median": 0.1886592227205943,
+        "min": 0.18865922272059282
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7763568394002505e-15,
+        "median": 5.967448757360216e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.18865922272059518,
+        "median": 0.188659222720594,
+        "min": 0.18865922272059282
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 0,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7763568394002505e-15,
+        "median": 6.106226635438361e-16,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.1886592227205946,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.01250883020501342,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.01250883020501342,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 8.874845303097345e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.012508830205022296,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 8.874845303097345e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.012508830205022296,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.012508830205022296,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 8.874845303097345e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.012508830205022296,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204977917
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 2.662800535624399e-14,
+        "median": 1.3313135316384006e-14,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.012508830205004545,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.01250883020501342,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.01250883020501342,
+        "median": 0.012508830205004545,
+        "min": 0.012508830204986793
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 1.7751425329670667e-14,
+        "median": 8.874845303097345e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q25",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.012508830205004545,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.025322005393639633,
+        "median": 0.025322005393635248,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.767292447586783e-15,
+        "median": 4.381911500317415e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.02532200539363306,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 4.381911500317415e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.025322005393635248,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 4.381911500317415e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.025322005393630866,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 8.767292447586783e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.025322005393635248,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 4.385380947269368e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.025322005393635248,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 4.385380947269368e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.025322005393635248,
+        "min": 0.025322005393635248
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.025322005393635248,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 2.192690473634684e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.02532200539364402,
+        "median": 0.025322005393635248,
+        "min": 0.02532200539362648
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 8.770761894538737e-15,
+        "median": 4.3836462237933915e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q50",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.025322005393635248,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.03545244215631642,
+        "min": 0.03545244215631016
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 9.395262345890387e-15,
+        "median": 3.1363800445660672e-15,
+        "min": 3.12944115066216e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.035452442156319555,
+        "min": 0.03545244215631016
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 9.395262345890387e-15,
+        "median": 3.1329105976141136e-15,
+        "min": 3.12944115066216e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.035452442156319555,
+        "min": 0.03545244215631016
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 9.395262345890387e-15,
+        "median": 3.12944115066216e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 0,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.035452442156319555,
+        "min": 0.03545244215631642
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 3.1363800445660672e-15,
+        "median": 3.12944115066216e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.035452442156319555,
+        "min": 0.03545244215631329
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 6.265821195228227e-15,
+        "median": 3.12944115066216e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.035452442156319555,
+        "min": 0.03545244215631329
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 6.265821195228227e-15,
+        "median": 3.12944115066216e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 1,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 5,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.03545244215631642,
+        "min": 0.03545244215631016
+      },
+      "anchor_coverage": 0.5,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 9.395262345890387e-15,
+        "median": 3.1363800445660672e-15,
+        "min": 3.12944115066216e-15
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 0.5,
+      "requested": 5,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 10,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.03545244215631642,
+        "min": 0.03545244215631016
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 9.395262345890387e-15,
+        "median": 3.1363800445660672e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 1.0,
+      "requested": 10,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    },
+    {
+      "acceptance_rate": 1.0,
+      "accepted": 20,
+      "actual_fs_displacement": {
+        "max": 0.035452442156322685,
+        "median": 0.03545244215631642,
+        "min": 0.03545244215631016
+      },
+      "anchor_coverage": 1.0,
+      "class_balance": "evaluated per class with equal requested count",
+      "class_label": 1,
+      "dataset": "blocked-g",
+      "displacement_error": {
+        "max": 9.395262345890387e-15,
+        "median": 3.1363800445660672e-15,
+        "min": 0.0
+      },
+      "failed_redraws": 0,
+      "numerical_physical_validity": "PASS",
+      "radius": "q75",
+      "ratio": 2.0,
+      "requested": 20,
+      "seed": 2,
+      "source_near_duplicate_rate": 0.0,
+      "synthetic_pair_near_duplicate_rate": 0.0,
+      "target_radius": 0.035452442156319555,
+      "unique": true
+    }
+  ]
+}

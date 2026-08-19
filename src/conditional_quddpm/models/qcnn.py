@@ -164,3 +164,36 @@ def train_qcnn_spsa(
         parameters = parameters - rate * gradient
 
     return QCNNTrainingResult(best_parameters, parameters.copy(), history, best_step, stopped_early)
+
+
+def train_confirmatory_qcnn_spsa(
+    train_states: np.ndarray, train_labels: np.ndarray,
+    val_states: np.ndarray, val_labels: np.ndarray, *,
+    init_seed: int, spsa_seed: int, learning_rate: float, perturbation: float,
+    parameter_updates: int = 300, early_stopping: bool = False,
+    checkpoint_selection: str = "final",
+) -> QCNNTrainingResult:
+    """Protocol-v2 trainer: exactly 300 updates; validation is record-only."""
+    if parameter_updates != 300 or early_stopping or checkpoint_selection != "final":
+        raise ValueError("confirmatory QCNN requires 300 updates, no early stopping, and final checkpoint")
+    init_rng = np.random.Generator(np.random.PCG64DXSM(init_seed))
+    spsa_rng = np.random.Generator(np.random.PCG64DXSM(spsa_seed))
+    parameters = init_rng.normal(0.0, 0.1, 42)
+    targets = 2 * train_labels.astype(float) - 1
+    history = []
+
+    def loss(candidate: np.ndarray) -> float:
+        return float(np.mean((predict_expectations(train_states, candidate) - targets) ** 2))
+
+    for step in range(301):
+        train_metrics = metrics(train_states, train_labels, parameters)
+        val_metrics = metrics(val_states, val_labels, parameters)
+        history.append({"step": step, "train_loss": train_metrics["loss"], "train_accuracy": train_metrics["accuracy"], "val_loss": val_metrics["loss"], "val_accuracy": val_metrics["accuracy"]})
+        if step == 300:
+            break
+        delta = spsa_rng.choice((-1.0, 1.0), size=parameters.shape)
+        scale = perturbation / (step + 1) ** 0.101
+        rate = learning_rate / (step + 1) ** 0.602
+        gradient = (loss(parameters + scale * delta) - loss(parameters - scale * delta)) / (2 * scale) * delta
+        parameters -= rate * gradient
+    return QCNNTrainingResult(parameters.copy(), parameters.copy(), history, 300, False)
