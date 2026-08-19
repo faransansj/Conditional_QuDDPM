@@ -1,0 +1,397 @@
+{
+  "analysis_class": "exploratory/post-hoc",
+  "augmentation_diagnostics_linkage": {
+    "acceptance_rate_min": 1.0,
+    "accepted": 120,
+    "anchor_coverage_min": 1.0,
+    "cells": 12,
+    "claim_boundary": "descriptive hypothesis only; no causal or significance claim",
+    "displacement_error_max": 1.4779844015322396e-14,
+    "duplicate_rate": 0.0,
+    "failed_redraws": 0,
+    "radius": "q50",
+    "ratio": 1.0,
+    "redraw_count": 0,
+    "requested": 120,
+    "source": "results/tfim_manifold_augmentation/local_tangent_calibration_v1/diagnostics.json",
+    "source_near_duplicate_rate_max": 0.0,
+    "synthetic_pair_near_duplicate_rate_max": 0.0,
+    "valid_cells": 12
+  },
+  "budget_level": {
+    "blocked_g/b10": {
+      "augmentation": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 3,
+      "paired_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real_only": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "standard_deviation": 0.0,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 3,
+        "win": 0
+      }
+    },
+    "blocked_g/b100": {
+      "augmentation": [
+        0.5833333333333334,
+        0.65,
+        0.6333333333333333
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.0,
+      "mean": -0.005555555555555573,
+      "min": -0.01666666666666672,
+      "n": 3,
+      "paired_deltas": [
+        0.0,
+        0.0,
+        -0.01666666666666672
+      ],
+      "real_only": [
+        0.5833333333333334,
+        0.65,
+        0.65
+      ],
+      "standard_deviation": 0.009622504486493792,
+      "win_tie_loss": {
+        "loss": 1,
+        "tie": 2,
+        "win": 0
+      }
+    },
+    "blocked_g/b25": {
+      "augmentation": [
+        0.6833333333333333,
+        0.65,
+        0.5833333333333334
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.01666666666666672,
+      "mean": -0.055555555555555504,
+      "min": -0.16666666666666663,
+      "n": 3,
+      "paired_deltas": [
+        -0.016666666666666607,
+        -0.16666666666666663,
+        0.01666666666666672
+      ],
+      "real_only": [
+        0.7,
+        0.8166666666666667,
+        0.5666666666666667
+      ],
+      "standard_deviation": 0.09765775461803859,
+      "win_tie_loss": {
+        "loss": 2,
+        "tie": 0,
+        "win": 1
+      }
+    },
+    "blocked_g/b50": {
+      "augmentation": [
+        0.75,
+        1.0,
+        0.7833333333333333
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.01666666666666672,
+      "mean": -0.011111111111111108,
+      "min": -0.033333333333333326,
+      "n": 3,
+      "paired_deltas": [
+        -0.01666666666666672,
+        0.01666666666666672,
+        -0.033333333333333326
+      ],
+      "real_only": [
+        0.7666666666666667,
+        0.9833333333333333,
+        0.8166666666666667
+      ],
+      "standard_deviation": 0.025458753860865806,
+      "win_tie_loss": {
+        "loss": 2,
+        "tie": 0,
+        "win": 1
+      }
+    },
+    "random/b10": {
+      "augmentation": [
+        0.9833333333333333,
+        1.0,
+        1.0
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 3,
+      "paired_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real_only": [
+        0.9833333333333333,
+        1.0,
+        1.0
+      ],
+      "standard_deviation": 0.0,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 3,
+        "win": 0
+      }
+    },
+    "random/b100": {
+      "augmentation": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 3,
+      "paired_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real_only": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "standard_deviation": 0.0,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 3,
+        "win": 0
+      }
+    },
+    "random/b25": {
+      "augmentation": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 3,
+      "paired_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real_only": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "standard_deviation": 0.0,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 3,
+        "win": 0
+      }
+    },
+    "random/b50": {
+      "augmentation": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "interpretation": "descriptive only; no test or cell-level verdict",
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "n": 3,
+      "paired_deltas": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real_only": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "standard_deviation": 0.0,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 3,
+        "win": 0
+      }
+    }
+  },
+  "confirmatory_evidence": false,
+  "historical_comparison": {
+    "allowed_interpretation": "FS-aware independence control \uc774\ud6c4 \uae30\uc874 exploratory improvement\uac00 blocked-g confirmatory setting\uc5d0\uc11c \uc7ac\ud604\ub418\uc9c0 \uc54a\uc558\ub2e4.",
+    "reason": "pilot/Phase-C protocol, dataset, split, seed and augmentation/QCNN settings do not all match Protocol v2.3",
+    "valid_for_direct_effect_comparison": false
+  },
+  "regime_comparison": {
+    "blocked_g_mean_delta": -0.018055555555555547,
+    "pairing": "descriptive only; cross-regime dataset identity is not guaranteed",
+    "random_mean_delta": 0.0
+  },
+  "regime_level": {
+    "blocked_g": {
+      "augmentation_mean_test_accuracy": 0.6930555555555555,
+      "max": 0.01666666666666672,
+      "mean": -0.018055555555555547,
+      "min": -0.16666666666666663,
+      "paired_deltas": [
+        0.0,
+        -0.016666666666666607,
+        -0.01666666666666672,
+        0.0,
+        0.0,
+        -0.16666666666666663,
+        0.01666666666666672,
+        0.0,
+        0.0,
+        0.01666666666666672,
+        -0.033333333333333326,
+        -0.01666666666666672
+      ],
+      "real_only_mean_test_accuracy": 0.7111111111111111,
+      "standard_deviation": 0.04895799752732459,
+      "win_tie_loss": {
+        "loss": 5,
+        "tie": 5,
+        "win": 2
+      }
+    },
+    "random": {
+      "augmentation_mean_test_accuracy": 0.9986111111111112,
+      "max": 0.0,
+      "mean": 0.0,
+      "min": 0.0,
+      "paired_deltas": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "real_only_mean_test_accuracy": 0.9986111111111112,
+      "standard_deviation": 0.0,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 12,
+        "win": 0
+      }
+    }
+  },
+  "repeat_sensitivity": {
+    "blocked_g_leave_one_repeat_out": {
+      "0": -0.022916666666666655,
+      "1": -0.008333333333333331,
+      "2": -0.022916666666666655
+    },
+    "blocked_g_sign_by_repeat_and_budget": {
+      "0": {
+        "10": 0,
+        "100": 0,
+        "25": -1,
+        "50": -1
+      },
+      "1": {
+        "10": 0,
+        "100": 0,
+        "25": -1,
+        "50": 1
+      },
+      "2": {
+        "10": 0,
+        "100": -1,
+        "25": 1,
+        "50": -1
+      }
+    },
+    "mean_effect_by_repeat": {
+      "0": {
+        "blocked_g": -0.008333333333333331,
+        "random": 0.0
+      },
+      "1": {
+        "blocked_g": -0.03749999999999998,
+        "random": 0.0
+      },
+      "2": {
+        "blocked_g": -0.008333333333333331,
+        "random": 0.0
+      }
+    },
+    "outlier_removal": "not performed"
+  },
+  "training_behavior": {
+    "convergence_traces": "not stored; not inferred",
+    "final_test_accuracy": {
+      "max": 1.0,
+      "mean": 0.8503472222222223,
+      "min": 0.5,
+      "standard_deviation": 0.18907794130490438,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 0,
+        "win": 48
+      }
+    },
+    "final_train_loss": {
+      "max": 0.49494490451764844,
+      "mean": 0.3661149884398229,
+      "min": 0.22863868754694178,
+      "standard_deviation": 0.06982601378892848,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 0,
+        "win": 48
+      }
+    },
+    "final_validation_loss": {
+      "max": 0.5620704478430631,
+      "mean": 0.4420964156651222,
+      "min": 0.3032038195558618,
+      "standard_deviation": 0.08170472376995613,
+      "win_tie_loss": {
+        "loss": 0,
+        "tie": 0,
+        "win": 48
+      }
+    },
+    "numerical_instability_detected": false,
+    "updates_completed": {
+      "maximum": 300,
+      "minimum": 300
+    }
+  }
+}

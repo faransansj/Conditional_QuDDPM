@@ -1,0 +1,9 @@
+{
+  "blocked_g_mean_paired_delta": -0.018055555555555547,
+  "completed_runs": 48,
+  "paired_bootstrap_95_ci": [
+    -0.0486111111111111,
+    0.0013888888888889024
+  ],
+  "verdict": "FAIL"
+}

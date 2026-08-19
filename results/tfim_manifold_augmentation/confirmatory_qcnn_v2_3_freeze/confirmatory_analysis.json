@@ -1,0 +1,35 @@
+{
+  "aggregation": "mean paired delta",
+  "analysis_class": "confirmatory",
+  "authoritative": true,
+  "blocked_g_mean_paired_delta": -0.018055555555555547,
+  "blocked_g_paired_deltas": [
+    0.0,
+    -0.016666666666666607,
+    -0.01666666666666672,
+    0.0,
+    0.0,
+    -0.16666666666666663,
+    0.01666666666666672,
+    0.0,
+    0.0,
+    0.01666666666666672,
+    -0.033333333333333326,
+    -0.01666666666666672
+  ],
+  "bootstrap_draws": 100000,
+  "completed_runs": 48,
+  "conclusion": "Frozen 4-qubit TFIM, QCNN, q50 local-random-tangent, ratio 1.0, Protocol v2.3 setting\uc5d0\uc11c blocked-g \uc131\ub2a5 \ud5a5\uc0c1 \uae30\uc900\uc740 \ucda9\uc871\ub418\uc9c0 \uc54a\uc558\ub2e4.",
+  "decision_rule_unchanged": true,
+  "estimand": "augmentation - real-only",
+  "execution_integrity": "PASS",
+  "failed_scientific_runs": 0,
+  "paired_bootstrap_95_ci": [
+    -0.0486111111111111,
+    0.0013888888888889024
+  ],
+  "primary_metric": "test_accuracy",
+  "primary_regime": "blocked-g",
+  "protocol_version": "2.3",
+  "verdict": "FAIL"
+}
