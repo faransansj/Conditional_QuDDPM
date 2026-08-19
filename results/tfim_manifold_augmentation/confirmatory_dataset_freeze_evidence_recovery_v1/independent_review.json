@@ -1,0 +1,23 @@
+{
+  "agreed_remediation_decision": "PROTOCOL_V2_REQUIRED",
+  "agreement": true,
+  "blocking_findings": [],
+  "findings": [
+    "Recovery semantic and serialized hashes match the immutable historical hashes.",
+    "All split and freshness pair exports reconcile with aggregate counts.",
+    "Independent projective metrics agree with production threshold classifications and show no boundary ambiguity.",
+    "blocked_g passes split validation and is correctly classified NO_GATE_FAILURE.",
+    "PROTOCOL_V2_REQUIRED is supported; V1 and QCNN remain blocked."
+  ],
+  "independent_review_pass": true,
+  "qualifications": [
+    "Historical v1 execution source remains unattested; byte/semantic replay attests the recovery, not historical source identity.",
+    "Projective near-neighbor exclusion is a diversity criterion and its v1 preregistration provenance remains unattested.",
+    "V2 criteria must be preregistered before a newly predeclared seed namespace is generated."
+  ],
+  "remaining_uncertainty": "Historical execution bytes and generation-time protocol attestation remain unavailable; this does not alter recovered pair identity.",
+  "review_input_sha256": "1be414db992cad3abf7dc1cf2cb44639d5a88e95aeecc37ce99015af443e279a",
+  "review_reference": "follow-up acceptance review for recovery run b352482e",
+  "reviewer": "parent-orchestrated independent reviewer",
+  "schema_version": 1
+}

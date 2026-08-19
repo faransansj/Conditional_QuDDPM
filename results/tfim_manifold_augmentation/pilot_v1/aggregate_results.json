@@ -1,0 +1,6 @@
+{
+  "blocking_reason": "QCNN prohibited in this scope: prior Phase A/B/C test metrics were observed; fresh frozen confirmatory datasets are not yet materialized",
+  "results": [],
+  "status": "NOT_RUN",
+  "test_split_used": false
+}

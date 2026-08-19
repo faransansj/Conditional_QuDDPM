@@ -1,0 +1,12 @@
+{
+  "classification_disagreement_count": 0,
+  "maximum_FS_distance_absolute_error": 1.8779755957009347e-09,
+  "maximum_fidelity_absolute_error": 1.1102230246251565e-15,
+  "maximum_infidelity_absolute_error": 1.1102230246270498e-15,
+  "maximum_phase_aligned_identity_error": 7.063012237916925e-16,
+  "method": "independent normalization + stable (1-c)(1+c) and atan2 metric",
+  "numerically_ambiguous_pair_count": 0,
+  "pair_count": 69,
+  "schema_version": 1,
+  "validator_implementation_defect": false
+}

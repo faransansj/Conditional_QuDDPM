@@ -1,0 +1,178 @@
+{
+  "arrays": {
+    "dataset_regimes": {
+      "dtype": "<U12",
+      "sha256": "32b0c2b6cb84a715bc194a02ac89995d90e9a6e7051a05bad9071982ce8022a8",
+      "shape": [
+        400
+      ]
+    },
+    "energies": {
+      "dtype": "float64",
+      "sha256": "28a558214437df979e281244110be5641482aa884ecb028e3398b1b7e3a5ac47",
+      "shape": [
+        400
+      ]
+    },
+    "g": {
+      "dtype": "float64",
+      "sha256": "8da0a90f44ed9578e4a3403b733447565f56ff7ee48006315ae0544077a8a844",
+      "shape": [
+        400
+      ]
+    },
+    "generation_seed_references": {
+      "dtype": "<U47",
+      "sha256": "06e5bb7beab5d82eb245d91f06e7b805726dcda52b1254ea7b0882f9adda85b6",
+      "shape": [
+        400
+      ]
+    },
+    "labels": {
+      "dtype": "int8",
+      "sha256": "ba61332658947bbe24a8fba1cd5387c166afc072748e4d9ef1b847f94cf60345",
+      "shape": [
+        400
+      ]
+    },
+    "magnetization_x": {
+      "dtype": "float64",
+      "sha256": "237d4acf89fa8ea50c73445ae468d3474d704175a68eb07727e75e90a7ca036d",
+      "shape": [
+        400
+      ]
+    },
+    "magnetization_z2": {
+      "dtype": "float64",
+      "sha256": "223e6a463efe8404db1d12801e80ea1b5c79a97a29021857fe58c2141ad35ef3",
+      "shape": [
+        400
+      ]
+    },
+    "parameter_ids": {
+      "dtype": "<U47",
+      "sha256": "f549ec4caf0c17b7ee1cea20f4b997dda4706898c59da2524cf1633da06f4414",
+      "shape": [
+        400
+      ]
+    },
+    "splits": {
+      "dtype": "<U5",
+      "sha256": "61ea6421132d4261b3fa793caf21904303688aa0ae761108c53ff8a0bf0b1db6",
+      "shape": [
+        400
+      ]
+    },
+    "states": {
+      "dtype": "complex128",
+      "sha256": "bde605902cf2db995dbe3a00e14f916f459beaacc252e5e642681181c045b5b5",
+      "shape": [
+        400,
+        16
+      ]
+    }
+  },
+  "dataset_regime": "random_split",
+  "generation_seed_reference": {
+    "dataset_seed": "fresh_confirmatory_datasets.random.dataset_seed",
+    "split_seed": "fresh_confirmatory_datasets.random.split_seed"
+  },
+  "promotion_status": "RECOVERY_EVIDENCE_ONLY_NOT_QCNN_INPUT",
+  "retained_after_failure": true,
+  "sample_count": 400,
+  "schema_version": 1,
+  "seed_material": {
+    "dataset_seed": 91001,
+    "split_seed": 92001
+  },
+  "semantic_dataset_hash": "ced581a4d29a410a90e8eb026f7b3406031d1cc11dc6f36042674228360908a6",
+  "serialized_states_sha256": "02a4d4414437b310151f2e9f9cbabaf6161289715ee72a2d9e7f70062ec9c4c1",
+  "validation": {
+    "counts": {
+      "per_class": {
+        "0": 200,
+        "1": 200
+      },
+      "per_class_per_split": {
+        "0": {
+          "test": 30,
+          "train": 140,
+          "val": 30
+        },
+        "1": {
+          "test": 30,
+          "train": 140,
+          "val": 30
+        }
+      },
+      "per_split": {
+        "test": 60,
+        "train": 280,
+        "val": 60
+      },
+      "total": 400
+    },
+    "dataset_regime": "random_split",
+    "labels": {
+      "boundary_ambiguous_sample_count": 0,
+      "label_mismatch_count": 0,
+      "per_class_g_range": {
+        "0": [
+          0.2014406130255435,
+          0.79850464846175
+        ],
+        "1": [
+          1.2040601589139133,
+          1.7925609311266544
+        ]
+      }
+    },
+    "numerics": {
+      "max_eigenpair_residual": 4.064083562510118e-15,
+      "max_global_phase_convention_error": 0.0,
+      "max_ground_energy_discrepancy": 1.2434497875801753e-14,
+      "max_hamiltonian_hermiticity_error": 0.0,
+      "max_mx_recomputation_error": 0.0,
+      "max_mz2_recomputation_error": 0.0,
+      "max_norm_error": 8.881784197001252e-16,
+      "mean_eigenpair_residual": 1.5072149700379844e-15,
+      "mean_norm_error": 1.4654943925052067e-16,
+      "tolerance": 1e-10
+    },
+    "physics_validation_pass": true,
+    "schema": {
+      "class_labels": [
+        0,
+        1
+      ],
+      "finite": true,
+      "g_dtype": "float64",
+      "label_dtype": "int8",
+      "split_names": [
+        "test",
+        "train",
+        "val"
+      ],
+      "state_dtype": "complex128",
+      "state_shape": [
+        400,
+        16
+      ],
+      "unique_sample_ids": 400
+    },
+    "split_leakage": {
+      "cross_split_duplicate_exact_g": 0,
+      "cross_split_duplicate_serialized_state_hashes": 0,
+      "cross_split_projective_duplicates": 2,
+      "duplicate_sample_ids": 0,
+      "global_minimum_cross_split_delta_g": 4.232886006150238e-07,
+      "min_delta_g_train_test": 2.5097300467180617e-05,
+      "min_delta_g_train_val": 4.232886006150238e-07,
+      "min_delta_g_val_test": 0.0003728965522165062,
+      "random_split_guard_gap_is_diagnostic_only": true
+    },
+    "split_validation_pass": false,
+    "structural_validation_pass": true,
+    "valid": false
+  }
+}

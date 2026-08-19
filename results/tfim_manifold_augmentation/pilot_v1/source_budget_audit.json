@@ -1,0 +1,352 @@
+{
+  "anchor_allocation": "exactly one physical and one matched-random synthetic state per selected anchor",
+  "augmentation_ratio": 1.0,
+  "budget_identity": true,
+  "counts": [
+    {
+      "class": 0,
+      "dataset": "random",
+      "expected_per_synthetic_arm": 10,
+      "expected_real": 10,
+      "physical": 10,
+      "random": 10,
+      "real": 10
+    },
+    {
+      "class": 1,
+      "dataset": "random",
+      "expected_per_synthetic_arm": 10,
+      "expected_real": 10,
+      "physical": 10,
+      "random": 10,
+      "real": 10
+    },
+    {
+      "class": 0,
+      "dataset": "blocked-g",
+      "expected_per_synthetic_arm": 10,
+      "expected_real": 10,
+      "physical": 10,
+      "random": 10,
+      "real": 10
+    },
+    {
+      "class": 1,
+      "dataset": "blocked-g",
+      "expected_per_synthetic_arm": 10,
+      "expected_real": 10,
+      "physical": 10,
+      "random": 10,
+      "real": 10
+    }
+  ],
+  "dataset_access_audit": {
+    "blocked-g": {
+      "checksums_verified": true,
+      "compressed_npz_full_members_materialized_for_indexing": [
+        "parameter_ids",
+        "labels",
+        "states"
+      ],
+      "dataset_container_opened": true,
+      "disclosure": "NPZ compression requires member materialization, but only manifest-designated train rows are selected or used scientifically.",
+      "scientific_generation_inputs": [
+        "dataset configuration",
+        "train row IDs",
+        "train labels",
+        "train states",
+        "train anchor g values"
+      ],
+      "split_manifest_contains_heldout_metadata": true,
+      "split_manifest_materialized": true,
+      "test_rows_selected": false,
+      "test_values_used": false,
+      "train_rows_selected": true,
+      "validation_rows_selected": false,
+      "validation_values_used": false
+    },
+    "random": {
+      "checksums_verified": true,
+      "compressed_npz_full_members_materialized_for_indexing": [
+        "parameter_ids",
+        "labels",
+        "states"
+      ],
+      "dataset_container_opened": true,
+      "disclosure": "NPZ compression requires member materialization, but only manifest-designated train rows are selected or used scientifically.",
+      "scientific_generation_inputs": [
+        "dataset configuration",
+        "train row IDs",
+        "train labels",
+        "train states",
+        "train anchor g values"
+      ],
+      "split_manifest_contains_heldout_metadata": true,
+      "split_manifest_materialized": true,
+      "test_rows_selected": false,
+      "test_values_used": false,
+      "train_rows_selected": true,
+      "validation_rows_selected": false,
+      "validation_values_used": false
+    }
+  },
+  "expected_arm_counts_passed": true,
+  "expected_total_states_per_synthetic_arm": 40,
+  "leakage_checks": [
+    {
+      "anchor_id": "class-0-00001",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00005",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00013",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00046",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00066",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00068",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00081",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00125",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00138",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00191",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00015",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00018",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00034",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00115",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00136",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00157",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00158",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00182",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00191",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00193",
+      "dataset": "random",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00001",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00004",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00011",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00030",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00043",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00045",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00052",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00086",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00093",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-0-00134",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00011",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00012",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00022",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00077",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00095",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00106",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00107",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00125",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00133",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    },
+    {
+      "anchor_id": "class-1-00135",
+      "dataset": "blocked-g",
+      "target_in_training_support": true,
+      "target_outside_blocked_val_test_support": true
+    }
+  ],
+  "real_source_states_per_class": 10,
+  "scientific_split_use": {
+    "test_rows_selected": false,
+    "test_values_used": false,
+    "train_rows_used": true,
+    "validation_rows_selected": false,
+    "validation_values_used": false
+  },
+  "source_subset_hashes": {
+    "blocked-g": "0abec3421bbe8c3847482e236d1441a0b40f1d9e00ce59230f6815242e619494",
+    "random": "7c2cfb3438a2a575ff3c7047b1beb2df5409064a48f8259fcd3782c4bc328826"
+  },
+  "subset_seed": 31415,
+  "synthetic_states_per_anchor": 1,
+  "synthetic_states_per_class_per_arm": 10
+}

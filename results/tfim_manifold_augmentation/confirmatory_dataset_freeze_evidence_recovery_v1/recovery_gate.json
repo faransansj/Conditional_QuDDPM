@@ -1,0 +1,27 @@
+{
+  "aggregate_failure_reproduced": true,
+  "blocking_reasons": [
+    "v1_failed_protocol_v2_required",
+    "qcnn_prohibited_for_v1"
+  ],
+  "candidate_retention_pass": true,
+  "final_metadata_replay_attested": true,
+  "freshness_pair_export_complete": true,
+  "frozen_seed_identity_pass": true,
+  "historical_execution_source_attested": false,
+  "historical_pair_evidence_recovered": true,
+  "independent_metric_validation_pass": true,
+  "independent_review_pass": true,
+  "pair_count_reconciliation_pass": true,
+  "protected_artifacts_unchanged": true,
+  "protocol_provenance_audit_complete": true,
+  "qcnn_execution_performed": false,
+  "qcnn_status": "BLOCKED",
+  "recovery_generation_source_attested": true,
+  "remediation_decision": "PROTOCOL_V2_REQUIRED",
+  "root_cause_resolved": true,
+  "schema_version": 1,
+  "semantic_reproduction_pass": true,
+  "source_attestation_complete": false,
+  "split_pair_export_complete": true
+}

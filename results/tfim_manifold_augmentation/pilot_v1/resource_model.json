@@ -1,0 +1,71 @@
+{
+  "dataset_access_and_scientific_use": {
+    "dataset_container_opened": true,
+    "details": {
+      "blocked-g": {
+        "checksums_verified": true,
+        "compressed_npz_full_members_materialized_for_indexing": [
+          "parameter_ids",
+          "labels",
+          "states"
+        ],
+        "dataset_container_opened": true,
+        "disclosure": "NPZ compression requires member materialization, but only manifest-designated train rows are selected or used scientifically.",
+        "scientific_generation_inputs": [
+          "dataset configuration",
+          "train row IDs",
+          "train labels",
+          "train states",
+          "train anchor g values"
+        ],
+        "split_manifest_contains_heldout_metadata": true,
+        "split_manifest_materialized": true,
+        "test_rows_selected": false,
+        "test_values_used": false,
+        "train_rows_selected": true,
+        "validation_rows_selected": false,
+        "validation_values_used": false
+      },
+      "random": {
+        "checksums_verified": true,
+        "compressed_npz_full_members_materialized_for_indexing": [
+          "parameter_ids",
+          "labels",
+          "states"
+        ],
+        "dataset_container_opened": true,
+        "disclosure": "NPZ compression requires member materialization, but only manifest-designated train rows are selected or used scientifically.",
+        "scientific_generation_inputs": [
+          "dataset configuration",
+          "train row IDs",
+          "train labels",
+          "train states",
+          "train anchor g values"
+        ],
+        "split_manifest_contains_heldout_metadata": true,
+        "split_manifest_materialized": true,
+        "test_rows_selected": false,
+        "test_values_used": false,
+        "train_rows_selected": true,
+        "validation_rows_selected": false,
+        "validation_values_used": false
+      }
+    },
+    "heldout_metadata_and_compressed_members_materialized": true,
+    "test_rows_selected": false,
+    "test_values_used": false,
+    "validation_rows_selected": false,
+    "validation_values_used": false
+  },
+  "decision": "RESOURCE_MODEL_A",
+  "endpoint_eigensolve_oracle_calls": 40,
+  "forbidden_claim": "strict fixed-dataset augmentation",
+  "ground_state_query_policy": "each new exact endpoint ground-state solve is allowed but counted as an oracle call",
+  "known_resource": "TFIM Hamiltonian family",
+  "method_naming": [
+    "Hamiltonian-assisted augmentation",
+    "physics-guided data expansion"
+  ],
+  "model_b_analysis": "Under RESOURCE_MODEL_B every endpoint eigensolve would consume the labeled-state budget; Candidate A would be disallowed and adiabatic/quasi-adiabatic quantum-in/quantum-out continuation would be required.",
+  "scarce_resource": "acquired/prepared quantum states"
+}

@@ -1,0 +1,722 @@
+{
+  "failed_pairs": [
+    {
+      "FS_per_delta_g": 0.6961004565201232,
+      "absolute_delta_g": 4.232886006150238e-07,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7985042251731493,
+      "g_b": 0.79850464846175,
+      "infidelity_per_delta_g_squared": 0.48455584556750986,
+      "pair_id": "random_split:tfim-confirmatory-v1-random_split-class-0-00046--tfim-confirmatory-v1-random_split-class-0-00069"
+    },
+    {
+      "FS_per_delta_g": 0.22823787162917855,
+      "absolute_delta_g": 2.5097300467180617e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4406610811816443,
+      "g_b": 1.4406861784821114,
+      "infidelity_per_delta_g_squared": 0.05209252604524764,
+      "pair_id": "random_split:tfim-confirmatory-v1-random_split-class-1-00247--tfim-confirmatory-v1-random_split-class-1-00336"
+    },
+    {
+      "FS_per_delta_g": 0.6982156591569251,
+      "absolute_delta_g": 1.2810541288654775e-05,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7984466570038677,
+      "g_b": 0.7984338464625791,
+      "infidelity_per_delta_g_squared": 0.4875051066789385,
+      "pair_id": "random_split_vs_legacy_tfim_4q:0000"
+    },
+    {
+      "FS_per_delta_g": 0.7593227633166098,
+      "absolute_delta_g": 3.059122230197886e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7513772531664689,
+      "g_b": 0.7513803122886991,
+      "infidelity_per_delta_g_squared": 0.576571058889735,
+      "pair_id": "random_split_vs_legacy_tfim_4q:0001"
+    },
+    {
+      "FS_per_delta_g": 0.2197158765969458,
+      "absolute_delta_g": 1.2951693381113571e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.466980790038257,
+      "g_b": 1.466993741731638,
+      "infidelity_per_delta_g_squared": 0.048275066428634,
+      "pair_id": "random_split_vs_legacy_tfim_4q:0002"
+    },
+    {
+      "FS_per_delta_g": 0.2539089965402966,
+      "absolute_delta_g": 1.8720514004755273e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.3692789933366052,
+      "g_b": 1.3692602728226004,
+      "infidelity_per_delta_g_squared": 0.06446977852361481,
+      "pair_id": "random_split_vs_legacy_tfim_4q:0003"
+    },
+    {
+      "FS_per_delta_g": 0.14404838707967296,
+      "absolute_delta_g": 5.713696373921273e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7925609311266544,
+      "g_b": 1.7925037941629152,
+      "infidelity_per_delta_g_squared": 0.02074993781978676,
+      "pair_id": "random_split_vs_legacy_tfim_4q:0004"
+    },
+    {
+      "FS_per_delta_g": 0.15949419131644357,
+      "absolute_delta_g": 3.837873876411102e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7078935197995333,
+      "g_b": 1.7078551410607692,
+      "infidelity_per_delta_g_squared": 0.02543839706336859,
+      "pair_id": "random_split_vs_legacy_tfim_4q:0005"
+    },
+    {
+      "FS_per_delta_g": 0.6982137213302662,
+      "absolute_delta_g": 1.2810541288543753e-05,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7984466570038677,
+      "g_b": 0.7984338464625792,
+      "infidelity_per_delta_g_squared": 0.4875024006408578,
+      "pair_id": "random_split_vs_legacy_random:0000"
+    },
+    {
+      "FS_per_delta_g": 0.7593383870534862,
+      "absolute_delta_g": 3.0591222303089083e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7513772531664689,
+      "g_b": 0.7513803122886992,
+      "infidelity_per_delta_g_squared": 0.5765947860519528,
+      "pair_id": "random_split_vs_legacy_random:0001"
+    },
+    {
+      "FS_per_delta_g": 0.730245733657311,
+      "absolute_delta_g": 9.876138601261353e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7735838694874018,
+      "g_b": 0.7735739933488005,
+      "infidelity_per_delta_g_squared": 0.5332588315154589,
+      "pair_id": "random_split_vs_legacy_random:0002"
+    },
+    {
+      "FS_per_delta_g": 0.2337562578311311,
+      "absolute_delta_g": 7.391854676797038e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4243527297229268,
+      "g_b": 1.42434533786825,
+      "infidelity_per_delta_g_squared": 0.054641988075159874,
+      "pair_id": "random_split_vs_legacy_random:0003"
+    },
+    {
+      "FS_per_delta_g": 0.2199255030762714,
+      "absolute_delta_g": 1.4930980537730676e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4663270513826216,
+      "g_b": 1.466312120402084,
+      "infidelity_per_delta_g_squared": 0.04836722690317723,
+      "pair_id": "random_split_vs_legacy_random:0004"
+    },
+    {
+      "FS_per_delta_g": 0.1862943244342557,
+      "absolute_delta_g": 7.58825197122448e-07,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.5816852445078369,
+      "g_b": 1.581686003333034,
+      "infidelity_per_delta_g_squared": 0.03470557531641549,
+      "pair_id": "random_split_vs_legacy_random:0005"
+    },
+    {
+      "FS_per_delta_g": 0.23782101820958534,
+      "absolute_delta_g": 2.4888177867943284e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.412742174426128,
+      "g_b": 1.41271728624826,
+      "infidelity_per_delta_g_squared": 0.05655883670158341,
+      "pair_id": "random_split_vs_legacy_random:0006"
+    },
+    {
+      "FS_per_delta_g": 0.15158767660120898,
+      "absolute_delta_g": 4.457225462806136e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7496238521014174,
+      "g_b": 1.7495792798467893,
+      "infidelity_per_delta_g_squared": 0.02297882369700305,
+      "pair_id": "random_split_vs_legacy_random:0007"
+    },
+    {
+      "FS_per_delta_g": 0.23136756369924116,
+      "absolute_delta_g": 1.5233586388108122e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.431371659946123,
+      "g_b": 1.431356426359735,
+      "infidelity_per_delta_g_squared": 0.05353094953190076,
+      "pair_id": "random_split_vs_legacy_random:0008"
+    },
+    {
+      "FS_per_delta_g": 0.33136903935280543,
+      "absolute_delta_g": 1.407721651092153e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.2040601589139133,
+      "g_b": 1.2040742361304242,
+      "infidelity_per_delta_g_squared": 0.10980544024080464,
+      "pair_id": "random_split_vs_legacy_random:0009"
+    },
+    {
+      "FS_per_delta_g": 0.26585942976728544,
+      "absolute_delta_g": 1.976616284471433e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.339444419137553,
+      "g_b": 1.3394641853003977,
+      "infidelity_per_delta_g_squared": 0.07068123639553557,
+      "pair_id": "random_split_vs_legacy_random:0010"
+    },
+    {
+      "FS_per_delta_g": 0.17693612834018513,
+      "absolute_delta_g": 2.9812010057916893e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.6257954779221655,
+      "g_b": 1.6258252899322234,
+      "infidelity_per_delta_g_squared": 0.03130639351172411,
+      "pair_id": "random_split_vs_legacy_random:0011"
+    },
+    {
+      "FS_per_delta_g": 0.25075385815420437,
+      "absolute_delta_g": 1.1396989781031763e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.3774839908766687,
+      "g_b": 1.3774725938868877,
+      "infidelity_per_delta_g_squared": 0.06287749737904769,
+      "pair_id": "random_split_vs_legacy_random:0012"
+    },
+    {
+      "FS_per_delta_g": 0.14851969032442544,
+      "absolute_delta_g": 1.9995888096424608e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7666482749724604,
+      "g_b": 1.7666682708605568,
+      "infidelity_per_delta_g_squared": 0.02205809841399839,
+      "pair_id": "random_split_vs_legacy_random:0013"
+    },
+    {
+      "FS_per_delta_g": 0.17236379286528586,
+      "absolute_delta_g": 2.1672693597762915e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.6461335930083292,
+      "g_b": 1.6461119203147314,
+      "infidelity_per_delta_g_squared": 0.02970927709076898,
+      "pair_id": "random_split_vs_legacy_blocked_g:0000"
+    },
+    {
+      "FS_per_delta_g": 0.1903932235782559,
+      "absolute_delta_g": 4.237277498231329e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.5702656430705462,
+      "g_b": 1.5702232702955639,
+      "infidelity_per_delta_g_squared": 0.036249579583733295,
+      "pair_id": "random_split_vs_legacy_blocked_g:0001"
+    },
+    {
+      "FS_per_delta_g": 0.26309736689712665,
+      "absolute_delta_g": 1.0142846709859654e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.346177087469609,
+      "g_b": 1.3461669446228992,
+      "infidelity_per_delta_g_squared": 0.06922022446803695,
+      "pair_id": "random_split_vs_legacy_blocked_g:0002"
+    },
+    {
+      "FS_per_delta_g": 0.2630994829345334,
+      "absolute_delta_g": 1.4995543976770165e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.346177087469609,
+      "g_b": 1.3461620919256323,
+      "infidelity_per_delta_g_squared": 0.06922133792005966,
+      "pair_id": "random_split_vs_legacy_blocked_g:0003"
+    },
+    {
+      "FS_per_delta_g": 0.15157497682607846,
+      "absolute_delta_g": 1.535161188614964e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7496238521014174,
+      "g_b": 1.7496392037133035,
+      "infidelity_per_delta_g_squared": 0.02297497359978475,
+      "pair_id": "random_split_vs_legacy_blocked_g:0004"
+    },
+    {
+      "FS_per_delta_g": 0.26626731537308845,
+      "absolute_delta_g": 2.859011161926439e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.3384634586249247,
+      "g_b": 1.338492048736544,
+      "infidelity_per_delta_g_squared": 0.07089828323462219,
+      "pair_id": "random_split_vs_legacy_blocked_g:0005"
+    },
+    {
+      "FS_per_delta_g": 0.2671535942458855,
+      "absolute_delta_g": 1.5071697259116945e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.336336590216925,
+      "g_b": 1.3363516619141842,
+      "infidelity_per_delta_g_squared": 0.0713710429181095,
+      "pair_id": "random_split_vs_legacy_blocked_g:0006"
+    },
+    {
+      "FS_per_delta_g": 0.15090990404717106,
+      "absolute_delta_g": 3.564111196663333e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7533436470606345,
+      "g_b": 1.7533080059486679,
+      "infidelity_per_delta_g_squared": 0.022773799139306772,
+      "pair_id": "random_split_vs_legacy_blocked_g:0007"
+    },
+    {
+      "FS_per_delta_g": 0.17058129208836154,
+      "absolute_delta_g": 9.09753034972205e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.6542230989681004,
+      "g_b": 1.6542140014377507,
+      "infidelity_per_delta_g_squared": 0.029097977210511553,
+      "pair_id": "random_split_vs_legacy_blocked_g:0008"
+    },
+    {
+      "FS_per_delta_g": 0.25075385815420437,
+      "absolute_delta_g": 1.1396989781031763e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.3774839908766687,
+      "g_b": 1.3774725938868877,
+      "infidelity_per_delta_g_squared": 0.06287749737904769,
+      "pair_id": "random_split_vs_phase_a:0000"
+    },
+    {
+      "FS_per_delta_g": 0.25075385815420437,
+      "absolute_delta_g": 1.1396989781031763e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.3774839908766687,
+      "g_b": 1.3774725938868877,
+      "infidelity_per_delta_g_squared": 0.06287749737904769,
+      "pair_id": "random_split_vs_phase_a:0001"
+    },
+    {
+      "FS_per_delta_g": 1.013097771076951,
+      "absolute_delta_g": 7.519704521230519e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.3350575942439695,
+      "g_b": 0.33506511394849076,
+      "infidelity_per_delta_g_squared": 1.0263670937412306,
+      "pair_id": "random_split_vs_new_blocked_g:0000"
+    },
+    {
+      "FS_per_delta_g": 0.22171533812209357,
+      "absolute_delta_g": 4.594822387238295e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4607053006768689,
+      "g_b": 1.4607007058544816,
+      "infidelity_per_delta_g_squared": 0.04915769115857729,
+      "pair_id": "random_split_vs_new_blocked_g:0001"
+    },
+    {
+      "FS_per_delta_g": 0.14980480730377818,
+      "absolute_delta_g": 1.3201127633255538e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7594198508152405,
+      "g_b": 1.7594330519428738,
+      "infidelity_per_delta_g_squared": 0.02244148029129285,
+      "pair_id": "random_split_vs_new_blocked_g:0002"
+    },
+    {
+      "FS_per_delta_g": 0.23727762982359374,
+      "absolute_delta_g": 5.197668806466993e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4142803475411054,
+      "g_b": 1.414285545209912,
+      "infidelity_per_delta_g_squared": 0.05630067361467384,
+      "pair_id": "random_split_vs_new_blocked_g:0003"
+    },
+    {
+      "FS_per_delta_g": 0.25864008380437453,
+      "absolute_delta_g": 3.3743319178825004e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.357224427111431,
+      "g_b": 1.35725817043061,
+      "infidelity_per_delta_g_squared": 0.06689469294863548,
+      "pair_id": "random_split_vs_new_blocked_g:0004"
+    },
+    {
+      "FS_per_delta_g": 0.14784333417842552,
+      "absolute_delta_g": 1.6314321260590958e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7680644324173382,
+      "g_b": 1.7680660638494643,
+      "infidelity_per_delta_g_squared": 0.02185765146099318,
+      "pair_id": "random_split_vs_new_blocked_g:0005"
+    },
+    {
+      "FS_per_delta_g": 1.0455252344299628,
+      "absolute_delta_g": 4.283243351943522e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.4607852286398115,
+      "g_b": 0.4607895118831634,
+      "infidelity_per_delta_g_squared": 1.0931230158225211,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0000"
+    },
+    {
+      "FS_per_delta_g": 0.7008410350983878,
+      "absolute_delta_g": 1.0944741265284108e-05,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7963732865670587,
+      "g_b": 0.796384231308324,
+      "infidelity_per_delta_g_squared": 0.49117815646814666,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0001"
+    },
+    {
+      "FS_per_delta_g": 0.19106021569655873,
+      "absolute_delta_g": 3.5493969941402526e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.5676557001945377,
+      "g_b": 1.5676202062245963,
+      "infidelity_per_delta_g_squared": 0.03650400602145596,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0002"
+    },
+    {
+      "FS_per_delta_g": 0.21199652528842558,
+      "absolute_delta_g": 4.34068030332746e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.492120449664502,
+      "g_b": 1.4921638564675352,
+      "infidelity_per_delta_g_squared": 0.04494252673309751,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0003"
+    },
+    {
+      "FS_per_delta_g": 0.2295663320561366,
+      "absolute_delta_g": 1.8523830568328847e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.43669403834818,
+      "g_b": 1.4367125621787484,
+      "infidelity_per_delta_g_squared": 0.05270070081339071,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0004"
+    },
+    {
+      "FS_per_delta_g": 0.16392421021502002,
+      "absolute_delta_g": 3.917644796547215e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.6857914019640166,
+      "g_b": 1.685830578411982,
+      "infidelity_per_delta_g_squared": 0.026871146694248664,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0005"
+    },
+    {
+      "FS_per_delta_g": 0.1493473603446663,
+      "absolute_delta_g": 5.8844019985571094e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7620545180797968,
+      "g_b": 1.7619956740598113,
+      "infidelity_per_delta_g_squared": 0.02230463404134539,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0006"
+    },
+    {
+      "FS_per_delta_g": 0.15369177839866596,
+      "absolute_delta_g": 1.0839880220103737e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7338762615316825,
+      "g_b": 1.7338751775436605,
+      "infidelity_per_delta_g_squared": 0.023621162747344424,
+      "pair_id": "blocked_g_vs_legacy_tfim_4q:0007"
+    },
+    {
+      "FS_per_delta_g": 0.9997159966732035,
+      "absolute_delta_g": 9.123538202593373e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.31604917104165986,
+      "g_b": 0.31605829457986245,
+      "infidelity_per_delta_g_squared": 0.999432073976582,
+      "pair_id": "blocked_g_vs_legacy_random:0000"
+    },
+    {
+      "FS_per_delta_g": 1.0455252344299628,
+      "absolute_delta_g": 4.283243351943522e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.4607852286398115,
+      "g_b": 0.4607895118831634,
+      "infidelity_per_delta_g_squared": 1.0931230158225211,
+      "pair_id": "blocked_g_vs_legacy_random:0001"
+    },
+    {
+      "FS_per_delta_g": 0.8481685728923518,
+      "absolute_delta_g": 2.145603974712529e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.6840555618369926,
+      "g_b": 0.6840577074409673,
+      "infidelity_per_delta_g_squared": 0.7193899280414545,
+      "pair_id": "blocked_g_vs_legacy_random:0002"
+    },
+    {
+      "FS_per_delta_g": 0.7008410350983878,
+      "absolute_delta_g": 1.0944741265284108e-05,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.7963732865670587,
+      "g_b": 0.796384231308324,
+      "infidelity_per_delta_g_squared": 0.49117815646814666,
+      "pair_id": "blocked_g_vs_legacy_random:0003"
+    },
+    {
+      "FS_per_delta_g": 0.2301807284107522,
+      "absolute_delta_g": 4.154024095570641e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4348562158258131,
+      "g_b": 1.4348977560667688,
+      "infidelity_per_delta_g_squared": 0.052983167730089764,
+      "pair_id": "blocked_g_vs_legacy_random:0004"
+    },
+    {
+      "FS_per_delta_g": 0.29482898246904093,
+      "absolute_delta_g": 2.4050633055328063e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.2744274505023323,
+      "g_b": 1.2744515011353876,
+      "infidelity_per_delta_g_squared": 0.08692412890227322,
+      "pair_id": "blocked_g_vs_legacy_random:0005"
+    },
+    {
+      "FS_per_delta_g": 0.22821262740094375,
+      "absolute_delta_g": 3.4601031538628035e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4407388941652346,
+      "g_b": 1.4407734951967732,
+      "infidelity_per_delta_g_squared": 0.05208100330415952,
+      "pair_id": "blocked_g_vs_legacy_random:0006"
+    },
+    {
+      "FS_per_delta_g": 1.0286697831257663,
+      "absolute_delta_g": 3.245381132166436e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.5059918688516301,
+      "g_b": 0.5059951142327622,
+      "infidelity_per_delta_g_squared": 1.0581615227120797,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0000"
+    },
+    {
+      "FS_per_delta_g": 0.9763039085686821,
+      "absolute_delta_g": 5.374597271678994e-07,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.28726712511368674,
+      "g_b": 0.2872676625734139,
+      "infidelity_per_delta_g_squared": 0.9531693218863981,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0001"
+    },
+    {
+      "FS_per_delta_g": 0.2031568041912504,
+      "absolute_delta_g": 4.594055460493962e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.5226525807539995,
+      "g_b": 1.5226066401993945,
+      "infidelity_per_delta_g_squared": 0.04127268708800367,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0002"
+    },
+    {
+      "FS_per_delta_g": 0.2992264859034209,
+      "absolute_delta_g": 3.1684023911182635e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.2654155044710733,
+      "g_b": 1.2654186728734644,
+      "infidelity_per_delta_g_squared": 0.08953648986608331,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0003"
+    },
+    {
+      "FS_per_delta_g": 0.20316798715580098,
+      "absolute_delta_g": 3.621339281778546e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.5225704268065767,
+      "g_b": 1.5226066401993945,
+      "infidelity_per_delta_g_squared": 0.04127723100419492,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0004"
+    },
+    {
+      "FS_per_delta_g": 0.16218348295335985,
+      "absolute_delta_g": 1.4546706298856904e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.6943570079169261,
+      "g_b": 1.6943424612106273,
+      "infidelity_per_delta_g_squared": 0.026303482142833966,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0005"
+    },
+    {
+      "FS_per_delta_g": 0.16789769661354972,
+      "absolute_delta_g": 3.497245689798589e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.6667381008972775,
+      "g_b": 1.6667730733541755,
+      "infidelity_per_delta_g_squared": 0.028189636527811614,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0006"
+    },
+    {
+      "FS_per_delta_g": 0.15181665938512892,
+      "absolute_delta_g": 1.262698547610519e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7484025266758392,
+      "g_b": 1.748389899690363,
+      "infidelity_per_delta_g_squared": 0.023048298066832024,
+      "pair_id": "blocked_g_vs_legacy_blocked_g:0007"
+    },
+    {
+      "FS_per_delta_g": 0.2685030280030748,
+      "absolute_delta_g": 1.3726776500577742e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.3331181721916663,
+      "g_b": 1.3331044454151657,
+      "infidelity_per_delta_g_squared": 0.07209387604649353,
+      "pair_id": "blocked_g_vs_pilot_v1:0000"
+    },
+    {
+      "FS_per_delta_g": 1.013097771076951,
+      "absolute_delta_g": 7.519704521230519e-06,
+      "class": 0,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 0.33506511394849076,
+      "g_b": 0.3350575942439695,
+      "infidelity_per_delta_g_squared": 1.0263670937412306,
+      "pair_id": "blocked_g_vs_new_random_split:0000"
+    },
+    {
+      "FS_per_delta_g": 0.25864008380437453,
+      "absolute_delta_g": 3.3743319178825004e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.35725817043061,
+      "g_b": 1.357224427111431,
+      "infidelity_per_delta_g_squared": 0.06689469294863548,
+      "pair_id": "blocked_g_vs_new_random_split:0001"
+    },
+    {
+      "FS_per_delta_g": 0.23727762982359374,
+      "absolute_delta_g": 5.197668806466993e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.414285545209912,
+      "g_b": 1.4142803475411054,
+      "infidelity_per_delta_g_squared": 0.05630067361467384,
+      "pair_id": "blocked_g_vs_new_random_split:0002"
+    },
+    {
+      "FS_per_delta_g": 0.22171533812209357,
+      "absolute_delta_g": 4.594822387238295e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.4607007058544816,
+      "g_b": 1.4607053006768689,
+      "infidelity_per_delta_g_squared": 0.04915769115857729,
+      "pair_id": "blocked_g_vs_new_random_split:0003"
+    },
+    {
+      "FS_per_delta_g": 0.14980480730377818,
+      "absolute_delta_g": 1.3201127633255538e-05,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7594330519428738,
+      "g_b": 1.7594198508152405,
+      "infidelity_per_delta_g_squared": 0.02244148029129285,
+      "pair_id": "blocked_g_vs_new_random_split:0004"
+    },
+    {
+      "FS_per_delta_g": 0.14784333417842552,
+      "absolute_delta_g": 1.6314321260590958e-06,
+      "class": 1,
+      "critical_region_proximity": "not evaluated: repository class contract excludes [0.8,1.2] but defines no canonical critical point",
+      "g_a": 1.7680660638494643,
+      "g_b": 1.7680644324173382,
+      "infidelity_per_delta_g_squared": 0.02185765146099318,
+      "pair_id": "blocked_g_vs_new_random_split:0005"
+    }
+  ],
+  "interpretation_limit": "empirical existing-state diagnostic, not a derivative or fidelity-susceptibility estimator",
+  "schema_version": 1,
+  "split_FS_per_delta_g_distribution": {
+    "count": 2,
+    "maximum": 0.6961004565201232,
+    "median": 0.46216916407465086,
+    "minimum": 0.22823787162917855,
+    "p0.1": 0.2287057342140695,
+    "p1": 0.23291649747808799,
+    "p25": 0.3452035178519147,
+    "p5": 0.2516310008737258,
+    "p75": 0.579134810297387,
+    "p95": 0.6727073272755759,
+    "p99": 0.6914218306712138
+  },
+  "split_infidelity_per_delta_g_squared_distribution": {
+    "count": 2,
+    "maximum": 0.48455584556750986,
+    "median": 0.26832418580637873,
+    "minimum": 0.05209252604524764,
+    "p0.1": 0.0525249893647699,
+    "p1": 0.05641715924047026,
+    "p25": 0.1602083559258132,
+    "p5": 0.07371569202136075,
+    "p75": 0.3764400156869443,
+    "p95": 0.4629326795913967,
+    "p99": 0.4802312123722872
+  }
+}

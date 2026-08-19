@@ -1,0 +1,116 @@
+{
+  "artifact_hashes": {
+    "blocked_g": {
+      "checksums.json": "8073f56841ac7cf4d4f18ed3ff641832ebb9ff75c9c7459e0e49b05a9c99ad49",
+      "split_manifest.json": "4a8fbc51b6b2147eb531658186cb2f366bcf1a09347513dfab6da32b18b0765e",
+      "states.npz": "2ebe9e31c82473a5c3e12f7bdab623364b5faddbe3d05b68510aa919bcbca350",
+      "validation.json": "62017f28d02710952ce19d943e22c581feecf7c9ef6d53db9a9c9a69f23d51d8"
+    },
+    "random_split": {
+      "checksums.json": "3506d974de020170e15eaa063e1bb03643e0ed2d92e8d9de379c0fe2292fc602",
+      "split_manifest.json": "7baa318afe85fe39797dbcaefb24e1a92688f920f495223e2b709a58684bb01e",
+      "states.npz": "02a4d4414437b310151f2e9f9cbabaf6161289715ee72a2d9e7f70062ec9c4c1",
+      "validation.json": "90aed14494c9f8224622f3deda106e65c558189b4a1a90afb68b24fcafb4ff83"
+    }
+  },
+  "artifact_paths": {
+    "blocked_g": null,
+    "random_split": null
+  },
+  "augmentation_arm": null,
+  "canonical_generator": "conditional_quddpm.datasets.tfim.generate_dataset",
+  "class_contract": {
+    "0": {
+      "g_range": [
+        0.2,
+        0.8
+      ],
+      "name": "ferromagnetic finite-size label"
+    },
+    "1": {
+      "g_range": [
+        1.2,
+        1.8
+      ],
+      "name": "paramagnetic finite-size label"
+    }
+  },
+  "dataset_ids": {
+    "blocked_g": "tfim_4q_confirmatory_blocked_g_v1",
+    "random_split": "tfim_4q_confirmatory_random_split_v1"
+  },
+  "dataset_regimes": [
+    "random_split",
+    "blocked_g"
+  ],
+  "execution_environment": {
+    "branch": "research/tfim-local-perturbation",
+    "current_test_command": ".venv/bin/python -m pytest -q",
+    "dependency_lock": "uv.lock",
+    "dependency_lock_sha256": "44b643f52e40d5b2cd58bef06420f410aa0056020621f8f430cf985f212f6f86",
+    "generation_head": "c86b3ebbd878902db2d8153190d8aa8ce71aa0c5",
+    "git_status_short": [
+      "M .gitignore",
+      "?? configs/augmentation/tfim_manifold_confirmatory.yaml",
+      "?? configs/augmentation/tfim_manifold_confirmatory_dataset_freeze.yaml",
+      "?? results/tfim_manifold_augmentation/",
+      "?? src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze.py",
+      "?? src/conditional_quddpm/experiments/tfim_manifold_confirmatory.py",
+      "?? tests/test_tfim_confirmatory_dataset_freeze.py",
+      "?? tests/test_tfim_manifold_confirmatory.py",
+      "?? tfim-confirmatory-freeze-10qg2218/",
+      "?? tfim-confirmatory-reproduction-2cjeuz8o/"
+    ],
+    "numpy_version": "2.5.2",
+    "python_version": "3.12.13",
+    "scipy_version": "1.18.0"
+  },
+  "g_dtype": "float64",
+  "hamiltonian_identifier": "H=-J sum_i Z_i Z_(i+1)-g sum_i X_i; open boundary",
+  "intended_artifact_paths": {
+    "blocked_g": "data/tfim_4q_confirmatory_blocked_g",
+    "random_split": "data/tfim_4q_confirmatory_random"
+  },
+  "label_dtype": "int8",
+  "promotion_status": "NOT_PROMOTED_VALIDATION_BLOCKED",
+  "protocol_version": "tfim-manifold-confirmatory-dataset-freeze-v1",
+  "repository_ground_truth": {
+    "J": 1.0,
+    "blocked_g": "predeclared intervals from ratios with 0.02 guard bands",
+    "boundary": "open",
+    "class_rule": "label 0 for g in [0.2,0.8], label 1 for g in [1.2,1.8]; [0.8,1.2] excluded",
+    "global_phase": "largest-magnitude amplitude rotated positive real",
+    "ground_state_solver": "scipy.linalg.eigh subset_by_index=[0,0]",
+    "hamiltonian": "H(g) = -J sum_{i=0}^{N-2} Z_i Z_{i+1} - g sum_{i=0}^{N-1} X_i",
+    "hilbert_dimension": 16,
+    "n_qubits": 4,
+    "random_split": "class-stratified seeded shuffle",
+    "sampling": "uniform within each configured class interval",
+    "validator_tolerance": 1e-10
+  },
+  "sample_counts": {
+    "blocked_g": 400,
+    "random_split": 400
+  },
+  "schema_version": 1,
+  "seed_manifest_hash": "3a502e1dd74468f8ccf242cb75c217036ff3fe256bcb2b9369d3cf8cf9a4da32",
+  "semantic_dataset_hashes": {
+    "blocked_g": "79102c54e69109a6dcdd33146f5ed398933415cf1462ea256b45359d768dc2c3",
+    "random_split": "ced581a4d29a410a90e8eb026f7b3406031d1cc11dc6f36042674228360908a6"
+  },
+  "source_code_commit": "c86b3ebbd878902db2d8153190d8aa8ce71aa0c5",
+  "source_config_hash": "29f66f80e23385c9c5f5cd331e168e68f2b0a6f3548612a04eeca4080309eba1",
+  "source_config_path": "configs/augmentation/tfim_manifold_confirmatory_dataset_freeze.yaml",
+  "split_contract": {
+    "blocked_g": "predeclared ordered per-class intervals with 0.02 gaps",
+    "counts_per_class": {
+      "test": 30,
+      "train": 140,
+      "val": 30
+    },
+    "random_split": "class-stratified seeded shuffle after uniform per-class g sampling"
+  },
+  "staging_artifacts_discarded": true,
+  "state_dimension": 16,
+  "state_dtype": "complex128"
+}

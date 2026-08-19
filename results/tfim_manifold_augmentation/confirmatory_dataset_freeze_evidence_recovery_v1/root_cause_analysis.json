@@ -1,0 +1,40 @@
+{
+  "blocked_g split validation": {
+    "finding": "blocked_g satisfies the split contract; no failure classification applies",
+    "primary": "NO_GATE_FAILURE",
+    "secondary": [],
+    "status": "PASS"
+  },
+  "confidence": "high for recovered pair/metric facts and remediation; historical protocol/source attestation limitation explicitly retained",
+  "dataset_freeze_complete": {
+    "finding": "normal fail-closed consequence of random split validation failure",
+    "primary": "GENUINE_DATASET_FAILURE",
+    "secondary": []
+  },
+  "freshness validation": {
+    "primary": "GENUINE_PROJECTIVE_NEAR_NEIGHBOR",
+    "secondary": [
+      "PROTOCOL_PROVENANCE_UNATTESTED",
+      "PROTOCOL_CONTRADICTION"
+    ]
+  },
+  "independent_review_agreement": true,
+  "numerical_boundary_ambiguity_found": false,
+  "overall v1 status": {
+    "primary": "PROTOCOL_PROVENANCE_UNATTESTED",
+    "secondary": [
+      "GENUINE_PROJECTIVE_NEAR_NEIGHBOR",
+      "PROTOCOL_CONTRADICTION"
+    ]
+  },
+  "random_split split validation": {
+    "primary": "GENUINE_PROJECTIVE_NEAR_NEIGHBOR",
+    "secondary": [
+      "GENUINE_DATASET_FAILURE",
+      "PROTOCOL_CONTRADICTION"
+    ]
+  },
+  "root_cause_resolved": true,
+  "schema_version": 1,
+  "validator_defect_found": false
+}

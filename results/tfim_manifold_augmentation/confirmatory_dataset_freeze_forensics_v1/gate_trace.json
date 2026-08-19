@@ -1,0 +1,180 @@
+{
+  "gate_fields": {
+    "artifact_immutability_pass": {
+      "aggregation_rule": "audit valid AND current==before==after",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/artifact_immutability_audit.json",
+      "expected_value": true,
+      "failure_condition": "any configured file/path difference",
+      "input_evidence": [
+        "artifact_immutability_audit.json"
+      ],
+      "observed_value": true,
+      "source_function": "gate_status -> _verify_immutability_now/_current_immutability",
+      "sub_checks": {
+        "before_equals_after": true,
+        "configured_paths_unchanged": true
+      },
+      "threshold": "byte SHA-256 equality"
+    },
+    "dataset_freeze_complete": {
+      "aggregation_rule": "all(item[\"valid\"])",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/validation.json",
+      "expected_value": true,
+      "failure_condition": "any dataset invalid",
+      "input_evidence": [
+        "validation.json datasets[*].valid"
+      ],
+      "observed_value": false,
+      "source_function": "gate_status",
+      "sub_checks": {
+        "blocked_g.valid": true,
+        "random_split.valid": false
+      },
+      "threshold": "all dataset valid"
+    },
+    "freshness_validation_pass": {
+      "aggregation_rule": "AND over all new/reference and cross-regime comparison rows",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/freshness_audit.json",
+      "expected_value": true,
+      "failure_condition": "any overlap count nonzero",
+      "input_evidence": [
+        "freshness_audit.json"
+      ],
+      "observed_value": false,
+      "source_function": "gate_status -> freshness_audit",
+      "sub_checks": {
+        "blocked_g_vs_legacy_blocked_g": false,
+        "blocked_g_vs_legacy_random": false,
+        "blocked_g_vs_legacy_tfim_4q": false,
+        "blocked_g_vs_new_random_split": false,
+        "blocked_g_vs_phase_a": true,
+        "blocked_g_vs_phase_b": true,
+        "blocked_g_vs_phase_c": true,
+        "blocked_g_vs_pilot_v1": false,
+        "random_split_vs_legacy_blocked_g": false,
+        "random_split_vs_legacy_random": false,
+        "random_split_vs_legacy_tfim_4q": false,
+        "random_split_vs_new_blocked_g": false,
+        "random_split_vs_phase_a": false,
+        "random_split_vs_phase_b": true,
+        "random_split_vs_phase_c": true,
+        "random_split_vs_pilot_v1": true
+      },
+      "threshold": {
+        "ID/exact-g/canonical-hash/projective_duplicate_count": 0,
+        "projective_duplicate_infidelity": 1e-10
+      }
+    },
+    "independent_review_pass": {
+      "aggregation_rule": "caller-supplied boolean",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/qcnn_gate.json",
+      "expected_value": true,
+      "failure_condition": false,
+      "input_evidence": [
+        "qcnn_gate.json.review_reference"
+      ],
+      "observed_value": true,
+      "source_function": "gate_status/finalize_review argument",
+      "sub_checks": {
+        "review_reference": "pi-subagent reviewer run d100d7c1 (implementation acceptable; scientific duplicate/freshness blockers confirmed)"
+      },
+      "threshold": "review pass"
+    },
+    "qcnn_confirmatory_ready": {
+      "aggregation_rule": "not blockers; strict AND including checksum, seed, structural, physics, split, freshness, reproducibility, immutability, tests, review",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/qcnn_gate.json",
+      "expected_value": true,
+      "failure_condition": "any false or explicit blocking_reasons appended by finalize_review",
+      "input_evidence": [
+        "all gate_status checks"
+      ],
+      "observed_value": false,
+      "source_function": "gate_status",
+      "sub_checks": {
+        "artifact_immutability_pass": true,
+        "checksums_validation_pass": true,
+        "dataset_freeze_complete": false,
+        "freshness_validation_pass": false,
+        "independent_review_pass": true,
+        "physics_validation_pass": true,
+        "reproducibility_validation_pass": true,
+        "seed_freeze_complete": true,
+        "split_validation_pass": false,
+        "structural_validation_pass": true,
+        "test_suite_pass": true
+      },
+      "threshold": "all true"
+    },
+    "reproducibility_validation_pass": {
+      "aggregation_rule": "all regimes semantic hash and arrays match (serialized match reported but not gate input)",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/reproducibility_audit.json",
+      "expected_value": true,
+      "failure_condition": "semantic or any array mismatch",
+      "input_evidence": [
+        "reproducibility_audit.json"
+      ],
+      "observed_value": true,
+      "source_function": "gate_status; produced in run_freeze",
+      "sub_checks": {
+        "all_arrays_match": true,
+        "semantic_hash_match": true,
+        "serialized_hashes_match": true
+      },
+      "threshold": "exact equality"
+    },
+    "split_validation_pass": {
+      "aggregation_rule": "all regime split_validation_pass",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/validation.json",
+      "expected_value": true,
+      "failure_condition": "exact-g/hash/projective count nonzero; additionally blocked_g gap+tolerance < 0.02",
+      "input_evidence": [
+        "validation.json"
+      ],
+      "observed_value": false,
+      "source_function": "gate_status -> validate_fresh_dataset -> _projective_duplicate_count/_pairwise_gap",
+      "sub_checks": {
+        "blocked_g": true,
+        "blocked_g.global_minimum_cross_split_delta_g": 0.022405635927595036,
+        "random_split": false,
+        "random_split.cross_split_projective_duplicates": 2
+      },
+      "threshold": {
+        "blocked_g_gap": 0.02,
+        "numerical_tolerance": 1e-10,
+        "projective_duplicate_infidelity": 1e-10
+      }
+    },
+    "test_suite_pass": {
+      "aggregation_rule": "caller-supplied boolean after tests",
+      "evidence_file": "/home/midori/Develop/Quantum_research/Conditional_QuDDPM/results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v1/qcnn_gate.json",
+      "expected_value": true,
+      "failure_condition": false,
+      "input_evidence": [
+        "qcnn_gate.json.test_evidence"
+      ],
+      "observed_value": true,
+      "source_function": "gate_status/finalize_review argument",
+      "sub_checks": {
+        "checksums": "PASS",
+        "focused": "10 passed",
+        "full": "96 passed in 86.46s",
+        "related": "47 passed"
+      },
+      "threshold": "focused, related, full, checksums PASS"
+    }
+  },
+  "implicit_conditions": [
+    "seed_freeze_complete",
+    "structural_validation_pass",
+    "physics_validation_pass",
+    "checksums_validation_pass"
+  ],
+  "schema_version": 1,
+  "source_attestation": "LIMITED: source_commit is recorded, but the relevant source/config/tests were untracked during generation; only config has a retained content hash. Function tracing uses current repository ground truth, not a cryptographically retained generation-time source hash.",
+  "source_commit": "c86b3ebbd878902db2d8153190d8aa8ce71aa0c5",
+  "source_files": [
+    "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze.py",
+    "configs/augmentation/tfim_manifold_confirmatory_dataset_freeze.yaml",
+    "tests/test_tfim_confirmatory_dataset_freeze.py"
+  ]
+}

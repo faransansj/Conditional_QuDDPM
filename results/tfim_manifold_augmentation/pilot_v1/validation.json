@@ -1,0 +1,52 @@
+{
+  "dataset_access_and_scientific_use": {
+    "dataset_container_opened": true,
+    "heldout_metadata_and_compressed_members_materialized": true,
+    "test_rows_selected": false,
+    "test_values_used": false,
+    "validation_rows_selected": false,
+    "validation_values_used": false
+  },
+  "endpoint_oracle_calls": 40,
+  "endpoint_oracle_count_passed": true,
+  "errors": [],
+  "expected_arm_counts_passed": true,
+  "expected_endpoint_oracle_calls": 40,
+  "gate_0_passed": true,
+  "ground_truth_audited": true,
+  "manifest_verification": {
+    "method": "recompute SHA-256 for every entry in manifest.sha256 using verify_manifest(output)",
+    "timing": "performed after manifest is written; manifest excludes itself to avoid recursion"
+  },
+  "pairwise_matching_passed": true,
+  "physical_generator_passed": true,
+  "projective_uniqueness_passed": true,
+  "qcnn_executed": false,
+  "random_control_passed": true,
+  "required_artifacts_declared": [
+    "research_direction_update.md",
+    "literature_grounding.md",
+    "resource_model.json",
+    "tfim_ground_truth.json",
+    "symmetry_diagnostic.json",
+    "augmentation_protocol.json",
+    "physical_generator_diagnostics.json",
+    "random_control_diagnostics.json",
+    "synthetic_states.npz",
+    "pairwise_distance_audit.json",
+    "source_budget_audit.json",
+    "seed_schedule.json",
+    "protocol_freeze.json",
+    "per_seed_results.json",
+    "aggregate_results.json",
+    "paired_comparisons.json",
+    "statistical_analysis.json",
+    "random_vs_blocked_analysis.json",
+    "validation.json",
+    "README.md"
+  ],
+  "source_budget_identity_passed": true,
+  "symmetry_diagnostic_complete": true,
+  "training_support_and_blocked_leakage_passed": true,
+  "valid": true
+}

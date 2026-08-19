@@ -1,0 +1,94 @@
+{
+  "failed_directed_comparisons": 10,
+  "failed_unordered_relationships": 9,
+  "freshness_directed_aggregate_count": 67,
+  "freshness_match": true,
+  "freshness_pair_export_count": 67,
+  "freshness_per_comparison": {
+    "blocked_g_vs_legacy_blocked_g": {
+      "pair_export_count": 8,
+      "pass": false,
+      "projective_duplicate_count": 8
+    },
+    "blocked_g_vs_legacy_random": {
+      "pair_export_count": 7,
+      "pass": false,
+      "projective_duplicate_count": 7
+    },
+    "blocked_g_vs_legacy_tfim_4q": {
+      "pair_export_count": 8,
+      "pass": false,
+      "projective_duplicate_count": 8
+    },
+    "blocked_g_vs_new_random_split": {
+      "pair_export_count": 6,
+      "pass": false,
+      "projective_duplicate_count": 6
+    },
+    "blocked_g_vs_phase_a": {
+      "pair_export_count": 0,
+      "pass": true,
+      "projective_duplicate_count": 0
+    },
+    "blocked_g_vs_phase_b": {
+      "pair_export_count": 0,
+      "pass": true,
+      "projective_duplicate_count": 0
+    },
+    "blocked_g_vs_phase_c": {
+      "pair_export_count": 0,
+      "pass": true,
+      "projective_duplicate_count": 0
+    },
+    "blocked_g_vs_pilot_v1": {
+      "pair_export_count": 1,
+      "pass": false,
+      "projective_duplicate_count": 1
+    },
+    "random_split_vs_legacy_blocked_g": {
+      "pair_export_count": 9,
+      "pass": false,
+      "projective_duplicate_count": 9
+    },
+    "random_split_vs_legacy_random": {
+      "pair_export_count": 14,
+      "pass": false,
+      "projective_duplicate_count": 14
+    },
+    "random_split_vs_legacy_tfim_4q": {
+      "pair_export_count": 6,
+      "pass": false,
+      "projective_duplicate_count": 6
+    },
+    "random_split_vs_new_blocked_g": {
+      "pair_export_count": 6,
+      "pass": false,
+      "projective_duplicate_count": 6
+    },
+    "random_split_vs_phase_a": {
+      "pair_export_count": 2,
+      "pass": false,
+      "projective_duplicate_count": 2
+    },
+    "random_split_vs_phase_b": {
+      "pair_export_count": 0,
+      "pass": true,
+      "projective_duplicate_count": 0
+    },
+    "random_split_vs_phase_c": {
+      "pair_export_count": 0,
+      "pass": true,
+      "projective_duplicate_count": 0
+    },
+    "random_split_vs_pilot_v1": {
+      "pair_export_count": 0,
+      "pass": true,
+      "projective_duplicate_count": 0
+    }
+  },
+  "schema_version": 1,
+  "split_aggregate_count": 2,
+  "split_match": true,
+  "split_pair_export_count": 2,
+  "unique_unordered_sample_pairs": 61
+}

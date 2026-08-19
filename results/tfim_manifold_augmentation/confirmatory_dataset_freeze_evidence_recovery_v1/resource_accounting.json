@@ -1,0 +1,11 @@
+{
+  "additional_diagnostic_eigensolve_calls": 0,
+  "base_dataset_recovery_eigensolve_calls": 800,
+  "pilot_accounting_modified": false,
+  "pilot_endpoint_eigensolve_calls": 40,
+  "qcnn_metrics_calculated": false,
+  "qcnn_runs": 0,
+  "schema_version": 1,
+  "seed_sweep_count": 0,
+  "validation_ground_energy_computations": 800
+}

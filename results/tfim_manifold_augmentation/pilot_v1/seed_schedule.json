@@ -1,0 +1,160 @@
+{
+  "fresh_confirmatory_datasets": {
+    "blocked-g": {
+      "J": 1.0,
+      "blocked_g_gap": 0.02,
+      "boundary": "open",
+      "dataset_seed": 91002,
+      "n_qubits": 4,
+      "numerical_tolerance": 1e-10,
+      "phase_regions": {
+        "ferromagnetic": [
+          0.2,
+          0.8
+        ],
+        "paramagnetic": [
+          1.2,
+          1.8
+        ]
+      },
+      "samples_per_class": 200,
+      "split_ratios": {
+        "test": 0.15,
+        "train": 0.7,
+        "val": 0.15
+      },
+      "split_seed": 92002,
+      "split_strategy": "blocked"
+    },
+    "random": {
+      "J": 1.0,
+      "boundary": "open",
+      "dataset_seed": 91001,
+      "n_qubits": 4,
+      "numerical_tolerance": 1e-10,
+      "phase_regions": {
+        "ferromagnetic": [
+          0.2,
+          0.8
+        ],
+        "paramagnetic": [
+          1.2,
+          1.8
+        ]
+      },
+      "samples_per_class": 200,
+      "split_ratios": {
+        "test": 0.15,
+        "train": 0.7,
+        "val": 0.15
+      },
+      "split_seed": 92001,
+      "split_strategy": "random"
+    }
+  },
+  "intermediate_rule": "seeds 100-109 may be reported as stability only; protocol cannot be changed before extending to all 20",
+  "paired_seeds": [
+    {
+      "init_seed": 11100,
+      "run_seed": 100,
+      "spsa_seed": 21100
+    },
+    {
+      "init_seed": 11101,
+      "run_seed": 101,
+      "spsa_seed": 21101
+    },
+    {
+      "init_seed": 11102,
+      "run_seed": 102,
+      "spsa_seed": 21102
+    },
+    {
+      "init_seed": 11103,
+      "run_seed": 103,
+      "spsa_seed": 21103
+    },
+    {
+      "init_seed": 11104,
+      "run_seed": 104,
+      "spsa_seed": 21104
+    },
+    {
+      "init_seed": 11105,
+      "run_seed": 105,
+      "spsa_seed": 21105
+    },
+    {
+      "init_seed": 11106,
+      "run_seed": 106,
+      "spsa_seed": 21106
+    },
+    {
+      "init_seed": 11107,
+      "run_seed": 107,
+      "spsa_seed": 21107
+    },
+    {
+      "init_seed": 11108,
+      "run_seed": 108,
+      "spsa_seed": 21108
+    },
+    {
+      "init_seed": 11109,
+      "run_seed": 109,
+      "spsa_seed": 21109
+    },
+    {
+      "init_seed": 11110,
+      "run_seed": 110,
+      "spsa_seed": 21110
+    },
+    {
+      "init_seed": 11111,
+      "run_seed": 111,
+      "spsa_seed": 21111
+    },
+    {
+      "init_seed": 11112,
+      "run_seed": 112,
+      "spsa_seed": 21112
+    },
+    {
+      "init_seed": 11113,
+      "run_seed": 113,
+      "spsa_seed": 21113
+    },
+    {
+      "init_seed": 11114,
+      "run_seed": 114,
+      "spsa_seed": 21114
+    },
+    {
+      "init_seed": 11115,
+      "run_seed": 115,
+      "spsa_seed": 21115
+    },
+    {
+      "init_seed": 11116,
+      "run_seed": 116,
+      "spsa_seed": 21116
+    },
+    {
+      "init_seed": 11117,
+      "run_seed": 117,
+      "spsa_seed": 21117
+    },
+    {
+      "init_seed": 11118,
+      "run_seed": 118,
+      "spsa_seed": 21118
+    },
+    {
+      "init_seed": 11119,
+      "run_seed": 119,
+      "spsa_seed": 21119
+    }
+  ],
+  "status": "FROZEN_FOR_FRESH_CONFIRMATORY_DATASETS",
+  "subset_seed": 31415
+}

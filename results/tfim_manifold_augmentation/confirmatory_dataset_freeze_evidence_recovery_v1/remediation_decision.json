@@ -1,0 +1,12 @@
+{
+  "candidate_reuse": false,
+  "independent_review_agreement": true,
+  "next_gate_transition": "none for v1; v2 must be preregistered before any newly predeclared seed namespace is generated",
+  "protocol_version_bump_required": true,
+  "qcnn_status": "BLOCKED",
+  "reason": "Independent review agrees that projective diversity was conflated with provenance freshness, random split has no structural guard gap, and comparator scope lacks historical preregistration attestation.",
+  "remediation_decision": "PROTOCOL_V2_REQUIRED",
+  "schema_version": 1,
+  "seed_maintained": true,
+  "v1_status": "FAILED_IMMUTABLE"
+}

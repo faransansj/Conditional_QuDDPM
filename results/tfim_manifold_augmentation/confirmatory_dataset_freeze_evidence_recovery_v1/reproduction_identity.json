@@ -1,0 +1,31 @@
+{
+  "blocked_g_gap_match": true,
+  "freshness_aggregate_match": true,
+  "historical_attribution_allowed": true,
+  "historical_source_identity": "UNATTESTED",
+  "limitation": "Historical execution bytes were not attested; identity is established against immutable semantic/serialized hashes and aggregate artifacts.",
+  "overall_identity_classification": "BYTE_EXACT_REPRODUCTION",
+  "regimes": {
+    "blocked_g": {
+      "aggregate_split_validation_match": true,
+      "config_identity_match": true,
+      "g_label_split_ID_order_and_canonical_states_match": true,
+      "identity_classification": "BYTE_EXACT_REPRODUCTION",
+      "sample_counts_match": true,
+      "seed_identity_match": true,
+      "semantic_dataset_hash_match": true,
+      "serialized_states_hash_match": true
+    },
+    "random_split": {
+      "aggregate_split_validation_match": true,
+      "config_identity_match": true,
+      "g_label_split_ID_order_and_canonical_states_match": true,
+      "identity_classification": "BYTE_EXACT_REPRODUCTION",
+      "sample_counts_match": true,
+      "seed_identity_match": true,
+      "semantic_dataset_hash_match": true,
+      "serialized_states_hash_match": true
+    }
+  },
+  "schema_version": 1
+}

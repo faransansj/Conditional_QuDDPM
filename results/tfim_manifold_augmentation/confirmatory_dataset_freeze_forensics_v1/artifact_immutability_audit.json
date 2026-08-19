@@ -1,0 +1,49 @@
+{
+  "after_tree_sha256": {
+    "freeze_v1": "332fda6d249c2d745b4140d33f033ca6c87ac5d468309e51924909671bf27f71",
+    "legacy_blocked_g": "55f19c39644b8375f8966beeb1e70c45bfb1fb483e0a5b4959eeb27b857cb7a5",
+    "legacy_random": "4848584ba0d722d1fbd3f7243ebca4fb4731a10782521ec82930ca67f3951689",
+    "legacy_tfim_4q": "8f265cc5bc28f5a4c43fdfd56c15d922cb26d16d42eef459f36c3d837752dbf2",
+    "phase_a": "48dc456d8248f499ad4d8da68ca3016bbbe0b7c6debd84ded18cb46d13ecb0f5",
+    "phase_b": "27fe68e54d0b1f3bc4c2c3482173b2a24efbcb17af679da6cf63a6ef499bbf47",
+    "phase_c": "38d3ec0eb16dba04feb746665785de26bfcb50252cc5a4d3250a7930ca3b9eaa",
+    "pilot_v1": "193da0d047562516d756ffe84e74ff3a4f194aa6b5f66fa322d2d15c4f126ed1"
+  },
+  "all_protected_artifacts_unchanged": true,
+  "before_tree_sha256": {
+    "freeze_v1": "332fda6d249c2d745b4140d33f033ca6c87ac5d468309e51924909671bf27f71",
+    "legacy_blocked_g": "55f19c39644b8375f8966beeb1e70c45bfb1fb483e0a5b4959eeb27b857cb7a5",
+    "legacy_random": "4848584ba0d722d1fbd3f7243ebca4fb4731a10782521ec82930ca67f3951689",
+    "legacy_tfim_4q": "8f265cc5bc28f5a4c43fdfd56c15d922cb26d16d42eef459f36c3d837752dbf2",
+    "phase_a": "48dc456d8248f499ad4d8da68ca3016bbbe0b7c6debd84ded18cb46d13ecb0f5",
+    "phase_b": "27fe68e54d0b1f3bc4c2c3482173b2a24efbcb17af679da6cf63a6ef499bbf47",
+    "phase_c": "38d3ec0eb16dba04feb746665785de26bfcb50252cc5a4d3250a7930ca3b9eaa",
+    "pilot_v1": "193da0d047562516d756ffe84e74ff3a4f194aa6b5f66fa322d2d15c4f126ed1"
+  },
+  "dataset_promotion_performed": false,
+  "dataset_regeneration_performed": false,
+  "hamiltonian_eigensolve_performed": false,
+  "modified_files": {
+    "freeze_v1": [],
+    "legacy_blocked_g": [],
+    "legacy_random": [],
+    "legacy_tfim_4q": [],
+    "phase_a": [],
+    "phase_b": [],
+    "phase_c": [],
+    "pilot_v1": []
+  },
+  "qcnn_execution_performed": false,
+  "schema_version": 1,
+  "source_config_test_modified_by_forensics": false,
+  "unchanged": {
+    "freeze_v1": true,
+    "legacy_blocked_g": true,
+    "legacy_random": true,
+    "legacy_tfim_4q": true,
+    "phase_a": true,
+    "phase_b": true,
+    "phase_c": true,
+    "pilot_v1": true
+  }
+}

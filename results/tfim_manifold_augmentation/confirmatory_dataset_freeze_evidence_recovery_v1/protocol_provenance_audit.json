@@ -1,0 +1,36 @@
+{
+  "clauses": {
+    "Phase corpus projective near-neighbor count must be zero": {
+      "classification": "IMPLEMENTATION_ONLY",
+      "evidence": "untracked freeze config/source"
+    },
+    "cross-split projective duplicate count must be zero": {
+      "classification": "IMPLEMENTATION_ONLY",
+      "evidence": "untracked validate_fresh_dataset implementation/test"
+    },
+    "directed comparator matrix": {
+      "classification": "IMPLEMENTATION_ONLY",
+      "evidence": "untracked freshness_audit source"
+    },
+    "fidelity threshold 1 - 1e-10": {
+      "classification": "PRESENT_BUT_NOT_TIME_ATTESTED",
+      "evidence": "pilot protocol/config contains threshold; freeze use and comparator scope are untracked"
+    },
+    "legacy corpus projective near-neighbor count must be zero": {
+      "classification": "IMPLEMENTATION_ONLY",
+      "evidence": "untracked freeze config/source"
+    },
+    "new random_split vs new blocked_g projective disjointness": {
+      "classification": "IMPLEMENTATION_ONLY",
+      "evidence": "untracked freshness_audit source"
+    },
+    "pilot corpus projective near-neighbor count must be zero": {
+      "classification": "IMPLEMENTATION_ONLY",
+      "evidence": "untracked freeze config/source"
+    }
+  },
+  "commit_history_finding": "Freeze source/config/tests and all freeze evidence are untracked at starting HEAD; no commit-level generation-time attestation was found.",
+  "current_prompt_used_as_preregistration_evidence": false,
+  "historical_source_identity": "UNATTESTED",
+  "schema_version": 1
+}

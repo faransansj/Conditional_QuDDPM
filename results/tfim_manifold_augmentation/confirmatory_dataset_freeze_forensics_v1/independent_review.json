@@ -1,0 +1,40 @@
+{
+  "agreement": "AGREE_WITH_QUALIFICATION",
+  "blocking_findings": [
+    "No blocker to QCNN BLOCKED or conservative INSUFFICIENT_EVIDENCE decision.",
+    "Pair-level/physical/protocol classification remains blocked by missing evidence."
+  ],
+  "checks": {
+    "blocked_g_gap_interpreted_correctly": true,
+    "exact_g_vs_projective_distinguished": true,
+    "existing_artifacts_not_modified_by_reviewer": true,
+    "failed_gates_evidence_linked": "partial: aggregate/code linked; pair-level and exact executed-source attestation absent",
+    "protocol_contradiction_not_overclaimed": true,
+    "qcnn_blocked": true,
+    "random_split_vs_distance_matched_random_distinguished": true,
+    "remediation_matches_evidence": true,
+    "sample_id_vs_physical_collision_distinguished": true,
+    "seed_change_not_proposed": true,
+    "self_comparison_distinguished": true,
+    "validator_bug_not_mislabeled": true
+  },
+  "decision_reviewed": "INSUFFICIENT_EVIDENCE",
+  "independent": true,
+  "qcnn_execution_performed": false,
+  "qcnn_status": "BLOCKED",
+  "remaining_concerns": [
+    "Exact pair IDs/classes/g/hashes/FS distances unavailable.",
+    "Pilot/phase corpora are aggregated.",
+    "Freshness criterion provenance and suitability remain unresolved.",
+    "Current validator source is not content-attested to generation because it was untracked."
+  ],
+  "resolved_findings": [
+    "Corrected failing directed-comparison count from 9 to 10 (9 unordered relationships).",
+    "Added generation-source attestation limitation.",
+    "Changed minimum evidence wording to alternative recovery paths.",
+    "Explicitly record random_split is a physical TFIM dataset regime, not distance_matched_random augmentation."
+  ],
+  "reviewer": "pi-subagent reviewer run aeb0add6",
+  "schema_version": 1,
+  "summary": "Aggregates establish validator/gate failure and continued QCNN block, but cannot identify pairs or distinguish seed-specific, unavoidable physical, or protocol-contradiction causes."
+}

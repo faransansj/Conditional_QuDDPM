@@ -1,0 +1,29 @@
+{
+  "confirmatory_necessity": "Not established by an attested preregistration record.",
+  "cross_regime_disjointness": "No repository-attested scientific necessity found for complete projective disjointness between separately evaluated regimes.",
+  "exact_state_freshness": {
+    "canonical_hash_overlap_count": 0,
+    "exact_projective_duplicate_count": 0,
+    "sample_ID_overlap_count": 0
+  },
+  "legacy_near_neighbor_interpretation": "Near-neighbor alone does not imply reuse when IDs, exact g, and canonical hashes are disjoint.",
+  "parameter_space_freshness": {
+    "exact_g_disjoint": true,
+    "guard_gap": {
+      "blocked_g": 0.02,
+      "random_split": null
+    }
+  },
+  "projective_near_neighbor_exclusion": {
+    "meaning": "diversity/minimum-distance criterion, not evidence of provenance reuse",
+    "pass": false,
+    "threshold": 0.9999999999
+  },
+  "provenance_freshness": {
+    "evidence": "frozen namespaces differ; candidate/reference sample-ID overlaps are zero; no artifact reuse",
+    "pass": true
+  },
+  "random_split_compatibility": "Not structurally guaranteed: absent a guard gap, zero near-neighbors is a post-generation hidden minimum-separation gate.",
+  "schema_version": 1,
+  "single_boolean_finding": "The implementation explicitly ANDs four distinct notions, but generation-time protocol attestation for that aggregation was not found."
+}

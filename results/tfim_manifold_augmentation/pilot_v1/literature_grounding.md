@@ -1,0 +1,9 @@
+# Literature grounding
+
+- Augmentation requires label preservation or a physical invariant argument; this protocol inherits the repository label only because both `g` and `g'` remain in the same predeclared TFIM class interval.
+- Gapped same-phase ground states can be related by quasi-adiabatic continuation: M. B. Hastings and X.-G. Wen, *Quasi-adiabatic continuation of quantum states*, Phys. Rev. B 72, 045141 (2005), https://doi.org/10.1103/PhysRevB.72.045141. This motivates the ground-state manifold as structured support, without claiming that exact endpoint diagonalization is itself a quantum-in/quantum-out continuation.
+- Local-unitary equivalence underlies the modern phase notion: X. Chen, Z.-C. Gu, and X.-G. Wen, *Local unitary transformation, long-range quantum entanglement, wave function renormalization, and topological order*, Phys. Rev. B 82, 155138 (2010), https://doi.org/10.1103/PhysRevB.82.155138.
+- Fidelity susceptibility/quantum metric explains why fixed raw `delta g` is not a fixed state-space movement: P. Zanardi, P. Giorda, and M. Cozzini, *Information-Theoretic Differential Geometry of Quantum Phase Transitions*, Phys. Rev. Lett. 99, 100603 (2007), https://doi.org/10.1103/PhysRevLett.99.100603; W.-L. You, Y.-W. Li, and S.-J. Gu, *Fidelity, dynamic structure factor, and susceptibility in critical phenomena*, Phys. Rev. E 76, 022101 (2007), https://doi.org/10.1103/PhysRevE.76.022101.
+- Fubini--Study geometry is used only to measure and pair displacement. Physics selects the endpoint direction; geometry controls how far the random control moves.
+
+These principles do not make observable closeness, geodesic proximity, or small FS distance sufficient evidence of TFIM label preservation. The random arm therefore uses the anchor label only as a matched-control assignment and applies no class-consistency filter or physics-validity claim.

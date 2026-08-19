@@ -1,0 +1,941 @@
+{
+  "benchmark_blocker": "fresh confirmatory random and blocked-g dataset artifacts must be generated from the frozen seeds and validated before any QCNN test execution",
+  "benchmark_ready": false,
+  "frozen_payload": {
+    "anchor_allocation": "exactly one physical and one matched-random synthetic state per selected anchor",
+    "augmentation_transformation": {
+      "arms": [
+        "real-only",
+        "same-phase physical ground-state-manifold Hamiltonian-assisted augmentation",
+        "FS-distance-matched random tangent control"
+      ],
+      "blocked_g_rule": "g' is restricted to the analytically configured TRAIN interval and may not enter validation/test intervals",
+      "critical_exclusion_rule": "targets may not enter excluded [0.8,1.2] or cross configured class intervals",
+      "endpoint_generation": "exact ground state of H(g')",
+      "endpoint_rule": {
+        "direction_namespace": "tfim-manifold-confirmatory-v1-endpoint",
+        "fraction": 0.25,
+        "name": "fractional_move_to_deterministic_training_support_boundary",
+        "support_source": "dataset_config_only"
+      },
+      "endpoint_rule_explanation": "For each anchor, a provenance-hash chooses lower/upper support; g' moves the frozen fraction of remaining distance to that boundary. Therefore delta-g varies by anchor and no QCNN result selects magnitude.",
+      "fs_distance_rule": "measure physical endpoint distance, then construct the random tangent at exactly that pairwise displacement",
+      "interpretation": "physics-guided data expansion",
+      "method": "Hamiltonian-assisted augmentation",
+      "phase_a_status": "immutable exploratory ablation: literature-motivated, not literature-derived",
+      "phase_b_status": "immutable exploratory heuristic; excluded from core benchmark",
+      "phase_c_status": "redefined as FS-distance-matched random control",
+      "protocol_version": "tfim-manifold-confirmatory-v1",
+      "qcNN_test_execution": "forbidden in this pilot",
+      "random_control_semantics": {
+        "class_assignment": "inherit the anchor label solely to match class budgets and paired QCNN inputs",
+        "class_consistency_filter": null,
+        "physics_label_preservation_claimed": false,
+        "pilot_checks_only": [
+          "normalization",
+          "tangent orthogonality",
+          "pairwise FS-distance matching",
+          "projective uniqueness",
+          "anchor coverage"
+        ],
+        "small_fs_distance_establishes_validity": false
+      },
+      "resource_model": "RESOURCE_MODEL_A",
+      "same_phase_rule": "g' must remain inside the anchor label's configured interval and generation TRAIN support",
+      "symmetry_arm_rule": "include only if the exact-symmetry diagnostic finds projectively unique states"
+    },
+    "fresh_confirmatory_dataset_configs": {
+      "blocked-g": {
+        "J": 1.0,
+        "blocked_g_gap": 0.02,
+        "boundary": "open",
+        "dataset_seed": 91002,
+        "n_qubits": 4,
+        "numerical_tolerance": 1e-10,
+        "phase_regions": {
+          "ferromagnetic": [
+            0.2,
+            0.8
+          ],
+          "paramagnetic": [
+            1.2,
+            1.8
+          ]
+        },
+        "samples_per_class": 200,
+        "split_ratios": {
+          "test": 0.15,
+          "train": 0.7,
+          "val": 0.15
+        },
+        "split_seed": 92002,
+        "split_strategy": "blocked"
+      },
+      "random": {
+        "J": 1.0,
+        "boundary": "open",
+        "dataset_seed": 91001,
+        "n_qubits": 4,
+        "numerical_tolerance": 1e-10,
+        "phase_regions": {
+          "ferromagnetic": [
+            0.2,
+            0.8
+          ],
+          "paramagnetic": [
+            1.2,
+            1.8
+          ]
+        },
+        "samples_per_class": 200,
+        "split_ratios": {
+          "test": 0.15,
+          "train": 0.7,
+          "val": 0.15
+        },
+        "split_seed": 92001,
+        "split_strategy": "random"
+      }
+    },
+    "hamiltonian_definition": "H(g) = -J sum_{i=0}^{N-2} Z_i Z_{i+1} - g sum_{i=0}^{N-1} X_i",
+    "numerical_tolerances": {
+      "distance_match": 1e-08,
+      "eigenpair_residual": 1e-10,
+      "energy_residual": 1e-10,
+      "normalization": 1e-10,
+      "projective_duplicate_infidelity": 1e-10,
+      "tangent_orthogonality": 1e-12
+    },
+    "qcnn_protocol": {
+      "architecture": "repository 4-to-2-to-1 statevector QCNN",
+      "config_path": "configs/qcnn/baseline_4q.yaml",
+      "config_sha256": "77ee0541b692fc01e459d02c0e1ab2755168dd01ac4dfdbd9557ad82cc7a08b8",
+      "paired_seed_schedule": [
+        {
+          "init_seed": 11100,
+          "run_seed": 100,
+          "spsa_seed": 21100
+        },
+        {
+          "init_seed": 11101,
+          "run_seed": 101,
+          "spsa_seed": 21101
+        },
+        {
+          "init_seed": 11102,
+          "run_seed": 102,
+          "spsa_seed": 21102
+        },
+        {
+          "init_seed": 11103,
+          "run_seed": 103,
+          "spsa_seed": 21103
+        },
+        {
+          "init_seed": 11104,
+          "run_seed": 104,
+          "spsa_seed": 21104
+        },
+        {
+          "init_seed": 11105,
+          "run_seed": 105,
+          "spsa_seed": 21105
+        },
+        {
+          "init_seed": 11106,
+          "run_seed": 106,
+          "spsa_seed": 21106
+        },
+        {
+          "init_seed": 11107,
+          "run_seed": 107,
+          "spsa_seed": 21107
+        },
+        {
+          "init_seed": 11108,
+          "run_seed": 108,
+          "spsa_seed": 21108
+        },
+        {
+          "init_seed": 11109,
+          "run_seed": 109,
+          "spsa_seed": 21109
+        },
+        {
+          "init_seed": 11110,
+          "run_seed": 110,
+          "spsa_seed": 21110
+        },
+        {
+          "init_seed": 11111,
+          "run_seed": 111,
+          "spsa_seed": 21111
+        },
+        {
+          "init_seed": 11112,
+          "run_seed": 112,
+          "spsa_seed": 21112
+        },
+        {
+          "init_seed": 11113,
+          "run_seed": 113,
+          "spsa_seed": 21113
+        },
+        {
+          "init_seed": 11114,
+          "run_seed": 114,
+          "spsa_seed": 21114
+        },
+        {
+          "init_seed": 11115,
+          "run_seed": 115,
+          "spsa_seed": 21115
+        },
+        {
+          "init_seed": 11116,
+          "run_seed": 116,
+          "spsa_seed": 21116
+        },
+        {
+          "init_seed": 11117,
+          "run_seed": 117,
+          "spsa_seed": 21117
+        },
+        {
+          "init_seed": 11118,
+          "run_seed": 118,
+          "spsa_seed": 21118
+        },
+        {
+          "init_seed": 11119,
+          "run_seed": 119,
+          "spsa_seed": 21119
+        }
+      ],
+      "parameter_count": 42,
+      "readout": "Z on qubit 3",
+      "real_states_per_class": 10,
+      "resolved_base_config": {
+        "datasets": {
+          "blocked": "data/tfim_4q_blocked",
+          "random": "data/tfim_4q_random"
+        },
+        "evaluate_test": true,
+        "real_states_per_class": [
+          10,
+          25,
+          50,
+          100
+        ],
+        "seeds": [
+          {
+            "init_seed": 1000,
+            "run_seed": 0,
+            "spsa_seed": 2000
+          },
+          {
+            "init_seed": 1001,
+            "run_seed": 1,
+            "spsa_seed": 2001
+          },
+          {
+            "init_seed": 1002,
+            "run_seed": 2,
+            "spsa_seed": 2002
+          }
+        ],
+        "subset_seed": 31415,
+        "training": {
+          "early_stopping_min_delta": 0.0001,
+          "early_stopping_patience": 40,
+          "learning_rate": 0.15,
+          "optimizer": "spsa",
+          "perturbation": 0.1,
+          "steps": 300
+        }
+      },
+      "training": {
+        "early_stopping_min_delta": 0.0001,
+        "early_stopping_patience": 40,
+        "learning_rate": 0.15,
+        "optimizer": "spsa",
+        "perturbation": 0.1,
+        "steps": 300
+      }
+    },
+    "random_control_construction": {
+      "distance_rule": "measure physical endpoint distance, then construct the random tangent at exactly that pairwise displacement",
+      "maximum_redraws": 100,
+      "namespace": "tfim-manifold-confirmatory-v1-random-control"
+    },
+    "reproducibility_and_provenance": {
+      "fresh_confirmatory_dataset_configs": {
+        "blocked-g": {
+          "J": 1.0,
+          "blocked_g_gap": 0.02,
+          "boundary": "open",
+          "dataset_seed": 91002,
+          "n_qubits": 4,
+          "numerical_tolerance": 1e-10,
+          "phase_regions": {
+            "ferromagnetic": [
+              0.2,
+              0.8
+            ],
+            "paramagnetic": [
+              1.2,
+              1.8
+            ]
+          },
+          "samples_per_class": 200,
+          "split_ratios": {
+            "test": 0.15,
+            "train": 0.7,
+            "val": 0.15
+          },
+          "split_seed": 92002,
+          "split_strategy": "blocked"
+        },
+        "random": {
+          "J": 1.0,
+          "boundary": "open",
+          "dataset_seed": 91001,
+          "n_qubits": 4,
+          "numerical_tolerance": 1e-10,
+          "phase_regions": {
+            "ferromagnetic": [
+              0.2,
+              0.8
+            ],
+            "paramagnetic": [
+              1.2,
+              1.8
+            ]
+          },
+          "samples_per_class": 200,
+          "split_ratios": {
+            "test": 0.15,
+            "train": 0.7,
+            "val": 0.15
+          },
+          "split_seed": 92001,
+          "split_strategy": "random"
+        }
+      },
+      "generator_config_path": "configs/augmentation/tfim_manifold_confirmatory.yaml",
+      "generator_config_sha256": "9bb968bce3eb839998f8ed56a1a7080a9a118b094e6ed8b67acf79e5543fb133",
+      "numerical_tolerances": {
+        "distance_match": 1e-08,
+        "eigenpair_residual": 1e-10,
+        "energy_residual": 1e-10,
+        "normalization": 1e-10,
+        "projective_duplicate_infidelity": 1e-10,
+        "tangent_orthogonality": 1e-12
+      },
+      "pilot_dataset_artifacts": {
+        "blocked-g": {
+          "checksums": {
+            "split_manifest.json": "e3709ef4acd58d0824ebe564ebd319177e47d81fec0f1c5bfa40c8d5951e1839",
+            "states.npz": "3fa4cb11b21f4a6417d4314ca51bfdc68640dfde8f2207e26dfeb6b804902eab",
+            "validation.json": "4eecfe610da04d8e20de42de52714728b8373fdc3633489ce65331d5ff75cec7"
+          },
+          "path": "data/tfim_4q_blocked"
+        },
+        "random": {
+          "checksums": {
+            "split_manifest.json": "a247020ee01ac6ae24846de675c1852738818ed300b012a1ed49e65e9b333002",
+            "states.npz": "9306262fe151d66ae283e2bf39ef42f5fa8d12d3fbbc2bc84038096b09b60a25",
+            "validation.json": "f844c576d7ff367c8793379ffe1abad034f7ddac09719d90dd1eb6bd28558334"
+          },
+          "path": "data/tfim_4q_random"
+        }
+      },
+      "random_control_seed_and_redraw_policy": {
+        "maximum_redraws": 100,
+        "namespace": "tfim-manifold-confirmatory-v1-random-control"
+      },
+      "resolved_generator_config": {
+        "augmentation_ratio": 1.0,
+        "endpoint_rule": {
+          "direction_namespace": "tfim-manifold-confirmatory-v1-endpoint",
+          "fraction": 0.25,
+          "name": "fractional_move_to_deterministic_training_support_boundary",
+          "support_source": "dataset_config_only"
+        },
+        "fresh_confirmatory_datasets": {
+          "blocked-g": {
+            "J": 1.0,
+            "blocked_g_gap": 0.02,
+            "boundary": "open",
+            "dataset_seed": 91002,
+            "n_qubits": 4,
+            "numerical_tolerance": 1e-10,
+            "phase_regions": {
+              "ferromagnetic": [
+                0.2,
+                0.8
+              ],
+              "paramagnetic": [
+                1.2,
+                1.8
+              ]
+            },
+            "samples_per_class": 200,
+            "split_ratios": {
+              "test": 0.15,
+              "train": 0.7,
+              "val": 0.15
+            },
+            "split_seed": 92002,
+            "split_strategy": "blocked"
+          },
+          "random": {
+            "J": 1.0,
+            "boundary": "open",
+            "dataset_seed": 91001,
+            "n_qubits": 4,
+            "numerical_tolerance": 1e-10,
+            "phase_regions": {
+              "ferromagnetic": [
+                0.2,
+                0.8
+              ],
+              "paramagnetic": [
+                1.2,
+                1.8
+              ]
+            },
+            "samples_per_class": 200,
+            "split_ratios": {
+              "test": 0.15,
+              "train": 0.7,
+              "val": 0.15
+            },
+            "split_seed": 92001,
+            "split_strategy": "random"
+          }
+        },
+        "interpretation": "physics-guided data expansion",
+        "method_name": "Hamiltonian-assisted augmentation",
+        "pilot_datasets": {
+          "blocked-g": "data/tfim_4q_blocked",
+          "random": "data/tfim_4q_random"
+        },
+        "protocol_version": "tfim-manifold-confirmatory-v1",
+        "qcnn": {
+          "config": "configs/qcnn/baseline_4q.yaml",
+          "init_seed_offset": 11000,
+          "multiplicity_correction": "Holm",
+          "paired_seeds": 20,
+          "primary_contrasts": [
+            "random:physical_minus_real",
+            "random:physical_minus_random",
+            "blocked-g:physical_minus_real",
+            "blocked-g:physical_minus_random"
+          ],
+          "primary_metric": "accuracy",
+          "real_states_per_class": 10,
+          "run_seeds": [
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119
+          ],
+          "secondary_metric": "macro_f1",
+          "spsa_seed_offset": 21000
+        },
+        "random_control": {
+          "maximum_redraws": 100,
+          "namespace": "tfim-manifold-confirmatory-v1-random-control"
+        },
+        "real_states_per_class": 10,
+        "resource_model": "RESOURCE_MODEL_A",
+        "statistics": {
+          "confidence_interval": {
+            "level": 0.95,
+            "method": "paired_percentile_bootstrap",
+            "resamples": 10000,
+            "seed": 73001
+          },
+          "interpretation_priority": "effect_magnitude_and_confidence_interval_before_p_value",
+          "metrics": {
+            "descriptive": [
+              "mean",
+              "sample_standard_deviation",
+              "median",
+              "wins_ties_losses"
+            ],
+            "diagnostic": [
+              "validation_loss",
+              "train_test_accuracy_gap"
+            ],
+            "primary": "accuracy",
+            "secondary": "macro_f1"
+          },
+          "multiplicity": {
+            "alpha": 0.05,
+            "family_size": 4,
+            "method": "Holm"
+          },
+          "paired_difference_rule": "method_metric_minus_control_metric_within_seed",
+          "paired_effect_size": {
+            "name": "dz",
+            "rule": "mean_paired_difference_divided_by_sample_standard_deviation"
+          },
+          "primary_contrasts": [
+            "random:physical_minus_real",
+            "random:physical_minus_random",
+            "blocked-g:physical_minus_real",
+            "blocked-g:physical_minus_random"
+          ],
+          "robustness_test": {
+            "method": "exact_two_sided_paired_sign_flip",
+            "zero_difference_rule": "retain_zero"
+          },
+          "wins_ties_losses": {
+            "tie_absolute_tolerance": 1e-12
+          }
+        },
+        "subset_seed": 31415,
+        "synthetic_states_per_anchor": 1,
+        "tolerances": {
+          "distance_match": 1e-08,
+          "eigenpair_residual": 1e-10,
+          "energy_residual": 1e-10,
+          "normalization": 1e-10,
+          "projective_duplicate_infidelity": 1e-10,
+          "tangent_orthogonality": 1e-12
+        }
+      },
+      "software_versions": {
+        "numpy": "2.5.2",
+        "python": "3.12.13",
+        "pyyaml": "6.0.3",
+        "scipy": "1.18.0"
+      },
+      "source_file_sha256": {
+        "src/conditional_quddpm/augmentation/geometry.py": "56ed1e9cf45314535893f7abd06d5c70d2af21bfe212fbf8c0079838816fd72d",
+        "src/conditional_quddpm/datasets/loader.py": "cd01448131e5b230285c7826ece7caacc46b3ed9f4ac610f54f508c9f3797a13",
+        "src/conditional_quddpm/datasets/tfim.py": "414b8e92849f3364923f84d4c774b4800b118c153cf2c4d0a2564705d7282fb7",
+        "src/conditional_quddpm/experiments/tfim_manifold_confirmatory.py": "eac900a2868eaa0299348b51f03ece8db5a34a1b493a03223b878612d1ab4def",
+        "src/conditional_quddpm/models/qcnn.py": "45234bdf9080e1adc21ffeef852b813be565aae8e4e8163e5acee86bbc35c2e9"
+      },
+      "source_revision": {
+        "git_commit_sha": "c86b3ebbd878902db2d8153190d8aa8ce71aa0c5",
+        "git_dirty": true,
+        "git_status_porcelain": [
+          " M .gitignore",
+          "?? configs/augmentation/tfim_manifold_confirmatory.yaml",
+          "?? results/tfim_manifold_augmentation/",
+          "?? src/conditional_quddpm/experiments/tfim_manifold_confirmatory.py",
+          "?? tests/test_tfim_manifold_confirmatory.py"
+        ]
+      },
+      "source_subset_hashes": {
+        "blocked-g": "0abec3421bbe8c3847482e236d1441a0b40f1d9e00ce59230f6815242e619494",
+        "random": "7c2cfb3438a2a575ff3c7047b1beb2df5409064a48f8259fcd3782c4bc328826"
+      }
+    },
+    "resolved_generator_config": {
+      "augmentation_ratio": 1.0,
+      "endpoint_rule": {
+        "direction_namespace": "tfim-manifold-confirmatory-v1-endpoint",
+        "fraction": 0.25,
+        "name": "fractional_move_to_deterministic_training_support_boundary",
+        "support_source": "dataset_config_only"
+      },
+      "fresh_confirmatory_datasets": {
+        "blocked-g": {
+          "J": 1.0,
+          "blocked_g_gap": 0.02,
+          "boundary": "open",
+          "dataset_seed": 91002,
+          "n_qubits": 4,
+          "numerical_tolerance": 1e-10,
+          "phase_regions": {
+            "ferromagnetic": [
+              0.2,
+              0.8
+            ],
+            "paramagnetic": [
+              1.2,
+              1.8
+            ]
+          },
+          "samples_per_class": 200,
+          "split_ratios": {
+            "test": 0.15,
+            "train": 0.7,
+            "val": 0.15
+          },
+          "split_seed": 92002,
+          "split_strategy": "blocked"
+        },
+        "random": {
+          "J": 1.0,
+          "boundary": "open",
+          "dataset_seed": 91001,
+          "n_qubits": 4,
+          "numerical_tolerance": 1e-10,
+          "phase_regions": {
+            "ferromagnetic": [
+              0.2,
+              0.8
+            ],
+            "paramagnetic": [
+              1.2,
+              1.8
+            ]
+          },
+          "samples_per_class": 200,
+          "split_ratios": {
+            "test": 0.15,
+            "train": 0.7,
+            "val": 0.15
+          },
+          "split_seed": 92001,
+          "split_strategy": "random"
+        }
+      },
+      "interpretation": "physics-guided data expansion",
+      "method_name": "Hamiltonian-assisted augmentation",
+      "pilot_datasets": {
+        "blocked-g": "data/tfim_4q_blocked",
+        "random": "data/tfim_4q_random"
+      },
+      "protocol_version": "tfim-manifold-confirmatory-v1",
+      "qcnn": {
+        "config": "configs/qcnn/baseline_4q.yaml",
+        "init_seed_offset": 11000,
+        "multiplicity_correction": "Holm",
+        "paired_seeds": 20,
+        "primary_contrasts": [
+          "random:physical_minus_real",
+          "random:physical_minus_random",
+          "blocked-g:physical_minus_real",
+          "blocked-g:physical_minus_random"
+        ],
+        "primary_metric": "accuracy",
+        "real_states_per_class": 10,
+        "run_seeds": [
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119
+        ],
+        "secondary_metric": "macro_f1",
+        "spsa_seed_offset": 21000
+      },
+      "random_control": {
+        "maximum_redraws": 100,
+        "namespace": "tfim-manifold-confirmatory-v1-random-control"
+      },
+      "real_states_per_class": 10,
+      "resource_model": "RESOURCE_MODEL_A",
+      "statistics": {
+        "confidence_interval": {
+          "level": 0.95,
+          "method": "paired_percentile_bootstrap",
+          "resamples": 10000,
+          "seed": 73001
+        },
+        "interpretation_priority": "effect_magnitude_and_confidence_interval_before_p_value",
+        "metrics": {
+          "descriptive": [
+            "mean",
+            "sample_standard_deviation",
+            "median",
+            "wins_ties_losses"
+          ],
+          "diagnostic": [
+            "validation_loss",
+            "train_test_accuracy_gap"
+          ],
+          "primary": "accuracy",
+          "secondary": "macro_f1"
+        },
+        "multiplicity": {
+          "alpha": 0.05,
+          "family_size": 4,
+          "method": "Holm"
+        },
+        "paired_difference_rule": "method_metric_minus_control_metric_within_seed",
+        "paired_effect_size": {
+          "name": "dz",
+          "rule": "mean_paired_difference_divided_by_sample_standard_deviation"
+        },
+        "primary_contrasts": [
+          "random:physical_minus_real",
+          "random:physical_minus_random",
+          "blocked-g:physical_minus_real",
+          "blocked-g:physical_minus_random"
+        ],
+        "robustness_test": {
+          "method": "exact_two_sided_paired_sign_flip",
+          "zero_difference_rule": "retain_zero"
+        },
+        "wins_ties_losses": {
+          "tie_absolute_tolerance": 1e-12
+        }
+      },
+      "subset_seed": 31415,
+      "synthetic_states_per_anchor": 1,
+      "tolerances": {
+        "distance_match": 1e-08,
+        "eigenpair_residual": 1e-10,
+        "energy_residual": 1e-10,
+        "normalization": 1e-10,
+        "projective_duplicate_infidelity": 1e-10,
+        "tangent_orthogonality": 1e-12
+      }
+    },
+    "resource_model": "RESOURCE_MODEL_A",
+    "seed_schedule": {
+      "fresh_confirmatory_datasets": {
+        "blocked-g": {
+          "J": 1.0,
+          "blocked_g_gap": 0.02,
+          "boundary": "open",
+          "dataset_seed": 91002,
+          "n_qubits": 4,
+          "numerical_tolerance": 1e-10,
+          "phase_regions": {
+            "ferromagnetic": [
+              0.2,
+              0.8
+            ],
+            "paramagnetic": [
+              1.2,
+              1.8
+            ]
+          },
+          "samples_per_class": 200,
+          "split_ratios": {
+            "test": 0.15,
+            "train": 0.7,
+            "val": 0.15
+          },
+          "split_seed": 92002,
+          "split_strategy": "blocked"
+        },
+        "random": {
+          "J": 1.0,
+          "boundary": "open",
+          "dataset_seed": 91001,
+          "n_qubits": 4,
+          "numerical_tolerance": 1e-10,
+          "phase_regions": {
+            "ferromagnetic": [
+              0.2,
+              0.8
+            ],
+            "paramagnetic": [
+              1.2,
+              1.8
+            ]
+          },
+          "samples_per_class": 200,
+          "split_ratios": {
+            "test": 0.15,
+            "train": 0.7,
+            "val": 0.15
+          },
+          "split_seed": 92001,
+          "split_strategy": "random"
+        }
+      },
+      "intermediate_rule": "seeds 100-109 may be reported as stability only; protocol cannot be changed before extending to all 20",
+      "paired_seeds": [
+        {
+          "init_seed": 11100,
+          "run_seed": 100,
+          "spsa_seed": 21100
+        },
+        {
+          "init_seed": 11101,
+          "run_seed": 101,
+          "spsa_seed": 21101
+        },
+        {
+          "init_seed": 11102,
+          "run_seed": 102,
+          "spsa_seed": 21102
+        },
+        {
+          "init_seed": 11103,
+          "run_seed": 103,
+          "spsa_seed": 21103
+        },
+        {
+          "init_seed": 11104,
+          "run_seed": 104,
+          "spsa_seed": 21104
+        },
+        {
+          "init_seed": 11105,
+          "run_seed": 105,
+          "spsa_seed": 21105
+        },
+        {
+          "init_seed": 11106,
+          "run_seed": 106,
+          "spsa_seed": 21106
+        },
+        {
+          "init_seed": 11107,
+          "run_seed": 107,
+          "spsa_seed": 21107
+        },
+        {
+          "init_seed": 11108,
+          "run_seed": 108,
+          "spsa_seed": 21108
+        },
+        {
+          "init_seed": 11109,
+          "run_seed": 109,
+          "spsa_seed": 21109
+        },
+        {
+          "init_seed": 11110,
+          "run_seed": 110,
+          "spsa_seed": 21110
+        },
+        {
+          "init_seed": 11111,
+          "run_seed": 111,
+          "spsa_seed": 21111
+        },
+        {
+          "init_seed": 11112,
+          "run_seed": 112,
+          "spsa_seed": 21112
+        },
+        {
+          "init_seed": 11113,
+          "run_seed": 113,
+          "spsa_seed": 21113
+        },
+        {
+          "init_seed": 11114,
+          "run_seed": 114,
+          "spsa_seed": 21114
+        },
+        {
+          "init_seed": 11115,
+          "run_seed": 115,
+          "spsa_seed": 21115
+        },
+        {
+          "init_seed": 11116,
+          "run_seed": 116,
+          "spsa_seed": 21116
+        },
+        {
+          "init_seed": 11117,
+          "run_seed": 117,
+          "spsa_seed": 21117
+        },
+        {
+          "init_seed": 11118,
+          "run_seed": 118,
+          "spsa_seed": 21118
+        },
+        {
+          "init_seed": 11119,
+          "run_seed": 119,
+          "spsa_seed": 21119
+        }
+      ],
+      "status": "FROZEN_FOR_FRESH_CONFIRMATORY_DATASETS",
+      "subset_seed": 31415
+    },
+    "statistical_plan": {
+      "confidence_interval": {
+        "level": 0.95,
+        "method": "paired_percentile_bootstrap",
+        "resamples": 10000,
+        "seed": 73001
+      },
+      "interpretation_priority": "effect_magnitude_and_confidence_interval_before_p_value",
+      "metrics": {
+        "descriptive": [
+          "mean",
+          "sample_standard_deviation",
+          "median",
+          "wins_ties_losses"
+        ],
+        "diagnostic": [
+          "validation_loss",
+          "train_test_accuracy_gap"
+        ],
+        "primary": "accuracy",
+        "secondary": "macro_f1"
+      },
+      "multiplicity": {
+        "alpha": 0.05,
+        "family_size": 4,
+        "method": "Holm"
+      },
+      "paired_difference_rule": "method_metric_minus_control_metric_within_seed",
+      "paired_effect_size": {
+        "name": "dz",
+        "rule": "mean_paired_difference_divided_by_sample_standard_deviation"
+      },
+      "primary_contrasts": [
+        "random:physical_minus_real",
+        "random:physical_minus_random",
+        "blocked-g:physical_minus_real",
+        "blocked-g:physical_minus_random"
+      ],
+      "robustness_test": {
+        "method": "exact_two_sided_paired_sign_flip",
+        "zero_difference_rule": "retain_zero"
+      },
+      "wins_ties_losses": {
+        "tie_absolute_tolerance": 1e-12
+      }
+    },
+    "synthetic_ratio": 1.0,
+    "synthetic_states_per_anchor": 1
+  },
+  "frozen_payload_sha256": "eea815d1233cb17bcf085e018dc46bc4b3455be3ff38e4831e421426b3a5c922",
+  "pilot_valid": true,
+  "scientific_split_use": {
+    "test_values_used": false,
+    "validation_values_used": false
+  },
+  "status": "FROZEN_GENERATOR_PROTOCOL_QCNN_NOT_RUN"
+}

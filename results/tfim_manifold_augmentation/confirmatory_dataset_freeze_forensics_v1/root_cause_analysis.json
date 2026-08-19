@@ -1,0 +1,31 @@
+{
+  "confidence": "medium for aggregate causes; low for final physical/protocol classification",
+  "contradicting_evidence": [
+    "No sample-level pair list survives",
+    "No candidate arrays survive",
+    "Protocol provenance proving cross-regime/corpus zero-near-duplicate criterion was preregistered is not present in the inspected v1 config"
+  ],
+  "dataset_freeze_primary_cause": "derived normal fail-closed result: random_split valid=false, so scientific_pass=false, staging discarded and promotion skipped",
+  "freshness_validation_primary_cause": "projective near-duplicates in blocked_g_vs_legacy_blocked_g, blocked_g_vs_legacy_random, blocked_g_vs_legacy_tfim_4q, blocked_g_vs_new_random_split, blocked_g_vs_pilot_v1, random_split_vs_legacy_blocked_g, random_split_vs_legacy_random, random_split_vs_legacy_tfim_4q, random_split_vs_new_blocked_g, random_split_vs_phase_a; every ID, exact-g, and canonical-hash overlap is zero",
+  "primary_classification": "INSUFFICIENT_EVIDENCE",
+  "schema_version": 1,
+  "secondary_classification": [
+    "GENUINE_DATASET_FAILURE (aggregate evidence)",
+    "UNAVOIDABLE_PHYSICAL_COLLISION/PROTOCOL_CONTRADICTION unresolved without sample-level pairs and preregistration provenance"
+  ],
+  "source_attestation_limit": "Generation-time source/config/tests were untracked. Config has a retained hash, but validator source has no generation-time content hash; current source explains the artifacts but is not cryptographically attested as the executed bytes.",
+  "split_validation_primary_cause": "random_split has 2 cross-split projective near-duplicate pairs at fidelity >= 1-1e-10; blocked_g passes all split checks",
+  "supporting_evidence": [
+    "validation.json reports exactly 2 random_split cross-split projective duplicates",
+    "blocked_g split_validation_pass=true and gap 0.022405635927595036 > 0.02",
+    "freshness_audit.json identifies 10 failing directed comparisons (9 unique unordered corpus relationships after collapsing reciprocal new-regime rows), solely projective duplicates",
+    "source applies fidelity >= 1-tolerance and strict zero-overlap policy",
+    "dataset_manifest says staging_artifacts_discarded=true and artifact_paths null"
+  ],
+  "unresolved_questions": [
+    "Which exact random_split pairs failed?",
+    "Which exact new/reference pairs account for each projective duplicate?",
+    "Are near-duplicates inevitable from the shared one-dimensional TFIM manifold or seed-specific?",
+    "Was full cross-regime disjointness explicitly preregistered before generation?"
+  ]
+}

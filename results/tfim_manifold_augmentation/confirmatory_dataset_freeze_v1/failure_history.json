@@ -1,0 +1,34 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "dataset_generation_started": false,
+      "failure": "implementation path-normalization bug while hashing immutable baselines",
+      "resolution": "resolve artifact paths before making them repository-relative; resume the unchanged pre-generation seed manifest",
+      "seed_manifest_changed": false
+    },
+    {
+      "attempt": 2,
+      "dataset_generation_started": true,
+      "reason": "frozen random-split and cross-corpus projective duplicates",
+      "result": "BLOCKED_VALIDATION_FAILED_NOT_PROMOTED",
+      "seed_selection_attempt": false,
+      "staging_discarded": true
+    },
+    {
+      "attempt": 3,
+      "dataset_generation_completed": true,
+      "dataset_generation_started": true,
+      "kind": "deterministic_implementation_bugfix_validation",
+      "same_frozen_seeds": true,
+      "scientific_blockers": [
+        "dataset_validation",
+        "freshness"
+      ],
+      "seed_selection_attempt": false,
+      "staging_discarded": true,
+      "status": "BLOCKED_VALIDATION_FAILED_NOT_PROMOTED"
+    }
+  ],
+  "protocol_version_rationale": "v1 is retained because implementation corrections do not change frozen seeds, thresholds, or scientific protocol"
+}

@@ -1,0 +1,131 @@
+{
+  "canonical_source": "src/conditional_quddpm/datasets/tfim.py plus each dataset split_manifest.json",
+  "claim_boundary": "N=4 finite-size classification; this protocol does not claim observation of a thermodynamic phase transition",
+  "critical_point_convention": "thermodynamic g/J=1 motivates excluding [0.8,1.2], but labels are the repository's predeclared finite-size TFIM classification convention",
+  "datasets": {
+    "blocked-g": {
+      "J": 1.0,
+      "artifact_checksums": {
+        "split_manifest.json": "e3709ef4acd58d0824ebe564ebd319177e47d81fec0f1c5bfa40c8d5951e1839",
+        "states.npz": "3fa4cb11b21f4a6417d4314ca51bfdc68640dfde8f2207e26dfeb6b804902eab",
+        "validation.json": "4eecfe610da04d8e20de42de52714728b8373fdc3633489ce65331d5ff75cec7"
+      },
+      "blocked_g_gap": 0.02,
+      "blocked_g_split_rule": "ordered per-class g intervals separated by configured gaps",
+      "blocked_intervals": {
+        "ferromagnetic": {
+          "test": [
+            0.7160000000000001,
+            0.8
+          ],
+          "train": [
+            0.2,
+            0.5920000000000001
+          ],
+          "val": [
+            0.6120000000000001,
+            0.6960000000000001
+          ]
+        },
+        "paramagnetic": {
+          "test": [
+            1.7160000000000002,
+            1.8
+          ],
+          "train": [
+            1.2,
+            1.592
+          ],
+          "val": [
+            1.612,
+            1.6960000000000002
+          ]
+        }
+      },
+      "boundary": "open",
+      "class_label_rule": "label 0 iff g is sampled from configured ferromagnetic interval; label 1 iff g is sampled from configured paramagnetic interval",
+      "dataset_generation_range": {
+        "ferromagnetic": [
+          0.2,
+          0.8
+        ],
+        "paramagnetic": [
+          1.2,
+          1.8
+        ]
+      },
+      "dataset_seed": 1729,
+      "g_ranges": {
+        "ferromagnetic": [
+          0.2,
+          0.8
+        ],
+        "paramagnetic": [
+          1.2,
+          1.8
+        ]
+      },
+      "n_qubits": 4,
+      "path": "data/tfim_4q_blocked",
+      "random_split_rule": null,
+      "samples_per_class": 200,
+      "split_ratios": {
+        "test": 0.15,
+        "train": 0.7,
+        "val": 0.15
+      },
+      "split_seed": 2718,
+      "split_strategy": "blocked"
+    },
+    "random": {
+      "J": 1.0,
+      "artifact_checksums": {
+        "split_manifest.json": "a247020ee01ac6ae24846de675c1852738818ed300b012a1ed49e65e9b333002",
+        "states.npz": "9306262fe151d66ae283e2bf39ef42f5fa8d12d3fbbc2bc84038096b09b60a25",
+        "validation.json": "f844c576d7ff367c8793379ffe1abad034f7ddac09719d90dd1eb6bd28558334"
+      },
+      "blocked_g_gap": null,
+      "blocked_g_split_rule": null,
+      "blocked_intervals": null,
+      "boundary": "open",
+      "class_label_rule": "label 0 iff g is sampled from configured ferromagnetic interval; label 1 iff g is sampled from configured paramagnetic interval",
+      "dataset_generation_range": {
+        "ferromagnetic": [
+          0.2,
+          0.8
+        ],
+        "paramagnetic": [
+          1.2,
+          1.8
+        ]
+      },
+      "dataset_seed": 1729,
+      "g_ranges": {
+        "ferromagnetic": [
+          0.2,
+          0.8
+        ],
+        "paramagnetic": [
+          1.2,
+          1.8
+        ]
+      },
+      "n_qubits": 4,
+      "path": "data/tfim_4q_random",
+      "random_split_rule": "class-stratified seeded shuffle after g sampling",
+      "samples_per_class": 200,
+      "split_ratios": {
+        "test": 0.15,
+        "train": 0.7,
+        "val": 0.15
+      },
+      "split_seed": 2718,
+      "split_strategy": "random"
+    }
+  },
+  "degeneracy_handling": "no degenerate-subspace rule; one solver eigenvector is returned",
+  "g_definition": "coefficient of the transverse X field; dimensionless g/J at J=1",
+  "global_phase_convention": "rotate the largest-magnitude amplitude to positive real",
+  "ground_state_solver": "scipy.linalg.eigh dense Hermitian minimum eigenpair (subset_by_index=[0,0])",
+  "hamiltonian_convention": "H(g) = -J sum_{i=0}^{N-2} Z_i Z_{i+1} - g sum_{i=0}^{N-1} X_i"
+}

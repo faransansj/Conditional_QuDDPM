@@ -1,0 +1,264 @@
+{
+  "comparisons": {
+    "blocked_g_vs_legacy_blocked_g": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.009490911151593636,
+        "mean": 0.0008640526481760373,
+        "median": 0.0004238115970224478,
+        "min": 5.245124073862505e-07
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 8,
+      "schema_limitations": []
+    },
+    "blocked_g_vs_legacy_random": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.004223011095676542,
+        "mean": 0.0006735431247764706,
+        "median": 0.00036365263212491644,
+        "min": 1.819711843465307e-06
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 7,
+      "schema_limitations": []
+    },
+    "blocked_g_vs_legacy_tfim_4q": {
+      "corpus_state_count": 200,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.01656393546448345,
+        "mean": 0.0015211956296376132,
+        "median": 0.0007824111818003055,
+        "min": 1.666000468656266e-07
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 8,
+      "schema_limitations": []
+    },
+    "blocked_g_vs_new_random_split": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.00655629084059169,
+        "mean": 0.0008931181166876771,
+        "median": 0.0004658118424422992,
+        "min": 2.4303058430999715e-07
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 6,
+      "schema_limitations": []
+    },
+    "blocked_g_vs_phase_a": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.057921256759716704,
+        "mean": 0.009871474398202702,
+        "median": 0.004947317703898935,
+        "min": 1.9010120987351166e-05
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "schema_limitations": []
+    },
+    "blocked_g_vs_phase_b": {
+      "corpus_state_count": 414,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.06750910030040208,
+        "mean": 0.012531351662136534,
+        "median": 0.006791236369571866,
+        "min": 0.0003058606688778183
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "schema_limitations": []
+    },
+    "blocked_g_vs_phase_c": {
+      "corpus_state_count": 720,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.08040059627310278,
+        "mean": 0.03916920202487692,
+        "median": 0.04062789433447612,
+        "min": 0.011414961098304227
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "schema_limitations": []
+    },
+    "blocked_g_vs_pilot_v1": {
+      "corpus_state_count": 80,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.10115151944589541,
+        "mean": 0.011778883569622731,
+        "median": 0.00543845129529992,
+        "min": 3.685801543563984e-06
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 1,
+      "schema_limitations": []
+    },
+    "random_split_vs_legacy_blocked_g": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.010311027291773849,
+        "mean": 0.0011429931062426556,
+        "median": 0.00048762809505827694,
+        "min": 1.5520115573755317e-06
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 9,
+      "schema_limitations": []
+    },
+    "random_split_vs_legacy_random": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.005898281295991841,
+        "mean": 0.0007746066696871882,
+        "median": 0.00041192877869247285,
+        "min": 1.4214801809444226e-07
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 14,
+      "schema_limitations": []
+    },
+    "random_split_vs_legacy_tfim_4q": {
+      "corpus_state_count": 200,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.017921579469275993,
+        "mean": 0.0018421025861886037,
+        "median": 0.0008390336854220846,
+        "min": 2.3229567341839446e-06
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 6,
+      "schema_limitations": []
+    },
+    "random_split_vs_new_blocked_g": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.011181856563361658,
+        "mean": 0.0011796833356136718,
+        "median": 0.0004697685507410875,
+        "min": 2.4303058430999715e-07
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 6,
+      "schema_limitations": []
+    },
+    "random_split_vs_phase_a": {
+      "corpus_state_count": 400,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.06485803167275944,
+        "mean": 0.01047486048480672,
+        "median": 0.005371909500663121,
+        "min": 2.8578003103354048e-06
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": false,
+      "projective_duplicate_count": 2,
+      "schema_limitations": []
+    },
+    "random_split_vs_phase_b": {
+      "corpus_state_count": 414,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.06660640159138478,
+        "mean": 0.013835609451445425,
+        "median": 0.009292622969631783,
+        "min": 0.000291732299505939
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "schema_limitations": []
+    },
+    "random_split_vs_phase_c": {
+      "corpus_state_count": 720,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.08040115703969321,
+        "mean": 0.03952728660951999,
+        "median": 0.04027011429179132,
+        "min": 0.011415568694645387
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "schema_limitations": []
+    },
+    "random_split_vs_pilot_v1": {
+      "corpus_state_count": 80,
+      "nearest_cross_corpus_fs_distance": {
+        "count": 400,
+        "max": 0.10054131735137604,
+        "mean": 0.01487485071950613,
+        "median": 0.0060579886195859176,
+        "min": 1.0777609285362243e-05
+      },
+      "overlapping_canonical_state_hashes": 0,
+      "overlapping_exact_g_values": 0,
+      "overlapping_sample_ids": 0,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "schema_limitations": []
+    }
+  },
+  "freshness_definition": "no ID, exact-g, canonical-hash, or projective duplicate",
+  "notes": "NPZ state arrays were audited directly. JSON/JSONL provenance supplied additional IDs and g values; schema limitations are disclosed per corpus.",
+  "projective_duplicate_infidelity_tolerance": 1e-10,
+  "valid": false
+}

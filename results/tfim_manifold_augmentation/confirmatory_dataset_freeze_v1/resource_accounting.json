@@ -1,0 +1,11 @@
+{
+  "base_dataset_generation_eigensolve_calls": 1600,
+  "confirmatory_qcnn_runs": 0,
+  "pilot_accounting_modified": false,
+  "pilot_endpoint_eigensolve_calls": 40,
+  "primary_base_dataset_generation_eigensolve_calls": 800,
+  "reproducibility_base_dataset_generation_eigensolve_calls": 800,
+  "resource_model": "RESOURCE_MODEL_A",
+  "symmetry_benchmark_runs": 0,
+  "validation_ground_energy_computations": 1600
+}

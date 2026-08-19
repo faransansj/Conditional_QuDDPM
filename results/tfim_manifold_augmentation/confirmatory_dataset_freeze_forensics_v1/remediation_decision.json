@@ -1,0 +1,29 @@
+{
+  "affected_files": [],
+  "candidate_data_reusable": false,
+  "decision": "INSUFFICIENT_EVIDENCE",
+  "minimum_additional_evidence": [
+    {
+      "alternative_A": "Recover both byte-identical candidate directories matching dataset_manifest artifact and semantic hashes; then perform read-only pair-level replay."
+    },
+    {
+      "alternative_B": "Recover a trustworthy original-run sample-level duplicate export containing pair IDs, arrays or sufficient state/g/hash evidence plus provenance."
+    },
+    {
+      "always_required": "Dated/preregistered protocol text establishing freshness comparator pairs and cross-regime disjointness before any criterion amendment."
+    }
+  ],
+  "protocol_version_bump_required": "unresolved; required if freshness/projective criterion changes",
+  "qcnn_execution_performed": false,
+  "qcnn_status": "BLOCKED",
+  "reason": "Candidate arrays and sample-level failure pairs were discarded. Aggregate evidence proves gate mechanics and failing counts, but cannot distinguish genuine seed-specific near-collisions from unavoidable physical collision/protocol contradiction, nor support revalidation of nonexistent artifacts.",
+  "regeneration_required": "not authorized in this task; would be required only under a separately approved next protocol/bugfix decision",
+  "required_review": "independent scientific/protocol review after evidence recovery",
+  "required_tests": [
+    "validator-only replay against retained candidates, if recovered",
+    "pair-level FS/hash/g/ID audit with no generation"
+  ],
+  "same_frozen_seed_retained": true,
+  "schema_version": 1,
+  "threshold_relaxation_required": false
+}

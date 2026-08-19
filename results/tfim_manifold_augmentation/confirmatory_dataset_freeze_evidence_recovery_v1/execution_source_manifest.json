@@ -1,0 +1,66 @@
+{
+  "BLAS_LAPACK_information": "{'blas': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.34.0.0', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.12.13/lib/python3.12/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.12.13/lib/python3.12/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.34.0.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}, 'lapack': {'name': 'scipy-openblas', 'found': True, 'version': '0.3.34.0.0', 'detection method': 'pkgconfig', 'include directory': '/opt/_internal/cpython-3.12.13/lib/python3.12/site-packages/scipy_openblas64/include', 'lib directory': '/opt/_internal/cpython-3.12.13/lib/python3.12/site-packages/scipy_openblas64/lib', 'openblas configuration': 'OpenBLAS 0.3.34.0.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64', 'pc file directory': '/project/.openblas'}}",
+  "NumPy_version": "2.5.2",
+  "Python_version": "3.12.13",
+  "SciPy_version": "1.18.0",
+  "branch": "research/tfim-local-perturbation",
+  "config_sha256": "dbb26b80ce2ab6405903b4cf5789923777ef81fccef42fb5568eddb7aaa13144",
+  "file_paths": [
+    "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze.py",
+    "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze_recovery.py",
+    "src/conditional_quddpm/datasets/tfim.py",
+    "src/conditional_quddpm/augmentation/geometry.py",
+    "configs/augmentation/tfim_manifold_confirmatory_dataset_freeze.yaml",
+    "configs/augmentation/tfim_manifold_confirmatory_dataset_recovery.yaml",
+    "configs/augmentation/tfim_manifold_confirmatory.yaml",
+    "tests/test_tfim_confirmatory_dataset_freeze.py",
+    "tests/test_tfim_confirmatory_dataset_recovery.py"
+  ],
+  "file_sha256": {
+    "configs/augmentation/tfim_manifold_confirmatory.yaml": "9bb968bce3eb839998f8ed56a1a7080a9a118b094e6ed8b67acf79e5543fb133",
+    "configs/augmentation/tfim_manifold_confirmatory_dataset_freeze.yaml": "29f66f80e23385c9c5f5cd331e168e68f2b0a6f3548612a04eeca4080309eba1",
+    "configs/augmentation/tfim_manifold_confirmatory_dataset_recovery.yaml": "dbb26b80ce2ab6405903b4cf5789923777ef81fccef42fb5568eddb7aaa13144",
+    "src/conditional_quddpm/augmentation/geometry.py": "56ed1e9cf45314535893f7abd06d5c70d2af21bfe212fbf8c0079838816fd72d",
+    "src/conditional_quddpm/datasets/tfim.py": "414b8e92849f3364923f84d4c774b4800b118c153cf2c4d0a2564705d7282fb7",
+    "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze.py": "cb4b678a4e95b1695e64885278ebb0f836b0223ea17b660ed1a111b3b6136343",
+    "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze_recovery.py": "368d8344f6203e7b4c12c0ddfe4f876fb8fa335ab13ec5bcc516f4e3687ac76c",
+    "tests/test_tfim_confirmatory_dataset_freeze.py": "47cfd606db5c9f1eb69af7e3de458a903cf464976a8f8050b0dd1172d2f78e63",
+    "tests/test_tfim_confirmatory_dataset_recovery.py": "df34e4cf7e9e49c38d125f4cf6de1bf84cdead51960ed6377e261fcd60af08e6"
+  },
+  "final_metadata_replay_attested": true,
+  "finalization_command": "PYTHONPATH=src .venv/bin/python -m conditional_quddpm.experiments.tfim_confirmatory_dataset_freeze_recovery --finalize-review",
+  "finalization_review_input_sha256": "1be414db992cad3abf7dc1cf2cb44639d5a88e95aeecc37ce99015af443e279a",
+  "finalization_source_sha256": "368d8344f6203e7b4c12c0ddfe4f876fb8fa335ab13ec5bcc516f4e3687ac76c",
+  "historical_execution_source_attested": false,
+  "historical_source_identity": "UNATTESTED",
+  "implementation_roles": {
+    "TFIM Hamiltonian construction/ground-state eigensolve/observables/split assignment": "conditional_quddpm.datasets.tfim",
+    "state canonicalization/sample-ID/semantic hashing/projective detection/freshness/gate aggregation": "conditional_quddpm.experiments.tfim_confirmatory_dataset_freeze"
+  },
+  "imported_module_sha256": {
+    "src/conditional_quddpm/augmentation/geometry.py": "56ed1e9cf45314535893f7abd06d5c70d2af21bfe212fbf8c0079838816fd72d",
+    "src/conditional_quddpm/datasets/tfim.py": "414b8e92849f3364923f84d4c774b4800b118c153cf2c4d0a2564705d7282fb7",
+    "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze.py": "cb4b678a4e95b1695e64885278ebb0f836b0223ea17b660ed1a111b3b6136343",
+    "src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze_recovery.py": "368d8344f6203e7b4c12c0ddfe4f876fb8fa335ab13ec5bcc516f4e3687ac76c",
+    "tests/test_tfim_confirmatory_dataset_freeze.py": "47cfd606db5c9f1eb69af7e3de458a903cf464976a8f8050b0dd1172d2f78e63",
+    "tests/test_tfim_confirmatory_dataset_recovery.py": "df34e4cf7e9e49c38d125f4cf6de1bf84cdead51960ed6377e261fcd60af08e6"
+  },
+  "recovery_generation_source_attested": true,
+  "recovery_source_identity": "ATTESTED",
+  "schema_version": 1,
+  "seed_manifest_sha256": "3a502e1dd74468f8ccf242cb75c217036ff3fe256bcb2b9369d3cf8cf9a4da32",
+  "source_commit": "c86b3ebbd878902db2d8153190d8aa8ce71aa0c5",
+  "working_tree_status": [
+    "M .gitignore",
+    "?? configs/augmentation/tfim_manifold_confirmatory.yaml",
+    "?? configs/augmentation/tfim_manifold_confirmatory_dataset_freeze.yaml",
+    "?? configs/augmentation/tfim_manifold_confirmatory_dataset_recovery.yaml",
+    "?? results/tfim_manifold_augmentation/",
+    "?? src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze.py",
+    "?? src/conditional_quddpm/experiments/tfim_confirmatory_dataset_freeze_recovery.py",
+    "?? src/conditional_quddpm/experiments/tfim_manifold_confirmatory.py",
+    "?? tests/test_tfim_confirmatory_dataset_freeze.py",
+    "?? tests/test_tfim_confirmatory_dataset_recovery.py",
+    "?? tests/test_tfim_manifold_confirmatory.py"
+  ]
+}

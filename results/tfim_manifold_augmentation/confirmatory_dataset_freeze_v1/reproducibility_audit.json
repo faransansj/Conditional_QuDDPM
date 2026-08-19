@@ -1,0 +1,54 @@
+{
+  "generation_is_reproducibility_check_not_seed_sweep": true,
+  "regimes": {
+    "blocked_g": {
+      "all_serialized_hashes_match": true,
+      "array_match": {
+        "dataset_regimes": true,
+        "energies": true,
+        "g": true,
+        "generation_seed_references": true,
+        "labels": true,
+        "magnetization_x": true,
+        "magnetization_z2": true,
+        "parameter_ids": true,
+        "splits": true,
+        "states": true
+      },
+      "semantic_hash_match": true,
+      "semantic_hash_primary": "79102c54e69109a6dcdd33146f5ed398933415cf1462ea256b45359d768dc2c3",
+      "semantic_hash_reproduction": "79102c54e69109a6dcdd33146f5ed398933415cf1462ea256b45359d768dc2c3",
+      "serialized_file_hash_match": {
+        "checksums.json": true,
+        "split_manifest.json": true,
+        "states.npz": true,
+        "validation.json": true
+      }
+    },
+    "random_split": {
+      "all_serialized_hashes_match": true,
+      "array_match": {
+        "dataset_regimes": true,
+        "energies": true,
+        "g": true,
+        "generation_seed_references": true,
+        "labels": true,
+        "magnetization_x": true,
+        "magnetization_z2": true,
+        "parameter_ids": true,
+        "splits": true,
+        "states": true
+      },
+      "semantic_hash_match": true,
+      "semantic_hash_primary": "ced581a4d29a410a90e8eb026f7b3406031d1cc11dc6f36042674228360908a6",
+      "semantic_hash_reproduction": "ced581a4d29a410a90e8eb026f7b3406031d1cc11dc6f36042674228360908a6",
+      "serialized_file_hash_match": {
+        "checksums.json": true,
+        "split_manifest.json": true,
+        "states.npz": true,
+        "validation.json": true
+      }
+    }
+  },
+  "valid": true
+}

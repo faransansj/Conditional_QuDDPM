@@ -1,0 +1,1225 @@
+{
+  "benchmark_arm_included": false,
+  "boundary_condition": "open",
+  "duplicate_infidelity_tolerance": 1e-10,
+  "maximum_commutator_or_invariance_error": {
+    "global_x_parity": 0.0,
+    "reflection": 0.0,
+    "time_reversal_complex_conjugation": 0.0
+  },
+  "number_of_projective_duplicates": 120,
+  "number_of_transformations": 120,
+  "number_of_unique_nonduplicate_states": 0,
+  "per_anchor": [
+    {
+      "anchor_id": "class-0-00001",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00001",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00001",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00005",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00005",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00005",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00013",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00013",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00013",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00046",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00046",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00046",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00066",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00066",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00066",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00068",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000018,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00068",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000018,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00068",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000018,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00081",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00081",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00081",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00125",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00125",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00125",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00138",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00138",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00138",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00191",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00191",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00191",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00015",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00015",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00015",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00018",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00018",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00018",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00034",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00034",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00034",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00115",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00115",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00115",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00136",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999993,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00136",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00136",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00157",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00157",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00157",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00158",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000018,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00158",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000013,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00158",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000018,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00182",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00182",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00182",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00191",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00191",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00191",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00193",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00193",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00193",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "random",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00001",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00001",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00001",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00004",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00004",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00004",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00011",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00011",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00011",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00030",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00030",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00030",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00043",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00043",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00043",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00045",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00045",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00045",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00052",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00052",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00052",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00086",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00086",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00086",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00093",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00093",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00093",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-0-00134",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-0-00134",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-0-00134",
+      "class": 0,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000009,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00011",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00011",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00011",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00012",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00012",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00012",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00022",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00022",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00022",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00077",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00077",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999993,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00077",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999993,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00095",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00095",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00095",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00106",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00106",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999998,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00106",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00107",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999993,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00107",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999993,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00107",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999993,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00125",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00125",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00125",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00133",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00133",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00133",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 0.9999999999999996,
+      "symmetry": "time_reversal_complex_conjugation"
+    },
+    {
+      "anchor_id": "class-1-00135",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "unitary symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "global_x_parity"
+    },
+    {
+      "anchor_id": "class-1-00135",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "open-chain reflection symmetry [U,H]=0; g and the repository label are unchanged",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0,
+      "symmetry": "reflection"
+    },
+    {
+      "anchor_id": "class-1-00135",
+      "class": 1,
+      "commutator_or_invariance_error": 0.0,
+      "dataset": "blocked-g",
+      "label_preservation_argument": "H is real, so antiunitary complex conjugation preserves its eigenspaces and label",
+      "projective_duplicate": true,
+      "source_fidelity": 1.0000000000000004,
+      "symmetry": "time_reversal_complex_conjugation"
+    }
+  ],
+  "status": "SYMMETRY AUGMENTATION NOT USEFUL: EXACT SYMMETRIES PRODUCE PROJECTIVE DUPLICATES",
+  "tested": [
+    "global_x_parity",
+    "reflection",
+    "time_reversal_complex_conjugation"
+  ],
+  "translation": {
+    "applicable": false,
+    "reason": "translation is not an exact symmetry of the repository open-chain Hamiltonian"
+  }
+}

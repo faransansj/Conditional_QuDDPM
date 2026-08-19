@@ -1,0 +1,179 @@
+{
+  "comparisons": {
+    "blocked_g_vs_legacy_blocked_g": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 5.245124073862505e-07,
+      "pass": false,
+      "projective_duplicate_count": 8,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "blocked_g_vs_legacy_random": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 1.819711843465307e-06,
+      "pass": false,
+      "projective_duplicate_count": 7,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "blocked_g_vs_legacy_tfim_4q": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 1.666000468656266e-07,
+      "pass": false,
+      "projective_duplicate_count": 8,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "blocked_g_vs_new_random_split": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 2.4303058430999715e-07,
+      "pass": false,
+      "projective_duplicate_count": 6,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "blocked_g_vs_phase_a": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 1.9010120987351166e-05,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "blocked_g_vs_phase_b": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 0.0003058606688778183,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "blocked_g_vs_phase_c": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 0.011414961098304227,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "blocked_g_vs_pilot_v1": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 3.685801543563984e-06,
+      "pass": false,
+      "projective_duplicate_count": 1,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_legacy_blocked_g": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 1.5520115573755317e-06,
+      "pass": false,
+      "projective_duplicate_count": 9,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_legacy_random": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 1.4214801809444226e-07,
+      "pass": false,
+      "projective_duplicate_count": 14,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_legacy_tfim_4q": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 2.3229567341839446e-06,
+      "pass": false,
+      "projective_duplicate_count": 6,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_new_blocked_g": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 2.4303058430999715e-07,
+      "pass": false,
+      "projective_duplicate_count": 6,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_phase_a": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 2.8578003103354048e-06,
+      "pass": false,
+      "projective_duplicate_count": 2,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_phase_b": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 0.000291732299505939,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_phase_c": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 0.011415568694645387,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    },
+    "random_split_vs_pilot_v1": {
+      "evidence_availability": "aggregate only; candidate sample arrays discarded",
+      "exact_g_overlap_count": 0,
+      "minimum_FS_distance": 1.0777609285362243e-05,
+      "pass": true,
+      "projective_duplicate_count": 0,
+      "sample_id_overlap_count": 0,
+      "schema_limitations": [],
+      "state_hash_overlap_count": 0
+    }
+  },
+  "corpus_granularity_limit": "pilot_v1 source/endpoints and Phase subcorpora are aggregated by _corpus; existing audit cannot disaggregate failed pairs after candidate deletion.",
+  "namespace_findings": {
+    "all_canonical_hash_overlaps_zero": true,
+    "all_exact_g_overlaps_zero": true,
+    "all_sample_id_overlaps_zero": true,
+    "failures_are_projective_near_duplicates_only": true
+  },
+  "schema_version": 1,
+  "self_comparison_or_path_alias": {
+    "basis": "source targets exclude same new regime; config paths are distinct; cross-regime comparisons are intentional",
+    "found": false
+  },
+  "threshold": {
+    "projective_duplicate_infidelity": 1e-10
+  }
+}

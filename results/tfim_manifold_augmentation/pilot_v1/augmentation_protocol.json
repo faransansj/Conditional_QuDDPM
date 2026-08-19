@@ -1,0 +1,41 @@
+{
+  "arms": [
+    "real-only",
+    "same-phase physical ground-state-manifold Hamiltonian-assisted augmentation",
+    "FS-distance-matched random tangent control"
+  ],
+  "blocked_g_rule": "g' is restricted to the analytically configured TRAIN interval and may not enter validation/test intervals",
+  "critical_exclusion_rule": "targets may not enter excluded [0.8,1.2] or cross configured class intervals",
+  "endpoint_generation": "exact ground state of H(g')",
+  "endpoint_rule": {
+    "direction_namespace": "tfim-manifold-confirmatory-v1-endpoint",
+    "fraction": 0.25,
+    "name": "fractional_move_to_deterministic_training_support_boundary",
+    "support_source": "dataset_config_only"
+  },
+  "endpoint_rule_explanation": "For each anchor, a provenance-hash chooses lower/upper support; g' moves the frozen fraction of remaining distance to that boundary. Therefore delta-g varies by anchor and no QCNN result selects magnitude.",
+  "fs_distance_rule": "measure physical endpoint distance, then construct the random tangent at exactly that pairwise displacement",
+  "interpretation": "physics-guided data expansion",
+  "method": "Hamiltonian-assisted augmentation",
+  "phase_a_status": "immutable exploratory ablation: literature-motivated, not literature-derived",
+  "phase_b_status": "immutable exploratory heuristic; excluded from core benchmark",
+  "phase_c_status": "redefined as FS-distance-matched random control",
+  "protocol_version": "tfim-manifold-confirmatory-v1",
+  "qcNN_test_execution": "forbidden in this pilot",
+  "random_control_semantics": {
+    "class_assignment": "inherit the anchor label solely to match class budgets and paired QCNN inputs",
+    "class_consistency_filter": null,
+    "physics_label_preservation_claimed": false,
+    "pilot_checks_only": [
+      "normalization",
+      "tangent orthogonality",
+      "pairwise FS-distance matching",
+      "projective uniqueness",
+      "anchor coverage"
+    ],
+    "small_fs_distance_establishes_validity": false
+  },
+  "resource_model": "RESOURCE_MODEL_A",
+  "same_phase_rule": "g' must remain inside the anchor label's configured interval and generation TRAIN support",
+  "symmetry_arm_rule": "include only if the exact-symmetry diagnostic finds projectively unique states"
+}

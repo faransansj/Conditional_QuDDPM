@@ -1,0 +1,37 @@
+{
+  "artifact_immutability_pass": true,
+  "augmentation_arms": [
+    "real_only",
+    "distance_matched_random",
+    "hamiltonian_assisted"
+  ],
+  "blocking_reasons": [
+    "dataset_freeze_complete",
+    "split_validation_pass",
+    "freshness_validation_pass"
+  ],
+  "checksums_validation_pass": true,
+  "confirmatory_qcnn_runs": 0,
+  "dataset_freeze_complete": false,
+  "dataset_manifest_hash": "e0c93058aded34a25efd5cf00246c188a7570a3f75cfcd5c77cddbd5d7a4cc1d",
+  "freshness_validation_pass": false,
+  "independent_review_pass": true,
+  "physics_validation_pass": true,
+  "qcnn_confirmatory_ready": false,
+  "reproducibility_validation_pass": true,
+  "review_reference": "pi-subagent reviewer run d100d7c1 (implementation acceptable; scientific duplicate/freshness blockers confirmed)",
+  "seed_freeze_complete": true,
+  "split_validation_pass": false,
+  "status": "BLOCKED",
+  "structural_validation_pass": true,
+  "symmetry_arm_included": false,
+  "symmetry_benchmark_runs": 0,
+  "test_evidence": {
+    "checksums": "PASS",
+    "focused": "10 passed",
+    "full": "96 passed in 86.46s",
+    "related": "47 passed"
+  },
+  "test_suite_pass": true,
+  "validation_hash": "2f193b1f7b047e6fe645e140028c64b9466e79d124d959fe233f50630d22e9a0"
+}

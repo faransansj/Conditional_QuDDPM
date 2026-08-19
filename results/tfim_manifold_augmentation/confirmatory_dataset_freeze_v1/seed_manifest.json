@@ -1,0 +1,47 @@
+{
+  "child_seed_derivation": {
+    "method": "none: two independent dataset/split seeds were already frozen by the pilot protocol",
+    "spawn_keys": []
+  },
+  "creation_timestamp": "2026-08-18T14:56:28.999611+00:00",
+  "downstream_metrics_inspected": false,
+  "namespaces": {
+    "blocked_g": "tfim-manifold-confirmatory-v1/blocked-g",
+    "random_split": "tfim-manifold-confirmatory-v1/random-split"
+  },
+  "protocol_clarification": "seed_sweep_count corrected from 1 to 0; no seed material or selection changed",
+  "protocol_version": "tfim-manifold-confirmatory-dataset-freeze-v1",
+  "rng_algorithm": "default_rng/PCG64",
+  "rng_library": "NumPy",
+  "rng_version": "2.5.2",
+  "root_seed_material": {
+    "blocked_g": {
+      "dataset_seed": 91002,
+      "split_seed": 92002
+    },
+    "random_split": {
+      "dataset_seed": 91001,
+      "split_seed": 92001
+    }
+  },
+  "schema_version": 1,
+  "seed_selected_before_generation": true,
+  "seed_selected_from_downstream_performance": false,
+  "seed_selection_count": 1,
+  "seed_selection_count_meaning": "one predeclared seed set per regime",
+  "seed_sweep_count": 0,
+  "seed_sweep_count_meaning": "no comparative seed sweep or best-seed selection",
+  "source_commit": "c86b3ebbd878902db2d8153190d8aa8ce71aa0c5",
+  "source_file": "configs/augmentation/tfim_manifold_confirmatory.yaml",
+  "source_file_sha256": "9bb968bce3eb839998f8ed56a1a7080a9a118b094e6ed8b67acf79e5543fb133",
+  "source_keys": {
+    "blocked_g": {
+      "dataset_seed": "fresh_confirmatory_datasets.blocked-g.dataset_seed",
+      "split_seed": "fresh_confirmatory_datasets.blocked-g.split_seed"
+    },
+    "random_split": {
+      "dataset_seed": "fresh_confirmatory_datasets.random.dataset_seed",
+      "split_seed": "fresh_confirmatory_datasets.random.split_seed"
+    }
+  }
+}
