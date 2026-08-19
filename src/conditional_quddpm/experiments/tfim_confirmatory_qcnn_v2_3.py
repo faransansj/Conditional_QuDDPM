@@ -59,8 +59,10 @@ def preflight(protocol_dir: Path = PROTOCOL) -> dict:
         raise ValueError("QCNN gate is not READY")
     for regime, spec in execution["datasets"].items():
         path = ROOT / spec["path"]
-        if sha256(path / "states.npz") != spec["states_sha256"]:
+        artifact = _resolve_state_artifact(path)
+        if sha256(artifact) != spec["states_sha256"]:
             raise ValueError(f"dataset hash mismatch: {regime}")
+        _load_frozen_dataset(path)
     _verify_checksums(ROOT / "results/tfim_manifold_augmentation/confirmatory_dataset_freeze_v2_2")
     return {"status": "READY_TO_EXECUTE", "protocol_hash": protocol_hash, "runs": 48}
 
@@ -84,9 +86,37 @@ def resolve_runs(protocol_dir: Path = PROTOCOL, output: Path = OUTPUT) -> list[d
     return resolved
 
 
+def _resolve_state_artifact(directory: Path) -> Path:
+    """Resolve the sole canonical NPZ declared by the frozen checksum manifest."""
+    checksums = _json(directory / "checksums.json")
+    candidates = [name for name in checksums if Path(name).suffix == ".npz"]
+    if len(candidates) != 1:
+        raise ValueError(f"expected one frozen state artifact in {directory}, found {candidates}")
+    artifact = directory / candidates[0]
+    if not artifact.is_file() or sha256(artifact) != checksums[candidates[0]]:
+        raise ValueError(f"missing or mismatched frozen state artifact: {artifact}")
+    return artifact
+
+
+def _load_frozen_dataset(directory: Path) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    manifest = _json(directory / "manifest.json")
+    records = manifest["records"]
+    with np.load(_resolve_state_artifact(directory), allow_pickle=False) as data:
+        required = ("states", "labels", "parameter_ids", "splits", "state_hashes")
+        if any(key not in data for key in required):
+            raise ValueError(f"frozen state artifact schema mismatch: {directory}")
+        states, labels, ids, splits, state_hashes = (np.array(data[key]) for key in required)
+    if (len(states) != manifest["sample_count"] or len(records) != len(states)
+            or ids.tolist() != [record["sample_id"] for record in records]
+            or labels.tolist() != [record["class"] for record in records]
+            or state_hashes.tolist() != [record["state_hash"] for record in records]
+            or set(splits.tolist()) != {"train", "val", "test"}):
+        raise ValueError(f"frozen manifest/state artifact mismatch: {directory}")
+    return states, labels, ids, splits
+
+
 def _load_run_data(run: dict) -> tuple[np.ndarray, ...]:
-    with np.load(run["input_path"]) as data:
-        states, labels, ids, splits = (data[k] for k in ("states", "labels", "parameter_ids", "splits"))
+    states, labels, ids, splits = _load_frozen_dataset(Path(run["input_path"]))
     wanted = set(run["sample_ids_by_class"]["0"] + run["sample_ids_by_class"]["1"])
     train_idx = np.array([i for i, value in enumerate(ids) if value in wanted])
     if len(train_idx) != 2 * run["budget"] or set(map(str, ids[train_idx])) != wanted:

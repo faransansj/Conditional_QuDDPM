@@ -46,6 +46,16 @@ def test_dry_run_resolves_exact_authoritative_matrix_and_seed_pairing(tmp_path):
                 assert len({(r["subset_seed"], r["init_seed"], r["spsa_seed"]) for r in pair}) == 1
 
 
+def test_frozen_directory_loader_resolves_manifest_declared_state_artifact(tmp_path):
+    run = runner.resolve_runs(output=tmp_path)[0]
+    train_states, train_labels, train_ids, val_states, val_labels, test_states, test_labels = runner._load_run_data(run)
+    assert train_states.shape == (20, 16)
+    assert np.bincount(train_labels).tolist() == [10, 10]
+    assert set(train_ids) == set(run["sample_ids_by_class"]["0"] + run["sample_ids_by_class"]["1"])
+    assert len(val_states) == len(val_labels) > 0
+    assert len(test_states) == len(test_labels) > 0
+
+
 def test_execute_enforces_300_final_schema_and_integrity_resume(tmp_path, monkeypatch):
     runs = runner.resolve_runs(output=tmp_path)[:1]
     monkeypatch.setattr(runner, "resolve_runs", lambda protocol_dir=runner.PROTOCOL, output=runner.OUTPUT: [{**runs[0], "output_path": str(output / runs[0]["run_id"])}])
