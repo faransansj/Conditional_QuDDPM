@@ -1,0 +1,47 @@
+{
+  "authoritative_conclusion": "Frozen 4-qubit TFIM + QCNN + q50 local-random-tangent + synthetic ratio 1.0 + Protocol v2.3 \uc870\uac74\uc5d0\uc11c augmentation\uc740 blocked-g generalization improvement criterion\uc744 \ucda9\uc871\ud558\uc9c0 \ubabb\ud588\ub2e4.",
+  "claim_boundaries": [
+    "not a failure of quantum-state augmentation generally",
+    "not a failure of geometric augmentation generally",
+    "not evidence local tangent augmentation is generally harmful",
+    "not transferable without validation to another Hamiltonian, qubit count, or model"
+  ],
+  "confirmatory_verdict": "FAIL",
+  "execution_integrity": "PASS",
+  "exploratory_post_hoc": {
+    "blocked_g_budget_mean_deltas": {
+      "10": 0.0,
+      "25": -0.055555555555555504,
+      "50": -0.011111111111111108,
+      "100": -0.005555555555555573
+    },
+    "blocked_g_repeat_means": {
+      "0": -0.008333333333333331,
+      "1": -0.03749999999999998,
+      "2": -0.008333333333333331
+    },
+    "confirmatory_evidence": false,
+    "leave_one_repeat_out_all_negative": true,
+    "numerical_instability_detected": false,
+    "random_mean_paired_delta": 0.0,
+    "runs_at_300_updates": 48
+  },
+  "future_research_question": "physical manifold\ub97c \ub530\ub77c perturbation\ud574\uc57c downstream utility\uac00 \uc0dd\uae38 \uc218 \uc788\ub294\uac00?",
+  "primary": {
+    "estimand": "augmentation - real-only",
+    "general_harm_claim": false,
+    "improvement_evidence": false,
+    "mean_paired_delta": -0.018055555555555547,
+    "metric": "test_accuracy",
+    "paired_bootstrap_95_ci": [
+      -0.0486111111111111,
+      0.0013888888888889024
+    ],
+    "point_estimate_percentage_points": -1.8055555555555547,
+    "regime": "blocked-g"
+  },
+  "research_track": "ARCHIVED_NO_GO",
+  "result_freeze": "FROZEN",
+  "schema_version": 1,
+  "scope": "Frozen 4-qubit TFIM + QCNN + q50 local-random-tangent + synthetic ratio 1.0 + Protocol v2.3"
+}
