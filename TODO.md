@@ -1,10 +1,12 @@
-# Atomic TODO Ledger
+# Archived TODO / Research Ledger
 
-Priority order is top-to-bottom within each section. Check an item only after its acceptance criteria are validated.
+> **This ledger is historical.** The 4-qubit TFIM augmentation research track is closed. No unchecked item below should be interpreted as active work unless explicitly re-opened in a new research branch.
+
+Historical priority was top-to-bottom within each section. Statuses below preserve completed, canceled, superseded, deferred, hold, and not-executed work without turning related experiments into false completions.
 
 ## P0 — Start here
 
-- [ ] Complete the missing MSQuDDPM upstream audit (HOLD; not active execution)
+- [ ] **HOLD / not evaluated / not part of the closed 4Q TFIM conclusion:** Complete the missing MSQuDDPM upstream audit
   - Goal: identify source, license, framework/version constraints, and a reproducible reference smoke task before any future resume.
   - Outputs: add a verified MSQuDDPM section to `docs/upstream_audit.md`; mark unavailable when no source can be verified.
 
@@ -126,25 +128,25 @@ Priority order is top-to-bottom within each section. Check an item only after it
 
 ## P3 — Pure-state augmentation
 
-> **Track decision (2026-08-18):** Conditional QuDDPM is **NO-GO** after preserved K0–K3 diagnostics; no K4 or augmentation run. MSQuDDPM is **HOLD**, not failed. Primary work moves to physics-aware perturbation and the v4 pure-state score model formerly called SSDM. See `docs/augmentation_track_transition.md`.
+> **Historical track decision (2026-08-18):** Conditional QuDDPM was **NO-GO** after preserved K0–K3 diagnostics; no K4 or QuDDPM augmentation run. MSQuDDPM remained **HOLD**, not failed. Work then moved to physics-aware augmentation; later geometry-aware, local-random-tangent, and confirmatory work completed. The proposed pure-state score model was **NOT EXECUTED**. See `docs/augmentation_track_transition.md` and the final archive.
 
-- [ ] Implement the shared train-only augmentation contract and provenance
+- [x] **COMPLETED:** Implement the shared train-only augmentation contract and provenance
   - Goal: let the frozen QCNN runner consume validated synthetic train states without exposing validation/test states to augmentation.
   - Acceptance criteria: source IDs, method/config/seed, state hash, synthetic count, and split audit are recorded; QCNN integration smoke passes.
 
-- [ ] Implement physics-aware and displacement-matched random perturbations
+- [x] **COMPLETED / SUPERSEDED by later phases:** Implement physics-aware and displacement-matched random perturbations
   - Goal: establish the smallest physically structured augmentation baseline and its generic-unitary control.
   - Acceptance criteria: normalization, determinism, observable/label gate, diversity, and train-only tests pass before a 10/class pilot.
 
-- [ ] Run physics-aware 10/class pilot
+- [x] **COMPLETED / exploratory negative:** Run physics-aware 10/class pilot
   - Goal: compare paired real-only, random-control, and physics-aware 1x arms under frozen QCNN seeds.
   - Acceptance criteria: identical real IDs, synthetic counts, QCNN initialization/SPSA, and evaluation split; per-seed deltas reported without threshold tuning.
 
-- [ ] Implement pure-state score-model S0 geometry feasibility
+- [ ] **NOT EXECUTED / SUPERSEDED:** Implement pure-state score-model S0 geometry feasibility
   - Goal: reproduce the pinned arXiv:2605.03573v4 Fubini–Study primitives, forward process, finite local-time teacher, and normalized sampling before network scaling.
   - Acceptance criteria: phase invariance, tangent projection, log/exp round-trip, Haar statistics, finite loss, deterministic sampling, and train-only tests pass.
 
-- [ ] Gate score-model S1/S2 state quality and class-specific generation
+- [ ] **NOT EXECUTED / SUPERSEDED:** Gate score-model S1/S2 state quality and class-specific generation
   - Goal: establish characteristic distribution quality and conditional separation before QCNN use.
   - Acceptance criteria: one bounded diagnostic per failed gate; no QCNN augmentation on S2 failure.
 
@@ -185,7 +187,7 @@ Priority order is top-to-bottom within each section. Check an item only after it
   - Acceptance criteria: nearest-training fidelity and declared observable distributions are reported by class; no test states are loaded.
   - Dependencies: generated pure states.
 
-- [ ] Implement a simple pure-state perturbation baseline
+- [x] **COMPLETED:** Implement a simple pure-state perturbation baseline
   - Goal: create a low-complexity physically valid augmentation control.
   - Inputs: training states and train/validation-selected perturbation strength.
   - Outputs: synthetic control states and config.
@@ -199,9 +201,9 @@ Priority order is top-to-bottom within each section. Check an item only after it
   - Acceptance criteria: all arms use matched splits/QCNN seeds; missing/failed cells remain visible; null/negative deltas are reported.
   - Dependencies: baseline pilot; diagnostics; perturbation baseline.
 
-## P4 — Mixed-state augmentation (**MSQuDDPM HOLD; excluded from active priority queue**)
+## P4 — Mixed-state augmentation (**HOLD / not evaluated / outside the closed 4Q TFIM conclusion**)
 
-The tasks below are preserved for a possible post-SSDM resume and are not failures or current work.
+The tasks below were **NOT EXECUTED**. They are preserved as historical possibilities, not failures or current work.
 
 - [ ] Implement a depolarizing channel for density matrices
   - Goal: create the first controlled mixed-state dataset transformation.
@@ -252,7 +254,7 @@ The tasks below are preserved for a possible post-SSDM resume and are not failur
   - Acceptance criteria: same QCNN protocol/test set across arms; noise and synthetic budgets are explicit; negative findings retained.
   - Dependencies: mixed diagnostics; noisy QCNN baseline.
 
-## P5 — Analysis and extensions
+## P5 — Analysis and extensions (**historical; unchecked items are DEFERRED or NOT EXECUTED**)
 
 - [ ] Quantify generation-quality/downstream association
   - Goal: answer RQ5 without treating correlation as causation.
@@ -275,14 +277,14 @@ The tasks below are preserved for a possible post-SSDM resume and are not failur
   - Acceptance criteria: critical points were not used to tune labels/models; results are not merged into the primary metric post hoc.
   - Dependencies: primary benchmark.
 
-- [ ] Prepare final reproducibility artifact
+- [x] **COMPLETED for the closed 4Q TFIM track:** Prepare final reproducibility artifact
   - Goal: reproduce reported tables/figures from frozen configs and stored run artifacts.
   - Inputs: final runs and code revision.
   - Outputs: reproduction commands, figures, tables, methodology, and failure ledger.
   - Acceptance criteria: clean-environment smoke passes; every claim maps to an artifact; all completed and failed declared cells are accounted for.
   - Dependencies: final benchmark.
 
-## Deferred roadmap (not MVP)
+## Deferred roadmap (**NOT EXECUTED; not active work**)
 
 - [ ] Evaluate few-step QuDDPM/MSQuDDPM.
 - [ ] Evaluate learnable quantum noise schedules.

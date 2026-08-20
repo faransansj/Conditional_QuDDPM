@@ -1,5 +1,7 @@
 # Research and Development Plan
 
+> **Historical document.** This file records an earlier project state and is superseded by [`docs/tfim_state_augmentation_final_archive.md`](docs/tfim_state_augmentation_final_archive.md). Do not interpret its phases, acceptance gaps, or next steps as current work.
+
 ## Governing principles
 
 - Downstream QCNN performance is primary; generation metrics are diagnostic.

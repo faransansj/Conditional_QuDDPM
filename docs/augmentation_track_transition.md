@@ -1,5 +1,7 @@
 # QML augmentation track transition
 
+> **Historical document.** This file records an earlier project transition and is superseded by [`tfim_state_augmentation_final_archive.md`](tfim_state_augmentation_final_archive.md). Its GO labels, implementation plan, and “Next execution” section are historical, not current work.
+
 ## Decision
 
 | Track | Status | Reason |
